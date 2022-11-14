@@ -1,0 +1,61 @@
+.loading-page{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height:220vw;
+    max-height: 100vh;
+    overflow: hidden;
+    .contentBox{
+        width: fit-content;
+  
+        margin:auto;
+        .svgBox{
+            width: 80vw;
+            height: 30vw;
+            svg{
+                width: 100%;
+                height: 100%;
+                .rotate{
+                  
+                    transform-origin:center;
+                }
+                .g2{
+                   path{
+                    transform: rotateY(180deg);
+                   }
+                }
+                .g4{
+                    line{
+                        stroke-dasharray: 1000;
+                        stroke-dashoffset: 1000;
+                    }
+                }
+            }
+        }
+    }
+    .titleBox{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        height: fit-content;
+        padding-top:175px;
+        h1{
+            font-weight: 700;
+            font-size:1.5vw;
+            opacity: 0;
+        }
+        h5{
+            font-size: 0.3vw;
+            transform: scale(0.95);
+            font-weight: 400;
+            opacity: 0;
+        }
+      
+    }
+}

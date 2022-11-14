@@ -1,0 +1,13 @@
+@import "_index";
+@import "_config";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+h1,h2,h3,h4,h5,h6,span,p{
+    font-family: 'Noto Sans TC', sans-serif;
+}
