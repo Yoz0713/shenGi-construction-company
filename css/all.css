@@ -15,6 +15,7 @@
 .loading-page .contentBox .svgBox {
   width: 80vw;
   height: 30vw;
+  transform: scale(1.2);
 }
 .loading-page .contentBox .svgBox svg {
   width: 100%;
@@ -43,11 +44,11 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding-top: 175px;
+  padding-top: 10vw;
 }
 .loading-page .titleBox h1 {
   font-weight: 700;
-  font-size: 1.5vw;
+  font-size: 2vw;
   opacity: 0;
 }
 .loading-page .titleBox h5 {
