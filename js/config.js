@@ -1,5 +1,25 @@
 
 function loadingPageAnimaiton(){
+    let g = gsap.timeline()
+    g.fromTo(".loading-page .rotate .g2",{
+        opacity:0
+    },{
+        opacity:1,
+        duration:0.8,
+   
+    }).fromTo(".loading-page .rotate .g1",{
+        opacity:0
+    },{
+        opacity:1,
+        duration:0.8,
+   
+    },"<+0.4").fromTo(".loading-page .rotate .g3",{
+        opacity:0
+    },{
+        opacity:1,
+        duration:0.8,
+   
+    },"<+0.4")
     let gg = gsap.timeline()
     gg.fromTo(".loading-page .g1 .circle1",{
         strokeDasharray: 1000,
@@ -169,7 +189,7 @@ function loadingPageAnimaiton(){
         {
             opacity:0,
             duartion:0.01
-        },">+0.5").to(".rotate",
+        },">").to(".rotate",
          {
            
             rotate:90,
@@ -239,7 +259,7 @@ function loadingPageAnimaiton(){
            transformOrigin:"center",
             duration:0.8,
         
-        }).fromTo(".loading-page .titleBox h1",{
+        },"<+0.5").fromTo(".loading-page .titleBox h1",{
            y:30,
            opacity:0
         },{
@@ -253,10 +273,50 @@ function loadingPageAnimaiton(){
             y:0,
             opacity:1,
             duration:0.8
-         },"<+0.5")
+         },"<+0.5").to(".loading-page",{
+            opacity:0,
+            duration:2,
+
+         })
     })
 
     
   
 }
 loadingPageAnimaiton()
+
+//menu的下拉式選單
+function selectMenu(event){
+    $('.sub').each((i,item)=>{
+        if(event.target == item){
+            $('.sub').eq(i).toggleClass('active');/*新增class*/
+            $('.sub-open').eq(i).slideToggle(); /*下拉選單被展開*/
+        }
+    })
+   
+  
+}
+$('.sub').click(function(event) {
+    event.preventDefault();
+    selectMenu(event)
+});
+
+//menu的下拉式選單
+
+
+//menu開啟關閉
+   
+    $(".close").click(()=>{
+        $(".menu").css("right","-20%")
+        $(".index").css({
+            filter:"blur(0px)"
+        })
+    })
+    $(".menu-button").click(()=>{
+        $(".menu").css("right","0")
+        var filterVal = 'blur(0px)';
+        $(".index").css({
+            filter:"blur(5px)"
+        })
+    })
+//Menu開啟關閉

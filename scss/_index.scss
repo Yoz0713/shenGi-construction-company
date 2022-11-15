@@ -1,0 +1,59 @@
+.index{
+    width: 100%;
+    height: 220vw;
+    max-height: 100vh;
+
+    overflow: hidden;
+    .first-page{
+        position: relative;
+        width: 100%;
+        
+        .imgBox{
+            width: 100%;
+            height: fit-content;
+            img{
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+        .paraBox{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 35vw;
+            background-color: #fff;
+            .para{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                width: fit-content;
+                height: fit-content;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                text-align: center;
+                bottom: 9vw;
+                & > :nth-child(1){
+                    span{
+                        font-size: 1.3vw;
+                        font-weight: 700;
+                    }
+              
+                }
+                & > :nth-child(2){
+                    span{
+                        font-size:3.2vw;
+                    }
+                
+                    margin: 0.2vw 0vw 0.4vw;
+                }
+                span{
+                    font-size: 0.9vw;
+                }
+            }
+        }
+    }
+}

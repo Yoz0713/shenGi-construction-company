@@ -5,6 +5,13 @@
     height:220vw;
     max-height: 100vh;
     overflow: hidden;
+    background-color: #fff;
+    pointer-events: none;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+   
     .contentBox{
         width: fit-content;
   
@@ -19,19 +26,24 @@
           
                 .rotate{
                     transform-origin:center;
-     
-                }
-                .g2{
-                   path{
-                    transform: rotateY(180deg);
-                   }
-                }
-                .g4{
-                    line{
-                        stroke-dasharray: 1000;
-                        stroke-dashoffset: 1000;
+                    g{
+                        opacity: 0;
                     }
+                    .g2{
+                        path{
+                         transform: rotateY(180deg);
+                        }
+                     }
+                     .g4{
+                         opacity: 1;
+                         line{
+                             stroke-dasharray: 1000;
+                             stroke-dashoffset: 1000;
+                         }
+                     }
                 }
+                
+              
             }
         }
     }
@@ -59,5 +71,70 @@
             opacity: 0;
         }
       
+    }
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0vw 1.5vw;
+    border-bottom:2px solid #000;
+    position:fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    .logoBox{
+        mix-blend-mode: difference;
+        img{
+            width: 5vw;
+        }
+    }
+    .menu-button{
+        display: flex;
+        align-items: center;
+
+        cursor: pointer;
+        & :nth-child(1){
+            font-size: 2.5vw;
+            mix-blend-mode: difference;
+        }
+    }
+}
+.menu{
+    position: absolute;
+    right:-20%;
+    top: 0;
+    width: 15vw;
+    height: 220vw;
+    max-height: 100vh;
+    background-color: #fff;
+    z-index: 20;
+    padding: 1vw 1.5vw;
+    transition: right 1.5s;
+    .close{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        cursor: pointer;
+        img{
+            width: 1.5vw;
+        }
+    }
+    ul{
+        margin-top: 4vw;
+        margin-left: 2vw;
+        li{
+            font-weight: 700;
+            margin-bottom: 0.5vw;
+            .sub-open{
+                display: none;
+                margin: 0.7vw 0vw 1vw 1.5vw;
+                li{
+                    margin-bottom: 0.5vw;
+                }
+            }
+        }
     }
 }

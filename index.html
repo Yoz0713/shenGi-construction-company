@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/all.min.css">
 </head>
-<body>
+<body style="overflow: hidden;">
     <!-- loading畫面 -->
     <section class="loading-page">
         <div class="contentBox">
@@ -55,8 +55,88 @@
     </section>
     <!-- loading畫面 -->
 
+    <!-- header -->
+        <header>
+            <div class="logoBox">
+                <a href="./index.html">
+                    <img src="./img/index/svg/logo.svg" alt="logo">
+                </a>
+           
+            </div>
+            <div class="menu-button">
+                <p>．</p>
+                <p>Menu</p>
+            </div>
+        </header>
+    <!-- header -->
 
 
+    <!-- Menu -->
+        <div class="menu">
+            <div class="close">
+                <img src="./img/index/svg/bx_x.svg" alt="">
+            </div>
+            <ul>
+                <li>
+                    <a href="#" class="sub">關於森鉅</a>
+                    <ul class="sub-open">
+                        <li> <a href="#">新創品牌</a> </li>
+                        <li> <a href="#">經營理念</a> </li>
+                        <li> <a href="#">營造公司</a> </li>
+                        <li> <a href="#">科技智慧宅</a> </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="sub">熱銷建案</a>
+                    <ul class="sub-open">
+                        <li> <a href="#">新創品牌</a> </li>
+                        <li> <a href="#">經營理念</a> </li>
+                        <li> <a href="#">營造公司</a> </li>
+                        <li> <a href="#">科技智慧宅</a> </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="sub">經典業績</a>
+                    <ul class="sub-open">
+                        <li> <a href="#">新創品牌</a> </li>
+                        <li> <a href="#">經營理念</a> </li>
+                        <li> <a href="#">營造公司</a> </li>
+                        <li> <a href="#">科技智慧宅</a> </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="sub">客戶服務</a>
+                    <ul class="sub-open">
+                        <li> <a href="#">新創品牌</a> </li>
+                        <li> <a href="#">經營理念</a> </li>
+                        <li> <a href="#">營造公司</a> </li>
+                        <li> <a href="#">科技智慧宅</a> </li>
+                    </ul>
+                </li>
+                <li>會員登入</li>
+            </ul>
+        </div>
+    <!-- Menu -->
+
+
+    <!-- 主畫面 -->
+    <section class="index">
+        <div class="first-page">
+            <div class="paraBox">
+                <div class="para">
+                    <p>Green Building Is The Scenery.</p>
+                    <h2>The Art of Architecture</h2>
+                    <span>Construction of artistic paradigmatic<br/>relations between existed in construction.</span>
+                </div>
+          
+            </div>
+            <div class="imgBox">
+                <img src="./img/index/image/banner-bg.webp" alt="banner-bg">
+            </div>
+        </div>
+
+    </section>
+    <!-- 主畫面 -->
 
 
 
@@ -69,11 +149,101 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="./js/config.js"></script>
 
     <script>
+        function splitTextAnimation(wrap,delay,speed){
+            wrap = document.querySelector(`${wrap}`);
+            text = wrap.innerHTML
+            wrap.innerHTML = null
+            let str=`${text}`;
+            let arr = str.split("")
+            let arrElement = arr.map((item,i)=>{
+                if(item == " "){
+                    item =`<span class="blind"><span>\xa0</span></span>`
+                    return item
+                }else{
+                    item = `<span class="blind"><span>${item}</span></span>`
+                    return item
+                }
+                  
+              
+                
+            })
+            let strElement = arrElement.join("")
+            wrap.innerHTML = strElement;
+            wrap.childNodes.forEach((item,i)=>{
+        let gg = gsap.timeline();
+      
+            gg.fromTo(item.childNodes,{
+            
+                autoAlpha:0,
+                
+            },{
+                autoAlpha:0,
+                
+                duration:delay,
+             
+            }).fromTo(item.childNodes,{
+                y:50,
+                autoAlpha:0,
+             
+            },{
+                autoAlpha:1,
+                
+                duration:0.6,
+                y:0,
+                delay:i/speed
+            })
+     
+        
+    })
+   
+        }
+        function firstPageAnimaiton(){
+            splitTextAnimation(".first-page .paraBox p",8.2,30)
+            splitTextAnimation(".first-page .paraBox h2",8.4,45)
+            let gg = gsap.timeline()
+            gg.fromTo(".first-page .paraBox .para > span",{
+                opacity:0,
+                y:30
+            },{
+                opacity:1,
+                y:0,
+                duration:0.8,
+                ease:"power1",
+                delay:8.9
+            })
+        }
+        firstPageAnimaiton()
 
+        function firstScrollAnimation(){
+            let gg =gsap.timeline()
+            gg.fromTo(".first-page .paraBox",{
+                y:0
+            },{
+                y:"-300%",
+                paused:true,
+            })
+
+            ScrollTrigger.create({
+                trigger: ".first-page",
+                end: "bottom bottom",
+                //once: true,
+                onEnter: self => {
+                    
+                    console.log('onEnter');
+                    if(gg.progress() === 0) {
+                    console.log('onEnter play');
+             
+                        gg.play().then(() => self.kill())
+                    }
+                }
+            });
+        }
+        firstScrollAnimation()
     </script>
 </body>
 </html>

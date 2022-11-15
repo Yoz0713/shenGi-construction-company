@@ -1,3 +1,63 @@
+.index {
+  width: 100%;
+  height: 220vw;
+  max-height: 100vh;
+  overflow: hidden;
+}
+.index .first-page {
+  position: relative;
+  width: 100%;
+}
+.index .first-page .imgBox {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.index .first-page .imgBox img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.index .first-page .paraBox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 35vw;
+  background-color: #fff;
+}
+.index .first-page .paraBox .para {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  bottom: 9vw;
+}
+.index .first-page .paraBox .para > :nth-child(1) span {
+  font-size: 1.3vw;
+  font-weight: 700;
+}
+.index .first-page .paraBox .para > :nth-child(2) {
+  margin: 0.2vw 0vw 0.4vw;
+}
+.index .first-page .paraBox .para > :nth-child(2) span {
+  font-size: 3.2vw;
+}
+.index .first-page .paraBox .para span {
+  font-size: 0.9vw;
+}
+
 .loading-page {
   display: flex;
   align-items: center;
@@ -5,6 +65,12 @@
   height: 220vw;
   max-height: 100vh;
   overflow: hidden;
+  background-color: #fff;
+  pointer-events: none;
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
 }
 .loading-page .contentBox {
   width: -webkit-fit-content;
@@ -24,10 +90,16 @@
 .loading-page .contentBox .svgBox svg .rotate {
   transform-origin: center;
 }
-.loading-page .contentBox .svgBox svg .g2 path {
+.loading-page .contentBox .svgBox svg .rotate g {
+  opacity: 0;
+}
+.loading-page .contentBox .svgBox svg .rotate .g2 path {
   transform: rotateY(180deg);
 }
-.loading-page .contentBox .svgBox svg .g4 line {
+.loading-page .contentBox .svgBox svg .rotate .g4 {
+  opacity: 1;
+}
+.loading-page .contentBox .svgBox svg .rotate .g4 line {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
 }
@@ -58,6 +130,71 @@
   opacity: 0;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0vw 1.5vw;
+  border-bottom: 2px solid #000;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+header .logoBox {
+  mix-blend-mode: difference;
+}
+header .logoBox img {
+  width: 5vw;
+}
+header .menu-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+header .menu-button :nth-child(1) {
+  font-size: 2.5vw;
+  mix-blend-mode: difference;
+}
+
+.menu {
+  position: absolute;
+  right: -20%;
+  top: 0;
+  width: 15vw;
+  height: 220vw;
+  max-height: 100vh;
+  background-color: #fff;
+  z-index: 20;
+  padding: 1vw 1.5vw;
+  transition: right 1.5s;
+}
+.menu .close {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  cursor: pointer;
+}
+.menu .close img {
+  width: 1.5vw;
+}
+.menu ul {
+  margin-top: 4vw;
+  margin-left: 2vw;
+}
+.menu ul li {
+  font-weight: 700;
+  margin-bottom: 0.5vw;
+}
+.menu ul li .sub-open {
+  display: none;
+  margin: 0.7vw 0vw 1vw 1.5vw;
+}
+.menu ul li .sub-open li {
+  margin-bottom: 0.5vw;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -68,4 +205,12 @@
 
 h1, h2, h3, h4, h5, h6, span, p {
   font-family: "Noto Sans TC", sans-serif;
+}
+
+a {
+  color: #000;
+}
+
+span {
+  display: inline-block;
 }
