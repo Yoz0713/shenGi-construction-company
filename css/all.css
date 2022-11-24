@@ -69,7 +69,6 @@
   z-index: 200;
   left: 0;
   top: 0;
-  opacity: 0;
 }
 .loading-page .contentBox {
   width: -webkit-fit-content;
