@@ -11,7 +11,7 @@
     z-index: 200;
     left: 0;
     top: 0;
-   
+    opacity: 0;
     .contentBox{
         width: fit-content;
   
@@ -104,9 +104,9 @@ header{
 }
 .menu{
     position: absolute;
-    right:-20%;
+    right:-30%;
     top: 0;
-    width: 15vw;
+    width: 26vw;
     height: 220vw;
     max-height: 100vh;
     background-color: #fff;
@@ -127,12 +127,13 @@ header{
         margin-left: 2vw;
         li{
             font-weight: 700;
-            margin-bottom: 0.5vw;
+            margin-bottom: 1.5vw;
             .sub-open{
-                display: none;
-                margin: 0.7vw 0vw 1vw 1.5vw;
+               
+                margin: 0.7vw 0vw 1vw 0.8vw;
                 li{
-                    margin-bottom: 0.5vw;
+                    margin-bottom: 1vw;
+                    font-weight: 500;
                 }
             }
         }

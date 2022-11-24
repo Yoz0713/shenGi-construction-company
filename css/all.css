@@ -1,8 +1,6 @@
 .index {
-  width: 100%;
-  height: 220vw;
-  max-height: 100vh;
-  overflow: hidden;
+  width: 100vw;
+  transition: 1s;
 }
 .index .first-page {
   position: relative;
@@ -71,6 +69,7 @@
   z-index: 200;
   left: 0;
   top: 0;
+  opacity: 0;
 }
 .loading-page .contentBox {
   width: -webkit-fit-content;
@@ -160,9 +159,9 @@ header .menu-button :nth-child(1) {
 
 .menu {
   position: absolute;
-  right: -20%;
+  right: -30%;
   top: 0;
-  width: 15vw;
+  width: 26vw;
   height: 220vw;
   max-height: 100vh;
   background-color: #fff;
@@ -185,14 +184,14 @@ header .menu-button :nth-child(1) {
 }
 .menu ul li {
   font-weight: 700;
-  margin-bottom: 0.5vw;
+  margin-bottom: 1.5vw;
 }
 .menu ul li .sub-open {
-  display: none;
-  margin: 0.7vw 0vw 1vw 1.5vw;
+  margin: 0.7vw 0vw 1vw 0.8vw;
 }
 .menu ul li .sub-open li {
-  margin-bottom: 0.5vw;
+  margin-bottom: 1vw;
+  font-weight: 500;
 }
 
 * {
@@ -213,4 +212,20 @@ a {
 
 span {
   display: inline-block;
+}
+
+html {
+  overflow: -moz-hidden-unscrollable;
+  height: 100%;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  height: 100%;
+  width: calc(100vw + 18px);
+  overflow: auto;
 }
