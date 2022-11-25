@@ -7,10 +7,11 @@
     <title>森鉅建設</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/all.min.css">
 </head>
-<body style="overflow-x: hidden;">
+<body>
     <!-- loading畫面 -->
     <section class="loading-page">
         <div class="contentBox">
@@ -80,8 +81,7 @@
                 <li>
                     <a href="#" class="sub">關於森鉅</a>
                     <ul class="sub-open">
-                        <li> <a href="#">新創品牌</a> </li>
-                        <li> <a href="#">經營理念</a> </li>
+                        <li> <a href="#">品牌理念</a> </li>
                         <li> <a href="#">營造公司</a> </li>
                         <li> <a href="#">科技智慧宅</a> </li>
                     </ul>
@@ -108,22 +108,33 @@
 
 
     <!-- 主畫面 -->
-    <section class="index">
-        <div class="first-page">
-            <div class="paraBox">
-                <div class="para">
-                    <p>Green Building Is The Scenery.</p>
-                    <h2>The Art of Architecture</h2>
-                    <span>Construction of artistic paradigmatic<br/>relations between existed in construction.</span>
+ 
+        <section class="index">
+            <div class="first-page">
+                <div class="paraBox">
+                    <div class="para">
+                        <p>Green Building Is The Scenery.</p>
+                        <h2>The Art of Architecture</h2>
+                        <span>Construction of artistic paradigmatic<br/>relations between existed in construction.</span>
+                    </div>
+              
                 </div>
-          
+                <div class="imgBox">
+                    <img src="./img/index/image/banner-bg.webp" alt="banner-bg">
+                    <div class="para">
+                        <img src="./img/index/svg/lineSquare.svg">
+                        <p>一棟建築物的設計</p>
+                        <p>和建築風格並不是那麼重要<br>
+                            真正重要的是對人<br>
+                            對生活造成什麼的影響?</p>
+                        <p>貝聿銘</p>
+                    </div>
+                </div>
             </div>
-            <div class="imgBox">
-                <img src="./img/index/image/banner-bg.webp" alt="banner-bg">
-            </div>
-        </div>
-
-    </section>
+    
+        </section>
+   
+  
     <!-- 主畫面 -->
 
 
@@ -142,97 +153,138 @@
     <script src="./js/config.js"></script>
 
     <script>
-        function splitTextAnimation(wrap,delay,speed){
+        //在Loading及開場動畫結束前取消滾動
+        gsap.set("html",{
+            overflow:"hidden"
+        })
+        //在Loading及開場動畫結束前取消滾動
+      function splitTextAnimation(wrap){
             wrap = document.querySelector(`${wrap}`);
-            text = wrap.innerHTML
+            text = wrap.innerText
+            console.log(text)
             wrap.innerHTML = null
             let str=`${text}`;
-            let arr = str.split("")
-            let arrElement = arr.map((item,i)=>{
-                if(item == " "){
-                    item =`<span class="blind"><span>\xa0</span></span>`
-                    return item
-                }else{
-                    item = `<span class="blind"><span>${item}</span></span>`
-                    return item
-                }
-                  
-              
-                
-            })
-            let strElement = arrElement.join("")
-            wrap.innerHTML = strElement;
-            wrap.childNodes.forEach((item,i)=>{
-        let gg = gsap.timeline();
-      
-            gg.fromTo(item.childNodes,{
-            
-                autoAlpha:0,
-                
-            },{
-                autoAlpha:0,
-                
-                duration:delay,
-             
-            }).fromTo(item.childNodes,{
-               autoAlpha:0,
-               y:30
-           },{
-                autoAlpha:1,
-                y:0,
-               duration:0.6,
-           }).fromTo(item.childNodes,{
-               
-                color:"#ccc"
-             
-            },{
-               
-               color:"#000",
-                duration:0.6,
-             
-                delay:i/speed
-            })
-     
+            let brExp = /\n/i;
+            let arrElement=[];
+            let arr = str.split(brExp)
+
+            arr.forEach((item,i)=>{
+                item = item.split("");
         
-    })
-   
+                let a = item.map((item2,i)=>{
+            
+                if(item2 == " "){
+                    item2 =`<span class="blind"><span>\xa0</span></span>`
+                    return item2
+                }else{
+                    item2 = `<span class="blind"><span>${item2}</span></span>`
+                    return item2
+                }
+                })
+                arrElement.push(a)
+            })
+            let finalStr = arrElement.map((item)=>{
+                return item.join("")
+            
+            })
+
+            wrap.innerHTML = finalStr.join("<br/>");
         }
+        function split(){
+            //first-page
+            splitTextAnimation(".first-page .paraBox p")
+            splitTextAnimation(".first-page .paraBox h2")
+            //first-page
+        }
+        split()
+        let pageInAnimation;
         function firstPageAnimaiton(){
-            splitTextAnimation(".first-page .paraBox p",9.5,30)
-            splitTextAnimation(".first-page .paraBox h2",9.7,45)
-            let gg = gsap.timeline()
-            gg.fromTo(".first-page .paraBox .para > span",{
-                opacity:0,
-                y:30
-            },{
+         
+            pageInAnimation = gsap.timeline()
+            pageInAnimation.to(".loading-page",{
+            backgroundColor:"transparent",
+            duration:2,
+         }).to(".loading-page .contentBox",{
+            y:"-14vw",
+            duration:1.5,
+         },"<+0.2").to(".rotate",
+         {
+           
+            rotate:0,
+            scaleY:0.25,
+            scaleX:0.22,
+            transformOrigin:"center",
+             duration:0.8,
+         
+         },"<").to(".loading-page .titleBox",
+         {
+            scale:0.7,
+            y:"-0.7vw",
+             duration:0.8,
+             onComplete:()=>{
+                let gg =gsap.timeline()
+                gg.to("html",{
+                overflow:"visible",
+                duration:0.00012
+                })
+            }
+         },"<").to(".first-page .paraBox p span",{
+               opacity:1,
+               y:0,
+               duration:0.5,
+           },"<+1").to(".first-page .paraBox h2 span",{
+                opacity:1,
+                y:0,
+                duration:0.5,
+                
+            },"<").to(".first-page .paraBox p span",{
+                color:"#000",
+                duration:0.5,
+                stagger:0.015
+            },"<+0.5").to(".first-page .paraBox h2 span",{
+                color:"#000",
+                duration:0.5,
+                stagger:0.015,
+               
+            },"<").to(".first-page .paraBox .para > span",{
+              
                 opacity:1,
                 y:0,
                 duration:0.8,
                 ease:"power1",
-                delay:11
-            })
+       
+            },">-0.2")
         }
-        firstPageAnimaiton()
-
-        function firstScrollAnimation(){
+        loadingPageAnimaiton(firstPageAnimaiton)
+        firstScroll()
+        function firstScroll(){
             let gg = gsap.timeline({
                 scrollTrigger:{
                     trigger:".first-page",
-                    start:"top top",
-                    scrub:2,
+                    scrub:1.5,
                     pin:true,
-                    pinSpacer:false,
-                    end:"2000"
-                }
+                    toggleActions:"play reverse play reverse",
+                    end:"+=2000"
+                },
+            
             })
-            gg.fromTo(".first-page .paraBox",{
+ 
+            gsap.set(".first-page .imgBox",{
+            scale:1.6,
+            y:"50vw"
+            })
+            gg.to(".first-page .paraBox",{
+                y:"-100vh"
+            }).to(".loading-page",{
+                y:"-100vh"
+            },"<").to(".first-page .imgBox",{
+                scale:1,
                 y:0
-            },{
-                y:"-100%",
+            },"<").to(".first-page .imgBox",{
+                x:"-105vw"
             })
-           
         }
-        firstScrollAnimation()
+     
        
     </script>
 </body>

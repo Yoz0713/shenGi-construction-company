@@ -8,7 +8,18 @@
     text-decoration: none;
     list-style: none;
 }
-h1,h2,h3,h4,h5,h6,span,p{
+html {
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    overscroll-behavior-y: none;
+    scroll-behavior: smooth;
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+h1,h2,h3,h4,h5,h6,span,p,a{
     font-family: 'Noto Sans TC', sans-serif;
 }
 a{
@@ -21,14 +32,16 @@ html {
     overflow: -moz-hidden-unscrollable;
     height: 100%;
 }
-
-body::-webkit-scrollbar {
-    display: none;
+body{
+    overscroll-behavior-y: none;
 }
+// body::-webkit-scrollbar {
+//     display: none;
+// }
 
-body {
-    -ms-overflow-style: none;
-    height: 100%;
-	width: calc(100vw + 18px);
-	overflow: auto;
-}
+// body {
+//     -ms-overflow-style: none;
+//     height: 100%;
+// 	width: calc(100vw + 18px);
+// 	overflow: auto;
+// }

@@ -1,5 +1,6 @@
 .index {
-  width: 100vw;
+  width: 100%;
+  overflow: visible;
   transition: 1s;
 }
 .index .first-page {
@@ -8,14 +9,43 @@
 }
 .index .first-page .imgBox {
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 50vw;
 }
 .index .first-page .imgBox img {
   display: block;
   width: 100%;
   height: auto;
+  overflow: hidden;
+}
+.index .first-page .imgBox .para {
+  position: absolute;
+  left: 15vw;
+  top: 20vw;
+}
+.index .first-page .imgBox .para img {
+  position: relative;
+  width: 25vw;
+  left: 0;
+  top: 0;
+}
+.index .first-page .imgBox .para p {
+  position: absolute;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.4vw;
+  font-family: "Noto Serif TC", sans-serif;
+}
+.index .first-page .imgBox .para :nth-child(2) {
+  top: -1vw;
+  left: 2.5vw;
+}
+.index .first-page .imgBox .para :nth-child(3) {
+  bottom: -5vw;
+  left: 4.5vw;
+}
+.index .first-page .imgBox .para :nth-child(4) {
+  right: 0;
+  bottom: -8vw;
 }
 .index .first-page .paraBox {
   position: absolute;
@@ -42,11 +72,15 @@
   text-align: center;
   bottom: 9vw;
 }
+.index .first-page .paraBox .para > :nth-child(1) {
+  color: #ccc;
+}
 .index .first-page .paraBox .para > :nth-child(1) span {
   font-size: 1.3vw;
   font-weight: 700;
 }
 .index .first-page .paraBox .para > :nth-child(2) {
+  color: #ccc;
   margin: 0.2vw 0vw 0.4vw;
 }
 .index .first-page .paraBox .para > :nth-child(2) span {
@@ -54,6 +88,8 @@
 }
 .index .first-page .paraBox .para span {
   font-size: 0.9vw;
+  transform: translateY(30px);
+  opacity: 0;
 }
 
 .loading-page {
@@ -74,6 +110,7 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  pointer-events: none;
   margin: auto;
 }
 .loading-page .contentBox .svgBox {
@@ -157,7 +194,7 @@ header .menu-button :nth-child(1) {
 }
 
 .menu {
-  position: absolute;
+  position: fixed;
   right: -30%;
   top: 0;
   width: 26vw;
@@ -201,7 +238,19 @@ header .menu-button :nth-child(1) {
   list-style: none;
 }
 
-h1, h2, h3, h4, h5, h6, span, p {
+html {
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overscroll-behavior-y: none;
+  scroll-behavior: smooth;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+h1, h2, h3, h4, h5, h6, span, p, a {
   font-family: "Noto Sans TC", sans-serif;
 }
 
@@ -218,13 +267,6 @@ html {
   height: 100%;
 }
 
-body::-webkit-scrollbar {
-  display: none;
-}
-
 body {
-  -ms-overflow-style: none;
-  height: 100%;
-  width: calc(100vw + 18px);
-  overflow: auto;
+  overscroll-behavior-y: none;
 }

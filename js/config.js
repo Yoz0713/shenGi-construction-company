@@ -1,5 +1,5 @@
-
-function loadingPageAnimaiton(){
+//開頭動畫
+function loadingPageAnimaiton(func){
     let g = gsap.timeline()
     g.fromTo(".loading-page .rotate .g2 ",{
         opacity:0
@@ -175,7 +175,9 @@ function loadingPageAnimaiton(){
         duration:1.5,
         ease: "none"
     },"<+0.1")
-    let gg4 = gsap.timeline()
+    let gg4 = gsap.timeline({
+     
+    })
     Promise.resolve(gg3).then(res=>{
     
         gg4.to(".g2",
@@ -274,36 +276,14 @@ function loadingPageAnimaiton(){
             y:0,
             opacity:1,
             duration:0.8
-         },"<+0.5").to(".loading-page",{
-            backgroundColor:"transparent",
-            duration:2,
-         }).to(".loading-page .contentBox",{
-            y:"-14vw",
-            duration:1.5,
-         },"<+0.2").to(".rotate",
-         {
-           
-            rotate:0,
-            scaleY:0.23,
-            scaleX:0.2,
-            transformOrigin:"center",
-             duration:0.8,
-         
-         },"<").to(".loading-page .titleBox",
-         {
-
-            scale:0.5,
-
-             duration:0.8,
-         
-         },"<")
+         },"<+0.5").then(func)
     })
 
     
   
 }
-loadingPageAnimaiton()
 
+//開頭動畫
 
 
 
@@ -314,11 +294,17 @@ loadingPageAnimaiton()
         $(".index").css({
             filter:"blur(0px)"
         })
+        $(".loading-page").css({
+            filter:"blur(0px)"
+        })
     })
     $(".menu-button").click(()=>{
         $(".menu").css("right","0")
-        var filterVal = 'blur(0px)';
+
         $(".index").css({
+            filter:"blur(5px)"
+        })
+        $(".loading-page").css({
             filter:"blur(5px)"
         })
     })

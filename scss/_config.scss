@@ -11,10 +11,10 @@
     z-index: 200;
     left: 0;
     top: 0;
-   
+ 
     .contentBox{
         width: fit-content;
-  
+        pointer-events: none;
         margin:auto;
         .svgBox{
             width: 80vw;
@@ -103,7 +103,7 @@ header{
     }
 }
 .menu{
-    position: absolute;
+    position: fixed;
     right:-30%;
     top: 0;
     width: 26vw;
