@@ -244,6 +244,7 @@
   margin: auto;
   color: #fff;
   text-align: center;
+  z-index: 12;
 }
 .container .index .third-page-bg .paraBox h2 {
   margin-bottom: 1vw;
