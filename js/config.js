@@ -1,25 +1,37 @@
 //開頭動畫
 function loadingPageAnimaiton(func){
     let g = gsap.timeline()
-    g.fromTo(".loading-page .rotate .g2 ",{
+    g.fromTo(".loading-page .rotate .g1",{
         opacity:0
     },{
         opacity:1,
         duration:1.32,
    
-    }).fromTo(".loading-page .rotate .g1",{
+    }).fromTo(".loading-page .rotate .g2 ",{
         opacity:0
     },{
         opacity:1,
         duration:1.32,
    
-    },"<+0.6").fromTo(".loading-page .rotate .g3",{
+    },"<+0.3").fromTo(".loading-page .rotate .g3",{
         opacity:0
     },{
         opacity:1,
         duration:1.32,
    
-    },"<+0.6")
+    },"<").fromTo(".loading-page .rotate .g2 ",{
+        x:"-3vw"
+    },{
+       x:0,
+        duration:1.3,
+   
+    },'<').fromTo(".loading-page .rotate .g3 ",{
+        x:"3vw"
+    },{
+       x:0,
+        duration:1.3,
+   
+    },"<")
     let gg = gsap.timeline()
     gg.fromTo(".loading-page .g1 .circle1",{
         strokeDasharray: 1000,

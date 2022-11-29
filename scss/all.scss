@@ -9,6 +9,7 @@
     list-style: none;
 }
 html {
+
     /* Hide scrollbar for IE, Edge and Firefox */
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -45,3 +46,13 @@ body{
 // 	width: calc(100vw + 18px);
 // 	overflow: auto;
 // }
+
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0);
+    }    
+    100%{
+        transform: rotate(360deg);
+    }
+}

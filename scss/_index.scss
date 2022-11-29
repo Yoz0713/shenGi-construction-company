@@ -1,9 +1,11 @@
-
+.container{
+    width: 100%;
+    overflow: hidden;
     .index{
         width: 100%;
-        overflow: visible;
-        
-        transition:1s;
+        overflow:visible;
+        position: relative;
+        transition:1s; // for menu blur
         .first-page{
             position: relative;
             width: 100%;
@@ -18,35 +20,36 @@
                     overflow: hidden;
                 }
                 .para{
-                   
+            
                     position: absolute;
                     left:15vw;
                     top: 20vw;
                     img{
                         position:relative;
-                        width: 25vw;
+                        width: 28vw;
                         left: 0;
                         top: 0;
                     }
                     p{
                         position: absolute;
                         color: #fff;
-                        font-weight: 500;
+                        font-weight: 600;
                         font-size: 1.4vw;
-
+                        letter-spacing: 0.2em;
+                        line-height: 1.8em;
                         font-family: 'Noto Serif TC', sans-serif;
                     }
                     & :nth-child(2){
-                        top: -1vw;
+                        top: -1.2vw;
                         left: 2.5vw;
                     }
                     & :nth-child(3){
-                        bottom: -5vw;
+                        bottom: -6.1vw;
                         left: 4.5vw;
                     }
                     & :nth-child(4){
                         right: 0;
-                        bottom: -8vw;
+                        bottom: -10vw;
                     }
                 }
             }
@@ -57,6 +60,7 @@
                 width: 100%;
                 height: 35vw;
                 background-color: #fff;
+                z-index: 10;
                 .para{
                     display: flex;
                     flex-direction: column;
@@ -69,8 +73,9 @@
                     margin: 0 auto;
                     text-align: center;
                     bottom: 9vw;
+                
                     & > :nth-child(1){
-                        color: #ccc;
+                    
                         span{
                             font-size: 1.3vw;
                             font-weight: 700;
@@ -78,7 +83,7 @@
                   
                     }
                     & > :nth-child(2){
-                        color: #ccc;
+                     
                         span{
                             font-size:3.2vw;
                         }
@@ -93,4 +98,279 @@
                 }
             }
         }
+        .second-page{
+            width: 100%;
+            height: 52vw;
+            
+            position: absolute;
+            right:-100vw;
+            top: 0;
+            &-bg{
+                width: 100%;
+                height: 100%;
+                position:absolute;
+                left: 0;
+                top: 0;
+                img{
+                    position: absolute;
+                }
+                & :nth-child(1){
+                    
+                    width: 16vw;
+                    left: 8vw;
+                    bottom: 0;
+                }
+                & :nth-child(2){
+                    width:37vw;
+                    right: -20vw;
+                    top: 0;
+                }
+                & :nth-child(3){
+                    width: 37vw;
+                     height: 24.5vw;
+                    right:-20vw;
+                    bottom: 0;
+                   object-fit: cover;
+                }
+            }
+            &-paraBox{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                .para{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    margin-top: 4vw;
+                    h3{
+                        font-size:1.9vw;
+                    }
+                    h2{
+                        width: fit-content;
+                        margin: 1.5vw 0 3.5vw;
+                        font-size: 2.1vw;
+                        letter-spacing: 0.1em;
+                        color: #56B87E;
+                        font-weight: 400;
+                    }
+                    p{
+                        font-size: 1.1vw;
+                        letter-spacing: 0.2em;
+                        line-height: 2.5em;
+                        font-weight: 300;
+                    }
+                }
+            }
+            .circle{
+                width:130vw;
+                position: absolute;
+                top: -76vw;
+                right: -30vw;
+             
+            }
+        }
+        .third-page{
+            width: 100%;
+            height: 51vw;
+            position:absolute;
+            right: -100vw;
+            top: 0;
+            z-index: 10;
+            &-bg{
+                display: flex;
+                align-items: center;
+                width: 51vw;
+                height: 100%;
+                position:absolute;
+                left: 0;
+                top: 0;
+                background-image: url(../img/index/image/third-page-bg-1.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                padding: 1vw;
+                img{
+                    position: absolute;
+                    object-fit: cover;
+                }
+              
+                & > :nth-child(1){
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    top: 0;
+                    width: 16vw;
+                    height: 16vw;
+                    margin: auto;
+                }
+                .imgBox{
+                    position: absolute;
+                    right: 0;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    width: 16.5vw;
+                    height: 16.5vw;
+                    overflow: hidden;
+                    z-index: 10;
+                    img{
+                        position: relative;
+                        top: 0;
+                        right: 0;
+                        left: 0;
+                        bottom: 0;
+                        margin: auto;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        z-index: 10;
+                    }
+                }
+                .paraBox{
+                    width: fit-content;
+                    height: fit-content;
+                    position: absolute;
+                    right: 0;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    color: #fff;
+                    text-align: center;
+                    h2{
+                        margin-bottom: 1vw;
+                        font-size: 2.5vw;
+                    }
+                    h3{
+                        font-size: 2.5vw;
+                        line-height: 2em;
+                        font-weight: 400;
+                    }
+                }
+            }
+            &-paraBox{
+                position: absolute;
+                z-index: 10;
+                left: 30vw;
+                top: 15vw;
+                p{
+                    width: 30vw;
+                    font-size: 1vw;
+                    line-height: 2.5em;
+                    letter-spacing: 0.3em;
+                    font-weight: 300;
+                }
+                & :nth-child(2){
+                    margin-top: 5vw;
+                    margin-left: 25vw;
+                }
+            }
+        }
+        .forth-page{
+        
+            width: 100%;
+            height: 51vw;
+            position: absolute;
+            left: 0;
+            bottom: -120vh;
+            &-bg{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                .imgBox{
+                    position: absolute;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        object-fit: cover;
+                    }
+                }
+                .left-top-box{
+                    position: absolute;
+            
+                    width: 15vw;
+                    height:21.5vw;
+                    left: 0;
+                    top: 0;
+                    z-index: -1;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        object-fit: cover;
+                        z-index: -1;
+                    }
+                }
+                .left-bottom-box{
+                    width: 15vw;
+                    height:23vw;
+                    left: 0;
+                    bottom: 2vw;
+                }
+                .left-center-box{
+                    width: 13vw;
+                    height:17.2vw;
+                    top: 20vw;
+                    left: 17.5vw;
+                    
+                }
+                .center-box{
+                    width: 35vw;
+                    height: 100%;
+                    right: 0;
+                    left: 0;
+                    margin: 0 auto;
+                }
+                .right-center-box{
+                    width:22vw;
+                    height:27.5vw;
+                    right: 5.1vw;
+                    top: 16vw;
+                }
+            }
+         
+        }
+        .fifth-page{
+            width: 100%;
+            height: 51vw;
+            position: absolute;
+            left: 0;
+            bottom: -120vh;
+            &-bg{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                img{
+                    position: absolute;
+                }
+                & :nth-child(1){
+                    width: 13vw;
+                    left: 17vw;
+                    top: 0vw;
+                } & :nth-child(2){
+                    width: 14.7vw;
+                    left: 60vw;
+                    top: 0vw;
+                }
+                & :nth-child(3){
+                    right: 0;
+                    bottom: 0;
+                    width: 13vw;
+                    height:17vw;
+                    object-fit: cover;
+                }
+            }
+        }
     }
+}
+  
