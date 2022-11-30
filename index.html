@@ -328,6 +328,7 @@
         loadingPageAnimaiton(firstPageAnimaiton)
         firstScroll()
         function firstScroll(){
+            ScrollTrigger.scrollerProxy(".index", {	pinType: "fixed" });
             let gg = gsap.timeline({
                 scrollTrigger:{
                     trigger:".first-page",
@@ -335,7 +336,7 @@
                     pin:".index",
                     toggleActions:"play reverse play reverse",
                     end:"+=24000",
-                    anticipatePin:10
+                    anticipatePin:1
                 },
                 ease:"none",
                 overwrite:"auto"
