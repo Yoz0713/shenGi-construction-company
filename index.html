@@ -149,6 +149,7 @@
                     <img src="./img/index/image/second-page-bg-1.png">
                     <img src="./img/index/image/second-page-bg-2.png">
                     <img src="./img/index/image/second-page-bg-3.webp">
+                    <img src="./img/index/image/second-page-3-(2).webp">
                 </div>
                 <img src="./img/index/svg/circle-text.svg" class="circle">
             </section>
@@ -225,9 +226,9 @@
 
     <script>
         //在Loading及開場動畫結束前取消滾動
-        gsap.set("html",{
-            overflow:"hidden"
-        })
+        // gsap.set("html",{
+        //     overflow:"hidden"
+        // })
         //在Loading及開場動畫結束前取消滾動
       function splitTextAnimation(wrap){
             wrap = document.querySelector(`${wrap}`);
@@ -333,21 +334,21 @@
                     scrub:2,
                     pin:".index",
                     toggleActions:"play reverse play reverse",
-                    end:"+=10000"
+                    end:"+=24000"
                 },
                 ease:"none"
             })
  
             gsap.set(".first-page .imgBox > img",{
             scale:1.6,
-            y:"15vh"
+            y:"15vw"
             })
             gg.to(".first-page .paraBox",{
                 y:"-100vh",
-                duration:6
+                duration:12
             }).to(".loading-page",{
                 y:"-100vh",
-                duration:6
+                duration:12
             },"<").to(".first-page .imgBox > img",{
                 scale:1,
                 y:0,
@@ -364,7 +365,7 @@
             },"<+1").to(".first-page .imgBox",{
                 x:"-105vw",
                 duration:6
-            },"<+7.5").to(".second-page",{
+            },"<+7").to(".second-page",{
                 x:"-100vw",
                 duration:6
             },"<+0.5").fromTo(".second-page-bg :nth-child(1)",{
@@ -397,7 +398,16 @@
                 width:"39vw",
                 height:"26.5vw",
                 duration:6
-            },"<").to(".second-page-bg :nth-child(3)",{
+            },"<").to(".second-page-bg :nth-child(4)",{
+                width:"39vw",
+                height:"26.5vw",
+                duration:6
+            },"<").fromTo(".second-page-bg :nth-child(4)",{
+                clipPath:"polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
+            },{
+                clipPath:"polygon(0 0 , 0% 0, 0% 100% , 0 100% , 0 0 )",
+                duration:6
+            }).to(".second-page-bg :nth-child(3)",{
                 width:"101%",
                 height:"100%",
                 x:"-5vw",
@@ -432,12 +442,36 @@
                 clipPath:"circle(0%)",
                 y:"-8vw",
                 duration:7
-            },"<+0.3").to(".third-page",{
-                x:"-100vw",
+            },"<+0.3").fromTo(".third-page-bg",{
+                opacity:0
+            },{
+              
+                opacity:1,
+               duration:1
+            }).fromTo(".third-page-bg",{
+              
+                clipPath:"polygon(0% 0 , 0% 100%, 0% 100% ,0 0)",
+                x:"50vw"
+            },{
+                clipPath:"polygon(100% 0 , 100% 100%, 0% 100% ,0 0)",
                 duration:6
-            }).to(".third-page-bg > :nth-child(1)",{
-                width:"93%",
-                height:"93%",
+            }).to(".third-page-bg",{
+                clipPath:"polygon(200% 0 , 200% 100%, 0% 100% ,0 0)",
+                x:0,
+                duration:6
+            }).fromTo(".third-page-bg > :nth-child(1)",{
+                x:"80vw"
+            },{
+                x:0,
+                duration:6
+            },"<+1.5").fromTo(".third-page-bg .paraBox",{
+                x:"80vw"
+            },{
+                x:0,
+                duration:6
+            },"<").to(".third-page-bg > :nth-child(1)",{
+                width:"100%",
+                height:"100%",
                 duration:6
             }).fromTo(".third-page-bg > :nth-child(2)",{
                 x:"85vw"
@@ -465,18 +499,18 @@
             },"<").to(".third-page-bg > :nth-child(1)",{
                 display:"none",
                 duration:1
-            }).to(".third-page-bg",{
+            },"<+3").to(".third-page-bg",{
                 backgroundImage:"none",
                 duration:1
-            }).fromTo(".third-page-paraBox p",{
+            },"<").fromTo(".third-page-paraBox p",{
                y:"15vw",
                 opacity:0
             },{
                 opacity:1,
                 y:0,
                 duration:6,
-                stagger:3
-            }).to(".third-page-paraBox p",{
+                stagger:1
+            },'<').to(".third-page-paraBox p",{
     
                 opacity:0,
                 duration:8,
@@ -513,16 +547,34 @@
                 y:"-120vh",
                 duration:6,
                 stagger:0.5
-            }).to(".fifth-page-bg img",{
+            }).to(".fifth-page-bg :nth-child(1)",{
+                y:"-180vh",
+                duration:6,
+             
+            },"<+3").to(".fifth-page-bg :nth-child(2)",{
+                y:"-180vh",
+                duration:6,
+             
+            },"<+0.5").to(".fifth-page-bg :nth-child(3)",{
                 y:"-150vh",
                 duration:6,
-                stagger:0.5
-            },"<+3").to(".fifth-page-bg :nth-child(3)",{
+             
+            },"<+0.5").to(".fifth-page-bg :nth-child(3)",{
                 width:"28.5vw",
-                
+    
                 duration:6,
-                stagger:1
-            })
+             
+            }).to(".fifth-page-bg :nth-child(3)",{
+             
+                x:"-40vw",
+                duration:6,
+            
+            }).to(".fifth-page-bg :nth-child(3)",{
+             
+               scale:3,
+             duration:6,
+         
+         })
         }
      
        
