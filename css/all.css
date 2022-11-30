@@ -97,7 +97,6 @@
   opacity: 0;
 }
 .container .index .second-page {
-  display: none;
   width: 100%;
   height: 220vw;
   max-height: 100vh;
@@ -184,7 +183,6 @@
   right: -30vw;
 }
 .container .index .third-page {
-  display: none;
   width: 100%;
   height: 220vw;
   max-height: 100vh;
@@ -291,7 +289,6 @@
   margin-left: 25vw;
 }
 .container .index .forth-page {
-  display: none;
   width: 100%;
   height: 220vw;
   max-height: 100vh;
@@ -363,7 +360,6 @@
   top: 16vw;
 }
 .container .index .fifth-page {
-  display: none;
   width: 100%;
   height: 220vw;
   max-height: 100vh;
@@ -443,10 +439,14 @@
 .loading-page .contentBox .svgBox svg .rotate g {
   opacity: 0;
 }
+.loading-page .contentBox .svgBox svg .rotate .g2 {
+  width: 100%;
+}
 .loading-page .contentBox .svgBox svg .rotate .g2 path {
   transform: rotateY(180deg);
 }
 .loading-page .contentBox .svgBox svg .rotate .g4 {
+  width: 100%;
   opacity: 1;
 }
 .loading-page .contentBox .svgBox svg .rotate .g4 line {

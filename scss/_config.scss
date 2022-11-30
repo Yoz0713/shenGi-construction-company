@@ -37,11 +37,13 @@
                         opacity: 0;
                     }
                     .g2{
+                        width: 100%;
                         path{
                          transform: rotateY(180deg);
                         }
                      }
                      .g4{
+                        width: 100%;
                          opacity: 1;
                          line{
                              stroke-dasharray: 1000;

@@ -100,7 +100,6 @@
             }
         }
         .second-page{
-            display: none;
             width: 100%;
             height: 220vw;
             max-height: 100vh;
@@ -117,7 +116,7 @@
                     position: absolute;
                 }
                 & :nth-child(1){
-                    
+                  
                     width: 16vw;
                     left: 8vw;
                     bottom: 0;
@@ -128,7 +127,7 @@
                     right: -20vw;
                     top: 0;
                     object-fit: cover;
-                    
+                  
                 }
                 & :nth-child(3){
                     width: 37vw;
@@ -136,7 +135,7 @@
                     right:-20vw;
                     bottom: 0;
                    object-fit: cover;
-                   
+                 
               
                 }
                 & :nth-child(4){
@@ -145,7 +144,7 @@
                     right:-20vw;
                     bottom: 0;
                    object-fit: cover;
-                   
+                 
                 }
             }
             &-paraBox{
@@ -162,7 +161,7 @@
                     margin-top: 4vw;
                     h3{
                         font-size:1.9vw;
-                        
+                      
                     }
                     h2{
                         width: fit-content;
@@ -171,14 +170,14 @@
                         letter-spacing: 0.1em;
                         color: #56B87E;
                         font-weight: 400;
-                        
+                      
                     }
                     p{
                         font-size: 1.1vw;
                         letter-spacing: 0.2em;
                         line-height: 2.5em;
                         font-weight: 300;
-                        
+                          
                     }
                 }
             }
@@ -187,11 +186,10 @@
                 position: absolute;
                 top: -76vw;
                 right: -30vw;
-                
+              
             }
         }
         .third-page{
-            display: none;
             width: 100%;
             height: 220vw;
             max-height: 100vh;
@@ -293,7 +291,7 @@
             }
         }
         .forth-page{
-            display: none;
+        
             width: 100%;
             height:220vw;
             max-height: 100vh;
@@ -366,7 +364,6 @@
          
         }
         .fifth-page{
-            display: none;
             width: 100%;
             height:220vw;
             max-height: 100vh;
