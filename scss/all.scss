@@ -7,7 +7,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-   
+    -webkit-backface-visibility: hidden;
 }
 html {
 

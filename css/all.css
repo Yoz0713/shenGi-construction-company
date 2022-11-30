@@ -115,7 +115,6 @@
   position: absolute;
 }
 .container .index .second-page-bg :nth-child(1) {
-  -webkit-transform-style: preserve-3d;
   width: 16vw;
   left: 8vw;
   bottom: 0;
@@ -127,7 +126,6 @@
   top: 0;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transform-style: preserve-3d;
 }
 .container .index .second-page-bg :nth-child(3) {
   width: 37vw;
@@ -136,7 +134,6 @@
   bottom: 0;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transform-style: preserve-3d;
 }
 .container .index .second-page-bg :nth-child(4) {
   width: 37vw;
@@ -145,7 +142,6 @@
   bottom: 0;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transform-style: preserve-3d;
 }
 .container .index .second-page-paraBox {
   display: flex;
@@ -163,7 +159,6 @@
 }
 .container .index .second-page-paraBox .para h3 {
   font-size: 1.9vw;
-  -webkit-transform-style: preserve-3d;
 }
 .container .index .second-page-paraBox .para h2 {
   width: -webkit-fit-content;
@@ -174,21 +169,18 @@
   letter-spacing: 0.1em;
   color: #56B87E;
   font-weight: 400;
-  -webkit-transform-style: preserve-3d;
 }
 .container .index .second-page-paraBox .para p {
   font-size: 1.1vw;
   letter-spacing: 0.2em;
   line-height: 2.5em;
   font-weight: 300;
-  -webkit-transform-style: preserve-3d;
 }
 .container .index .second-page .circle {
   width: 130vw;
   position: absolute;
   top: -76vw;
   right: -30vw;
-  -webkit-transform-style: preserve-3d;
 }
 .container .index .third-page {
   width: 100%;
@@ -556,6 +548,7 @@ header .menu-button :nth-child(2) {
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  -webkit-backface-visibility: hidden;
 }
 
 html {

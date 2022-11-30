@@ -116,7 +116,7 @@
                     position: absolute;
                 }
                 & :nth-child(1){
-                    -webkit-transform-style: preserve-3d;
+                    
                     width: 16vw;
                     left: 8vw;
                     bottom: 0;
@@ -127,7 +127,7 @@
                     right: -20vw;
                     top: 0;
                     object-fit: cover;
-                    -webkit-transform-style: preserve-3d;
+                    
                 }
                 & :nth-child(3){
                     width: 37vw;
@@ -135,7 +135,7 @@
                     right:-20vw;
                     bottom: 0;
                    object-fit: cover;
-                   -webkit-transform-style: preserve-3d;
+                   
               
                 }
                 & :nth-child(4){
@@ -144,7 +144,7 @@
                     right:-20vw;
                     bottom: 0;
                    object-fit: cover;
-                   -webkit-transform-style: preserve-3d;
+                   
                 }
             }
             &-paraBox{
@@ -161,7 +161,7 @@
                     margin-top: 4vw;
                     h3{
                         font-size:1.9vw;
-                        -webkit-transform-style: preserve-3d;
+                        
                     }
                     h2{
                         width: fit-content;
@@ -170,14 +170,14 @@
                         letter-spacing: 0.1em;
                         color: #56B87E;
                         font-weight: 400;
-                        -webkit-transform-style: preserve-3d;
+                        
                     }
                     p{
                         font-size: 1.1vw;
                         letter-spacing: 0.2em;
                         line-height: 2.5em;
                         font-weight: 300;
-                        -webkit-transform-style: preserve-3d;
+                        
                     }
                 }
             }
@@ -186,7 +186,7 @@
                 position: absolute;
                 top: -76vw;
                 right: -30vw;
-                -webkit-transform-style: preserve-3d;
+                
             }
         }
         .third-page{
