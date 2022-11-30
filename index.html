@@ -95,7 +95,7 @@
                
                 </li>
                 <li>
-                    <a href="#" class="sub">客戶服務</a>
+                    <a href="#" class="sub">聯絡我們</a>
                   
                 </li>
                 <li>
@@ -334,7 +334,8 @@
                     scrub:2,
                     pin:".index",
                     toggleActions:"play reverse play reverse",
-                    end:"+=24000"
+                    end:"+=24000",
+                    anticipatePin:1
                 },
                 ease:"none",
                 overwrite:"auto"
@@ -365,21 +366,21 @@
                 duration:6
             },"<+1").to(".first-page .imgBox",{
                 x:"-105vw",
-                duration:6
+                duration:12
             },"<+6.5").to(".second-page",{
                 x:"-100vw",
-                duration:6
+                duration:12
             },"<+0.5").fromTo(".second-page-bg :nth-child(1)",{
                 opacity:0
             },{
                 opacity:1,
                 duration:6
-            },"<+0.5").fromTo(".second-page h3",{
+            },"<+3").fromTo(".second-page h3",{
                 y:"80vh"
             },{
                 y:0,
                 duration:6
-            },"<+3").fromTo(".second-page h2",{
+            },"<+4").fromTo(".second-page h2",{
                 y:"80vh"
             },{
                 y:0,
@@ -407,13 +408,13 @@
                 clipPath:"polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
             },{
                 clipPath:"polygon(0 0 , 0% 0, 0% 100% , 0 100% , 0 0 )",
-                duration:6
+                duration:10
             }).to(".second-page-bg :nth-child(3)",{
                 width:"101%",
                 height:"100%",
                 x:"-5vw",
                 duration:6
-            },"<+6").to(".second-page-bg :nth-child(1)",{
+            }).to(".second-page-bg :nth-child(1)",{
                 display:"none"
             },"<+5").to(".second-page-bg :nth-child(2)",{
                 display:"none"
@@ -534,7 +535,7 @@
                 clipPath:"polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
             },{
                 clipPath:"polygon(0 0 , 100% 0, 100% 0% , 0 0% , 0 0 )",
-                duration:10,
+                duration:8,
                 stagger:1
             }).fromTo(".forth-page-bg .left-top-box",{
                 opacity:0
@@ -545,7 +546,7 @@
                 clipPath:"polygon(0 0 , 40% 0, 40% 100% , 0 100% , 0 0 )",
             },{
                 clipPath:"polygon(0 0 , 40% 0, 40% 0% , 0 0% , 0 0 )",
-                duration:10,
+                duration:8,
             },"<").to(".forth-page-bg .imgBox",{
         
                 y:"-120vh",
@@ -580,7 +581,7 @@
          
          })
         }
-     
+      
        
     </script>
 </body>
