@@ -121,8 +121,11 @@
 }
 .container .index .second-page-bg :nth-child(2) {
   width: 37vw;
+  height: 24.5vw;
   right: -20vw;
   top: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .container .index .second-page-bg :nth-child(3) {
   width: 37vw;

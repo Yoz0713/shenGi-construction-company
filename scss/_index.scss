@@ -123,8 +123,10 @@
                 }
                 & :nth-child(2){
                     width:37vw;
+                    height: 24.5vw;
                     right: -20vw;
                     top: 0;
+                    object-fit: cover;
                 }
                 & :nth-child(3){
                     width: 37vw;
