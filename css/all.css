@@ -97,6 +97,7 @@
   opacity: 0;
 }
 .container .index .second-page {
+  display: none;
   width: 100%;
   height: 220vw;
   max-height: 100vh;
@@ -183,6 +184,7 @@
   right: -30vw;
 }
 .container .index .third-page {
+  display: none;
   width: 100%;
   height: 220vw;
   max-height: 100vh;
@@ -289,6 +291,7 @@
   margin-left: 25vw;
 }
 .container .index .forth-page {
+  display: none;
   width: 100%;
   height: 220vw;
   max-height: 100vh;
@@ -360,6 +363,7 @@
   top: 16vw;
 }
 .container .index .fifth-page {
+  display: none;
   width: 100%;
   height: 220vw;
   max-height: 100vh;
@@ -548,7 +552,6 @@ header .menu-button :nth-child(2) {
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  -webkit-backface-visibility: hidden;
 }
 
 html {

@@ -367,6 +367,9 @@
                 x:"-105vw",
                 duration:6
             },"<+6.5").to(".second-page",{
+                display:"block",
+                duration:0.1
+            },"<").to(".second-page",{
                 x:"-100vw",
                 duration:6
             },"<+0.5").fromTo(".second-page-bg :nth-child(1)",{
@@ -443,7 +446,10 @@
                 clipPath:"circle(0%)",
                 y:"-8vw",
                 duration:7
-            },"<+0.3").fromTo(".third-page-bg",{
+            },"<+0.3").to(".third-page",{
+                display:"block",
+                duration:0.1
+            },"<").fromTo(".third-page-bg",{
                 opacity:0
             },{
               
@@ -524,7 +530,10 @@
                 duration:6,
                 y:"-19vw",
                 x:"-11vw"
-            },"<+4.5").fromTo(".forth-page-bg .imgBox",{
+            },"<+4.5").to(".forth-page",{
+                display:"block",
+                duration:0.1
+            },"<").fromTo(".forth-page-bg .imgBox",{
                 y:"120vh"
             },{
                 y:"0vh",
@@ -546,6 +555,9 @@
             },{
                 clipPath:"polygon(0 0 , 40% 0, 40% 0% , 0 0% , 0 0 )",
                 duration:10,
+            },"<").to(".fifth-page",{
+                display:"block",
+                duration:0.1
             },"<").to(".forth-page-bg .imgBox",{
         
                 y:"-120vh",
