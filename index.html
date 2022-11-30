@@ -336,7 +336,8 @@
                     toggleActions:"play reverse play reverse",
                     end:"+=24000"
                 },
-                ease:"none"
+                ease:"none",
+                overwrite:"auto"
             })
  
             gsap.set(".first-page .imgBox > img",{
@@ -464,7 +465,7 @@
             },{
                 x:0,
                 duration:6
-            }).fromTo(".third-page-bg .paraBox",{
+            },'<').fromTo(".third-page-bg .paraBox",{
                 x:"85vw"
             },{
                 x:0,
@@ -523,8 +524,10 @@
                 duration:6,
                 y:"-19vw",
                 x:"-11vw"
-            },"<+4.5").to(".forth-page-bg .imgBox",{
-                y:"-120vh",
+            },"<+4.5").fromTo(".forth-page-bg .imgBox",{
+                y:"120vh"
+            },{
+                y:"0vh",
                 duration:6,
                 stagger:1
             },"<+1").fromTo(".forth-page-bg .imgBox > :nth-child(2)",{
@@ -543,10 +546,9 @@
             },{
                 clipPath:"polygon(0 0 , 40% 0, 40% 0% , 0 0% , 0 0 )",
                 duration:10,
-            },"<").fromTo(".forth-page-bg img",{
-                y:"120vh"
-            },{
-                y:"0",
+            },"<").to(".forth-page-bg .imgBox",{
+        
+                y:"-120vh",
                 duration:6,
                 stagger:0.5
             }).to(".fifth-page-bg :nth-child(1)",{
