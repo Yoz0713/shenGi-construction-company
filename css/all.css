@@ -286,10 +286,11 @@
 }
 .container .index .forth-page {
   width: 100%;
-  height: 51vw;
+  height: 220vw;
+  max-height: 100vh;
   position: absolute;
   left: 0;
-  bottom: -120vh;
+  top: 0;
 }
 .container .index .forth-page-bg {
   width: 100%;
@@ -345,6 +346,7 @@
   height: 100%;
   right: 0;
   left: 0;
+  top: 0vw;
   margin: 0 auto;
 }
 .container .index .forth-page-bg .right-center-box {
@@ -355,7 +357,8 @@
 }
 .container .index .fifth-page {
   width: 100%;
-  height: 51vw;
+  height: 220vw;
+  max-height: 100vh;
   position: absolute;
   left: 0;
   bottom: -120vh;

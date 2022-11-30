@@ -365,7 +365,7 @@
             },"<+1").to(".first-page .imgBox",{
                 x:"-105vw",
                 duration:6
-            },"<+7").to(".second-page",{
+            },"<+6.5").to(".second-page",{
                 x:"-100vw",
                 duration:6
             },"<+0.5").fromTo(".second-page-bg :nth-child(1)",{
@@ -391,7 +391,7 @@
             },"<+1.2").to(".second-page",{
                 x:"-115vw",
                 duration:6
-            }).to(".second-page-bg :nth-child(2)",{
+            },"<+3").to(".second-page-bg :nth-child(2)",{
                 width:"39vw",
                 duration:6
             },"<").to(".second-page-bg :nth-child(3)",{
@@ -412,7 +412,7 @@
                 height:"100%",
                 x:"-5vw",
                 duration:6
-            }).to(".second-page-bg :nth-child(1)",{
+            },"<+6").to(".second-page-bg :nth-child(1)",{
                 display:"none"
             },"<+5").to(".second-page-bg :nth-child(2)",{
                 display:"none"
@@ -435,7 +435,7 @@
             },{
                 rotate:195,
        
-                duration:6
+                duration:12
             }).fromTo(".second-page-bg :nth-child(3)",{
                 clipPath:"circle(8%)",
             },{
@@ -450,22 +450,22 @@
                duration:1
             }).fromTo(".third-page-bg",{
               
-                clipPath:"polygon(0% 0 , 0% 100%, 0% 100% ,0 0)",
+                clipPath:"polygon(100% 0 , 100% 100%, 100% 100% ,100% 0)",
                 x:"50vw"
             },{
-                clipPath:"polygon(100% 0 , 100% 100%, 0% 100% ,0 0)",
+                clipPath:"polygon(0% 0 , 0% 100%, 100% 100% ,100% 0)",
                 duration:6
             }).to(".third-page-bg",{
                 clipPath:"polygon(200% 0 , 200% 100%, 0% 100% ,0 0)",
                 x:0,
                 duration:6
             }).fromTo(".third-page-bg > :nth-child(1)",{
-                x:"80vw"
+                x:"85vw"
             },{
                 x:0,
                 duration:6
-            },"<+1.5").fromTo(".third-page-bg .paraBox",{
-                x:"80vw"
+            }).fromTo(".third-page-bg .paraBox",{
+                x:"85vw"
             },{
                 x:0,
                 duration:6
@@ -483,12 +483,12 @@
             }).to(".third-page-bg > :nth-child(2)",{
                 width:"100%",
                 height:"100%",
-                duration:6,
+                duration:4,
             
             }).to(".third-page-bg > :nth-child(2)",{
                 width:"100vw",
                 height:"100%",
-                duration:6,
+                duration:4,
             
             }).to(".third-page-bg .paraBox h2",{
                y:"-60vh",
@@ -508,12 +508,12 @@
             },{
                 opacity:1,
                 y:0,
-                duration:6,
-                stagger:1
+                duration:4,
+                stagger:0.5
             },'<').to(".third-page-paraBox p",{
     
                 opacity:0,
-                duration:8,
+                duration:6,
             }).fromTo(".third-page-bg > :nth-child(2)",{
                 clipPath:"polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
             },{
@@ -524,7 +524,7 @@
                 y:"-19vw",
                 x:"-11vw"
             },"<+4.5").to(".forth-page-bg .imgBox",{
-                y:"-118vh",
+                y:"-120vh",
                 duration:6,
                 stagger:1
             },"<+1").fromTo(".forth-page-bg .imgBox > :nth-child(2)",{
@@ -543,8 +543,10 @@
             },{
                 clipPath:"polygon(0 0 , 40% 0, 40% 0% , 0 0% , 0 0 )",
                 duration:10,
-            },"<").to(".forth-page-bg img",{
-                y:"-120vh",
+            },"<").fromTo(".forth-page-bg img",{
+                y:"120vh"
+            },{
+                y:"0",
                 duration:6,
                 stagger:0.5
             }).to(".fifth-page-bg :nth-child(1)",{
