@@ -114,7 +114,8 @@
 
     <script>
       
-    const swiper = new Swiper(".swiper",{
+      window.onload = function(){
+            const swiper = new Swiper(".swiper",{
                 loop:true,
                 effect : 'fade',
                 fadeEffect: {
@@ -128,6 +129,7 @@
             swiper.slideNext()
             console.log($(".about .swiper-slide-active").css("height"))
             $(".about").css("height",`${$(".about .swiper-slide-active").css("height")}`)
+        }
         }
 
     </script>

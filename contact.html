@@ -81,7 +81,6 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img src="./img/fake img/聯絡我們.webp">
-           
                 </div>
                
             </div>
@@ -98,8 +97,8 @@
     <script src="./js/config.js"></script>
 
     <script>
-  
-    const swiper = new Swiper(".swiper",{
+        window.onload = function(){
+            const swiper = new Swiper(".swiper",{
                 loop:true,
                 effect : 'fade',
                 fadeEffect: {
@@ -114,6 +113,8 @@
             console.log($(".about .swiper-slide-active").css("height"))
             $(".about").css("height",`${$(".about .swiper-slide-active").css("height")}`)
         }
+        }
+ 
 
     </script>
 </body>
