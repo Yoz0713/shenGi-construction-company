@@ -682,6 +682,6 @@ body {
   position: fixed !important;
   left: 2vw;
   top: 5vw;
-  font-size: 3vw;
-  color: #000;
+  font-size: 1.3vw;
+  color: rgba(0, 0, 0, 0.171);
 }
