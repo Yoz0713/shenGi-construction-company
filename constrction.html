@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.css">
+    <title>關於森鉅</title>
+</head>
+<body>
+    <header>
+        <div class="logoBox">
+            <a href="./index.html">
+                <img src="./img/index/svg/logo.svg" alt="logo">
+            </a>
+       
+        </div>
+        <div class="menu-button">
+            <p>．</p>
+            <p>Menu</p>
+        </div>
+    </header>
+    <div class="menu">
+        <div class="close">
+            <img src="./img/index/svg/bx_x.svg" alt="">
+        </div>
+        <ul>
+            <li>
+                <a href="#" class="sub">
+                    關於森鉅
+                    <span>Sun Glory</span>
+                </a>
+                <ul class="sub-open">
+                    <li> <a href="./concept.html">
+                        品牌理念
+                        <span>Concept</span>
+                    </a> </li>
+                    <li> <a href="./company.html">
+                        營造公司
+                        <span>Company</span>
+                    </a> </li>
+                    <li> <a href="#">
+                        科技智慧宅
+                        <span>Smart Home</span>
+                    </a> </li>
+                </ul>
+            </li>
+            <li>
+                <a href="./constrction.html" class="sub">
+                    熱銷建案
+                    <span>Construction</span>
+                </a>
+            
+            </li>
+            <li>
+                <a href="./portfolio.html" class="sub">
+                    經典業績
+                    <span>Portfolio</span>
+                </a>
+           
+            </li>
+            <li>
+                <a href="./contact.html" class="sub">
+                    聯絡我們
+                    <span>Contact Us</span>
+                </a>
+              
+            </li>
+            <li>
+                <a href="./login.html">
+                    會員登入
+                    <span>Log In</span>
+                </a>
+
+            </li>
+        </ul>
+    </div>
+    <section class="about">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./img/fake img/熱銷建案A.webp">
+                    <p>方案1</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/fake img/熱銷建案 內頁 A.webp">
+                    <p>方案1-內頁</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/fake img/熱銷建案B.webp">
+                    <p>方案2</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/fake img/熱銷建案 內頁 B.webp">
+                    <p>方案2-內頁</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/fake img/工程進度.webp">
+                    <p>工程進度</p>
+                </div>
+            </div>
+        </div>
+      
+    </section>
+  
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./js/config.js"></script>
+
+    <script>
+    const swiper = new Swiper(".swiper",{
+                loop:true,
+                effect : 'fade',
+                fadeEffect: {
+                    crossFade: true,
+                },
+                speed:0,
+            })
+            let about = document.querySelector(".about")
+            $(".about").css("height",`${$(".about .swiper-slide-active").css("height")}`)
+        about.onclick = function(){
+            swiper.slideNext()
+            console.log($(".about .swiper-slide-active").css("height"))
+            $(".about").css("height",`${$(".about .swiper-slide-active").css("height")}`)
+        }
+
+    </script>
+</body>
+</html>

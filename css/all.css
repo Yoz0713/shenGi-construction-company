@@ -646,3 +646,28 @@ body {
     transform: rotate(360deg);
   }
 }
+.about {
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+.about .swiper-wrapper {
+  width: 100%;
+}
+.about .swiper-wrapper .swiper-slide {
+  width: 100%;
+  position: relative;
+}
+.about .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: -4vw;
+}
+.about .swiper-wrapper .swiper-slide p {
+  position: fixed !important;
+  left: 2vw;
+  top: 5vw;
+  font-size: 3vw;
+  color: #000;
+}
