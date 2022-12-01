@@ -62,7 +62,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 100vw;
   height: 35vw;
   background-color: #fff;
   z-index: 10;
@@ -664,6 +664,7 @@ body {
   width: 100%;
   z-index: -1;
   overflow: hidden;
+  cursor: pointer;
 }
 .about .swiper-wrapper {
   width: 100%;
