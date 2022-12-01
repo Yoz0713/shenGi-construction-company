@@ -700,3 +700,6 @@ footer {
 footer p {
   font-size: 0.7vw;
 }
+footer p span {
+  margin: 0 1vw;
+}
