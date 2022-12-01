@@ -686,3 +686,17 @@ body {
   font-size: 1.3vw;
   color: rgba(0, 0, 0, 0.171);
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+  padding: 1.2vw 0;
+  border-top: 1px solid #000;
+}
+footer p {
+  font-size: 0.7vw;
+}
