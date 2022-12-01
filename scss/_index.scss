@@ -18,8 +18,10 @@
                 img{
                     display: block;
                     width: 100%;
-                    height: auto;
+                    height: 100%;
+                    object-fit: cover;
                     overflow: hidden;
+                    color: #3db66d;
                 }
                 .para{
             
@@ -172,7 +174,9 @@
                         letter-spacing: 0.1em;
                         color: #56B87E;
                         font-weight: 400;
-                      
+                        span{
+                            color:#56b87dbb ;
+                        }
                     }
                     p{
                         font-size: 1.1vw;
@@ -184,7 +188,7 @@
                     .second-page-line{
                         position: absolute;
                         top: 1.8vw;
-                        transform: scaleX(0.8);
+                        transform: scaleX(1.1);
                      
                         width: 36vw;
                     }
