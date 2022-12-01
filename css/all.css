@@ -699,6 +699,7 @@ footer {
 }
 footer p {
   font-size: 0.7vw;
+  letter-spacing: 0.1em;
 }
 footer p span {
   margin: 0 1vw;
