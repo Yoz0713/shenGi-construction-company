@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/all.min.css">
 </head>
 <body>
@@ -79,27 +79,51 @@
             </div>
             <ul>
                 <li>
-                    <a href="#" class="sub">關於森鉅</a>
+                    <a href="#" class="sub">
+                        關於森鉅
+                        <span>Sun Glory</span>
+                    </a>
                     <ul class="sub-open">
-                        <li> <a href="#">品牌理念</a> </li>
-                        <li> <a href="#">營造公司</a> </li>
-                        <li> <a href="#">科技智慧宅</a> </li>
+                        <li> <a href="#">
+                            品牌理念
+                            <span>Concept</span>
+                        </a> </li>
+                        <li> <a href="#">
+                            營造公司
+                            <span>Company</span>
+                        </a> </li>
+                        <li> <a href="#">
+                            科技智慧宅
+                            <span>Smart Home</span>
+                        </a> </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="sub">熱銷建案</a>
+                    <a href="#" class="sub">
+                        熱銷建案
+                        <span>Construction</span>
+                    </a>
                 
                 </li>
                 <li>
-                    <a href="#" class="sub">經典業績</a>
+                    <a href="#" class="sub">
+                        經典業績
+                        <span>Portfolio</span>
+                    </a>
                
                 </li>
                 <li>
-                    <a href="#" class="sub">聯絡我們</a>
+                    <a href="#" class="sub">
+                        聯絡我們
+                        <span>Contact Us</span>
+                    </a>
                   
                 </li>
                 <li>
-                    <a href="#">會員登入</a>
+                    <a href="#">
+                        會員登入
+                        <span>Log In</span>
+                    </a>
     
                 </li>
             </ul>
@@ -143,6 +167,9 @@
                             吹吹風 看天光 觀雲起 靜沉思​​<br>
                             在推開家門前 微笑相迎家人​​<br>
                             扮演人生角色前，先找回自己。</p>
+                            <svg  viewBox="0 0 671 117" fill="none" xmlns="http://www.w3.org/2000/svg" class="second-page-line">
+                                <path d="M132 1H1V116H670.5V1H539.5" stroke="black" stroke-width="0.5"/>
+                                </svg>
                     </div>
                 </div>
                 <div class="second-page-bg">
@@ -162,8 +189,8 @@
                     </div>
                     <div class="paraBox">
                         <h2>Design Concept</h2>
-                        <h3>科技人的理性<br>
-                            創意人的熱情</h3>
+                        <h3>科技人的理性</h3>
+                        <h3>創意人的熱情</h3> 
                     </div>
                 </div>
                 <div class="third-page-paraBox">
@@ -391,19 +418,27 @@
             },{
                 y:0,
                 duration:6
-            },"<+1.2").to(".second-page",{
+            },"<+1.2").fromTo(".second-page .second-page-line path",{
+                strokeDashoffset: 2000,
+                strokeDasharray: 2000
+            },{
+                strokeDashoffset: 800,
+          
+                duration:9
+            },"<+3").to(".second-page",{
                 x:"-115vw",
                 duration:6
-            },"<+3").to(".second-page-bg :nth-child(2)",{
-                width:"39vw",
+            },"<+1").to(".second-page-bg :nth-child(2)",{
+                width:"39%",
+                height:"50%",
+                duration:6
+            },"<+2").to(".second-page-bg :nth-child(4)",{
+                width:"39%",
+                height:"50%",
                 duration:6
             },"<").to(".second-page-bg :nth-child(3)",{
-                width:"39vw",
-                height:"26.5vw",
-                duration:6
-            },"<").to(".second-page-bg :nth-child(4)",{
-                width:"39vw",
-                height:"26.5vw",
+                width:"39%",
+                height:"50%",
                 duration:6
             },"<").fromTo(".second-page-bg :nth-child(4)",{
                 clipPath:"polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
@@ -454,25 +489,33 @@
             }).fromTo(".third-page-bg",{
               
                 clipPath:"polygon(100% 0 , 100% 100%, 100% 100% ,100% 0)",
-                x:"50vw"
+       
             },{
                 clipPath:"polygon(0% 0 , 0% 100%, 100% 100% ,100% 0)",
+             
                 duration:6
-            }).to(".third-page-bg",{
+            }).fromTo(".third-page-bg .paraBox h2",{
+                x:"85vw"
+            },{
+                x:0,
+                duration:6
+            },"<+2").fromTo(".third-page-bg .paraBox h3",{
+                x:"85vw"
+            },{
+                x:0,
+                duration:6,
+                stagger:1.5
+            },"<+2").to(".third-page-bg",{
                 clipPath:"polygon(0% 0 , 0% 100%, 200% 100% ,200% 0)",
+                width:"51%",
                 x:0,
                 duration:6
-            }).fromTo(".third-page-bg > :nth-child(1)",{
+            },"<+2").fromTo(".third-page-bg > :nth-child(1)",{
                 x:"85vw"
             },{
                 x:0,
                 duration:6
-            },'<').fromTo(".third-page-bg .paraBox",{
-                x:"85vw"
-            },{
-                x:0,
-                duration:6
-            },"<").to(".third-page-bg > :nth-child(1)",{
+            }).to(".third-page-bg > :nth-child(1)",{
                 width:"100%",
                 height:"100%",
                 duration:6
@@ -499,6 +542,7 @@
             }).to(".third-page-bg .paraBox h3",{
                y:"60vh",
                 duration:6,
+             
             },"<").to(".third-page-bg > :nth-child(1)",{
                 display:"none",
                 duration:1

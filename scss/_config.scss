@@ -141,17 +141,44 @@ header{
         margin-top: 4vw;
         margin-left: 2vw;
         li{
-            font-size: 0.8vw;
-            font-weight: 700;
-            margin-bottom: 1.5vw;
-            .sub-open{
-               
-                margin: 0.7vw 0vw 1vw 0.8vw;
-                li{
-                    margin-bottom: 1vw;
-                    font-weight: 500;
-                }
+            font-size: 1vw;
+            font-weight: 600;
+            margin-bottom: 2.8vw;
+            letter-spacing: 0.1em;
+            span{
+                letter-spacing: 0;
+             font-weight: 300;
+            color: rgba(0, 0, 0, 0.61);
+             margin-left: 0.8vw;
             }
+             .sub-open{
+               
+                 margin: 1.5vw 0vw 4.9vw 1.3vw;
+                 li{
+                     margin-bottom: 1.6vw;
+                     font-size: 0.8vw;
+                     font-weight: 500;
+                     position: relative;
+                     letter-spacing: 0;
+                     span{
+                        color: rgba(0, 0, 0, 0.5);
+                        letter-spacing: 0;
+                     }
+                     &::before{
+                        display: block;
+                        content: "";
+                        position: absolute;
+                        left:-0.9vw;
+                        bottom: 0;
+                        top: 0;
+                        margin: auto 0;
+                        width: 2%;
+                        height: 1px;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        
+                     }
+                 }
+             }
         }
     }
 }

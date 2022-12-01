@@ -120,7 +120,7 @@
   bottom: 0;
 }
 .container .index .second-page-bg :nth-child(2) {
-  width: 37vw;
+  width: 37%;
   height: 24.5vw;
   right: -20vw;
   top: 0;
@@ -128,16 +128,16 @@
      object-fit: cover;
 }
 .container .index .second-page-bg :nth-child(3) {
-  width: 37vw;
-  height: 24.5vw;
+  width: 37%;
+  height: 48%;
   right: -20vw;
   bottom: 0;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .container .index .second-page-bg :nth-child(4) {
-  width: 37vw;
-  height: 24.5vw;
+  width: 37%;
+  height: 48%;
   right: -20vw;
   bottom: 0;
   -o-object-fit: cover;
@@ -156,6 +156,7 @@
   align-items: center;
   text-align: center;
   margin-top: 4vw;
+  position: relative;
 }
 .container .index .second-page-paraBox .para h3 {
   font-size: 1.9vw;
@@ -164,7 +165,7 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 1.5vw 0 3.5vw;
+  margin: 1vw 0 3.5vw;
   font-size: 2.1vw;
   letter-spacing: 0.1em;
   color: #56B87E;
@@ -175,6 +176,12 @@
   letter-spacing: 0.2em;
   line-height: 2.5em;
   font-weight: 300;
+}
+.container .index .second-page-paraBox .para .second-page-line {
+  position: absolute;
+  top: 1.8vw;
+  transform: scaleX(0.8);
+  width: 36vw;
 }
 .container .index .second-page .circle {
   width: 130vw;
@@ -194,12 +201,12 @@
 .container .index .third-page-bg {
   display: flex;
   align-items: center;
-  width: 51vw;
+  width: 100%;
   height: 100%;
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url(../img/index/image/third-page-bg-1.png);
+  background-image: url(../img/index/image/third-page.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center right;
@@ -263,12 +270,13 @@
   z-index: 12;
 }
 .container .index .third-page-bg .paraBox h2 {
-  margin-bottom: 1vw;
-  font-size: 2.5vw;
+  margin-bottom: 0.5vw;
+  font-size: 2.8vw;
 }
 .container .index .third-page-bg .paraBox h3 {
-  font-size: 2.5vw;
-  line-height: 2em;
+  font-size: 2vw;
+  line-height: 1.4em;
+  letter-spacing: 0.1em;
   font-weight: 400;
 }
 .container .index .third-page-paraBox {
@@ -534,16 +542,42 @@ header .menu-button :nth-child(2) {
   margin-left: 2vw;
 }
 .menu ul li {
-  font-size: 0.8vw;
-  font-weight: 700;
-  margin-bottom: 1.5vw;
+  font-size: 1vw;
+  font-weight: 600;
+  margin-bottom: 2.8vw;
+  letter-spacing: 0.1em;
+}
+.menu ul li span {
+  letter-spacing: 0;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.61);
+  margin-left: 0.8vw;
 }
 .menu ul li .sub-open {
-  margin: 0.7vw 0vw 1vw 0.8vw;
+  margin: 1.5vw 0vw 4.9vw 1.3vw;
 }
 .menu ul li .sub-open li {
-  margin-bottom: 1vw;
+  margin-bottom: 1.6vw;
+  font-size: 0.8vw;
   font-weight: 500;
+  position: relative;
+  letter-spacing: 0;
+}
+.menu ul li .sub-open li span {
+  color: rgba(0, 0, 0, 0.5);
+  letter-spacing: 0;
+}
+.menu ul li .sub-open li::before {
+  display: block;
+  content: "";
+  position: absolute;
+  left: -0.9vw;
+  bottom: 0;
+  top: 0;
+  margin: auto 0;
+  width: 2%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 * {
