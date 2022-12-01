@@ -223,12 +223,16 @@
                 </div>
             </section>
             <section class="fifth-page">
+                
                 <div class="fifth-page-bg">
                     <img src="./img/index/image/forth-page-b1.webp">
                     <img src="./img/index/image/forth-page-b2.webp">
                     <img src="./img/index/image/forth-page-b3.webp">
                 </div>
             </section>
+            <div class="devloping">
+                <p>官網製作中...</p>
+            </div>
         </section>
     </section>
      
@@ -597,7 +601,12 @@
                 y:"-120vh",
                 duration:6,
                 stagger:0.5
-            }).to(".fifth-page-bg :nth-child(1)",{
+            }).to(".devloping",{
+             
+             y:"-100vh",
+           duration:6,
+       
+       },"<+3").to(".fifth-page-bg :nth-child(1)",{
                 y:"-180vh",
                 duration:6,
              
