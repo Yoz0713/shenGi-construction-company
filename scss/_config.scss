@@ -38,12 +38,14 @@
                     }
                     .g2{
                         width: 100%;
+                        transform-origin:center;
                         path{
                          transform: rotateY(180deg);
                         }
                      }
                      .g4{
                         width: 100%;
+                        transform-origin:center;
                          opacity: 1;
                          line{
                              stroke-dasharray: 1000;
