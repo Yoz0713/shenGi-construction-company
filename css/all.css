@@ -4,7 +4,7 @@
 }
 .container .index {
   width: 100%;
-  overflow: visible;
+  overflow: hidden;
   position: relative;
   transition: 1s;
 }
@@ -543,7 +543,7 @@
 .container .index .forth-page-para .box3 {
   position: absolute;
   left: 21vw;
-  bottom: 9.5vw;
+  bottom: 8vw;
   font-size: 0.8vw;
   font-weight: 600;
 }
@@ -846,6 +846,8 @@ header .menu-button :nth-child(2) {
 }
 
 html {
+  overflow: -moz-hidden-unscrollable;
+  height: 100%;
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -867,11 +869,6 @@ a {
 
 span {
   display: inline-block;
-}
-
-html {
-  overflow: -moz-hidden-unscrollable;
-  height: 100%;
 }
 
 body {

@@ -6,7 +6,7 @@ $gray_color:#999999;
    
     .index{
         width: 100%;
-        overflow:visible;
+        overflow: hidden;
         position: relative;
         transition:1s; // for menu blur
         .first-page{
@@ -569,7 +569,7 @@ $gray_color:#999999;
                 .box3{
                     position: absolute;
                     left:21vw ;
-                    bottom: 9.5vw;
+                    bottom: 8vw;
                     font-size: 0.8vw;
                     font-weight: 600;
                 }

@@ -362,6 +362,7 @@
                 overflow:"visible",
                 duration:0.00012
                 })
+          
             }
          },"<").fromTo(".first-page .paraBox p span",{
                 y:30,
@@ -393,7 +394,7 @@
         function firstScroll(){
             ScrollTrigger.scrollerProxy(".index", {	pinType: "fixed" });
             //測試mac
-            ScrollTrigger.normalizeScroll(true)
+         
             //測試mac
             let gg = gsap.timeline({
                 // scrollTrigger:{
@@ -407,7 +408,7 @@
                 // },
                 ease:"none",
                 overwrite:"auto",
-                paused:true,
+       
                 
             })
             
@@ -433,7 +434,8 @@
                 duration:10
             }).to(".loading-page",{
                 y:"-100vh",
-                duration:10
+                duration:10,
+                
             },"<").to(".first-page .imgBox > img",{
                 scale:1,
                 y:0,
@@ -725,7 +727,7 @@
                     opacity:1,
                 x:0,
                 duration:6,
-        },"<+5").fromTo(".forth-page-para .box2",{
+        },"<-4").fromTo(".forth-page-para .box2",{
                 x:"30vw",
                 opacity:0
                 },{
