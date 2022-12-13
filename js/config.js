@@ -194,11 +194,11 @@ function loadingPageAnimaiton(func){
     
         gg4.to(".g2",
         {
-            x:"50%",
+            transform:"matrix(1,0,0,1,120,0)",
             duration:0.8,
         }).to(".g3",
         {
-            x:"-50%",
+            transform:"matrix(1,0,0,1,-120,0)",
             duration:0.8,
         },"<").to(".rotate",
         {
