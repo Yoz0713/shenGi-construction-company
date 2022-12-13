@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 394.06 297.36">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #7c8c5b;
+      }
+
+      .cls-4 {
+        stroke-width: .5px;
+      }
+
+      .cls-4, .cls-5 {
+        fill: none;
+        stroke: #1a1a1a;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-6 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-7 {
+        letter-spacing: .01em;
+      }
+
+      .cls-8 {
+        letter-spacing: .02em;
+      }
+
+      .cls-9 {
+        letter-spacing: .02em;
+      }
+
+      .cls-10 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-11 {
+        letter-spacing: 0em;
+      }
+
+      .cls-12, .cls-2 {
+        font-family: NotoSerifTC-SemiBold-90ms-RKSJ-H, 'Noto Serif TC';
+        font-size: 39.42px;
+        letter-spacing: .4em;
+      }
+
+      .cls-13 {
+        letter-spacing: 0em;
+      }
+
+      .cls-14 {
+        letter-spacing: 0em;
+      }
+
+      .cls-15 {
+        font-family: MinionConceptRoman-Display, 'Minion Variable Concept';
+        font-size: 48px;
+        font-variation-settings: 'wght' 400, 'opsz' 36;
+      }
+
+      .cls-15, .cls-16 {
+        fill: #1a1a1a;
+      }
+
+      .cls-17 {
+        letter-spacing: 0em;
+      }
+
+      .cls-18 {
+        letter-spacing: .01em;
+      }
+    </style>
+  </defs>
+  <g id="_圖層_2-2" data-name="圖層 2">
+    <rect class="cls-3" x="227.06" y="101.47" width="46" height="46"/>
+    <rect class="cls-3" x="280.06" y="101.47" width="46" height="46"/>
+    <rect class="cls-3" x="120.06" y="217.47" width="46" height="46"/>
+    <rect class="cls-3" x="173.06" y="217.47" width="46" height="46"/>
+    <circle class="cls-4" cx="249.06" cy="250.47" r="4"/>
+  </g>
+  <g id="_圖層_4" data-name="圖層 4">
+    <g>
+      <text class="cls-15" transform="translate(39.6 271) rotate(-90)"><tspan class="cls-13" x="0" y="0">I</tspan><tspan class="cls-7" x="15.22" y="0">NN</tspan><tspan class="cls-18" x="85.58" y="0">O</tspan><tspan class="cls-6" x="120.72" y="0">V</tspan><tspan class="cls-10" x="146.16" y="0">A</tspan><tspan class="cls-14" x="170.45" y="0">T</tspan><tspan class="cls-9" x="200.06" y="0">I</tspan><tspan class="cls-8" x="216.19" y="0">V</tspan><tspan class="cls-11" x="245.47" y="0">E</tspan></text>
+      <text class="cls-15" transform="translate(88.6 270.26) rotate(-90)"><tspan class="cls-17" x="0" y="0">D</tspan><tspan class="cls-18" x="33.94" y="0">E</tspan><tspan class="cls-17" x="60" y="0">SIG</tspan><tspan x="130.8" y="0">N</tspan></text>
+      <line class="cls-5" x1="177.06" y1="182.47" x2="394.06" y2="182.47"/>
+      <text class="cls-12" transform="translate(118.29 79.91)"><tspan class="cls-16"><tspan x="0" y="0">呈現建築</tspan></tspan><tspan class="cls-16" x="0" y="60">新的</tspan><tspan class="cls-1" x="110.39" y="60">視野</tspan><tspan class="cls-16"><tspan x="0" y="120">與</tspan></tspan></text>
+      <text class="cls-2" transform="translate(123.39 256.08)"><tspan x="0" y="0">格</tspan></text>
+      <text class="cls-2" transform="translate(175.99 255.51)"><tspan x="0" y="0">局</tspan></text>
+    </g>
+  </g>
+</svg>

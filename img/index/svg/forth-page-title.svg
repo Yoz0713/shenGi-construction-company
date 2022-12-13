@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 307.82 110.02">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        letter-spacing: .02em;
+      }
+
+      .cls-3 {
+        letter-spacing: .01em;
+      }
+
+      .cls-4 {
+        letter-spacing: 0em;
+      }
+
+      .cls-5 {
+        fill: #1a1a1a;
+        font-family: MinionConceptRoman-Display, 'Minion Variable Concept';
+        font-size: 48px;
+        font-variation-settings: 'wght' 400, 'opsz' 36;
+      }
+
+      .cls-6 {
+        fill: none;
+        stroke: #1a1a1a;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-7 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-8 {
+        letter-spacing: 0em;
+      }
+
+      .cls-9 {
+        letter-spacing: .01em;
+      }
+
+      .cls-10 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <g id="_圖層_2-2" data-name="圖層 2">
+    <text class="cls-5" transform="translate(0 39.6)"><tspan class="cls-2" x="0" y="0">P</tspan><tspan class="cls-1" x="26.11" y="0">O</tspan><tspan class="cls-7" x="60.96" y="0">R</tspan><tspan class="cls-4" x="88.13" y="0">T</tspan><tspan class="cls-3" x="117.74" y="0">F</tspan><tspan class="cls-8" x="142.37" y="0">O</tspan><tspan class="cls-10" x="177.21" y="0">L</tspan><tspan class="cls-8" x="201.84" y="0">I</tspan><tspan x="217.05" y="0">O</tspan></text>
+    <text class="cls-5" transform="translate(87.39 92.6)"><tspan class="cls-8" x="0" y="0">D</tspan><tspan class="cls-9" x="33.94" y="0">E</tspan><tspan class="cls-8" x="60" y="0">SIG</tspan><tspan x="130.8" y="0">N</tspan></text>
+    <line class="cls-6" x1="268.82" y1="15.81" x2="307.82" y2="15.81"/>
+  </g>
+</svg>

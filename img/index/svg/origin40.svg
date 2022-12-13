@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 531.84 419.49">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        font-size: 126.24px;
+      }
+
+      .cls-2, .cls-3 {
+        font-family: MinionConceptRoman-Display, 'Minion Variable Concept';
+        font-variation-settings: 'wght' 400, 'opsz' 36;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        font-size: 353.11px;
+      }
+
+      .cls-4 {
+        font-family: NotoSerifTC-SemiBold-90ms-RKSJ-H, 'Noto Serif TC';
+        font-size: 48px;
+      }
+
+      .cls-5 {
+        letter-spacing: .01em;
+      }
+
+      .cls-6 {
+        letter-spacing: 0em;
+      }
+
+      .cls-7 {
+        letter-spacing: .2em;
+      }
+
+      .cls-8 {
+        letter-spacing: .2em;
+      }
+    </style>
+  </defs>
+  <g id="_圖層_2-2" data-name="圖層 2">
+    <g>
+      <text class="cls-2" transform="translate(205.15 169.64) scale(.98 1)"><tspan class="cls-5" x="0" y="0">R</tspan><tspan class="cls-1" x="74.61" y="0">IGI</tspan><tspan class="cls-6" x="242.89" y="0">N</tspan></text>
+      <text class="cls-3" transform="translate(0 291.31)"><tspan x="0" y="0">O</tspan></text>
+      <text class="cls-4" transform="translate(244.74 234.16)"><tspan class="cls-7"><tspan x="0" y="0">源自</tspan></tspan><tspan class="cls-8"><tspan x="0" y="57.6">40年建築</tspan></tspan></text>
+    </g>
+  </g>
+</svg>
