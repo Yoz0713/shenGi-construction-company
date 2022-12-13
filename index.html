@@ -69,6 +69,9 @@
                 <p>．</p>
                 <p>Menu</p>
             </div>
+            <div class="progress-bar">
+
+            </div>
         </header>
     <!-- header -->
 
@@ -287,16 +290,16 @@
 
     <script>
         //在Loading及開場動畫結束前取消滾動
-        gsap.set("html",{
-            overflow:"hidden"
-        })
-    
+         gsap.set("html",{
+             overflow:"hidden"
+         })
+      
 
         //在Loading及開場動畫結束前取消滾動
       function splitTextAnimation(wrap){
             wrap = document.querySelector(`${wrap}`);
             text = wrap.innerText
-            console.log(text)
+        
             wrap.innerHTML = null
             let str=`${text}`;
             let brExp = /\n/i;
@@ -393,9 +396,7 @@
         firstScroll()
         function firstScroll(){
             ScrollTrigger.scrollerProxy(".index", {	pinType: "fixed" });
-            //測試mac
-         
-            //測試mac
+           
             let gg = gsap.timeline({
                 // scrollTrigger:{
                 //     trigger:".first-page",
@@ -422,9 +423,24 @@
                     animation:gg,
                    
                 })
+            //reset animation on refresh
             ScrollTrigger.addEventListener("refresh", () => st.scroll(0)) 
+            //reset animation on refresh
            
+            //progress
+            window.onscroll = (e)=>{
+                let progress= gsap.timeline()
 
+                progress.to("header .progress-bar",{
+                    width:`${st.progress*100}%`,
+                    overwrite:"auto"
+                })
+        
+            }
+            //progress
+
+
+        //animation start
             gsap.set(".first-page .imgBox > img",{
             scale:1.6,
             y:"15vw"
@@ -790,12 +806,6 @@
            duration:6,
        
        },"<-4")   
-         
-
-
-
-
-      
         }
       
        

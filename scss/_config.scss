@@ -118,6 +118,14 @@ header{
             font-size: 0.8vw;
         }
     }
+    .progress-bar{
+        width: 0;
+        height: 4px;
+        background-color: #000;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+    }
 }
 .menu{
     position: fixed;
