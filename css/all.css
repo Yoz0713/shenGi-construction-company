@@ -940,6 +940,13 @@ body {
   width: 100%;
   position: relative;
 }
+.about .swiper-wrapper .swiper-slide video {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(0.5);
+}
 .about .swiper-wrapper .swiper-slide img {
   width: 100%;
   -o-object-fit: cover;
@@ -953,6 +960,28 @@ body {
   font-size: 1.3vw;
   color: rgb(0, 0, 0);
   filter: drop-shadow(1px 1px 1px #fff);
+}
+
+.contact {
+  cursor: pointer;
+}
+.contact .swiper-wrapper {
+  width: 100%;
+}
+.contact .swiper-wrapper .swiper-slide {
+  width: 100%;
+  position: relative;
+}
+.contact .swiper-wrapper .swiper-slide img {
+  position: absolute;
+  top: 13vw;
+  left: 10vw;
+  width: 35vw;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: -4vw;
+  z-index: 3;
 }
 
 footer {

@@ -74,6 +74,14 @@ body{
         .swiper-slide{
             width: 100%;
             position: relative;
+            video{
+           
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                    filter: brightness(0.5);
+               
+            }
             img{
                 width: 100%;
                 object-fit: cover;
@@ -87,6 +95,30 @@ body{
                 color: rgba(0, 0, 0);
                 filter: drop-shadow(1px 1px 1px #fff);
             }
+        }
+    }
+   
+}
+.contact{
+  
+    cursor: pointer;
+    .swiper-wrapper{
+        width: 100%;
+        .swiper-slide{
+            width: 100%;
+            position: relative;
+            
+            img{
+                position: absolute;
+                top:13vw;
+                left: 10vw;
+                width:35vw;
+                height: auto;
+                object-fit: cover;
+                margin-top: -4vw;
+                z-index: 3;
+            }
+         
         }
     }
    
