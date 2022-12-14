@@ -335,11 +335,11 @@
      object-fit: contain;
 }
 .container .index .third-page-bg .para :nth-child(1) {
-  width: 12vw;
+  width: 10vw;
   margin-right: 2vw;
 }
 .container .index .third-page-bg .para :nth-child(2) {
-  width: 18vw;
+  width: 14vw;
   margin-bottom: -1.5vw;
 }
 .container .index .third-page-bg .imgBox {
