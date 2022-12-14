@@ -92,32 +92,34 @@ header{
     padding:0vw 1.5vw;
     border-bottom:2px solid #000;
     position:fixed;
+    background-color: #fff;
 
-
-   
     transition: 1s;
     width: 100%;
     left: 0;
     top: 0;
     z-index: 10;
     .logoBox{
- 
+        mix-blend-mode: normal;
+        isolation: isolate;
+
         img{
-            
+
             width: 5vw;
         }
     }
     .menu-button{
         display: flex;
         align-items: center;
-
+        color: #000;
         cursor: pointer;
         & :nth-child(1){
             font-size: 2.5vw;
-         
+ 
         }
         & :nth-child(2){
             font-size: 0.8vw;
+     
         }
     }
     .progress-bar{

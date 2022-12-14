@@ -10,7 +10,7 @@
 
 }
 html {
-    overflow: -moz-hidden-unscrollable;
+  
     height: 100%;
     /* Hide scrollbar for IE, Edge and Firefox */
     -ms-overflow-style: none;  /* IE and Edge */
@@ -22,6 +22,9 @@ html {
     &::-webkit-scrollbar {
         display: none;
     }
+}
+html{
+    overflow: -moz-hidden-unscrollable;
 }
 h1,h2,h3,h4,h5,h6,span,p,a,li{
     font-family: 'Noto Serif TC', sans-serif;

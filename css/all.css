@@ -4,7 +4,8 @@
 }
 .container .index {
   width: 100%;
-  overflow: hidden;
+  background-color: #fff;
+  overflow: visible;
   position: relative;
   transition: 1s;
 }
@@ -28,14 +29,23 @@
 }
 .container .index .first-page .imgBox .para {
   position: absolute;
-  left: 10vw;
-  top: 12vw;
+  left: 12vw;
+  top: 15vw;
 }
-.container .index .first-page .imgBox .para img {
+.container .index .first-page .imgBox .para .box {
+  margin-bottom: 4vw;
+}
+.container .index .first-page .imgBox .para .box img {
   position: relative;
   width: 25vw;
   left: 0;
   top: 0;
+}
+.container .index .first-page .imgBox .para .box svg {
+  position: absolute;
+  width: 16vw;
+  left: -2vw;
+  top: -2vw;
 }
 .container .index .first-page .imgBox .para p {
   color: #fff;
@@ -261,11 +271,17 @@
   height: 100%;
   position: absolute;
   left: 0;
-  top: -3vw;
+  top: -2vw;
 }
-.container .index .second-page-paraBox .imgBox img {
-  opacity: 0;
+.container .index .second-page-paraBox .imgBox svg {
   width: 25vw;
+  height: 15vw;
+}
+.container .index .second-page-paraBox .imgBox svg > :nth-child(1) path {
+  opacity: 0;
+}
+.container .index .second-page-paraBox .imgBox svg > :nth-child(2) {
+  opacity: 0;
 }
 .container .index .second-page .circle {
   width: 130vw;
@@ -311,7 +327,7 @@
   width: fit-content;
   left: 0;
   right: 0;
-  margin: 0 auto 2vw;
+  margin: 0 auto 1.5vw;
 }
 .container .index .third-page-bg .para img {
   position: relative;
@@ -319,11 +335,11 @@
      object-fit: contain;
 }
 .container .index .third-page-bg .para :nth-child(1) {
-  width: 16.5vw;
+  width: 12vw;
   margin-right: 2vw;
 }
 .container .index .third-page-bg .para :nth-child(2) {
-  width: 23.8vw;
+  width: 18vw;
   margin-bottom: -1.5vw;
 }
 .container .index .third-page-bg .imgBox {
@@ -470,7 +486,7 @@
   line-height: 1em;
   margin-right: -1vw;
 }
-.container .index .third-page-paraBox .box img {
+.container .index .third-page-paraBox .box svg {
   width: 9vw;
 }
 .container .index .third-page-paraBox ul {
@@ -752,11 +768,16 @@ header {
   padding: 0vw 1.5vw;
   border-bottom: 2px solid #000;
   position: fixed;
+  background-color: #fff;
   transition: 1s;
   width: 100%;
   left: 0;
   top: 0;
   z-index: 10;
+}
+header .logoBox {
+  mix-blend-mode: normal;
+  isolation: isolate;
 }
 header .logoBox img {
   width: 5vw;
@@ -764,6 +785,7 @@ header .logoBox img {
 header .menu-button {
   display: flex;
   align-items: center;
+  color: #000;
   cursor: pointer;
 }
 header .menu-button :nth-child(1) {
@@ -856,7 +878,6 @@ header .progress-bar {
 }
 
 html {
-  overflow: -moz-hidden-unscrollable;
   height: 100%;
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none; /* IE and Edge */
@@ -867,6 +888,10 @@ html {
 }
 html::-webkit-scrollbar {
   display: none;
+}
+
+html {
+  overflow: -moz-hidden-unscrollable;
 }
 
 h1, h2, h3, h4, h5, h6, span, p, a, li {
