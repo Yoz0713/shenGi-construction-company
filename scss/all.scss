@@ -1,6 +1,6 @@
-@import "_index";
 @import "_config";
-
+@import "_index";
+@import "_construction";
 *{
     margin: 0;
     padding: 0;
@@ -110,12 +110,14 @@ body{
             
             img{
                 position: absolute;
-                top:13vw;
-                left: 10vw;
-                width:35vw;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                margin: auto;
+                width:55vw;
                 height: auto;
-                object-fit: cover;
-                margin-top: -4vw;
+               
                 z-index: 3;
             }
          

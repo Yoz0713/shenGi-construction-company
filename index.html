@@ -214,7 +214,7 @@
                 <div class="second-page-paraBox">
                     <div class="para">
                         <h4>ABOUT</h4>
-                        <h3>SUN GLORY</h3>
+                        <h3>SUN <span>GLORY</span></h3>
                         <h2>森<span>。</span>思<span>。</span>熟<span>。</span>綠<span>。</span>創<span>。</span>意<span>。</span>匯<span>。</span>鉅</h2>
                         <div class="svgBox">
                             <svg viewBox="0 0 600 600">
@@ -322,14 +322,34 @@
             <section class="forth-page">
                 <div class="forth-page-para">
                     <div class="box1">
-                        <img src="./img/index/svg/forth-page-title.svg">
-                        <p>轉變成設計的成果 激盪創意的火花</p>
+                        <div class="box1-1">
+                            <h4>CLASSIC<br>PORTFOLIO</h4>
+                            <p>純粹美學 時代印記~閱讀建築</p>
+                        </div>
+                        <div class="box1-2">
+                            <h4>PORTFOLIO<br>DESIGN</h4>
+                            <p>轉變成設計的成果 激盪創意的火花</p>
+                        </div>
+                         
                     </div>
                     <div class="box2">
-                        <h4>AESTHETICS</h4>
+                        <div class="box1-1">
+                            <h4>ARCHITECTURE</h4>
+                        </div>
+                        <div class="box1-2">
+                            <h4>AESTHETICS</h4>
+                        </div>
+              
                     </div>
                     <div class="box3">
-                        <p>打造空間新美學，<br>收藏一個詩意棲居般的「家」</p>
+                        <div class="box1-1">
+                            <p>滿足居住者的理想居所，<br>讓美好生活與藝術自然相遇。</p>
+                        </div>
+                        <div class="box1-2">
+                            <p>打造空間新美學，<br>收藏一個詩意棲居般的「家」</p>
+                        </div>
+                      
+                      
                     </div>
                 </div>
                 <div class="forth-page-bg">
@@ -391,9 +411,9 @@
 
     <script>
         //在Loading及開場動畫結束前取消滾動
-          gsap.set("html",{
-              overflow:"hidden"
-          })
+        gsap.set("html",{
+            overflow:"hidden"
+        })
       
 
         //在Loading及開場動畫結束前取消滾動
@@ -586,10 +606,10 @@
             },"<+1.5").to(".first-page .imgBox",{
                 x:"-105vw",
                 duration:12
-            },"<+6.5").to(".second-page",{
+            },"<+9").to(".second-page",{
                 x:"-100vw",
                 duration:12
-            },"<+0.5").fromTo(".second-page-bg :nth-child(1)",{
+            },"<").fromTo(".second-page-bg :nth-child(1)",{
                 opacity:0
             },{
                 opacity:1,
@@ -621,7 +641,10 @@
                     $(".second-page h4").addClass("active1");
                     $(".second-page h3").addClass("active2");
                 }
-            },"<+3").to(".second-page",{
+            },"<+3").to(".second-page h3 span",{
+                color:"rgb(86,184,126)",
+                duration:6,
+            }).to(".second-page",{
                 x:"-108vw",
                 duration:6
             },"<+1").to(".second-page-bg :nth-child(2)",{
@@ -705,7 +728,7 @@
              
           
                 duration:6
-            },">-4").to(".second-page-paraBox .para",{
+            },">+2").to(".second-page-paraBox .para",{
                 x:"3.5vw",
                 scale:0.3,
                 duration:6
@@ -863,26 +886,15 @@
                 },{
                 y:0,
                 duration:6,
-        },"<").fromTo(".forth-page-bg .left-top-box > :nth-child(2)",{
-            clipPath:"polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
-            },{ 
-                clipPath:"polygon(0 0 , 100% 0, 100% 0% , 0 0% , 0 0 )",
-                duration:6,
-        }).fromTo(".forth-page-bg .imgBox > :nth-child(2)",{
-            clipPath:"polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
-            },{
-                clipPath:"polygon(0 0 , 100% 0, 100% 0% , 0 0% , 0 0 )",
-                duration:6,
-                stagger:1
-            },"<+2").fromTo(".forth-page-para .box1",{
+        },"<").fromTo(".forth-page-para .box1",{
                 x:"30vw",
                 opacity:0
                 },{
                     opacity:1,
                 x:0,
                 duration:6,
-        },"<-4").fromTo(".forth-page-para .box2",{
-                x:"30vw",
+        },"<+3").fromTo(".forth-page-para .box2",{
+                x:"-40vw",
                 opacity:0
                 },{
                 opacity:1,
@@ -895,11 +907,28 @@
                 opacity:1,
                 x:0,
                 duration:6,
-        },"<").to(".forth-page-para div",{
+        },"<").fromTo(".forth-page-bg .left-top-box > :nth-child(2)",{
+            clipPath:"polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
+            },{ 
+                clipPath:"polygon(0 0 , 100% 0, 100% 0% , 0 0% , 0 0 )",
+                duration:6,
+        },">+5").fromTo(".forth-page-bg .imgBox > :nth-child(2)",{
+            clipPath:"polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
+            },{
+                clipPath:"polygon(0 0 , 100% 0, 100% 0% , 0 0% , 0 0 )",
+                duration:6,
+                stagger:1
+            },"<+2").fromTo(".forth-page-para .box1-2",{
+                clipPath:"polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
+            },{
+                clipPath:"polygon(0 100% , 100% 100%, 100% 100% , 0 100% , 0 0 )",
+                duration:6,
+                stagger:1
+        },"<+3").to(".forth-page-para div",{
             opacity:0,
             duration:6
            
-        }).to(".forth-page-bg > div",{
+        },">+4.5").to(".forth-page-bg > div",{
         
                 y:"-120vh",
                 duration:6,

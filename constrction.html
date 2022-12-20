@@ -76,19 +76,92 @@
             </li>
         </ul>
     </div>
-    <section class="about">
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="./img/fake img/熱銷建案確認.jpg">
-                </div>
-                <div class="swiper-slide">
-                    <img src="./img/fake img/熱銷建案 內頁 確認.jpg">
-                </div>
+    <section class="construction">
+        <section class="first-page">
+            <div class="first-page-bg">
+                <img src="./img/construction/constrction-banner.webp">
             </div>
-        </div>
-      
+            <div class="first-page-title">
+                <h3>CONSTRUCTION</h3>
+                <h2>熱銷建案</h2>
+            </div>
+        </section>
+        <section class="second-page">
+            <ul>
+                <li>
+                    <div class="imgBox">
+                        <a href="./z-fake-html/construction1.html">
+                            <img src="./img/construction/p1.webp">
+                        </a>
+                    </div>
+                    <div class="paraBox">
+                        <div class="paraBox-title">
+                            <h3>之間</h3>
+                       
+                        </div>
+                        
+                        <p>南勢國中校園比鄰、綠意圍繞眼界非凡、都會中自然系建築。</p>
+                        <a href="./z-fake-html/construction1.html">
+                            <span>了解更多</span>
+                        </a>
+                        
+                    </div>
+                </li>
+                <li>
+                    <div class="imgBox">
+                        <a href="javascript:;">
+                            <img src="./img/construction/p2.webp">
+                        </a>
+                    </div>
+                    <div class="paraBox">
+                        <div class="paraBox-title">
+                            <h3>鳳鳴案</h3>
+                        </div>
+                   
+                        <p>南勢國中校園比鄰、綠意圍繞眼界非凡、都會中自然系建築。</p>
+                        <a href="javascript:;">
+                            <span>了解更多</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="imgBox">
+                        <a href="./z-fake-html/constrction2.html">
+                            <img src="./img/construction/p3.webp">
+                        </a>
+                    </div>
+                    <div class="paraBox">
+                        <div class="paraBox-title">
+                            <h3>512</h3>
+                            <p>即將推出</p>
+                        </div>
+                        <p>南勢國中校園比鄰、綠意圍繞眼界非凡、都會中自然系建築。</p>
+                        <a href="./z-fake-html/constrction2.html">
+                            <span>了解更多</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="imgBox">
+                        <a href="./z-fake-html/constrction3.html">
+                            <img src="./img/construction/p4.webp">
+                        </a>
+                    </div>
+                    <div class="paraBox">
+                        <div class="paraBox-title">
+                            <h3>492</h3>
+                            <p>即將推出</p>
+                        </div>
+                        <p>南勢國中校園比鄰、綠意圍繞眼界非凡、都會中自然系建築。</p>
+                        <a href="./z-fake-html/constrction3.html">
+                            <span>了解更多</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </section>
     </section>
+       
     <footer>
         <p>Copyright © 2023 森鉅建設股份有限公司版權所有<span>TEL：12345678</span>地址：臺北市松山區敦化北路167號17樓</p>
     </footer>
@@ -100,24 +173,7 @@
 
     <script>
       
-      window.onload = function(){
-            const swiper = new Swiper(".swiper",{
-                loop:true,
-                effect : 'fade',
-                fadeEffect: {
-                    crossFade: true,
-                },
-                speed:0,
-            })
-            let about = document.querySelector(".about")
-            $(".about").css("height",`${$(".about .swiper-slide-active").css("height")}`)
-        about.onclick = function(){
-            swiper.slideNext()
-            console.log($(".about .swiper-slide-active").css("height"))
-            $(".about").css("height",`${$(".about .swiper-slide-active").css("height")}`)
-        }
-        }
-
+    
     </script>
 </body>
 </html>

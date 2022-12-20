@@ -1,3 +1,199 @@
+.loading-page {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 220vw;
+  max-height: 100vh;
+  transition: filter 1s;
+  overflow: hidden;
+  background-color: #fff;
+  pointer-events: none;
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+}
+.loading-page .contentBox {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  pointer-events: none;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 10vw;
+}
+.loading-page .contentBox .svgBox {
+  width: 80vw;
+  height: 30vw;
+  transform: scale(1.2);
+}
+.loading-page .contentBox .svgBox svg {
+  width: 100%;
+  height: 100%;
+}
+.loading-page .contentBox .svgBox svg .rotate {
+  transform-origin: center;
+}
+.loading-page .contentBox .svgBox svg .rotate g {
+  opacity: 0;
+}
+.loading-page .contentBox .svgBox svg .rotate .g2 {
+  width: 100%;
+  transform-origin: center;
+}
+.loading-page .contentBox .svgBox svg .rotate .g2 path {
+  transform: rotateY(180deg);
+}
+.loading-page .contentBox .svgBox svg .rotate .g4 {
+  width: 100%;
+  transform-origin: center;
+  opacity: 1;
+}
+.loading-page .contentBox .svgBox svg .rotate .g4 line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+.loading-page .titleBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-top: 10vw;
+}
+.loading-page .titleBox h1 {
+  font-weight: 700;
+  font-size: 2vw;
+  opacity: 0;
+}
+.loading-page .titleBox h5 {
+  font-size: 0.3vw;
+  transform: scale(0.95);
+  font-weight: 400;
+  opacity: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0vw 1.5vw;
+  border-bottom: 2px solid #000;
+  position: fixed;
+  background-color: #fff;
+  transition: 1s;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+header .logoBox {
+  mix-blend-mode: normal;
+  isolation: isolate;
+}
+header .logoBox img {
+  width: 5vw;
+}
+header .menu-button {
+  display: flex;
+  align-items: center;
+  color: #000;
+  cursor: pointer;
+}
+header .menu-button :nth-child(1) {
+  font-size: 2.5vw;
+}
+header .menu-button :nth-child(2) {
+  font-size: 0.8vw;
+}
+header .progress-bar {
+  width: 0;
+  height: 4px;
+  background-color: #000;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+}
+
+.menu {
+  position: fixed;
+  right: -30%;
+  top: 0;
+  width: 26vw;
+  height: 220vw;
+  max-height: 100vh;
+  background-color: #fff;
+  z-index: 20;
+  padding: 1vw 1.5vw;
+  transition: right 1.5s;
+}
+.menu .close {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  cursor: pointer;
+}
+.menu .close img {
+  width: 1.5vw;
+}
+.menu ul {
+  margin-top: 4vw;
+  margin-left: 2vw;
+}
+.menu ul li {
+  font-size: 1vw;
+  font-weight: 600;
+  margin-bottom: 2.8vw;
+  letter-spacing: 0.1em;
+}
+.menu ul li span {
+  font-size: 0.9vw;
+  letter-spacing: 0;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.61);
+  margin-left: 0.8vw;
+}
+.menu ul li .sub-open {
+  margin: 1.5vw 0vw 4.9vw 1.3vw;
+}
+.menu ul li .sub-open li {
+  margin-bottom: 1.6vw;
+  font-size: 0.8vw;
+  font-weight: 500;
+  position: relative;
+  letter-spacing: 0;
+}
+.menu ul li .sub-open li span {
+  font-size: 0.8vw;
+  color: rgba(0, 0, 0, 0.5);
+  letter-spacing: 0;
+}
+.menu ul li .sub-open li::before {
+  display: block;
+  content: "";
+  position: absolute;
+  left: -0.9vw;
+  bottom: 0;
+  top: 0;
+  margin: auto 0;
+  width: 2%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .container {
   width: 100%;
   overflow: hidden;
@@ -193,7 +389,7 @@
   font-size: 2.5vw;
   font-weight: 500;
   text-align: start;
-  color: #3E3A39;
+  color: #3e3a39;
   position: relative;
 }
 .container .index .second-page-paraBox .para h4::after {
@@ -208,6 +404,13 @@
   bottom: 0;
   margin: auto 0;
   transition: width 1.2s;
+}
+.container .index .second-page-paraBox .para h4 span {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.5vw;
+  font-weight: 500;
+  text-align: start;
+  position: relative;
 }
 .container .index .second-page-paraBox .para h3 {
   font-family: "Cormorant Garamond", serif;
@@ -229,6 +432,14 @@
   bottom: 0;
   margin: auto 0;
   transition: width 1.2s;
+}
+.container .index .second-page-paraBox .para h3 span {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3.8vw;
+  font-weight: 500;
+  text-align: start;
+  color: #3E3A39;
+  position: relative;
 }
 .container .index .second-page-paraBox .para .active1::after {
   width: 3.3vw;
@@ -515,8 +726,10 @@
   height: 220vw;
   max-height: 100vh;
   position: absolute;
+  overflow: hidden;
   left: 0;
   top: 0;
+  z-index: 0;
 }
 .container .index .forth-page-para {
   position: relative;
@@ -525,36 +738,77 @@
 }
 .container .index .forth-page-para .box1 {
   position: absolute;
-  right: 0;
+  right: 2.5vw;
   top: 7vw;
-}
-.container .index .forth-page-para .box1 img {
-  width: 13vw;
 }
 .container .index .forth-page-para .box1 p {
   text-align: end;
-  position: absolute;
   white-space: nowrap;
   font-size: 1.2vw;
-  bottom: -1.5vw;
-  right: 2.4vw;
   letter-spacing: 0.1em;
   font-weight: 700;
 }
+.container .index .forth-page-para .box1 .box1-1 h4 {
+  position: relative;
+  text-align: end;
+  white-space: nowrap;
+  font-size: 2vw;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+}
+.container .index .forth-page-para .box1 .box1-1 h4::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 4.5vw;
+  height: 1px;
+  background-color: #000;
+  right: -5vw;
+  top: 1.2vw;
+}
+.container .index .forth-page-para .box1 .box1-2 {
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.container .index .forth-page-para .box1 .box1-2 h4 {
+  position: relative;
+  text-align: end;
+  white-space: nowrap;
+  font-size: 2vw;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+}
+.container .index .forth-page-para .box1 .box1-2 h4::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 4.5vw;
+  height: 1px;
+  background-color: #000;
+  right: -5vw;
+  top: 1.2vw;
+}
 .container .index .forth-page-para .box2 {
   position: absolute;
-  left: 39.5vw;
-  top: 12vw;
+  left: 27vw;
+  top: 12.5vw;
+  z-index: 0;
 }
 .container .index .forth-page-para .box2 h4 {
-  text-align: end;
-  position: absolute;
   white-space: nowrap;
   font-size: 1.3vw;
-  bottom: -1.5vw;
-  right: 2.4vw;
+  text-align: end;
   font-family: "Cormorant Garamond", serif;
   font-weight: 500;
+}
+.container .index .forth-page-para .box2 .box1-2 {
+  position: absolute;
+  width: 10vw;
+  right: 0;
+  top: 0;
+  background-color: #fff;
 }
 .container .index .forth-page-para .box3 {
   position: absolute;
@@ -563,12 +817,19 @@
   font-size: 0.8vw;
   font-weight: 600;
 }
+.container .index .forth-page-para .box3 .box1-2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+}
 .container .index .forth-page-bg {
   width: 100%;
   height: 100%;
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 2;
 }
 .container .index .forth-page-bg .imgBox {
   position: absolute;
@@ -611,6 +872,10 @@
   height: 23vw;
   top: 15vw;
   left: 21vw;
+}
+.container .index .forth-page-bg .left-center-box :nth-child(1) {
+  -o-object-position: left center;
+     object-position: left center;
 }
 .container .index .forth-page-bg .center-box {
   width: 35vw;
@@ -673,200 +938,147 @@
   font-weight: 600;
 }
 
-.loading-page {
-  display: flex;
-  align-items: center;
+.construction .first-page {
   width: 100%;
-  height: 220vw;
-  max-height: 100vh;
-  transition: filter 1s;
-  overflow: hidden;
-  background-color: #fff;
-  pointer-events: none;
-  position: fixed;
-  z-index: 200;
-  left: 0;
-  top: 0;
+  height: auto;
+  position: relative;
 }
-.loading-page .contentBox {
+.construction .first-page-bg {
+  width: 100%;
+  height: auto;
+}
+.construction .first-page-bg img {
+  width: 100%;
+  height: auto;
+}
+.construction .first-page-title {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  pointer-events: none;
-  margin: auto;
   position: absolute;
   left: 0;
   right: 0;
-  margin: 0 auto;
-  top: 10vw;
-}
-.loading-page .contentBox .svgBox {
-  width: 80vw;
-  height: 30vw;
-  transform: scale(1.2);
-}
-.loading-page .contentBox .svgBox svg {
-  width: 100%;
-  height: 100%;
-}
-.loading-page .contentBox .svgBox svg .rotate {
-  transform-origin: center;
-}
-.loading-page .contentBox .svgBox svg .rotate g {
-  opacity: 0;
-}
-.loading-page .contentBox .svgBox svg .rotate .g2 {
-  width: 100%;
-  transform-origin: center;
-}
-.loading-page .contentBox .svgBox svg .rotate .g2 path {
-  transform: rotateY(180deg);
-}
-.loading-page .contentBox .svgBox svg .rotate .g4 {
-  width: 100%;
-  transform-origin: center;
-  opacity: 1;
-}
-.loading-page .contentBox .svgBox svg .rotate .g4 line {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-}
-.loading-page .titleBox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
   bottom: 0;
+  top: 0;
   margin: auto;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding-top: 10vw;
 }
-.loading-page .titleBox h1 {
-  font-weight: 700;
-  font-size: 2vw;
-  opacity: 0;
+.construction .first-page-title h2, .construction .first-page-title h3 {
+  text-align: center;
 }
-.loading-page .titleBox h5 {
-  font-size: 0.3vw;
-  transform: scale(0.95);
-  font-weight: 400;
-  opacity: 0;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0vw 1.5vw;
-  border-bottom: 2px solid #000;
-  position: fixed;
-  background-color: #fff;
-  transition: 1s;
-  width: 100%;
-  left: 0;
-  top: 0;
-  z-index: 10;
-}
-header .logoBox {
-  mix-blend-mode: normal;
-  isolation: isolate;
-}
-header .logoBox img {
-  width: 5vw;
-}
-header .menu-button {
-  display: flex;
-  align-items: center;
-  color: #000;
-  cursor: pointer;
-}
-header .menu-button :nth-child(1) {
-  font-size: 2.5vw;
-}
-header .menu-button :nth-child(2) {
-  font-size: 0.8vw;
-}
-header .progress-bar {
-  width: 0;
-  height: 4px;
-  background-color: #000;
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-}
-
-.menu {
-  position: fixed;
-  right: -30%;
-  top: 0;
-  width: 26vw;
-  height: 220vw;
-  max-height: 100vh;
-  background-color: #fff;
-  z-index: 20;
-  padding: 1vw 1.5vw;
-  transition: right 1.5s;
-}
-.menu .close {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  cursor: pointer;
-}
-.menu .close img {
-  width: 1.5vw;
-}
-.menu ul {
-  margin-top: 4vw;
-  margin-left: 2vw;
-}
-.menu ul li {
-  font-size: 1vw;
+.construction .first-page-title h2 {
+  font-size: 1.4vw;
+  letter-spacing: 0.2em;
   font-weight: 600;
-  margin-bottom: 2.8vw;
-  letter-spacing: 0.1em;
 }
-.menu ul li span {
-  font-size: 0.9vw;
-  letter-spacing: 0;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.61);
-  margin-left: 0.8vw;
-}
-.menu ul li .sub-open {
-  margin: 1.5vw 0vw 4.9vw 1.3vw;
-}
-.menu ul li .sub-open li {
-  margin-bottom: 1.6vw;
+.construction .first-page-title h3 {
   font-size: 0.8vw;
-  font-weight: 500;
+  margin-right: 0.3vw;
+}
+.construction .second-page {
+  width: 100%;
+  padding: 20vw 0;
+}
+.construction .second-page ul {
+  width: 80%;
+  margin: 0 auto;
+}
+.construction .second-page ul li {
+  width: 100%;
   position: relative;
-  letter-spacing: 0;
 }
-.menu ul li .sub-open li span {
-  font-size: 0.8vw;
-  color: rgba(0, 0, 0, 0.5);
-  letter-spacing: 0;
+.construction .second-page ul li:not(:first-child) {
+  margin-top: 20vw;
 }
-.menu ul li .sub-open li::before {
+.construction .second-page ul li .imgBox {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.construction .second-page ul li .imgBox a {
+  display: flex;
+  justify-content: center;
+  width: 80.5%;
+}
+.construction .second-page ul li .imgBox a img {
+  width: 100%;
+  height: 37.2vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 55%, 75% 100%, 0 100%, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 55%, 75% 100%, 0 100%, 0 0);
+  margin-right: 8vw;
+}
+.construction .second-page ul li .imgBox::after {
   display: block;
   content: "";
   position: absolute;
-  left: -0.9vw;
-  bottom: 0;
-  top: 0;
-  margin: auto 0;
-  width: 2%;
+  right: 1.6vw;
+  bottom: -1.75vw;
+  width: 35%;
   height: 1px;
-  background-color: rgba(0, 0, 0, 0.5);
+  transform: rotate(-46.1deg);
+  transform-origin: left center;
+  background-color: #888888;
+}
+.construction .second-page ul li .paraBox {
+  position: absolute;
+  width: 15vw;
+  right: 2vw;
+  bottom: 3.5vw;
+}
+.construction .second-page ul li .paraBox-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1vw;
+}
+.construction .second-page ul li .paraBox-title h3 {
+  font-size: 1.1vw;
+  letter-spacing: 0.1em;
+  margin-right: 1vw;
+}
+.construction .second-page ul li .paraBox-title p {
+  font-size: 1.2vw;
+  padding: 0.1vw 0.5vw;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #56B87E;
+  background-color: rgb(233, 233, 233);
+}
+.construction .second-page ul li .paraBox > p {
+  font-size: 0.9vw;
+  letter-spacing: 0.1em;
+}
+.construction .second-page ul li .paraBox a {
+  position: absolute;
+  right: -4vw;
+  bottom: -6vw;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.construction .second-page ul li .paraBox span {
+  font-size: 0.8vw;
+  letter-spacing: 0.2em;
+  border-bottom: 1px solid #888888;
+  padding: 0 1.5vw 0.3vw 0.5vw;
+}
+.construction .second-page ul li .paraBox span::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 18%;
+  height: 1px;
+  background-color: #888888;
+  bottom: -0.3px;
+  right: 0;
+  transform: rotate(30deg);
+  transform-origin: right center;
 }
 
 * {
@@ -974,13 +1186,13 @@ body {
 }
 .contact .swiper-wrapper .swiper-slide img {
   position: absolute;
-  top: 13vw;
-  left: 10vw;
-  width: 35vw;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 55vw;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-top: -4vw;
   z-index: 3;
 }
 
