@@ -82,6 +82,9 @@
                 <div class="swiper-slide">
                     <img src="../img/fake img/熱銷建案 內頁 之間.webp">
                 </div>
+                <div class="swiper-slide">
+                    <img src="../img/fake img/工程進度.webp">
+                </div>
             </div>
         </div>
       
@@ -96,7 +99,23 @@
     <script src="../js/config.js"></script>
 
     <script>
-    
+     window.onload = function(){
+            const swiper = new Swiper(".swiper",{
+                loop:true,
+                effect : 'fade',
+                fadeEffect: {
+                    crossFade: true,
+                },
+                speed:0,
+            })
+            let about = document.querySelector(".about")
+            $(".about").css("height",`${$(".about .swiper-slide-active").css("height")}`)
+        about.onclick = function(){
+            swiper.slideNext()
+            console.log($(".about .swiper-slide-active").css("height"))
+            $(".about").css("height",`${$(".about .swiper-slide-active").css("height")}`)
+        }
+        }
 
     </script>
 </body>
