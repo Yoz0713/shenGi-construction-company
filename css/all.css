@@ -458,7 +458,7 @@ header .progress-bar {
   letter-spacing: 0.1em;
   color: #1A1A1A;
 }
-.container .index .second-page-paraBox .para h2 span {
+.container .index .second-page-paraBox .para h2 .dot {
   font-size: 0.8vw;
   color: #1A1A1A;
 }
@@ -819,9 +819,10 @@ header .progress-bar {
 }
 .container .index .forth-page-para .box3 .box1-2 {
   position: absolute;
-  right: 0;
+  width: 150%;
   top: 0;
   background-color: #fff;
+  left: 0;
 }
 .container .index .forth-page-bg {
   width: 100%;

@@ -215,7 +215,7 @@
                     <div class="para">
                         <h4>ABOUT</h4>
                         <h3>SUN <span>GLORY</span></h3>
-                        <h2>森<span>。</span>思<span>。</span>熟<span>。</span>綠<span>。</span>創<span>。</span>意<span>。</span>匯<span>。</span>鉅</h2>
+                        <h2><span class="green">森</span><span class="dot">。</span>思<span class="dot">。</span>熟<span class="dot">。</span><span class="green">綠</span><span class="dot">。</span>創<span class="dot">。</span>意<span class="dot">。</span>匯<span class="dot">。</span>鉅</h2>
                         <div class="svgBox">
                             <svg viewBox="0 0 600 600">
                                 <g >
@@ -343,7 +343,7 @@
                     </div>
                     <div class="box3">
                         <div class="box1-1">
-                            <p>滿足居住者的理想居所，<br>讓美好生活與藝術自然相遇。</p>
+                            <p>美好生活 與 人 藝術 自然相遇。</p>
                         </div>
                         <div class="box1-2">
                             <p>打造空間新美學，<br>收藏一個詩意棲居般的「家」</p>
@@ -644,6 +644,9 @@
             },"<+3").to(".second-page h3 span",{
                 color:"rgb(86,184,126)",
                 duration:6,
+            }).to(".second-page h2 .green",{
+                color:"rgb(86,184,126)",
+                duration:6,
             }).to(".second-page",{
                 x:"-108vw",
                 duration:6
@@ -924,7 +927,7 @@
                 clipPath:"polygon(0 100% , 100% 100%, 100% 100% , 0 100% , 0 0 )",
                 duration:6,
                 stagger:1
-        },"<+3").to(".forth-page-para div",{
+        }).to(".forth-page-para div",{
             opacity:0,
             duration:6
            

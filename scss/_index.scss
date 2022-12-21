@@ -248,6 +248,7 @@
                             margin: auto 0;
                             transition:width 1.2s;
                         }
+                        
                         span{
                             font-family: $en_style;
                             font-size:3.8vw;
@@ -276,7 +277,7 @@
                         letter-spacing: 0.1em;
                         color: #1A1A1A;
                      
-                        span{
+                        .dot{
                             font-size: 0.8vw;
                             
                             color:#1A1A1A ;
@@ -659,9 +660,10 @@
                     font-weight: 600;
                     .box1-2{
                         position: absolute;
-                        right: 0;
+                        width: 150%;
                         top: 0;
                         background-color: #fff;
+                        left: 0;
                     }
                 }
             }
