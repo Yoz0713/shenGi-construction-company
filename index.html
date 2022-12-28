@@ -562,7 +562,7 @@
                 scrub: 2,
                 pin: ".index",
                 toggleActions: "play none none reverse",
-                end: `+=${$(".index .first-page").height() + $(".index .second-page").height() + $(".index .third-page").height() + $(".index .forth-page").height() + $(".index .fifth-page").height()}`,
+                end: "+=24000",
                 anticipatePin: 1,
                 animation: gg,
                 lazy: true,
@@ -584,15 +584,16 @@
             }
             //progress
 
-
+            let gg2 = gsap.timeline()
             //animation start
             gsap.set(".first-page .imgBox > img", {
                 scale: 1.6,
                 y: "15vw"
             })
-            gg.to(".first-page .paraBox", {
+            gg2.to(".first-page .paraBox", {
                 y: "-100vh",
-                duration: 10
+                duration: 10,
+                delay: 10
             }).to(".loading-page", {
                 y: "-100vh",
                 duration: 10,
