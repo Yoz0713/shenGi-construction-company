@@ -18,6 +18,7 @@
                 width: 100%;
                 height: 220vw;
                 max-height: 100vh;
+                transform: translate3d(0, 0, 0);
 
                 img {
                     display: block;
@@ -92,6 +93,7 @@
                 height: 35vw;
                 background-color: #fff;
                 z-index: 10;
+                transform: translate3d(0, 0, 0);
 
                 .para {
                     display: flex;
@@ -149,6 +151,7 @@
             position: absolute;
             right: -100vw;
             top: 0;
+            transform: translate3d(0, 0, 0);
 
             &-bg {
                 width: 100%;
@@ -187,7 +190,7 @@
                     bottom: 0;
                     object-fit: cover;
                     filter: brightness(1);
-
+                    transform: translate3d(0, 0, 0);
                 }
 
                 & :nth-child(4) {
@@ -217,6 +220,7 @@
                     margin-top: 0vw;
                     position: relative;
                     margin-left: 8vw;
+                    transform: translate3d(0, 0, 0);
 
                     h4 {
                         font-family: $en_style;
@@ -364,7 +368,8 @@
                 position: absolute;
                 top: -76vw;
                 right: -23vw;
-                transform: rotate(-165deg);
+                transform: rotate(-165deg) translate3d(0, 0, 0);
+
             }
 
         }
@@ -392,6 +397,7 @@
                 background-position: center right;
                 padding: 1vw;
                 overflow: visible;
+                transform: translate3d(0, 0, 0);
 
                 img {
                     position: absolute;
@@ -438,6 +444,7 @@
                     overflow: hidden;
                     z-index: 10;
                     filter: brightness(1);
+                    transform: translate3d(0, 0, 0);
 
                     img {
                         position: relative;

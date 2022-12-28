@@ -12,6 +12,7 @@
   z-index: 200;
   left: 0;
   top: 0;
+  transform: translate3d(0, 0, 0);
 }
 .loading-page .contentBox {
   width: -webkit-fit-content;
@@ -213,6 +214,7 @@ header .progress-bar {
   width: 100%;
   height: 220vw;
   max-height: 100vh;
+  transform: translate3d(0, 0, 0);
 }
 .container .index .first-page .imgBox img {
   display: block;
@@ -276,6 +278,7 @@ header .progress-bar {
   height: 35vw;
   background-color: #fff;
   z-index: 10;
+  transform: translate3d(0, 0, 0);
 }
 .container .index .first-page .paraBox .para {
   display: flex;
@@ -323,6 +326,7 @@ header .progress-bar {
   position: absolute;
   right: -100vw;
   top: 0;
+  transform: translate3d(0, 0, 0);
 }
 .container .index .second-page-bg {
   width: 100%;
@@ -357,6 +361,7 @@ header .progress-bar {
   -o-object-fit: cover;
      object-fit: cover;
   filter: brightness(1);
+  transform: translate3d(0, 0, 0);
 }
 .container .index .second-page-bg :nth-child(4) {
   width: 25%;
@@ -383,6 +388,7 @@ header .progress-bar {
   margin-top: 0vw;
   position: relative;
   margin-left: 8vw;
+  transform: translate3d(0, 0, 0);
 }
 .container .index .second-page-paraBox .para h4 {
   font-family: "Cormorant Garamond", serif;
@@ -499,7 +505,7 @@ header .progress-bar {
   position: absolute;
   top: -76vw;
   right: -23vw;
-  transform: rotate(-165deg);
+  transform: rotate(-165deg) translate3d(0, 0, 0);
 }
 .container .index .third-page {
   width: 100%;
@@ -524,6 +530,7 @@ header .progress-bar {
   background-position: center right;
   padding: 1vw;
   overflow: visible;
+  transform: translate3d(0, 0, 0);
 }
 .container .index .third-page-bg img {
   position: absolute;
@@ -565,6 +572,7 @@ header .progress-bar {
   overflow: hidden;
   z-index: 10;
   filter: brightness(1);
+  transform: translate3d(0, 0, 0);
 }
 .container .index .third-page-bg .imgBox img {
   position: relative;

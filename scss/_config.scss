@@ -18,6 +18,7 @@ $more_text: 0.8vw;
     z-index: 200;
     left: 0;
     top: 0;
+    transform: translate3d(0, 0, 0);
 
     .contentBox {
         width: fit-content;
