@@ -200,11 +200,17 @@ header .progress-bar {
   overflow: hidden;
 }
 .container .index {
+  position: fixed;
   width: 100%;
   background-color: #fff;
-  overflow: initial;
-  position: relative;
   transition: 1s;
+  overflow: hidden;
+  bottom: 0;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+  top: 0;
+  left: 0;
+  right: 0;
 }
 .container .index .first-page {
   position: relative;

@@ -552,14 +552,13 @@
                     //     anticipatePin:1,
 
                     // },
-                    ease: "none",
+                    ease: "Linear.easeNone",
                     overwrite: "auto",
 
 
                 })
 
                 let st = ScrollTrigger.create({
-                    trigger: ".first-page",
                     scrub: 2,
                     pin: ".index",
                     toggleActions: "play none none reverse",
@@ -585,7 +584,7 @@
                 }
                 //progress
 
-                let gg2 = gsap.timeline()
+
                 //animation start
                 gsap.set(".first-page .imgBox > img", {
                     scale: 1.6,
