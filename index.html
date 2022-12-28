@@ -590,418 +590,414 @@
                 scale: 1.6,
                 y: "15vw"
             })
-            gg
-                // .to(".first-page .paraBox", {
-                //     y: "-100vh",
-                //     duration: 10
-                // }).to(".loading-page", {
-                //     y: "-100vh",
-                //     duration: 10,
+            gg.to(".first-page .paraBox", {
+                y: "-100vh",
+                duration: 10
+            }).to(".loading-page", {
+                y: "-100vh",
+                duration: 10,
 
-                // }, "<").to(".first-page .imgBox > img", {
-                //     scale: 1,
-                //     y: 0,
-                //     duration: 6
-                // }, "<").fromTo(".first-page .imgBox .para img", {
-                //     y: 30,
-                //     opacity: 0,
+            }, "<").to(".first-page .imgBox > img", {
+                scale: 1,
+                y: 0,
+                duration: 6
+            }, "<").fromTo(".first-page .imgBox .para img", {
+                y: 30,
+                opacity: 0,
 
-                // }, {
+            }, {
 
-                //     opacity: 1,
-                //     y: 0,
-                //     duration: 6
-                // }, "<+3.5").fromTo(".first-page .imgBox .para svg .fp-line", {
-                //     strokeDashoffset: 2000,
-                //     strokeDasharray: 2000
-                // }, {
-                //     strokeDashoffset: 1700,
+                opacity: 1,
+                y: 0,
+                duration: 6
+            }, "<+3.5").fromTo(".first-page .imgBox .para svg .fp-line", {
+                strokeDashoffset: 2000,
+                strokeDasharray: 2000
+            }, {
+                strokeDashoffset: 1700,
 
-                //     duration: 12,
+                duration: 12,
 
-                // }, "<+5").fromTo(".first-page .imgBox .para p", {
-                //     y: 30,
-                //     opacity: 0,
+            }, "<+5").fromTo(".first-page .imgBox .para p", {
+                y: 30,
+                opacity: 0,
 
-                // }, {
+            }, {
 
-                //     opacity: 1,
-                //     y: 0,
-                //     duration: 6
-                // }, "<+1.5").to(".first-page .imgBox", {
-                //     x: "-105vw",
-                //     duration: 12
-                // }, "<+9").to(".second-page", {
-                //     x: "-100vw",
-                //     duration: 12
-                // }, "<").fromTo(".second-page-bg :nth-child(1)", {
-                //     opacity: 0
-                // }, {
-                //     opacity: 1,
-                //     duration: 6
-                // }, "<+3").fromTo(".second-page h4", {
-                //     y: "80vh"
-                // }, {
-                //     y: 0,
-                //     duration: 6
-                // }, "<+4").fromTo(".second-page h3", {
-                //     y: "80vh"
-                // }, {
-                //     y: 0,
-                //     duration: 6
-                // }, "<+1.2").fromTo(".second-page h2", {
-                //     y: "80vh"
-                // }, {
-                //     y: 0,
-                //     duration: 6,
+                opacity: 1,
+                y: 0,
+                duration: 6
+            }, "<+1.5").to(".first-page .imgBox", {
+                x: "-105vw",
+                duration: 12
+            }, "<+9").to(".second-page", {
+                x: "-100vw",
+                duration: 12
+            }, "<").fromTo(".second-page-bg :nth-child(1)", {
+                opacity: 0
+            }, {
+                opacity: 1,
+                duration: 6
+            }, "<+3").fromTo(".second-page h4", {
+                y: "80vh"
+            }, {
+                y: 0,
+                duration: 6
+            }, "<+4").fromTo(".second-page h3", {
+                y: "80vh"
+            }, {
+                y: 0,
+                duration: 6
+            }, "<+1.2").fromTo(".second-page h2", {
+                y: "80vh"
+            }, {
+                y: 0,
+                duration: 6,
 
-                // }, "<+1.2").fromTo(".second-page .svgBox path", {
-                //     strokeDashoffset: 2000,
-                //     strokeDasharray: 2000
-                // }, {
-                //     strokeDashoffset: 420,
+            }, "<+1.2").fromTo(".second-page .svgBox path", {
+                strokeDashoffset: 2000,
+                strokeDasharray: 2000
+            }, {
+                strokeDashoffset: 420,
 
-                //     duration: 8,
-                //     onStart: () => {
-                //         $(".second-page h4").addClass("active1");
-                //         $(".second-page h3").addClass("active2");
-                //     }
-                // }, "<+3").to(".second-page h3 span", {
-                //     color: "rgb(86,184,126)",
-                //     duration: 6,
-                // }).to(".second-page h2 .green", {
-                //     color: "rgb(86,184,126)",
-                //     duration: 6,
-                // }).to(".second-page", {
-                //     x: "-108vw",
-                //     duration: 6
-                // }, "<+1").to(".second-page-bg :nth-child(2)", {
+                duration: 8,
+                onStart: () => {
+                    $(".second-page h4").addClass("active1");
+                    $(".second-page h3").addClass("active2");
+                }
+            }, "<+3").to(".second-page h3 span", {
+                color: "rgb(86,184,126)",
+                duration: 6,
+            }).to(".second-page h2 .green", {
+                color: "rgb(86,184,126)",
+                duration: 6,
+            }).to(".second-page", {
+                x: "-108vw",
+                duration: 6
+            }, "<+1").to(".second-page-bg :nth-child(2)", {
 
-                //     scale: 1.035,
-                //     duration: 4
-                // }, "<+2").to(".second-page-bg :nth-child(4)", {
+                scale: 1.035,
+                duration: 4
+            }, "<+2").to(".second-page-bg :nth-child(4)", {
 
-                //     scale: 1.035,
-                //     duration: 4
-                // }, "<").to(".second-page-bg :nth-child(3)", {
+                scale: 1.035,
+                duration: 4
+            }, "<").to(".second-page-bg :nth-child(3)", {
 
-                //     scale: 1.035,
-                //     duration: 4
-                // }, "<").fromTo(".second-page-bg :nth-child(4)", {
-                //     clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
-                // }, {
-                //     clipPath: "polygon(0 0 , 0% 0, 0% 100% , 0 100% , 0 0 )",
-                //     duration: 5
-                // }).to(".second-page-bg :nth-child(3)", {
-                //     width: "101%",
-                //     height: "100%",
-                //     filter: "brightness(0.4)",
-                //     duration: 5,
+                scale: 1.035,
+                duration: 4
+            }, "<").fromTo(".second-page-bg :nth-child(4)", {
+                clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
+            }, {
+                clipPath: "polygon(0 0 , 0% 0, 0% 100% , 0 100% , 0 0 )",
+                duration: 5
+            }).to(".second-page-bg :nth-child(3)", {
+                // width: "101%",
+                // height: "100%",
+                filter: "brightness(0.4)",
+                duration: 5,
 
-                // }).fromTo(".second-page .svgBox", {
-                //     filter: `brightness(1)`,
-                // }, {
-                //     x: "14vw",
-                //     y: "1.5vw",
-                //     scale: 0.7,
-                //     filter: `brightness(2)`,
-                //     duration: 4,
-                // }, "<").to(".second-page .svgBox svg", {
-                //     rotate: -22,
-                //     duration: 6,
-                // }, "<").to(".second-page .svgBox svg path", {
-                //     strokeDashoffset: 530,
-                //     duration: 6,
-                // }, "<").to(".second-page .para h4", {
-                //     opacity: 0,
-                //     duration: 6,
-                // }, "<").to(".second-page .para h3", {
-                //     opacity: 0,
-                //     duration: 6,
-                // }, "<").to(".second-page .para h2", {
-                //     opacity: 0,
-                //     duration: 6,
-                // }, "<").to(".second-page-bg :nth-child(1)", {
-                //     display: "none"
-                // }, "<+5").to(".second-page-bg :nth-child(2)", {
-                //     display: "none"
-                // }, "<").fromTo(".second-page .para .imgBox svg > :nth-child(1) > :nth-child(1)", {
-                //     y: 30
-                // }, {
-                //     y: 0,
-                //     opacity: 1,
-                //     duration: 4,
-                // }, "<+1").fromTo(".second-page .para .imgBox svg .rigin", {
-                //     y: 30
-                // }, {
-                //     y: 0,
-                //     opacity: 1,
-                //     duration: 5,
-                //     stagger: 0.8
-                // }, "<+3").fromTo(".second-page .para .imgBox svg > :nth-child(2) ", {
-                //     y: 30,
-                //     opacity: 0
-                // }, {
-                //     y: 0,
-                //     opacity: 1,
-                //     duration: 5,
-                // }, "<+3").fromTo(".second-page-bg :nth-child(3)", {
+            }).fromTo(".second-page .svgBox", {
+                filter: `brightness(1)`,
+            }, {
+                x: "14vw",
+                y: "1.5vw",
+                scale: 0.7,
+                filter: `brightness(2)`,
+                duration: 4,
+            }, "<").to(".second-page .svgBox svg", {
+                rotate: -22,
+                duration: 6,
+            }, "<").to(".second-page .svgBox svg path", {
+                strokeDashoffset: 530,
+                duration: 6,
+            }, "<").to(".second-page .para h4", {
+                opacity: 0,
+                duration: 6,
+            }, "<").to(".second-page .para h3", {
+                opacity: 0,
+                duration: 6,
+            }, "<").to(".second-page .para h2", {
+                opacity: 0,
+                duration: 6,
+            }, "<").to(".second-page-bg :nth-child(1)", {
+                display: "none"
+            }, "<+5").to(".second-page-bg :nth-child(2)", {
+                display: "none"
+            }, "<").fromTo(".second-page .para .imgBox svg > :nth-child(1) > :nth-child(1)", {
+                y: 30
+            }, {
+                y: 0,
+                opacity: 1,
+                duration: 4,
+            }, "<+1").fromTo(".second-page .para .imgBox svg .rigin", {
+                y: 30
+            }, {
+                y: 0,
+                opacity: 1,
+                duration: 5,
+                stagger: 0.8
+            }, "<+3").fromTo(".second-page .para .imgBox svg > :nth-child(2) ", {
+                y: 30,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1,
+                duration: 5,
+            }, "<+3").fromTo(".second-page-bg :nth-child(3)", {
 
-                //     clipPath: "circle(100%)"
-                // }, {
-                //     clipPath: "circle(8%)",
-                //     // width:"15vw",
-                //     // height:"15vw",
-                //     // borderRadius:"50%",
+                clipPath: "circle(100%)"
+            }, {
+                clipPath: "circle(8%)",
 
 
-                //     duration: 6
-                // }, ">+2").to(".second-page-paraBox .para", {
-                //     x: "3.5vw",
-                //     scale: 0.3,
-                //     duration: 6
-                // }, "<+1").to(".second-page .circle", {
-                //     rotate: 195,
 
-                //     duration: 12
-                // }).fromTo(".second-page-bg :nth-child(3)", {
-                //     clipPath: "circle(8%)",
-                // }, {
-                //     clipPath: "circle(0%)",
-                //     y: "-8vw",
-                //     duration: 7
-                // }, "<+0.3").to(".second-page-paraBox .para", {
-                //     y: "-7.5vw",
-                //     scale: 0,
-                //     duration: 6
-                // }, "<")
-                .fromTo(".third-page-bg", {
-                    opacity: 0
-                }, {
+                duration: 6
+            }, ">+2").to(".second-page-paraBox .para", {
+                x: "3.5vw",
+                scale: 0.3,
+                duration: 6
+            }, "<+1").to(".second-page .circle", {
+                rotate: 195,
 
-                    opacity: 1,
-                    duration: 1
-                }).fromTo(".third-page-bg", {
+                duration: 12
+            }).fromTo(".second-page-bg :nth-child(3)", {
+                clipPath: "circle(8%)",
+            }, {
+                clipPath: "circle(0%)",
+                y: "-8vw",
+                duration: 7
+            }, "<+0.3").to(".second-page-paraBox .para", {
+                y: "-7.5vw",
+                scale: 0,
+                duration: 6
+            }, "<").fromTo(".third-page-bg", {
+                opacity: 0
+            }, {
 
-                    clipPath: "polygon(100% 0 , 100% 100%, 100% 100% ,100% 0)",
+                opacity: 1,
+                duration: 1
+            }).fromTo(".third-page-bg", {
 
-                }, {
-                    clipPath: "polygon(0% 0 , 0% 100%, 100% 100% ,100% 0)",
+                clipPath: "polygon(100% 0 , 100% 100%, 100% 100% ,100% 0)",
 
-                    duration: 10
-                }).fromTo(".third-page-bg .paraBox h2", {
-                    x: "85vw"
-                }, {
-                    x: 0,
-                    duration: 6
-                }, "<+5.5").fromTo(".third-page-bg .paraBox h3", {
-                    x: "85vw"
-                }, {
-                    x: 0,
-                    duration: 6,
-                    stagger: 1.5
-                }, "<+2").to(".third-page-bg", {
-                    clipPath: "polygon(0% 0 , 0% 100%, 200% 100% ,200% 0)",
-                    width: "51%",
+            }, {
+                clipPath: "polygon(0% 0 , 0% 100%, 100% 100% ,100% 0)",
 
-                    duration: 6
-                }, "<+3.5").fromTo(".third-page-bg > :nth-child(1)", {
-                    y: "35vw",
-                    x: "52vw",
-                }, {
-                    y: 0,
-                    duration: 4.5
-                }, "<+3.5").fromTo(".third-page-bg > :nth-child(2)", {
-                    x: "85vw"
+                duration: 10
+            }).fromTo(".third-page-bg .paraBox h2", {
+                x: "85vw"
+            }, {
+                x: 0,
+                duration: 6
+            }, "<+5.5").fromTo(".third-page-bg .paraBox h3", {
+                x: "85vw"
+            }, {
+                x: 0,
+                duration: 6,
+                stagger: 1.5
+            }, "<+2").to(".third-page-bg", {
+                clipPath: "polygon(0% 0 , 0% 100%, 200% 100% ,200% 0)",
+                // width: "51%",
 
-
-                }, {
-                    x: 0,
-                    duration: 6,
-                }, "<+3.5").to(".third-page-bg .paraBox h2", {
-                    x: "-45vw",
-                    duration: 6,
-                }, "<+1.5").to(".third-page-bg .paraBox h3", {
-                    x: "-45vw",
-                    duration: 6,
-                    stagger: 0.8
-                }, "<+0.8").to(".third-page-bg > :nth-child(2)", {
-                    width: "100%",
-                    height: "100%",
-                    duration: 4,
-
-                }, "<+4").to(".third-page-bg > :nth-child(2)", {
-                    width: "100vw",
-                    height: "100%",
-                    duration: 6,
-                    filter: "brightness(0.2)"
-                }).to(".third-page-bg > :nth-child(1)", {
-                    display: "none",
-                    duration: 1
-                }, "<+3").to(".third-page-bg", {
-                    backgroundImage: "none",
-                    duration: 1
-                }, "<").fromTo(".third-page-paraBox h2", {
-                    opacity: 0,
-                    y: 30,
-                }, {
-                    opacity: 1,
-                    y: 0,
-                    duration: 2,
-                }, "<").fromTo(".third-page-paraBox ul .line", {
-                    opacity: 0,
-                    y: -30,
-                }, {
-                    opacity: 1,
-                    y: 0,
-                    stagger: 1.5,
-                    duration: 2,
-                }, "<+2.5").fromTo(".third-page-paraBox ul :nth-child(odd)", {
-                    opacity: 0,
-                    y: 30,
-                }, {
-                    opacity: 1,
-                    y: 0,
-                    stagger: 1.5,
-                    duration: 2,
-                }, "<+1").fromTo(".third-page-paraBox .box h3", {
-                    opacity: 0,
-                    x: -30,
-                    filter: "blur(5px)",
-                }, {
-                    filter: "blur(0px)",
-                    opacity: 1,
-                    y: 0,
-                    stagger: 1.5,
-                    duration: 4.5,
-                }, "<+5").fromTo(".third-page-paraBox .box svg", {
-                    opacity: 0,
-                    y: 30,
-                }, {
-                    opacity: 1,
-                    y: 0,
-                    stagger: 1.5,
-                    duration: 3.5,
-                }, "<+1").to(".third-page-paraBox .box svg > rect", {
-                    fill: "#7c8c5b",
-                    duration: 6
-                }, "<+3").fromTo(".third-page-paraBox .box svg", {
-                    strokeDashoffset: 2000,
-                    strokeDasharray: 2000
-                }, {
-                    strokeDashoffset: 1300,
-                    duration: 13,
-                }, "<+3").fromTo(".third-page-bg > :nth-child(2)", {
-                    clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
-                }, {
-                    width: "65vw",
-                    height: "37vw",
-                    clipPath: "polygon(0 0 , 0% 0, 0% 0% , 0 0% , 0 0 )",
-                    duration: 12,
-                    y: "-19vw",
-                    x: "-11vw"
-                }, "<+6.5").to(".third-page-paraBox ", {
-                    opacity: 0,
-                    filter: "blur(4px)",
-                    duration: 2.5,
-                }, "<").fromTo(".forth-page-bg .imgBox", {
-                    y: "120vh"
-                }, {
-                    y: "0vh",
-                    duration: 6,
-                    stagger: 1
-                }, "<+2").fromTo(".forth-page-bg .left-top-box", {
-                    y: "-50vh"
-                }, {
-                    y: 0,
-                    duration: 6,
-                }, "<").fromTo(".forth-page-para .box1", {
-                    x: "30vw",
-                    opacity: 0
-                }, {
-                    opacity: 1,
-                    x: 0,
-                    duration: 6,
-                }, "<+3").fromTo(".forth-page-para .box2", {
-                    x: "-40vw",
-                    opacity: 0
-                }, {
-                    opacity: 1,
-                    x: 0,
-                    duration: 6,
-                }, "<").fromTo(".forth-page-para .box3", {
-                    x: "-30vw",
-                    opacity: 0,
-                }, {
-                    opacity: 1,
-                    x: 0,
-                    duration: 6,
-                }, "<").fromTo(".forth-page-bg .left-top-box > :nth-child(2)", {
-                    clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
-                }, {
-                    clipPath: "polygon(0 0 , 100% 0, 100% 0% , 0 0% , 0 0 )",
-                    duration: 6,
-                }, ">+5").fromTo(".forth-page-bg .imgBox > :nth-child(2)", {
-                    clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
-                }, {
-                    clipPath: "polygon(0 0 , 100% 0, 100% 0% , 0 0% , 0 0 )",
-                    duration: 6,
-                    stagger: 1
-                }, "<+2").fromTo(".forth-page-para .box1-2", {
-                    clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
-                }, {
-                    clipPath: "polygon(0 100% , 100% 100%, 100% 100% , 0 100% , 0 0 )",
-                    duration: 6,
-                    stagger: 1
-                }).to(".forth-page-para div", {
-                    opacity: 0,
-                    duration: 6
-
-                }, ">+4.5").to(".forth-page-bg > div", {
-
-                    y: "-120vh",
-                    duration: 6,
-                    stagger: 0.5
-                }, "<+5").to(".fifth-page-bg :nth-child(1)", {
-                    y: "-180vh",
-                    duration: 6,
-
-                }, "<+3").to(".fifth-page-bg :nth-child(2)", {
-                    y: "-180vh",
-                    duration: 6,
-
-                }, "<+0.5").fromTo(".fifth-page-bg", {
-                    x: "55vw"
-                }, {
+                duration: 6
+            }, "<+3.5").fromTo(".third-page-bg > :nth-child(1)", {
+                y: "35vw",
+                x: "52vw",
+            }, {
+                y: 0,
+                duration: 4.5
+            }, "<+3.5").fromTo(".third-page-bg > :nth-child(2)", {
+                x: "85vw"
 
 
-                    duration: 6,
+            }, {
+                x: 0,
+                duration: 6,
+            }, "<+3.5").to(".third-page-bg .paraBox h2", {
+                x: "-45vw",
+                duration: 6,
+            }, "<+1.5").to(".third-page-bg .paraBox h3", {
+                x: "-45vw",
+                duration: 6,
+                stagger: 0.8
+            }, "<+0.8").to(".third-page-bg > :nth-child(2)", {
+                // width: "100%",
+                // height: "100%",
+                duration: 4,
 
-                }, "<+0.5").fromTo(".fifth-page-bg :nth-child(3)", {
-                    scaleX: 0.5,
-                    scaleY: 0.5,
+            }, "<+4").to(".third-page-bg > :nth-child(2)", {
+                // width: "100vw",
+                // height: "100%",
+                duration: 6,
+                filter: "brightness(0.2)"
+            }).to(".third-page-bg > :nth-child(1)", {
+                display: "none",
+                duration: 1
+            }, "<+3").to(".third-page-bg", {
+                backgroundImage: "none",
+                duration: 1
+            }, "<").fromTo(".third-page-paraBox h2", {
+                opacity: 0,
+                y: 30,
+            }, {
+                opacity: 1,
+                y: 0,
+                duration: 2,
+            }, "<").fromTo(".third-page-paraBox ul .line", {
+                opacity: 0,
+                y: -30,
+            }, {
+                opacity: 1,
+                y: 0,
+                stagger: 1.5,
+                duration: 2,
+            }, "<+2.5").fromTo(".third-page-paraBox ul :nth-child(odd)", {
+                opacity: 0,
+                y: 30,
+            }, {
+                opacity: 1,
+                y: 0,
+                stagger: 1.5,
+                duration: 2,
+            }, "<+1").fromTo(".third-page-paraBox .box h3", {
+                opacity: 0,
+                x: -30,
+                filter: "blur(5px)",
+            }, {
+                filter: "blur(0px)",
+                opacity: 1,
+                y: 0,
+                stagger: 1.5,
+                duration: 4.5,
+            }, "<+5").fromTo(".third-page-paraBox .box svg", {
+                opacity: 0,
+                y: 30,
+            }, {
+                opacity: 1,
+                y: 0,
+                stagger: 1.5,
+                duration: 3.5,
+            }, "<+1").to(".third-page-paraBox .box svg > rect", {
+                fill: "#7c8c5b",
+                duration: 6
+            }, "<+3").fromTo(".third-page-paraBox .box svg", {
+                strokeDashoffset: 2000,
+                strokeDasharray: 2000
+            }, {
+                strokeDashoffset: 1300,
+                duration: 13,
+            }, "<+3").fromTo(".third-page-bg > :nth-child(2)", {
+                clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
+            }, {
+                // width: "65vw",
+                // height: "37vw",
+                clipPath: "polygon(0 0 , 0% 0, 0% 0% , 0 0% , 0 0 )",
+                duration: 12,
+                y: "-19vw",
+                x: "-11vw"
+            }, "<+6.5").to(".third-page-paraBox ", {
+                opacity: 0,
+                filter: "blur(4px)",
+                duration: 2.5,
+            }, "<").fromTo(".forth-page-bg .imgBox", {
+                y: "120vh"
+            }, {
+                y: "0vh",
+                duration: 6,
+                stagger: 1
+            }, "<+2").fromTo(".forth-page-bg .left-top-box", {
+                y: "-50vh"
+            }, {
+                y: 0,
+                duration: 6,
+            }, "<").fromTo(".forth-page-para .box1", {
+                x: "30vw",
+                opacity: 0
+            }, {
+                opacity: 1,
+                x: 0,
+                duration: 6,
+            }, "<+3").fromTo(".forth-page-para .box2", {
+                x: "-40vw",
+                opacity: 0
+            }, {
+                opacity: 1,
+                x: 0,
+                duration: 6,
+            }, "<").fromTo(".forth-page-para .box3", {
+                x: "-30vw",
+                opacity: 0,
+            }, {
+                opacity: 1,
+                x: 0,
+                duration: 6,
+            }, "<").fromTo(".forth-page-bg .left-top-box > :nth-child(2)", {
+                clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
+            }, {
+                clipPath: "polygon(0 0 , 100% 0, 100% 0% , 0 0% , 0 0 )",
+                duration: 6,
+            }, ">+5").fromTo(".forth-page-bg .imgBox > :nth-child(2)", {
+                clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
+            }, {
+                clipPath: "polygon(0 0 , 100% 0, 100% 0% , 0 0% , 0 0 )",
+                duration: 6,
+                stagger: 1
+            }, "<+2").fromTo(".forth-page-para .box1-2", {
+                clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
+            }, {
+                clipPath: "polygon(0 100% , 100% 100%, 100% 100% , 0 100% , 0 0 )",
+                duration: 6,
+                stagger: 1
+            }).to(".forth-page-para div", {
+                opacity: 0,
+                duration: 6
 
-                }, {
-                    scaleX: 0.5,
-                    scaleY: 0.5,
-                    y: "-120.1vh",
-                    duration: 4,
+            }, ">+4.5").to(".forth-page-bg > div", {
 
-                }, "<").to(".fifth-page-bg", {
-                    x: 0,
-                    duration: 4.5,
+                y: "-120vh",
+                duration: 6,
+                stagger: 0.5
+            }, "<+5").to(".fifth-page-bg :nth-child(1)", {
+                y: "-180vh",
+                duration: 6,
 
-                }, "<+4.5").to(".fifth-page-bg :nth-child(3)", {
-                    scaleX: 1.01,
-                    scaleY: 1.01,
-                    duration: 4,
+            }, "<+3").to(".fifth-page-bg :nth-child(2)", {
+                y: "-180vh",
+                duration: 6,
 
-                }, "<+4").to(".devloping", {
+            }, "<+0.5").fromTo(".fifth-page-bg", {
+                x: "55vw"
+            }, {
 
-                    y: "-100vh",
-                    duration: 6,
 
-                }, "<-4")
+                duration: 6,
+
+            }, "<+0.5").fromTo(".fifth-page-bg :nth-child(3)", {
+                scaleX: 0.5,
+                scaleY: 0.5,
+
+            }, {
+                scaleX: 0.5,
+                scaleY: 0.5,
+                y: "-120.1vh",
+                duration: 4,
+
+            }, "<").to(".fifth-page-bg", {
+                x: 0,
+                duration: 4.5,
+
+            }, "<+4.5").to(".fifth-page-bg :nth-child(3)", {
+                scaleX: 1.01,
+                scaleY: 1.01,
+                duration: 4,
+
+            }, "<+4").to(".devloping", {
+
+                y: "-100vh",
+                duration: 6,
+
+            }, "<-4")
         }
 
 
