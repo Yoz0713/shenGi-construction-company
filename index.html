@@ -566,7 +566,7 @@
                 anticipatePin: 1,
                 animation: gg,
                 lazy: true,
-                autoKill: true
+
             })
             //reset animation on refresh
             ScrollTrigger.addEventListener("refresh", () => st.scroll(0))
@@ -584,16 +584,15 @@
             }
             //progress
 
-            let gg2 = gsap.timeline()
+
             //animation start
             gsap.set(".first-page .imgBox > img", {
                 scale: 1.6,
                 y: "15vw"
             })
-            gg2.to(".first-page .paraBox", {
+            gg.to(".first-page .paraBox", {
                 y: "-100vh",
-                duration: 10,
-                delay: 10
+                duration: 10
             }).to(".loading-page", {
                 y: "-100vh",
                 duration: 10,
@@ -692,7 +691,10 @@
             }, {
                 clipPath: "polygon(0 0 , 0% 0, 0% 100% , 0 100% , 0 0 )",
                 duration: 5
-            }).to(".second-page-bg :nth-child(3)", {
+            }).fromTo(".second-page-bg :nth-child(3)", {
+                width: "25%",
+                height: "49%"
+            }, {
                 width: "101%",
                 height: "100%",
                 filter: "brightness(0.4)",
@@ -750,7 +752,9 @@
                 clipPath: "circle(100%)"
             }, {
                 clipPath: "circle(8%)",
-
+                // width:"15vw",
+                // height:"15vw",
+                // borderRadius:"50%",
 
 
                 duration: 6
