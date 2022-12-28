@@ -281,7 +281,7 @@
                 </div>
                 <img src="./img/index/svg/circle-text.svg" class="circle">
             </section>
-            <section class="third-page">
+            <!-- <section class="third-page">
                 <div class="third-page-bg">
                     <div class="para">
                         <img src="./img/index/image/third-page-para-bg.webp">
@@ -406,7 +406,7 @@
                     <img src="./img/index/image/forth-page-b2.webp">
                     <img src="./img/index/image/forth-page-b3.webp">
                 </div>
-            </section>
+            </section> -->
             <div class="devloping">
                 <p>以下製作中...</p>
             </div>
@@ -566,6 +566,7 @@
                 anticipatePin: 1,
                 animation: gg,
                 lazy: true,
+                autoKill: true
             })
             //reset animation on refresh
             ScrollTrigger.addEventListener("refresh", () => st.scroll(0))
@@ -772,233 +773,234 @@
                 y: "-7.5vw",
                 scale: 0,
                 duration: 6
-            }, "<").fromTo(".third-page-bg", {
-                opacity: 0
-            }, {
+            }, "<")
+            // .fromTo(".third-page-bg", {
+            //     opacity: 0
+            // }, {
 
-                opacity: 1,
-                duration: 1
-            }).fromTo(".third-page-bg", {
+            //     opacity: 1,
+            //     duration: 1
+            // }).fromTo(".third-page-bg", {
 
-                clipPath: "polygon(100% 0 , 100% 100%, 100% 100% ,100% 0)",
+            //     clipPath: "polygon(100% 0 , 100% 100%, 100% 100% ,100% 0)",
 
-            }, {
-                clipPath: "polygon(0% 0 , 0% 100%, 100% 100% ,100% 0)",
+            // }, {
+            //     clipPath: "polygon(0% 0 , 0% 100%, 100% 100% ,100% 0)",
 
-                duration: 10
-            }).fromTo(".third-page-bg .paraBox h2", {
-                x: "85vw"
-            }, {
-                x: 0,
-                duration: 6
-            }, "<+5.5").fromTo(".third-page-bg .paraBox h3", {
-                x: "85vw"
-            }, {
-                x: 0,
-                duration: 6,
-                stagger: 1.5
-            }, "<+2").to(".third-page-bg", {
-                clipPath: "polygon(0% 0 , 0% 100%, 200% 100% ,200% 0)",
-                width: "51%",
+            //     duration: 10
+            // }).fromTo(".third-page-bg .paraBox h2", {
+            //     x: "85vw"
+            // }, {
+            //     x: 0,
+            //     duration: 6
+            // }, "<+5.5").fromTo(".third-page-bg .paraBox h3", {
+            //     x: "85vw"
+            // }, {
+            //     x: 0,
+            //     duration: 6,
+            //     stagger: 1.5
+            // }, "<+2").to(".third-page-bg", {
+            //     clipPath: "polygon(0% 0 , 0% 100%, 200% 100% ,200% 0)",
+            //     width: "51%",
 
-                duration: 6
-            }, "<+3.5").fromTo(".third-page-bg > :nth-child(1)", {
-                y: "35vw",
-                x: "52vw",
-            }, {
-                y: 0,
-                duration: 4.5
-            }, "<+3.5").fromTo(".third-page-bg > :nth-child(2)", {
-                x: "85vw"
-
-
-            }, {
-                x: 0,
-                duration: 6,
-            }, "<+3.5").to(".third-page-bg .paraBox h2", {
-                x: "-45vw",
-                duration: 6,
-            }, "<+1.5").to(".third-page-bg .paraBox h3", {
-                x: "-45vw",
-                duration: 6,
-                stagger: 0.8
-            }, "<+0.8").to(".third-page-bg > :nth-child(2)", {
-                width: "100%",
-                height: "100%",
-                duration: 4,
-
-            }, "<+4").to(".third-page-bg > :nth-child(2)", {
-                width: "100vw",
-                height: "100%",
-                duration: 6,
-                filter: "brightness(0.2)"
-            }).to(".third-page-bg > :nth-child(1)", {
-                display: "none",
-                duration: 1
-            }, "<+3").to(".third-page-bg", {
-                backgroundImage: "none",
-                duration: 1
-            }, "<").fromTo(".third-page-paraBox h2", {
-                opacity: 0,
-                y: 30,
-            }, {
-                opacity: 1,
-                y: 0,
-                duration: 2,
-            }, "<").fromTo(".third-page-paraBox ul .line", {
-                opacity: 0,
-                y: -30,
-            }, {
-                opacity: 1,
-                y: 0,
-                stagger: 1.5,
-                duration: 2,
-            }, "<+2.5").fromTo(".third-page-paraBox ul :nth-child(odd)", {
-                opacity: 0,
-                y: 30,
-            }, {
-                opacity: 1,
-                y: 0,
-                stagger: 1.5,
-                duration: 2,
-            }, "<+1").fromTo(".third-page-paraBox .box h3", {
-                opacity: 0,
-                x: -30,
-                filter: "blur(5px)",
-            }, {
-                filter: "blur(0px)",
-                opacity: 1,
-                y: 0,
-                stagger: 1.5,
-                duration: 4.5,
-            }, "<+5").fromTo(".third-page-paraBox .box svg", {
-                opacity: 0,
-                y: 30,
-            }, {
-                opacity: 1,
-                y: 0,
-                stagger: 1.5,
-                duration: 3.5,
-            }, "<+1").to(".third-page-paraBox .box svg > rect", {
-                fill: "#7c8c5b",
-                duration: 6
-            }, "<+3").fromTo(".third-page-paraBox .box svg", {
-                strokeDashoffset: 2000,
-                strokeDasharray: 2000
-            }, {
-                strokeDashoffset: 1300,
-                duration: 13,
-            }, "<+3").fromTo(".third-page-bg > :nth-child(2)", {
-                clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
-            }, {
-                width: "65vw",
-                height: "37vw",
-                clipPath: "polygon(0 0 , 0% 0, 0% 0% , 0 0% , 0 0 )",
-                duration: 12,
-                y: "-19vw",
-                x: "-11vw"
-            }, "<+6.5").to(".third-page-paraBox ", {
-                opacity: 0,
-                filter: "blur(4px)",
-                duration: 2.5,
-            }, "<").fromTo(".forth-page-bg .imgBox", {
-                y: "120vh"
-            }, {
-                y: "0vh",
-                duration: 6,
-                stagger: 1
-            }, "<+2").fromTo(".forth-page-bg .left-top-box", {
-                y: "-50vh"
-            }, {
-                y: 0,
-                duration: 6,
-            }, "<").fromTo(".forth-page-para .box1", {
-                x: "30vw",
-                opacity: 0
-            }, {
-                opacity: 1,
-                x: 0,
-                duration: 6,
-            }, "<+3").fromTo(".forth-page-para .box2", {
-                x: "-40vw",
-                opacity: 0
-            }, {
-                opacity: 1,
-                x: 0,
-                duration: 6,
-            }, "<").fromTo(".forth-page-para .box3", {
-                x: "-30vw",
-                opacity: 0,
-            }, {
-                opacity: 1,
-                x: 0,
-                duration: 6,
-            }, "<").fromTo(".forth-page-bg .left-top-box > :nth-child(2)", {
-                clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
-            }, {
-                clipPath: "polygon(0 0 , 100% 0, 100% 0% , 0 0% , 0 0 )",
-                duration: 6,
-            }, ">+5").fromTo(".forth-page-bg .imgBox > :nth-child(2)", {
-                clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
-            }, {
-                clipPath: "polygon(0 0 , 100% 0, 100% 0% , 0 0% , 0 0 )",
-                duration: 6,
-                stagger: 1
-            }, "<+2").fromTo(".forth-page-para .box1-2", {
-                clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
-            }, {
-                clipPath: "polygon(0 100% , 100% 100%, 100% 100% , 0 100% , 0 0 )",
-                duration: 6,
-                stagger: 1
-            }).to(".forth-page-para div", {
-                opacity: 0,
-                duration: 6
-
-            }, ">+4.5").to(".forth-page-bg > div", {
-
-                y: "-120vh",
-                duration: 6,
-                stagger: 0.5
-            }, "<+5").to(".fifth-page-bg :nth-child(1)", {
-                y: "-180vh",
-                duration: 6,
-
-            }, "<+3").to(".fifth-page-bg :nth-child(2)", {
-                y: "-180vh",
-                duration: 6,
-
-            }, "<+0.5").fromTo(".fifth-page-bg", {
-                x: "55vw"
-            }, {
+            //     duration: 6
+            // }, "<+3.5").fromTo(".third-page-bg > :nth-child(1)", {
+            //     y: "35vw",
+            //     x: "52vw",
+            // }, {
+            //     y: 0,
+            //     duration: 4.5
+            // }, "<+3.5").fromTo(".third-page-bg > :nth-child(2)", {
+            //     x: "85vw"
 
 
-                duration: 6,
+            // }, {
+            //     x: 0,
+            //     duration: 6,
+            // }, "<+3.5").to(".third-page-bg .paraBox h2", {
+            //     x: "-45vw",
+            //     duration: 6,
+            // }, "<+1.5").to(".third-page-bg .paraBox h3", {
+            //     x: "-45vw",
+            //     duration: 6,
+            //     stagger: 0.8
+            // }, "<+0.8").to(".third-page-bg > :nth-child(2)", {
+            //     width: "100%",
+            //     height: "100%",
+            //     duration: 4,
 
-            }, "<+0.5").fromTo(".fifth-page-bg :nth-child(3)", {
-                scaleX: 0.5,
-                scaleY: 0.5,
+            // }, "<+4").to(".third-page-bg > :nth-child(2)", {
+            //     width: "100vw",
+            //     height: "100%",
+            //     duration: 6,
+            //     filter: "brightness(0.2)"
+            // }).to(".third-page-bg > :nth-child(1)", {
+            //     display: "none",
+            //     duration: 1
+            // }, "<+3").to(".third-page-bg", {
+            //     backgroundImage: "none",
+            //     duration: 1
+            // }, "<").fromTo(".third-page-paraBox h2", {
+            //     opacity: 0,
+            //     y: 30,
+            // }, {
+            //     opacity: 1,
+            //     y: 0,
+            //     duration: 2,
+            // }, "<").fromTo(".third-page-paraBox ul .line", {
+            //     opacity: 0,
+            //     y: -30,
+            // }, {
+            //     opacity: 1,
+            //     y: 0,
+            //     stagger: 1.5,
+            //     duration: 2,
+            // }, "<+2.5").fromTo(".third-page-paraBox ul :nth-child(odd)", {
+            //     opacity: 0,
+            //     y: 30,
+            // }, {
+            //     opacity: 1,
+            //     y: 0,
+            //     stagger: 1.5,
+            //     duration: 2,
+            // }, "<+1").fromTo(".third-page-paraBox .box h3", {
+            //     opacity: 0,
+            //     x: -30,
+            //     filter: "blur(5px)",
+            // }, {
+            //     filter: "blur(0px)",
+            //     opacity: 1,
+            //     y: 0,
+            //     stagger: 1.5,
+            //     duration: 4.5,
+            // }, "<+5").fromTo(".third-page-paraBox .box svg", {
+            //     opacity: 0,
+            //     y: 30,
+            // }, {
+            //     opacity: 1,
+            //     y: 0,
+            //     stagger: 1.5,
+            //     duration: 3.5,
+            // }, "<+1").to(".third-page-paraBox .box svg > rect", {
+            //     fill: "#7c8c5b",
+            //     duration: 6
+            // }, "<+3").fromTo(".third-page-paraBox .box svg", {
+            //     strokeDashoffset: 2000,
+            //     strokeDasharray: 2000
+            // }, {
+            //     strokeDashoffset: 1300,
+            //     duration: 13,
+            // }, "<+3").fromTo(".third-page-bg > :nth-child(2)", {
+            //     clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
+            // }, {
+            //     width: "65vw",
+            //     height: "37vw",
+            //     clipPath: "polygon(0 0 , 0% 0, 0% 0% , 0 0% , 0 0 )",
+            //     duration: 12,
+            //     y: "-19vw",
+            //     x: "-11vw"
+            // }, "<+6.5").to(".third-page-paraBox ", {
+            //     opacity: 0,
+            //     filter: "blur(4px)",
+            //     duration: 2.5,
+            // }, "<").fromTo(".forth-page-bg .imgBox", {
+            //     y: "120vh"
+            // }, {
+            //     y: "0vh",
+            //     duration: 6,
+            //     stagger: 1
+            // }, "<+2").fromTo(".forth-page-bg .left-top-box", {
+            //     y: "-50vh"
+            // }, {
+            //     y: 0,
+            //     duration: 6,
+            // }, "<").fromTo(".forth-page-para .box1", {
+            //     x: "30vw",
+            //     opacity: 0
+            // }, {
+            //     opacity: 1,
+            //     x: 0,
+            //     duration: 6,
+            // }, "<+3").fromTo(".forth-page-para .box2", {
+            //     x: "-40vw",
+            //     opacity: 0
+            // }, {
+            //     opacity: 1,
+            //     x: 0,
+            //     duration: 6,
+            // }, "<").fromTo(".forth-page-para .box3", {
+            //     x: "-30vw",
+            //     opacity: 0,
+            // }, {
+            //     opacity: 1,
+            //     x: 0,
+            //     duration: 6,
+            // }, "<").fromTo(".forth-page-bg .left-top-box > :nth-child(2)", {
+            //     clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
+            // }, {
+            //     clipPath: "polygon(0 0 , 100% 0, 100% 0% , 0 0% , 0 0 )",
+            //     duration: 6,
+            // }, ">+5").fromTo(".forth-page-bg .imgBox > :nth-child(2)", {
+            //     clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
+            // }, {
+            //     clipPath: "polygon(0 0 , 100% 0, 100% 0% , 0 0% , 0 0 )",
+            //     duration: 6,
+            //     stagger: 1
+            // }, "<+2").fromTo(".forth-page-para .box1-2", {
+            //     clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
+            // }, {
+            //     clipPath: "polygon(0 100% , 100% 100%, 100% 100% , 0 100% , 0 0 )",
+            //     duration: 6,
+            //     stagger: 1
+            // }).to(".forth-page-para div", {
+            //     opacity: 0,
+            //     duration: 6
 
-            }, {
-                scaleX: 0.5,
-                scaleY: 0.5,
-                y: "-120.1vh",
-                duration: 4,
+            // }, ">+4.5").to(".forth-page-bg > div", {
 
-            }, "<").to(".fifth-page-bg", {
-                x: 0,
-                duration: 4.5,
+            //     y: "-120vh",
+            //     duration: 6,
+            //     stagger: 0.5
+            // }, "<+5").to(".fifth-page-bg :nth-child(1)", {
+            //     y: "-180vh",
+            //     duration: 6,
 
-            }, "<+4.5").to(".fifth-page-bg :nth-child(3)", {
-                scaleX: 1.01,
-                scaleY: 1.01,
-                duration: 4,
+            // }, "<+3").to(".fifth-page-bg :nth-child(2)", {
+            //     y: "-180vh",
+            //     duration: 6,
 
-            }, "<+4").to(".devloping", {
+            // }, "<+0.5").fromTo(".fifth-page-bg", {
+            //     x: "55vw"
+            // }, {
 
-                y: "-100vh",
-                duration: 6,
 
-            }, "<-4")
+            //     duration: 6,
+
+            // }, "<+0.5").fromTo(".fifth-page-bg :nth-child(3)", {
+            //     scaleX: 0.5,
+            //     scaleY: 0.5,
+
+            // }, {
+            //     scaleX: 0.5,
+            //     scaleY: 0.5,
+            //     y: "-120.1vh",
+            //     duration: 4,
+
+            // }, "<").to(".fifth-page-bg", {
+            //     x: 0,
+            //     duration: 4.5,
+
+            // }, "<+4.5").to(".fifth-page-bg :nth-child(3)", {
+            //     scaleX: 1.01,
+            //     scaleY: 1.01,
+            //     duration: 4,
+
+            // }, "<+4").to(".devloping", {
+
+            //     y: "-100vh",
+            //     duration: 6,
+
+            // }, "<-4")
         }
 
 
