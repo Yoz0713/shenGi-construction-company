@@ -435,9 +435,9 @@
 
     <script>
         //在Loading及開場動畫結束前取消滾動
-        gsap.set("html", {
-            overflow: "hidden"
-        })
+        // gsap.set("html", {
+        //     overflow: "hidden"
+        // })
 
         //在Loading及開場動畫結束前取消滾動
         function splitTextAnimation(wrap) {
@@ -506,7 +506,7 @@
                         onComplete: () => {
                             let gg = gsap.timeline()
                             gg.to("html", {
-                                overflow: "visible",
+                                overflow: "initial",
                                 duration: 0.00012
                             })
 
@@ -539,7 +539,7 @@
         loadingPageAnimaiton(firstPageAnimaiton)
         firstScroll()
         function firstScroll() {
-            ScrollTrigger.scrollerProxy(".index", { pinType: "fixed" });
+
 
             let gg = gsap.timeline({
                 // scrollTrigger:{
@@ -674,16 +674,16 @@
                 x: "-108vw",
                 duration: 6
             }, "<+1").to(".second-page-bg :nth-child(2)", {
-                width: "25%",
-                height: "50%",
+
+                scale: 1.035,
                 duration: 4
             }, "<+2").to(".second-page-bg :nth-child(4)", {
-                width: "25%",
-                height: "50%",
+
+                scale: 1.035,
                 duration: 4
             }, "<").to(".second-page-bg :nth-child(3)", {
-                width: "25%",
-                height: "50%",
+
+                scale: 1.035,
                 duration: 4
             }, "<").fromTo(".second-page-bg :nth-child(4)", {
                 clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
