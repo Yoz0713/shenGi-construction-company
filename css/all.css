@@ -196,12 +196,10 @@ header .progress-bar {
 
 .container {
   width: 100%;
-  overflow: hidden;
 }
 .container .index {
   width: 100%;
   background-color: #fff;
-  overflow: visible;
   position: relative;
   transition: 1s;
 }
@@ -1093,8 +1091,10 @@ header .progress-bar {
 html {
   height: 100%;
   /* Hide scrollbar for IE, Edge and Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
   overscroll-behavior-y: none;
   scroll-behavior: smooth;
   /* Hide scrollbar for Chrome, Safari and Opera */
@@ -1107,7 +1107,16 @@ html {
   overflow: -moz-hidden-unscrollable;
 }
 
-h1, h2, h3, h4, h5, h6, span, p, a, li {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+a,
+li {
   font-family: "Noto Serif TC", sans-serif;
 }
 
@@ -1117,10 +1126,6 @@ a {
 
 span {
   display: inline-block;
-}
-
-body {
-  overscroll-behavior-y: none;
 }
 
 @-webkit-keyframes rotate {
