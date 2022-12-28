@@ -1,54 +1,58 @@
-
-.container{
+.container {
     width: 100%;
     overflow: hidden;
-  
-    .index{
+
+    .index {
         width: 100%;
         background-color: #fff;
-     
+
         overflow: visible;
         position: relative;
-        transition:1s; // for menu blur
-        .first-page{
+        transition: 1s; // for menu blur
+
+        .first-page {
             position: relative;
             width: 100%;
-        
-            .imgBox{
+
+            .imgBox {
                 width: 100%;
-                height:220vw;
-                max-height: 100vh;
-                img{
+                height: 51vw;
+
+                img {
                     display: block;
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-                    overflow:hidden;
+                    overflow: hidden;
                     color: #3db66d;
                 }
-                .para{
-            
+
+                .para {
+
                     position: absolute;
-                    left:12vw;
-                    top:15vw;
-                    .box{
+                    left: 12vw;
+                    top: 15vw;
+
+                    .box {
                         margin-bottom: 4vw;
-                        img{
-                            position:relative;
+
+                        img {
+                            position: relative;
                             width: 25vw;
                             left: 0;
                             top: 0;
                         }
-                        svg{
+
+                        svg {
                             position: absolute;
                             width: 16vw;
                             left: -2vw;
                             top: -2vw;
                         }
                     }
-                    
-                    p{
-                     
+
+                    p {
+
                         color: #fff;
                         font-weight: 600;
                         font-size: 1.4vw;
@@ -56,11 +60,13 @@
                         line-height: 1.8em;
                         font-family: 'Noto Serif TC', sans-serif;
                     }
-                    & :nth-child(3){
+
+                    & :nth-child(3) {
                         margin-top: 2vw;
                         margin-left: 15vw;
                         position: relative;
-                        &::after{
+
+                        &::after {
                             display: block;
                             content: "";
                             position: absolute;
@@ -71,12 +77,13 @@
                             margin: auto 0;
                             right: 108%;
                             background-color: #fff;
-                       
+
                         }
                     }
                 }
             }
-            .paraBox{
+
+            .paraBox {
                 position: absolute;
                 left: 0;
                 top: 0;
@@ -84,7 +91,8 @@
                 height: 35vw;
                 background-color: #fff;
                 z-index: 10;
-                .para{
+
+                .para {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -96,31 +104,34 @@
                     margin: 0 auto;
                     text-align: center;
                     bottom: 8vw;
-                  
-                    & > :nth-child(1){
-                    
-                        span{
+
+                    &> :nth-child(1) {
+
+                        span {
                             font-size: 1.3vw;
                             font-weight: 900;
-                
+
                         }
-                  
+
                     }
-                    & > :nth-child(2){
-                        
-                        span{
+
+                    &> :nth-child(2) {
+
+                        span {
                             font-weight: 700;
-                            font-size:3.2vw;
+                            font-size: 3.2vw;
                             font-family: $en_style;
                         }
-                    
+
                         margin: 0.8vw 0vw 1.5vw;
                     }
-                    & > :nth-child(3){
+
+                    &> :nth-child(3) {
                         font-weight: 600;
                         color: $gray_color;
                     }
-                    span{
+
+                    span {
                         font-size: 0.9vw;
                         transform: translateY(30px);
                         opacity: 0;
@@ -129,60 +140,66 @@
                 }
             }
         }
-        .second-page{
+
+        .second-page {
             width: 100%;
-            height: 220vw;
-            max-height: 100vh;
+            height: 51vw;
+
             position: absolute;
-            right:-100vw;
+            right: -100vw;
             top: 0;
-   
-            &-bg{
+
+            &-bg {
                 width: 100%;
                 height: 100%;
-                position:absolute;
+                position: absolute;
                 left: 0;
                 top: 0;
-                
-                img{
+
+                img {
                     position: absolute;
                 }
-                & :nth-child(1){
+
+                & :nth-child(1) {
                     position: relative;
-                    width:28.8vw;
+                    width: 28.8vw;
                     height: auto;
                     left: 5vw;
-                 
+
                     top: 5.5vw;
-                
+
                 }
-                & :nth-child(2){
-                    width:25%;
+
+                & :nth-child(2) {
+                    width: 25%;
                     height: 49%;
                     right: -8vw;
                     top: 0;
                     object-fit: cover;
-                  
+
                 }
-                & :nth-child(3){
+
+                & :nth-child(3) {
                     width: 25%;
-                     height: 49%;
-                    right:-8vw;
+                    height: 49%;
+                    right: -8vw;
                     bottom: 0;
-                   object-fit: cover;
+                    object-fit: cover;
                     filter: brightness(1);
-              
+
                 }
-                & :nth-child(4){
+
+                & :nth-child(4) {
                     width: 25%;
-                     height: 49%;
-                    right:-8vw;
+                    height: 49%;
+                    right: -8vw;
                     bottom: 0;
-                   object-fit: cover;
-                 
+                    object-fit: cover;
+
                 }
             }
-            &-paraBox{
+
+            &-paraBox {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -190,22 +207,25 @@
                 height: 100%;
                 position: relative;
                 z-index: 10;
-                .para{
+
+                .para {
                     display: flex;
                     flex-direction: column;
                     align-items: start;
-                    text-align:start;
+                    text-align: start;
                     margin-top: 0vw;
                     position: relative;
                     margin-left: 8vw;
-                    h4{
+
+                    h4 {
                         font-family: $en_style;
-                        font-size:2.5vw;
+                        font-size: 2.5vw;
                         font-weight: 500;
                         text-align: start;
                         color: #3e3a39;
                         position: relative;
-                        &::after{
+
+                        &::after {
                             display: block;
                             content: "";
                             width: 0vw;
@@ -216,26 +236,29 @@
                             top: 0;
                             bottom: 0;
                             margin: auto 0;
-                      
-                            transition:width 1.2s;
+
+                            transition: width 1.2s;
                         }
-                        span{
+
+                        span {
                             font-family: $en_style;
-                            font-size:2.5vw;
+                            font-size: 2.5vw;
                             font-weight: 500;
                             text-align: start;
-                        
+
                             position: relative;
                         }
                     }
-                    h3{
+
+                    h3 {
                         font-family: $en_style;
-                        font-size:3.8vw;
+                        font-size: 3.8vw;
                         font-weight: 500;
                         text-align: start;
                         color: #3E3A39;
                         position: relative;
-                        &::after{
+
+                        &::after {
                             display: block;
                             content: "";
                             width: 0vw;
@@ -246,29 +269,32 @@
                             top: 0;
                             bottom: 0;
                             margin: auto 0;
-                            transition:width 1.2s;
+                            transition: width 1.2s;
                         }
-                        
-                        span{
+
+                        span {
                             font-family: $en_style;
-                            font-size:3.8vw;
+                            font-size: 3.8vw;
                             font-weight: 500;
                             text-align: start;
                             color: #3E3A39;
                             position: relative;
                         }
                     }
-                    .active1{
-                        &::after{
+
+                    .active1 {
+                        &::after {
                             width: 3.3vw;
                         }
                     }
-                    .active2{
-                        &::after{
+
+                    .active2 {
+                        &::after {
                             width: 8vw;
                         }
                     }
-                    h2{
+
+                    h2 {
                         display: flex;
                         align-items: center;
                         width: fit-content;
@@ -276,117 +302,130 @@
                         font-size: 1.3vw;
                         letter-spacing: 0.1em;
                         color: #1A1A1A;
-                     
-                        .dot{
+
+                        .dot {
                             font-size: 0.8vw;
-                            
-                            color:#1A1A1A ;
+
+                            color: #1A1A1A;
                         }
                     }
-                   
+
                 }
-                .svgBox{
+
+                .svgBox {
                     width: 150%;
                     height: 100%;
                     position: absolute;
                     left: -23.5vw;
                     top: -8vw;
-                    svg{
-                    
-                        transform:  rotate(-22deg);
-                        g{
-                     
+
+                    svg {
+
+                        transform: rotate(-22deg);
+
+                        g {
+
                             transform-box: fill-box;
                             transform-origin: center;
                             transform: rotateX(180deg);
-                            
+
                         }
                     }
                 }
-                .imgBox{
+
+                .imgBox {
                     width: 100%;
                     height: 100%;
                     position: absolute;
                     left: 0;
                     top: -2vw;
-        
-                    svg{
-                    
+
+                    svg {
+
                         width: 25vw;
                         height: 15vw;
-                        & > :nth-child(1){
-                            path{
+
+                        &> :nth-child(1) {
+                            path {
                                 opacity: 0;
                             }
                         }
-                        & > :nth-child(2){
+
+                        &> :nth-child(2) {
                             opacity: 0;
                         }
                     }
                 }
             }
-            .circle{
-                width:130vw;
+
+            .circle {
+                width: 130vw;
                 position: absolute;
                 top: -76vw;
                 right: -23vw;
                 transform: rotate(-165deg);
             }
-            
+
         }
-        .third-page{
+
+        .third-page {
             width: 100%;
-            height: 220vw;
-            max-height: 100vh;
-            position:absolute;
-            right:0;
+            height: 51vw;
+
+            position: absolute;
+            right: 0;
             top: 0;
             z-index: 10;
-         
-            &-bg{
+
+            &-bg {
                 display: flex;
-                align-items:flex-end;
-                width:100%;
+                align-items: flex-end;
+                width: 100%;
                 height: 100%;
-                position:absolute;
+                position: absolute;
                 left: 0;
                 top: 0;
                 background-image: url(../img/index/image/third-page-bg.webp);
-                background-size:cover;
+                background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center right;
                 padding: 1vw;
                 overflow: visible;
-                img{
+
+                img {
                     position: absolute;
                     object-fit: cover;
                 }
-              
-                .para{
+
+                .para {
                     display: flex;
                     align-items: center;
                     width: fit-content;
                     left: 0;
                     right: 0;
-              
-                  
-                    margin:0 auto 1.5vw;
-                    img{
+
+
+                    margin: 0 auto 1.5vw;
+
+                    img {
                         position: relative;
-                      
+
                         object-fit: contain;
                     }
-                    & :nth-child(1){
+
+                    & :nth-child(1) {
                         width: 10vw;
                         margin-right: 2vw;
                     }
-                    & :nth-child(2){
+
+                    & :nth-child(2) {
                         width: 14vw;
                         margin-bottom: -1.5vw;
                     }
-                   
+
                 }
-                .imgBox{
+
+                .imgBox {
                     position: absolute;
                     right: 0;
                     left: 0;
@@ -398,7 +437,8 @@
                     overflow: hidden;
                     z-index: 10;
                     filter: brightness(1);
-                    img{
+
+                    img {
                         position: relative;
                         top: 0;
                         right: 0;
@@ -409,11 +449,12 @@
                         height: 100%;
                         object-fit: cover;
                         z-index: 10;
-                        
+
                     }
-                   
+
                 }
-                .paraBox{
+
+                .paraBox {
                     width: fit-content;
                     height: fit-content;
                     position: absolute;
@@ -425,15 +466,16 @@
                     color: #000;
                     text-align: center;
                     z-index: 12;
-                    
-                    h2{
+
+                    h2 {
                         margin-bottom: 0.8vw;
                         font-size: 1.5vw;
                         font-weight: 500;
                         font-family: $en_style;
-                
+
                         position: relative;
-                        &::after{
+
+                        &::after {
                             display: block;
                             content: "";
                             position: absolute;
@@ -444,9 +486,10 @@
                             margin: auto 0;
                             right: 95%;
                             background-color: #000;
-                       
+
                         }
-                        &::before{
+
+                        &::before {
                             display: block;
                             content: "";
                             position: absolute;
@@ -457,20 +500,22 @@
                             margin: auto 0;
                             left: 95%;
                             background-color: #000;
-                       
+
                         }
                     }
-                    h3{
+
+                    h3 {
                         font-size: 1.8vw;
                         line-height: 1.4em;
                         letter-spacing: 0.5em;
                         font-weight: 600;
                         margin-left: 1vw;
-                
+
                     }
                 }
             }
-            &-paraBox{
+
+            &-paraBox {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -483,15 +528,16 @@
                 top: 0;
                 bottom: 0;
                 margin: auto;
-          
-                h2{
+
+                h2 {
                     margin-bottom: 0.8vw;
                     font-size: 1vw;
                     font-weight: 500;
                     font-family: $en_style;
                     color: #fff;
                     position: relative;
-                    &::after{
+
+                    &::after {
                         display: block;
                         content: "";
                         position: absolute;
@@ -502,9 +548,10 @@
                         margin: auto 0;
                         right: 106%;
                         background-color: #ccc;
-                   
+
                     }
-                    &::before{
+
+                    &::before {
                         display: block;
                         content: "";
                         position: absolute;
@@ -515,15 +562,17 @@
                         margin: auto 0;
                         left: 106%;
                         background-color: #ccc;
-                   
+
                     }
                 }
-                .box{
+
+                .box {
                     display: flex;
                     align-items: center;
                     margin-top: 1.5vw;
-                    h3{
-                       
+
+                    h3 {
+
                         color: #fff;
                         font-size: 3.5vw;
                         letter-spacing: 0.2em;
@@ -531,73 +580,82 @@
                         line-height: 1em;
                         margin-right: -1vw;
                     }
-                    svg{
+
+                    svg {
                         width: 9vw;
                     }
                 }
-                
-                ul{
+
+                ul {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     width: 100%;
-                    li{
+
+                    li {
                         color: #fff;
                         font-size: 1.5vw;
                         height: fit-content;
                     }
-                    .line{
+
+                    .line {
                         font-size: 0.8vw;
                         margin: 0 1vw;
                         color: #ccc;
                     }
-                    p{
+
+                    p {
                         margin: 0 2vw;
                     }
                 }
-               
+
             }
         }
-        .forth-page{
-        
+
+        .forth-page {
+
             width: 100%;
-            height:220vw;
-            max-height: 100vh;
+            height: 51vw;
+
             position: absolute;
             overflow: hidden;
             left: 0;
             top: 0;
             z-index: 0;
-            &-para{
+
+            &-para {
                 position: relative;
                 width: 100%;
                 height: 100%;
-                .box1{
+
+                .box1 {
                     position: absolute;
                     right: 2.5vw;
                     top: 7vw;
-                
-                    p{
+
+                    p {
                         text-align: end;
                         white-space: nowrap;
                         font-size: 1.2vw;
                         letter-spacing: 0.1em;
                         font-weight: 700;
                     }
-                    .box1-1{
-                    
-                        h4{
+
+                    .box1-1 {
+
+                        h4 {
                             position: relative;
                             text-align: end;
                             white-space: nowrap;
                             font-size: 2vw;
                             font-family: $en_style;
                             font-weight: 600;
-                            &::after{
+
+                            &::after {
                                 position: absolute;
                                 display: block;
                                 content: "";
-                                width:4.5vw;
+                                width: 4.5vw;
                                 height: 1px;
                                 background-color: #000;
                                 right: -5vw;
@@ -605,23 +663,26 @@
                             }
                         }
                     }
-                    .box1-2{
+
+                    .box1-2 {
                         background-color: #fff;
                         position: absolute;
                         right: 0;
                         top: 0;
-                        h4{
+
+                        h4 {
                             position: relative;
                             text-align: end;
                             white-space: nowrap;
                             font-size: 2vw;
                             font-family: $en_style;
                             font-weight: 600;
-                            &::after{
+
+                            &::after {
                                 position: absolute;
                                 display: block;
                                 content: "";
-                                width:4.5vw;
+                                width: 4.5vw;
                                 height: 1px;
                                 background-color: #000;
                                 right: -5vw;
@@ -630,21 +691,24 @@
                         }
                     }
                 }
-                .box2{
+
+                .box2 {
                     position: absolute;
-                    left:27vw;
+                    left: 27vw;
                     top: 12.5vw;
                     z-index: 0;
-                    h4{
-                      
+
+                    h4 {
+
                         white-space: nowrap;
                         font-size: 1.3vw;
                         text-align: end;
-         
+
                         font-family: $en_style;
                         font-weight: 500;
                     }
-                    .box1-2{
+
+                    .box1-2 {
                         position: absolute;
                         width: 10vw;
                         right: 0;
@@ -652,13 +716,15 @@
                         background-color: #fff;
                     }
                 }
-                .box3{
+
+                .box3 {
                     position: absolute;
-                    left:21vw ;
+                    left: 21vw;
                     bottom: 8vw;
                     font-size: 0.8vw;
                     font-weight: 600;
-                    .box1-2{
+
+                    .box1-2 {
                         position: absolute;
                         width: 150%;
                         top: 0;
@@ -667,16 +733,19 @@
                     }
                 }
             }
-            &-bg{
+
+            &-bg {
                 width: 100%;
                 height: 100%;
                 position: absolute;
                 left: 0;
                 top: 0;
                 z-index: 2;
-                .imgBox{
+
+                .imgBox {
                     position: absolute;
-                    img{
+
+                    img {
                         width: 100%;
                         height: 100%;
                         position: absolute;
@@ -685,15 +754,17 @@
                         object-fit: cover;
                     }
                 }
-                .left-top-box{
+
+                .left-top-box {
                     position: absolute;
-            
+
                     width: 20vw;
-                    height:49%;
+                    height: 49%;
                     left: 0;
                     top: 0;
                     z-index: -1;
-                    img{
+
+                    img {
                         width: 100%;
                         height: 100%;
                         position: absolute;
@@ -703,76 +774,87 @@
                         z-index: -1;
                     }
                 }
-                .left-bottom-box{
+
+                .left-bottom-box {
                     width: 20vw;
-                    height:49%;
+                    height: 49%;
                     left: 0;
-                    bottom:0;
+                    bottom: 0;
                 }
-                .left-center-box{
+
+                .left-center-box {
                     width: 16vw;
-                    height:23vw;
+                    height: 23vw;
                     top: 15vw;
                     left: 21vw;
-                    & :nth-child(1){
+
+                    & :nth-child(1) {
                         object-position: left center;
                     }
                 }
-                .center-box{
+
+                .center-box {
                     width: 35vw;
                     height: 100%;
-             
+
                     left: 38vw;
                     top: 0vw;
-            
+
                 }
-                .right-center-box{
-                    width:22vw;
-                    height:27.5vw;
+
+                .right-center-box {
+                    width: 22vw;
+                    height: 27.5vw;
                     right: 2.5vw;
                     top: 18vw;
                 }
             }
-         
+
         }
-        .fifth-page{
+
+        .fifth-page {
             display: none;
             width: 100%;
-            height:220vw;
-            max-height: 100vh;
+            height: 51vw;
+
             position: absolute;
             left: 0;
             bottom: -120vh;
-           
-            &-bg{
+
+            &-bg {
                 position: absolute;
                 width: 100%;
                 height: 100%;
-                img{
+
+                img {
                     position: absolute;
                 }
-                & :nth-child(1){
+
+                & :nth-child(1) {
                     width: 13vw;
                     left: -30vw;
                     top: 0vw;
-                } & :nth-child(2){
+                }
+
+                & :nth-child(2) {
                     width: 14.7vw;
-                    left:8vw;
+                    left: 8vw;
                     top: 0vw;
                 }
-                & :nth-child(3){
+
+                & :nth-child(3) {
                     right: 0;
                     bottom: 0;
                     width: 100%;
-              
-                    height:100%;
+
+                    height: 100%;
                     object-fit: cover;
                 }
             }
         }
 
 
-        .devloping{
+        .devloping {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -780,11 +862,11 @@
             height: 100%;
             position: absolute;
             bottom: -100vh;
-            p{
+
+            p {
                 font-size: 4vw;
                 font-weight: 600;
             }
         }
     }
 }
-  

@@ -211,8 +211,7 @@ header .progress-bar {
 }
 .container .index .first-page .imgBox {
   width: 100%;
-  height: 220vw;
-  max-height: 100vh;
+  height: 51vw;
 }
 .container .index .first-page .imgBox img {
   display: block;
@@ -318,8 +317,7 @@ header .progress-bar {
 }
 .container .index .second-page {
   width: 100%;
-  height: 220vw;
-  max-height: 100vh;
+  height: 51vw;
   position: absolute;
   right: -100vw;
   top: 0;
@@ -503,8 +501,7 @@ header .progress-bar {
 }
 .container .index .third-page {
   width: 100%;
-  height: 220vw;
-  max-height: 100vh;
+  height: 51vw;
   position: absolute;
   right: 0;
   top: 0;
@@ -723,8 +720,7 @@ header .progress-bar {
 }
 .container .index .forth-page {
   width: 100%;
-  height: 220vw;
-  max-height: 100vh;
+  height: 51vw;
   position: absolute;
   overflow: hidden;
   left: 0;
@@ -893,8 +889,7 @@ header .progress-bar {
 .container .index .fifth-page {
   display: none;
   width: 100%;
-  height: 220vw;
-  max-height: 100vh;
+  height: 51vw;
   position: absolute;
   left: 0;
   bottom: -120vh;
