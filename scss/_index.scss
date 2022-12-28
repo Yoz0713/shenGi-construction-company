@@ -5,6 +5,7 @@
     .index {
         width: 100%;
         background-color: #fff;
+        overscroll-behavior-y: none;
 
         position: relative;
         transition: 1s; // for menu blur

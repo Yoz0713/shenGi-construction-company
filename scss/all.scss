@@ -30,6 +30,7 @@ html {
 
 html {
     overflow: -moz-hidden-unscrollable;
+    overscroll-behavior-y: none;
 }
 
 h1,
@@ -53,6 +54,9 @@ span {
     display: inline-block;
 }
 
+body {
+    overscroll-behavior-y: none;
+}
 
 // body::-webkit-scrollbar {
 //     display: none;

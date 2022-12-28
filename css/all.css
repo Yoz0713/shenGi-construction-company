@@ -200,6 +200,7 @@ header .progress-bar {
 .container .index {
   width: 100%;
   background-color: #fff;
+  overscroll-behavior-y: none;
   position: relative;
   transition: 1s;
 }
@@ -1105,6 +1106,7 @@ html::-webkit-scrollbar {
 
 html {
   overflow: -moz-hidden-unscrollable;
+  overscroll-behavior-y: none;
 }
 
 h1,
@@ -1126,6 +1128,10 @@ a {
 
 span {
   display: inline-block;
+}
+
+body {
+  overscroll-behavior-y: none;
 }
 
 @-webkit-keyframes rotate {
