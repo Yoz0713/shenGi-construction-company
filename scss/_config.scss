@@ -1,13 +1,14 @@
-$en_style:'Cormorant Garamond', serif;
-$gray_color:#999999;
-$green_color:#56B87E;
-$ch_s_text:0.9vw;
-$more_text:0.8vw;
-.loading-page{
+$en_style: 'Cormorant Garamond', serif;
+$gray_color: #999999;
+$green_color: #56B87E;
+$ch_s_text: 0.9vw;
+$more_text: 0.8vw;
+
+.loading-page {
     display: flex;
     align-items: center;
     width: 100%;
-    height:220vw;
+    height: 220vw;
     max-height: 100vh;
     transition: filter 1s;
     overflow: hidden;
@@ -17,53 +18,61 @@ $more_text:0.8vw;
     z-index: 200;
     left: 0;
     top: 0;
-   
-    .contentBox{
+
+    .contentBox {
         width: fit-content;
         height: fit-content;
         pointer-events: none;
-        margin:auto;
+        margin: auto;
         position: absolute;
         left: 0;
         right: 0;
         margin: 0 auto;
         top: 10vw;
-        .svgBox{
+
+        .svgBox {
             width: 80vw;
             height: 30vw;
             transform: scale(1.2);
-            svg{
+
+            svg {
                 width: 100%;
                 height: 100%;
-          
-                .rotate{
-                    transform-origin:center;
-                    g{
+
+                .rotate {
+                    transform-origin: center;
+
+                    g {
                         opacity: 0;
                     }
-                    .g2{
+
+                    .g2 {
                         width: 100%;
-                        transform-origin:center;
-                        path{
-                         transform: rotateY(180deg);
+                        transform-origin: center;
+
+                        path {
+                            transform: rotateY(180deg);
                         }
-                     }
-                     .g4{
+                    }
+
+                    .g4 {
                         width: 100%;
-                        transform-origin:center;
-                         opacity: 1;
-                         line{
-                             stroke-dasharray: 1000;
-                             stroke-dashoffset: 1000;
-                         }
-                     }
+                        transform-origin: center;
+                        opacity: 1;
+
+                        line {
+                            stroke-dasharray: 1000;
+                            stroke-dashoffset: 1000;
+                        }
+                    }
                 }
-                
-              
+
+
             }
         }
     }
-    .titleBox{
+
+    .titleBox {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -74,29 +83,31 @@ $more_text:0.8vw;
         bottom: 0;
         margin: auto;
         height: fit-content;
-        padding-top:10vw;
-        h1{
+        padding-top: 10vw;
+
+        h1 {
             font-weight: 700;
-            font-size:2vw;
+            font-size: 2vw;
             opacity: 0;
         }
-        h5{
-            font-size: 0.3vw;
+
+        h5 {
+            font-size: 0.8vw;
             transform: scale(0.95);
             font-weight: 400;
             opacity: 0;
         }
-      
+
     }
 }
 
-header{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:0vw 1.5vw;
-    border-bottom:2px solid #000;
-    position:fixed;
+    padding: 0vw 1.5vw;
+    border-bottom: 2px solid #000;
+    position: fixed;
     background-color: #fff;
 
     transition: 1s;
@@ -104,30 +115,35 @@ header{
     left: 0;
     top: 0;
     z-index: 10;
-    .logoBox{
+
+    .logoBox {
         mix-blend-mode: normal;
         isolation: isolate;
 
-        img{
+        img {
 
             width: 5vw;
         }
     }
-    .menu-button{
+
+    .menu-button {
         display: flex;
         align-items: center;
         color: #000;
         cursor: pointer;
-        & :nth-child(1){
+
+        & :nth-child(1) {
             font-size: 2.5vw;
- 
+
         }
-        & :nth-child(2){
+
+        & :nth-child(2) {
             font-size: 0.8vw;
-     
+
         }
     }
-    .progress-bar{
+
+    .progress-bar {
         width: 0;
         height: 4px;
         background-color: #000;
@@ -136,9 +152,10 @@ header{
         left: 0;
     }
 }
-.menu{
+
+.menu {
     position: fixed;
-    right:-30%;
+    right: -30%;
     top: 0;
     width: 26vw;
     height: 220vw;
@@ -147,59 +164,68 @@ header{
     z-index: 20;
     padding: 1vw 1.5vw;
     transition: right 1.5s;
-    .close{
+
+    .close {
         display: flex;
         justify-content: flex-end;
         width: 100%;
         cursor: pointer;
-        img{
+
+        img {
             width: 1.5vw;
         }
     }
-    ul{
+
+    ul {
         margin-top: 4vw;
         margin-left: 2vw;
-        li{
+
+        li {
             font-size: 1vw;
             font-weight: 600;
             margin-bottom: 2.8vw;
             letter-spacing: 0.1em;
-            span{
+
+            span {
                 font-size: 0.9vw;
                 letter-spacing: 0;
-             font-weight: 300;
-            color: rgba(0, 0, 0, 0.61);
-             margin-left: 0.8vw;
+                font-weight: 300;
+                color: rgba(0, 0, 0, 0.61);
+                margin-left: 0.8vw;
             }
-             .sub-open{
-               
-                 margin: 1.5vw 0vw 4.9vw 1.3vw;
-                 li{
-                     margin-bottom: 1.6vw;
-                     font-size: 0.8vw;
-                     font-weight: 500;
-                     position: relative;
-                     letter-spacing: 0;
-                     span{
+
+            .sub-open {
+
+                margin: 1.5vw 0vw 4.9vw 1.3vw;
+
+                li {
+                    margin-bottom: 1.6vw;
+                    font-size: 0.8vw;
+                    font-weight: 500;
+                    position: relative;
+                    letter-spacing: 0;
+
+                    span {
                         font-size: 0.8vw;
                         color: rgba(0, 0, 0, 0.5);
                         letter-spacing: 0;
-                     }
-                     &::before{
+                    }
+
+                    &::before {
                         display: block;
                         content: "";
                         position: absolute;
-                        left:-0.9vw;
+                        left: -0.9vw;
                         bottom: 0;
                         top: 0;
                         margin: auto 0;
                         width: 2%;
                         height: 1px;
                         background-color: rgba(0, 0, 0, 0.5);
-                        
-                     }
-                 }
-             }
+
+                    }
+                }
+            }
         }
     }
 }

@@ -1,12 +1,12 @@
 .container {
     width: 100%;
-
+    overflow: hidden;
 
     .index {
         width: 100%;
         background-color: #fff;
-        overscroll-behavior-y: none;
 
+        overflow: initial;
         position: relative;
         transition: 1s; // for menu blur
 

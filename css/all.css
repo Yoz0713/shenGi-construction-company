@@ -80,7 +80,7 @@
   opacity: 0;
 }
 .loading-page .titleBox h5 {
-  font-size: 0.3vw;
+  font-size: 0.8vw;
   transform: scale(0.95);
   font-weight: 400;
   opacity: 0;
@@ -196,11 +196,12 @@ header .progress-bar {
 
 .container {
   width: 100%;
+  overflow: hidden;
 }
 .container .index {
   width: 100%;
   background-color: #fff;
-  overscroll-behavior-y: none;
+  overflow: initial;
   position: relative;
   transition: 1s;
 }
