@@ -485,9 +485,8 @@ header .progress-bar {
   transform: rotate(-22deg);
 }
 .container .index .second-page-paraBox .svgBox svg g {
-  transform-box: fill-box;
   transform-origin: center;
-  transform: rotateY(180deg) rotate(180deg);
+  transform: rotateY(180deg) rotate(183deg);
 }
 .container .index .second-page-paraBox .imgBox {
   width: 100%;
