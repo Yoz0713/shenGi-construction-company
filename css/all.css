@@ -962,7 +962,6 @@ header .progress-bar {
 }
 .construction .first-page-bg {
   width: 100%;
-  height: auto;
 }
 .construction .first-page-bg img {
   width: 100%;
@@ -982,8 +981,10 @@ header .progress-bar {
   top: 0;
   margin: auto;
 }
-.construction .first-page-title h2, .construction .first-page-title h3 {
+.construction .first-page-title h2,
+.construction .first-page-title h3 {
   text-align: center;
+  filter: url(#blur-storm);
 }
 .construction .first-page-title h2 {
   font-size: 1.4vw;
@@ -993,6 +994,15 @@ header .progress-bar {
 .construction .first-page-title h3 {
   font-size: 0.8vw;
   margin-right: 0.3vw;
+}
+.construction .first-page-title svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.construction .first-page-title svg text:nth-child(2) {
+  font-weight: 600;
+  letter-spacing: 0.15em;
 }
 .construction .second-page {
   width: 100%;
@@ -1098,6 +1108,10 @@ header .progress-bar {
   transform-origin: right center;
 }
 
+.filter {
+  display: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1135,7 +1149,8 @@ h6,
 span,
 p,
 a,
-li {
+li,
+text {
   font-family: "Noto Serif TC", sans-serif;
 }
 

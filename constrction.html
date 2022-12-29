@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./style/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.css">
     <title>森鉅建設</title>
 </head>
+
 <body>
     <header>
         <div class="logoBox">
             <a href="./index.html">
                 <img src="./img/index/svg/logo.svg" alt="logo">
             </a>
-       
+
         </div>
         <div class="menu-button">
             <p>．</p>
@@ -31,23 +36,23 @@
         </div>
         <ul>
             <li>
-            
-                    關於森鉅
-                    <span>Sun Glory</span>
-            
+
+                關於森鉅
+                <span>Sun Glory</span>
+
                 <ul class="sub-open">
                     <li> <a href="./concept.html">
-                        品牌理念
-                        <span>Concept</span>
-                    </a> </li>
+                            品牌理念
+                            <span>Concept</span>
+                        </a> </li>
                     <li> <a href="./company.html">
-                        營造公司
-                        <span>Company</span>
-                    </a> </li>
+                            營造公司
+                            <span>Company</span>
+                        </a> </li>
                     <li> <a href="javascript:;">
-                        科技智慧宅
-                        <span>Smart Home</span>
-                    </a> </li>
+                            科技智慧宅
+                            <span>Smart Home</span>
+                        </a> </li>
                 </ul>
             </li>
             <li>
@@ -55,21 +60,21 @@
                     熱銷建案
                     <span>Construction</span>
                 </a>
-            
+
             </li>
             <li>
                 <a href="./portfolio.html" class="sub">
                     經典業績
                     <span>Portfolio</span>
                 </a>
-           
+
             </li>
             <li>
                 <a href="./contact.html" class="sub">
                     聯絡我們
                     <span>Contact Us</span>
                 </a>
-              
+
             </li>
             <li>
                 <a href="./login.html">
@@ -89,6 +94,7 @@
                 <h3>CONSTRUCTION</h3>
                 <h2>熱銷建案</h2>
             </div>
+
         </section>
         <section class="second-page">
             <ul>
@@ -101,14 +107,14 @@
                     <div class="paraBox">
                         <div class="paraBox-title">
                             <h3>之間</h3>
-                       
+
                         </div>
-                        
+
                         <p>南勢國中校園比鄰、綠意圍繞眼界非凡、都會中自然系建築。</p>
                         <a href="./z-fake-html/construction1.html">
                             <span>了解更多</span>
                         </a>
-                        
+
                     </div>
                 </li>
                 <li>
@@ -121,7 +127,7 @@
                         <div class="paraBox-title">
                             <h3>鳳鳴案</h3>
                         </div>
-                   
+
                         <p>南勢國中校園比鄰、綠意圍繞眼界非凡、都會中自然系建築。</p>
                         <a href="javascript:;">
                             <span>了解更多</span>
@@ -165,19 +171,54 @@
             </ul>
         </section>
     </section>
-       
+
     <footer>
         <p>Copyright © 2023 森鉅建設股份有限公司版權所有<span>TEL：12345678</span>地址：臺北市松山區敦化北路167號17樓</p>
     </footer>
 
-
+    <section class="filter">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <filter id="blur-storm">
+                    <feTurbulence type="fractalNoise" baseFrequency="1" numOctaves="2" result="turbulence" />
+                    <feColorMatrix type="matrix" values="1 0 0 0 0
+                                                         0 1 0 0 0
+                                                         0 0 1 0 0
+                                                         0 0 0 1 0" in="turbulence" result="turbulence2" />
+                    <feComposite operator="in" in2="turbulence2" result="smoke" />
+                    <feGaussianBlur stdDeviation="10" in="smoke" result="smokeBlur" />
+                    <feDisplacementMap in="SourceGraphic" in2="smoke" scale="200" xChannelSelector="R"
+                        yChannelSelector="G" />
+                </filter>
+            </defs>
+        </svg>
+    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="./js/config.js"></script>
 
     <script>
-      
-    
+        function bannerIn() {
+            let gg = gsap.timeline()
+
+            gg.fromTo(".first-page-title", {
+                y: 100,
+                opacity: 0
+            }, {
+                opacity: 1,
+                y: 0,
+                duration: 1.5
+            }).to("#blur-storm feDisplacementMap", {
+                attr: {
+                    scale: 0,
+                },
+                duration: 2
+            }, "<")
+        }
+
+        bannerIn()
     </script>
 </body>
+
 </html>
