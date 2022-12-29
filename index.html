@@ -630,8 +630,10 @@
                 }, "<+1.5").to(".first-page .imgBox", {
                     x: "-105vw",
                     duration: 12
-                }, "<+9").to(".second-page", {
-                    x: "-100vw",
+                }, "<+9").fromTo(".second-page-bg img", {
+                    x: "100vw",
+                }, {
+                    x: 0,
                     duration: 12
                 }, "<").fromTo(".second-page-bg :nth-child(1)", {
                     opacity: 0
@@ -672,7 +674,7 @@
                     color: "rgb(86,184,126)",
                     duration: 6,
                 }).to(".second-page", {
-                    x: "-108vw",
+                    x: "-8vw",
                     duration: 6
                 }, "<+1").to(".second-page-bg :nth-child(2)", {
 

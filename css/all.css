@@ -330,7 +330,7 @@ header .progress-bar {
   height: 220vw;
   max-height: 100vh;
   position: absolute;
-  right: -100vw;
+  right: 0;
   top: 0;
   transform: translate3d(0, 0, 0);
 }
@@ -349,6 +349,7 @@ header .progress-bar {
   width: 28.8vw;
   height: auto;
   left: 5vw;
+  will-change: opacity;
   top: 5.5vw;
 }
 .container .index .second-page-bg :nth-child(2) {
@@ -368,7 +369,7 @@ header .progress-bar {
      object-fit: cover;
   filter: brightness(1);
   transform: translate3d(0, 0, 0);
-  will-change: width, height;
+  will-change: width, height, filter;
 }
 .container .index .second-page-bg :nth-child(4) {
   width: 25%;
@@ -579,7 +580,7 @@ header .progress-bar {
   z-index: 10;
   filter: brightness(1);
   transform: translate3d(0, 0, 0);
-  will-change: width, height;
+  will-change: width, height, filter;
 }
 .container .index .third-page-bg .imgBox img {
   position: relative;
@@ -912,7 +913,7 @@ header .progress-bar {
   max-height: 100vh;
   position: absolute;
   left: 0;
-  bottom: -120vh;
+  bottom: 0;
 }
 .container .index .fifth-page-bg {
   position: absolute;

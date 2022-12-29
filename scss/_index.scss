@@ -155,7 +155,7 @@
             height: 220vw;
             max-height: 100vh;
             position: absolute;
-            right: -100vw;
+            right: 0;
             top: 0;
             transform: translate3d(0, 0, 0);
 
@@ -175,7 +175,7 @@
                     width: 28.8vw;
                     height: auto;
                     left: 5vw;
-
+                    will-change: opacity;
                     top: 5.5vw;
 
                 }
@@ -197,7 +197,8 @@
                     object-fit: cover;
                     filter: brightness(1);
                     transform: translate3d(0, 0, 0);
-                    will-change: width, height;
+                    will-change: width, height, filter;
+
                 }
 
                 & :nth-child(4) {
@@ -450,7 +451,7 @@
                     z-index: 10;
                     filter: brightness(1);
                     transform: translate3d(0, 0, 0);
-                    will-change: width, height;
+                    will-change: width, height, filter;
 
                     img {
                         position: relative;
@@ -833,7 +834,7 @@
             max-height: 100vh;
             position: absolute;
             left: 0;
-            bottom: -120vh;
+            bottom: 0;
 
             &-bg {
                 position: absolute;
