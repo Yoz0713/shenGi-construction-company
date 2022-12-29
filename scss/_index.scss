@@ -197,6 +197,7 @@
                     object-fit: cover;
                     filter: brightness(1);
                     transform: translate3d(0, 0, 0);
+                    will-change: width, height;
                 }
 
                 & :nth-child(4) {
@@ -449,6 +450,7 @@
                     z-index: 10;
                     filter: brightness(1);
                     transform: translate3d(0, 0, 0);
+                    will-change: width, height;
 
                     img {
                         position: relative;

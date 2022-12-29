@@ -368,6 +368,7 @@ header .progress-bar {
      object-fit: cover;
   filter: brightness(1);
   transform: translate3d(0, 0, 0);
+  will-change: width, height;
 }
 .container .index .second-page-bg :nth-child(4) {
   width: 25%;
@@ -578,6 +579,7 @@ header .progress-bar {
   z-index: 10;
   filter: brightness(1);
   transform: translate3d(0, 0, 0);
+  will-change: width, height;
 }
 .container .index .third-page-bg .imgBox img {
   position: relative;
