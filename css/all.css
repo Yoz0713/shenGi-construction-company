@@ -985,6 +985,7 @@ header .progress-bar {
 .construction .first-page-title h3 {
   text-align: center;
   filter: url(#blur-storm);
+  -webkit-filter: url(#blur-storm);
 }
 .construction .first-page-title h2 {
   font-size: 1.4vw;
