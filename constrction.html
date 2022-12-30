@@ -184,7 +184,8 @@
                     <feColorMatrix type="matrix" values="1 0 0 0 0
                                                          0 1 0 0 0
                                                          0 0 1 0 0
-                                                         0 0 0 1 0" in="turbulence" result="turbulence2" />
+                                                         0 0 0 1 0" in="turbulence" result="turbulence2"
+                        color-interpolation-filters="sRGB" />
                     <feComposite operator="in" in2="turbulence2" result="smoke" />
                     <feGaussianBlur stdDeviation="10" in="smoke" result="smokeBlur" />
                     <feDisplacementMap in="SourceGraphic" in2="smoke" scale="200" xChannelSelector="R"
