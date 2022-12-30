@@ -8,7 +8,8 @@
             width: 100%;
 
             img {
-
+                filter: url(#blur-storm);
+                -webkit-filter: url(#blur-storm);
                 width: 100%;
                 height: auto;
             }
@@ -27,8 +28,7 @@
             h2,
             h3 {
                 text-align: center;
-                filter: url(#blur-storm);
-                -webkit-filter: url(#blur-storm);
+
             }
 
             h2 {
@@ -88,6 +88,7 @@
                             object-fit: cover;
                             clip-path: polygon(0 0, 100% 0, 100% 55%, 75% 100%, 0 100%, 0 0);
                             margin-right: 8vw;
+
                         }
                     }
 
@@ -173,4 +174,5 @@
 
 .filter {
     display: none;
+
 }
