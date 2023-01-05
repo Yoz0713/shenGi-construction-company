@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 292.88 328.37">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.14em;
+      }
+
+      .cls-2 {
+        letter-spacing: .1em;
+      }
+
+      .cls-3 {
+        letter-spacing: .01em;
+      }
+
+      .cls-4 {
+        letter-spacing: .1em;
+      }
+
+      .cls-5 {
+        letter-spacing: -.13em;
+      }
+
+      .cls-6 {
+        letter-spacing: 0em;
+      }
+
+      .cls-7 {
+        filter: url(#drop-shadow-1);
+      }
+
+      .cls-7, .cls-8 {
+        font-family: CormorantGaramond-SemiBold, 'Cormorant Garamond';
+        font-size: 48px;
+      }
+
+      .cls-7, .cls-8, .cls-9, .cls-10 {
+        fill: #fff;
+      }
+
+      .cls-8 {
+        filter: url(#drop-shadow-2);
+      }
+
+      .cls-11 {
+        letter-spacing: .08em;
+      }
+
+      .cls-12 {
+        letter-spacing: 0em;
+      }
+
+      .cls-13 {
+        letter-spacing: 0em;
+      }
+
+      .cls-14 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-9 {
+        filter: url(#drop-shadow-4);
+        font-size: 16px;
+      }
+
+      .cls-9, .cls-10 {
+        font-family: NotoSerifTC-SemiBold-90ms-RKSJ-H, 'Noto Serif TC';
+      }
+
+      .cls-10 {
+        filter: url(#drop-shadow-3);
+        font-size: 36px;
+      }
+
+      .cls-15 {
+        letter-spacing: -.15em;
+      }
+
+      .cls-16 {
+        letter-spacing: 0em;
+      }
+    </style>
+    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".75"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-2" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur-2" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".75"/>
+      <feComposite in2="blur-2" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-3" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur-3" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".75"/>
+      <feComposite in2="blur-3" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-4" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur-4" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".75"/>
+      <feComposite in2="blur-4" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="_圖層_1-2" data-name="圖層 1">
+    <text class="cls-7" transform="translate(61.43 141.29)"><tspan class="cls-12" x="0" y="0">U</tspan><tspan class="cls-6" x="33.65" y="0">S</tspan></text>
+    <text class="cls-8" transform="translate(60.42 91.35)"><tspan class="cls-3" x="0" y="0">CON</tspan><tspan class="cls-14" x="106.13" y="0">T</tspan><tspan class="cls-13" x="133.97" y="0">A</tspan><tspan class="cls-16" x="168" y="0">CT</tspan></text>
+    <text class="cls-10" transform="translate(0 31.68)"><tspan class="cls-4"><tspan x="0" y="0">聯絡</tspan></tspan><tspan class="cls-11"><tspan x="0" y="43.2">•</tspan></tspan><tspan class="cls-11"><tspan x="0" y="86.4">我</tspan></tspan><tspan class="cls-11"><tspan x="0" y="129.6">們</tspan></tspan></text>
+    <text class="cls-9" transform="translate(55.76 247.62)"><tspan class="cls-2" x="0" y="0">歡迎提供您的寶貴意</tspan><tspan class="cls-15" x="158.4" y="0">見，</tspan><tspan class="cls-2" x="0" y="32">請務必留下正確資</tspan><tspan class="cls-15" x="140.8" y="32">料，</tspan><tspan class="cls-2" x="0" y="64">我們將竭誠為您服</tspan><tspan class="cls-15" x="140.8" y="64">務，</tspan><tspan class="cls-2" x="168" y="64">謝</tspan><tspan class="cls-5" x="185.6" y="64">謝</tspan><tspan class="cls-1" x="199.54" y="64">！</tspan></text>
+  </g>
+</svg>

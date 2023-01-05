@@ -1,9 +1,13 @@
 .portfolio {
+    width: 100%;
+
+
     .first-page {
         width: 100%;
         height: auto;
         position: relative;
         padding-top: 3.5vw;
+        margin-bottom: 10vw;
 
         &-bg {
             width: 100%;
@@ -45,4 +49,157 @@
             }
         }
     }
+
+    .second-page {
+        width: 70.5%;
+        margin: 0 auto;
+
+        &-logo {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 0vw;
+
+            img {
+                width: 5vw;
+            }
+        }
+
+        &-content {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            margin-top: -1vw;
+
+
+
+            &::after {
+                display: block;
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 4vw;
+                margin: 0 auto;
+                background-color: #000;
+                width: 1px;
+                height: 100%;
+                z-index: -1;
+            }
+
+
+
+            .content-box {
+                width: 28vw;
+                align-self: flex-end;
+                margin-bottom: 0vw;
+
+
+                &-top {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    margin-bottom: 1.5vw;
+
+                    .box {
+                        display: flex;
+                        align-items: center;
+                        margin-left: -7.52vw;
+
+                        .dot {
+                            background-color: #4F4F4F;
+                            width: 0.6vw;
+                            height: 0.6vw;
+                            border-radius: 50%;
+                            margin-right: 1.4vw;
+                        }
+
+                        p {
+                            opacity: 0.8;
+                            font-size: $ch_l_text;
+                            font-weight: 700;
+                            margin-right: 1.4vw;
+                        }
+
+                        h4 {
+                            color: $green_color;
+                            font-size: $ch_l_text;
+                        }
+                    }
+
+
+
+                    img {
+                        width: 15vw;
+                    }
+                }
+
+                &-bottom {
+                    p {
+                        font-size: $ch_m_text;
+                        opacity: 0.6;
+                        line-height: 1.7em;
+                    }
+                }
+            }
+
+            & :nth-child(even) {
+                align-self: flex-start;
+
+
+                .content-box-top {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    margin-bottom: 1.5vw;
+
+                    .box {
+                        display: flex;
+                        align-items: center;
+                        margin: 0;
+                        margin-right: -7.58vw;
+
+                        .dot {
+                            margin: 0;
+                            order: 2;
+                            margin-left: 1.4vw;
+                        }
+
+                        p {
+                            margin: 0;
+                            margin-left: 1.4vw;
+                            order: 0;
+                            padding-left: 0.6vw;
+                        }
+
+                        h4 {
+
+                            order: -1;
+                        }
+                    }
+
+
+
+                    img {
+                        order: -1;
+
+                    }
+                }
+
+                .content-box-bottom {
+                    p {
+                        font-size: $ch_m_text;
+                        opacity: 0.6;
+                    }
+                }
+            }
+
+            &> :last-child {
+                margin-bottom: 8vw;
+            }
+        }
+    }
+
 }

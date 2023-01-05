@@ -5,6 +5,7 @@
 @import "_progress";
 @import "_concept";
 @import "_portfolio";
+@import "_contact";
 
 * {
     margin: 0;
@@ -131,34 +132,7 @@ body {
 
 }
 
-.contact {
 
-    cursor: pointer;
-
-    .swiper-wrapper {
-        width: 100%;
-
-        .swiper-slide {
-            width: 100%;
-            position: relative;
-
-            img {
-                position: absolute;
-                left: 0;
-                top: 0;
-                bottom: 0;
-                right: 0;
-                margin: auto;
-                width: 55vw;
-                height: auto;
-
-                z-index: 3;
-            }
-
-        }
-    }
-
-}
 
 footer {
     display: flex;

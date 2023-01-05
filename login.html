@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.css">
     <title>森鉅建設</title>
 </head>
+
 <body>
     <header>
         <div class="logoBox">
             <a href="./index.html">
                 <img src="./img/index/svg/logo.svg" alt="logo">
             </a>
-       
+
         </div>
         <div class="menu-button">
             <p>．</p>
@@ -27,23 +29,23 @@
         </div>
         <ul>
             <li>
-         
-                    關於森鉅
-                    <span>Sun Glory</span>
-             
+
+                關於森鉅
+                <span>Sun Glory</span>
+
                 <ul class="sub-open">
                     <li> <a href="./concept.html">
-                        品牌理念
-                        <span>Concept</span>
-                    </a> </li>
+                            品牌理念
+                            <span>Concept</span>
+                        </a> </li>
                     <li> <a href="./company.html">
-                        營造公司
-                        <span>Company</span>
-                    </a> </li>
+                            營造公司
+                            <span>Company</span>
+                        </a> </li>
                     <li> <a href="javascript:;">
-                        科技智慧宅
-                        <span>Smart Home</span>
-                    </a> </li>
+                            科技智慧宅
+                            <span>Smart Home</span>
+                        </a> </li>
                 </ul>
             </li>
             <li>
@@ -51,21 +53,21 @@
                     熱銷建案
                     <span>Construction</span>
                 </a>
-            
+
             </li>
             <li>
                 <a href="./portfolio.html" class="sub">
                     經典業績
                     <span>Portfolio</span>
                 </a>
-           
+
             </li>
             <li>
                 <a href="./contact.html" class="sub">
                     聯絡我們
                     <span>Contact Us</span>
                 </a>
-              
+
             </li>
             <li>
                 <a href="./login.html">
@@ -81,12 +83,12 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img src="./img/fake img/會員登入.webp">
-           
+
                 </div>
-               
+
             </div>
         </div>
-      
+
     </section>
     <footer>
         <p>Copyright © 2023 森鉅建設股份有限公司版權所有<span>TEL：12345678</span>地址：臺北市松山區敦化北路167號17樓</p>
@@ -98,24 +100,25 @@
     <script src="./js/config.js"></script>
 
     <script>
-     window.onload = function(){
-            const swiper = new Swiper(".swiper",{
-                loop:true,
-                effect : 'fade',
+        window.onload = function () {
+            const swiper = new Swiper(".swiper", {
+                loop: true,
+                effect: 'fade',
                 fadeEffect: {
                     crossFade: true,
                 },
-                speed:0,
+                speed: 0,
             })
             let about = document.querySelector(".about")
-            $(".about").css("height",`${$(".about .swiper-slide-active").css("height")}`)
-        about.onclick = function(){
-            swiper.slideNext()
-            console.log($(".about .swiper-slide-active").css("height"))
-            $(".about").css("height",`${$(".about .swiper-slide-active").css("height")}`)
-        }
+            $(".about").css("height", `${$(".about .swiper-slide-active").css("height")}`)
+            about.onclick = function () {
+                swiper.slideNext()
+                console.log($(".about .swiper-slide-active").css("height"))
+                $(".about").css("height", `${$(".about .swiper-slide-active").css("height")}`)
+            }
         }
 
     </script>
 </body>
+
 </html>

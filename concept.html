@@ -191,8 +191,23 @@
         <p>Copyright © 2023 森鉅建設股份有限公司版權所有<span>TEL：12345678</span>地址：臺北市松山區敦化北路167號17樓</p>
     </footer>
 
-    <svg viewBox="0 0 1920 634" class="clipPath">
+
+    <svg class="clipPath" viewBox="0 0 1920 634">
         <defs>
+            <clipPath id="clipPath2" clipPathUnits="objectBoundingBox">
+                <rect x="0" y="0" stroke="#000000" stroke-miterlimit="10" width="0.499375" height="0.33166666666666667">
+                </rect>
+                <rect x="0" y="0.33416666666666667" stroke="#000000" stroke-miterlimit="10" width="0.499375"
+                    height="0.33166666666666667"></rect>
+                <rect x="0" y="0.6683333333333333" stroke="#000000" stroke-miterlimit="10" width="0.499375"
+                    height="0.33166666666666667"></rect>
+                <rect x="0.500625" y="0" stroke="#000000" stroke-miterlimit="10" width="0.499375"
+                    height="0.33166666666666667"></rect>
+                <rect x="0.500625" y="0.33416666666666667" stroke="#000000" stroke-miterlimit="10" width="0.499375"
+                    height="0.33166666666666667"></rect>
+                <rect x="0.500625" y="0.6683333333333333" stroke="#000000" stroke-miterlimit="10" width="0.499375"
+                    height="0.33166666666666667"></rect>
+            </clipPath>
         </defs>
     </svg>
 
@@ -206,22 +221,6 @@
     <script>
 
         window.onload = function () {
-            // function upDownText(target) {
-            //     let text = $(target).text()
-            //     let arr = text.split("")
-            //     let arrNew = arr.reverse();
-            //     arrNew.forEach((item) => {
-            //         if (item == " ") {
-            //             item = "\xa0"
-            //         }
-            //     })
-
-            //     let textNew = arrNew.join("")
-
-            //     $(target).html(textNew)
-
-            // }
-            // upDownText(".second-page .en-box h2")
             class SliceSquare {
                 static i = 0
 
@@ -250,37 +249,72 @@
                         }
 
                     }
-                    let result = this.squares.map((item, i) => {
+                    // let result = this.squares.map((item, i) => {
 
-                        item = `<rect x="${item.x}" y="${item.y}" stroke="#000000" stroke-miterlimit="10" width="${item.width}" height="${item.height}" />`
-                        return item
-                    })
-                    let clipPathEl = `<clipPath id="${this.id}" clipPathUnits="objectBoundingBox">
-                        ${result.join("\n")}
-                        </clipPath>`;
-                    let img = document.querySelector(target)
-                    img.insertAdjacentHTML("beforeend", clipPathEl);
+                    //     item = `<rect x="${item.x}" y="${item.y}" stroke="#000000" opacity="1" width="${item.width}" height="${item.height}" />`
+                    //     return item
+                    // })
+                    // let clipPathEl = `<svg class="clipPath" viewBox="0 0 1920 634">
+                    //             <defs>
+                    //                 <clipPath id="${this.id}" clipPathUnits="objectBoundingBox">
+                    //                     ${result.join("\n")}
+                    //                     </clipPath>
+                    //             </defs>
+                    //     </svg>`;
+                    // document.body.insertAdjacentHTML("beforeend", clipPathEl);
+
+                    let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+                    let defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
+                    svg.setAttribute("class", "clipPath")
+                    svg.setAttribute("viewBox", "0 0 1920 634")
+                    let clipPathEl = document.createElementNS("http://www.w3.org/2000/svg", "clipPath");
+                    clipPathEl.id = this.id;
+                    clipPathEl.setAttributeNS("http://www.w3.org/2000/svg", "clipPathUnits", "objectBoundingBox");
+                    let fragment = document.createDocumentFragment();
+                    // Create the rect elements and append them to the clipPath element
+                    this.squares.forEach((item) => {
+                        let rectEl = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+                        rectEl.setAttribute("x", item.x);
+                        rectEl.setAttribute("y", item.y);
+                        rectEl.setAttribute("stroke", "#000000");
+                        rectEl.setAttribute("stroke-miterlimit", "10");
+                        rectEl.setAttribute("width", item.width);
+                        rectEl.setAttribute("height", item.height);
+
+                        clipPathEl.appendChild(rectEl);
+                    });
+                    defs.appendChild(clipPathEl)
+                    svg.appendChild(defs)
+                    fragment.appendChild(svg)
+                    // // Find the target element and append the clipPath element to it
+
+                    document.body.appendChild(fragment);
                 }
             }
             const square1 = new SliceSquare({
-                row: 5,
-                collumn: 5,
-                gapX: 0,
-                gapY: 0.01
+                row: 2,
+                collumn: 3,
+                gapX: 0.00125,
+                gapY: 0.0025
             })
             square1.makeSquares(".clipPath defs")
 
             function bannerIn() {
                 let gg = gsap.timeline()
 
-                gg.from("#clipPath1 rect", {
+                gg.from("#clipPath2 :nth-child(odd)", {
                     attr: {
-                        x: 0,
+                        width: 0,
+
 
                     },
                     duration: 1.5,
-
-                })
+                }).from("#clipPath2 :nth-child(even)", {
+                    attr: {
+                        width: 0,
+                    },
+                    duration: 1.5,
+                }, "<+1")
             }
             bannerIn()
         }
