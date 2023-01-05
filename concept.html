@@ -193,7 +193,6 @@
 
     <svg viewBox="0 0 1920 634" class="clipPath">
         <defs>
-
         </defs>
     </svg>
 
@@ -266,7 +265,7 @@
             const square1 = new SliceSquare({
                 row: 5,
                 collumn: 5,
-                gapX: 0.005,
+                gapX: 0,
                 gapY: 0.01
             })
             square1.makeSquares(".clipPath defs")
@@ -276,11 +275,11 @@
 
                 gg.from("#clipPath1 rect", {
                     attr: {
-                        width: 0,
-                        height: 0
+                        x: 0,
+
                     },
                     duration: 1.5,
-                    stagger: 0.05
+
                 })
             }
             bannerIn()
