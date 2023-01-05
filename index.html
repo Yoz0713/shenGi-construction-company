@@ -652,19 +652,11 @@
                 }, {
                     y: 0,
                     duration: 6,
-
-                }, "<+1.2").fromTo(".second-page .svgBox path", {
-                    strokeDashoffset: 2000,
-                    strokeDasharray: 2000
-                }, {
-                    strokeDashoffset: 420,
-
-                    duration: 8,
-                    onStart: () => {
+                    onComplete: () => {
                         $(".second-page h4").addClass("active1");
                         $(".second-page h3").addClass("active2");
                     }
-                }, "<+3").to(".second-page h3 span", {
+                }, "<+1.2").to(".second-page h3 span", {
                     color: "rgb(86,184,126)",
                     duration: 6,
                 }).to(".second-page h2 .green", {
@@ -685,11 +677,19 @@
 
                     scale: 1.035,
                     duration: 4
-                }, "<").fromTo(".second-page-bg :nth-child(4)", {
+                }, "<").fromTo(".second-page .svgBox path", {
+                    strokeDashoffset: 2000,
+                    strokeDasharray: 2000
+                }, {
+                    strokeDashoffset: 420,
+
+                    duration: 10,
+
+                }, "<+3").fromTo(".second-page-bg :nth-child(4)", {
                     clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
                 }, {
                     clipPath: "polygon(0 0 , 0% 0, 0% 100% , 0 100% , 0 0 )",
-                    duration: 5
+                    duration: 8
                 }).fromTo(".second-page-bg :nth-child(3)", {
                     width: "25%",
                     height: "49%"
@@ -764,7 +764,7 @@
                 }, "<+1").to(".second-page .circle", {
                     rotate: 195,
 
-                    duration: 12
+                    duration: 16
                 }).fromTo(".second-page-bg :nth-child(3)", {
                     clipPath: "circle(8%)",
                 }, {

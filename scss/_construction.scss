@@ -6,10 +6,10 @@
 
         &-bg {
             width: 100%;
+            height: 35vw;
 
             img {
-                filter: url(#blur-storm);
-                -webkit-filter: url(#blur-storm);
+
                 width: 100%;
                 height: auto;
             }
@@ -118,7 +118,7 @@
                         margin-bottom: 1vw;
 
                         h3 {
-                            font-size: 1.1vw;
+                            font-size: $ch_m_text;
                             letter-spacing: 0.1em;
                             margin-right: 1vw;
                         }

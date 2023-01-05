@@ -1,0 +1,48 @@
+.portfolio {
+    .first-page {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding-top: 3.5vw;
+
+        &-bg {
+            width: 100%;
+
+
+            img {
+
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &-title {
+            width: fit-content;
+            height: fit-content;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+
+            h2,
+            h3 {
+                text-align: center;
+                color: #fff;
+            }
+
+            h2 {
+                font-size: 1.4vw;
+                letter-spacing: 0.2em;
+                font-weight: 600;
+            }
+
+            h3 {
+                font-size: 0.8vw;
+                margin-right: 0.3vw;
+
+            }
+        }
+    }
+}

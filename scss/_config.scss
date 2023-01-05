@@ -1,7 +1,11 @@
 $en_style: 'Cormorant Garamond', serif;
 $gray_color: #999999;
+$para_color: #010101;
 $green_color: #56B87E;
+$ch_xs_text: 0.7vw;
 $ch_s_text: 0.9vw;
+$ch_m_text: 1.1vw;
+$ch_l_text: 1.7vw;
 $more_text: 0.8vw;
 
 .loading-page {
@@ -186,6 +190,7 @@ header {
             font-weight: 600;
             margin-bottom: 2.8vw;
             letter-spacing: 0.1em;
+            opacity: 1;
 
             span {
                 font-size: 0.9vw;
@@ -193,6 +198,7 @@ header {
                 font-weight: 300;
                 color: rgba(0, 0, 0, 0.61);
                 margin-left: 0.8vw;
+
             }
 
             .sub-open {
@@ -205,6 +211,7 @@ header {
                     font-weight: 500;
                     position: relative;
                     letter-spacing: 0;
+                    opacity: 1;
 
                     span {
                         font-size: 0.8vw;

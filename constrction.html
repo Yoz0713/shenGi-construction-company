@@ -88,7 +88,7 @@
     <section class="construction">
         <section class="first-page">
             <div class="first-page-bg">
-                <img src="./img/construction/constrction-banner.webp">
+                <!-- <img src="./img/construction/constrction-banner.webp"> -->
             </div>
             <div class="first-page-title">
                 <h3>CONSTRUCTION</h3>
@@ -100,7 +100,7 @@
             <ul>
                 <li>
                     <div class="imgBox">
-                        <a href="./z-fake-html/construction1.html">
+                        <a href="./constructionInner.html">
                             <img src="./img/construction/p1.webp">
                         </a>
                     </div>
@@ -111,7 +111,7 @@
                         </div>
 
                         <p>南勢國中校園比鄰、綠意圍繞眼界非凡、都會中自然系建築。</p>
-                        <a href="./z-fake-html/construction1.html">
+                        <a href="./constructionInner.html">
                             <span>了解更多</span>
                         </a>
 
@@ -119,7 +119,7 @@
                 </li>
                 <li>
                     <div class="imgBox">
-                        <a href="javascript:;">
+                        <a href="./constructionInner.html">
                             <img src="./img/construction/p2.webp">
                         </a>
                     </div>
@@ -129,14 +129,14 @@
                         </div>
 
                         <p>南勢國中校園比鄰、綠意圍繞眼界非凡、都會中自然系建築。</p>
-                        <a href="javascript:;">
+                        <a href="./constructionInner.html">
                             <span>了解更多</span>
                         </a>
                     </div>
                 </li>
                 <li>
                     <div class="imgBox">
-                        <a href="./z-fake-html/constrction2.html">
+                        <a href="./constructionInner.html">
                             <img src="./img/construction/p3.webp">
                         </a>
                     </div>
@@ -146,14 +146,14 @@
                             <p>即將推出</p>
                         </div>
                         <p>南勢國中校園比鄰、綠意圍繞眼界非凡、都會中自然系建築。</p>
-                        <a href="./z-fake-html/constrction2.html">
+                        <a href="./constructionInner.html">
                             <span>了解更多</span>
                         </a>
                     </div>
                 </li>
                 <li>
                     <div class="imgBox">
-                        <a href="./z-fake-html/constrction3.html">
+                        <a href="./constructionInner.html">
                             <img src="./img/construction/p4.webp">
                         </a>
                     </div>
@@ -163,7 +163,7 @@
                             <p>即將推出</p>
                         </div>
                         <p>南勢國中校園比鄰、綠意圍繞眼界非凡、都會中自然系建築。</p>
-                        <a href="./z-fake-html/constrction3.html">
+                        <a href="./constructionInner.html">
                             <span>了解更多</span>
                         </a>
                     </div>
@@ -176,28 +176,45 @@
         <p>Copyright © 2023 森鉅建設股份有限公司版權所有<span>TEL：12345678</span>地址：臺北市松山區敦化北路167號17樓</p>
     </footer>
 
-    <section class="filter">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            color-interpolation="sRGB">
-            <defs>
-                <filter id="blur-storm">
-                    <feTurbulence x="50%" y="50%" type="fractalNoise" baseFrequency="0.5" numOctaves="1"
-                        result="turbulence" />
-                    <feColorMatrix in="turbulence" type="hueRotate" values="150" />
-
-                    <feDisplacementMap in="SourceGraphic" in2="hue" scale="30" xChannelSelector="G"
-                        yChannelSelector="R" />
-                </filter>
-            </defs>
-        </svg>
-    </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.0.5/pixi.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="./js/config.js"></script>
 
     <script>
+
         function bannerIn() {
+            const px1 = new PIXI.Application({
+                width: $(".first-page-bg").width(),
+                height: $(".first-page-bg").height(),
+                backgroundAlpha: 0
+            })
+            $(".first-page-bg").append(px1.view)
+            let container = new PIXI.Container();
+            px1.stage.addChild(container);
+
+            // Create a new texture
+            let texture = PIXI.Texture.from('./img/construction/constrction-banner.webp');
+
+            // Create a 5x5 grid of bunnies
+
+            const banner = new PIXI.Sprite(texture);
+
+            banner.x = 0;
+            banner.y = 0;
+            banner.width = $(".first-page-bg").width(),
+                banner.height = $(".first-page-bg").height(),
+                container.addChild(banner);
+
+
+            // Move container to the center
+            container.x = px1.screen.width / 2;
+            container.y = px1.screen.height / 2;
+
+            // Center bunny sprite in local container coordinates
+            container.pivot.x = container.width / 2;
+            container.pivot.y = container.height / 2;
+
             let gg = gsap.timeline()
 
             gg.fromTo(".first-page-title", {
@@ -207,12 +224,7 @@
                 opacity: 1,
                 y: 0,
                 duration: 1.5
-            }).to("#blur-storm feTurbulence", {
-                attr: {
-                    baseFrequency: 0,
-                },
-                duration: 2,
-            }, "<")
+            })
         }
 
         bannerIn()

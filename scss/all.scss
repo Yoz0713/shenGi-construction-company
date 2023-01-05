@@ -1,6 +1,10 @@
 @import "_config";
 @import "_index";
 @import "_construction";
+@import "_constrcutionInner";
+@import "_progress";
+@import "_concept";
+@import "_portfolio";
 
 * {
     margin: 0;
@@ -45,6 +49,7 @@ a,
 li,
 text {
     font-family: 'Noto Serif TC', sans-serif;
+
 }
 
 a {
