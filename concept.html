@@ -219,68 +219,68 @@
     <script src="./js/config.js"></script>
 
     <script>
-        class SliceSquare {
-            static i = 0
 
-            constructor(data) {
-                SliceSquare.i += 1
-                this.id = `clipPath${SliceSquare.i}`;
-                this.row = data.row;
-                this.collumn = data.collumn;
-                this.gapX = data.gapX;
-                this.gapY = data.gapY;
-                this.squares = []
-                this.square = {
-                    width: 1 / data.row - (data.gapX * (data.row - 1) / data.row),
-                    height: 1 / data.collumn - (data.gapY * (data.collumn - 1) / data.collumn)
-                }
+        window.onload = function () {
+            class SliceSquare {
+                static i = 0
 
-            }
-
-            makeSquares(target) {
-                for (let i = 0; i < this.row; i++) {
-                    this.square.x = i * this.square.width + (i == 0 ? 0 : this.gapX * i)
-                    for (let j = 0; j < this.collumn; j++) {
-                        this.square.y = j * this.square.height + (j == 0 ? 0 : this.gapY * j)
-                        this.squares.push({ ...this.square })
-
+                constructor(data) {
+                    SliceSquare.i += 1
+                    this.id = `clipPath${SliceSquare.i}`;
+                    this.row = data.row;
+                    this.collumn = data.collumn;
+                    this.gapX = data.gapX;
+                    this.gapY = data.gapY;
+                    this.squares = []
+                    this.square = {
+                        width: 1 / data.row - (data.gapX * (data.row - 1) / data.row),
+                        height: 1 / data.collumn - (data.gapY * (data.collumn - 1) / data.collumn)
                     }
 
                 }
-                let result = this.squares.map((item, i) => {
 
-                    item = `<rect x="${item.x}" y="${item.y}" stroke="#000000" opacity="1" width="${item.width}" height="${item.height}" />`
-                    return item
-                })
-                // let clipPathEl = `<svg class="clipPath" viewBox="0 0 1920 634">
-                //             <defs>
-                //                 <clipPath id="${this.id}" clipPathUnits="objectBoundingBox">
-                //                     ${result.join("\n")}
-                //                     </clipPath>
-                //             </defs>
-                //     </svg>`;
-                // document.body.insertAdjacentHTML("beforeend", clipPathEl);
-                let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-                svg.setAttribute("class", "clipPath")
-                svg.setAttribute("viewBox", "0 0 1920 634")
-                let clipPathEl = `<defs>
+                makeSquares(target) {
+                    for (let i = 0; i < this.row; i++) {
+                        this.square.x = i * this.square.width + (i == 0 ? 0 : this.gapX * i)
+                        for (let j = 0; j < this.collumn; j++) {
+                            this.square.y = j * this.square.height + (j == 0 ? 0 : this.gapY * j)
+                            this.squares.push({ ...this.square })
+
+                        }
+
+                    }
+                    let result = this.squares.map((item, i) => {
+
+                        item = `<rect x="${item.x}" y="${item.y}" stroke="#000000" opacity="1" width="${item.width}" height="${item.height}" />`
+                        return item
+                    })
+                    // let clipPathEl = `<svg class="clipPath" viewBox="0 0 1920 634">
+                    //             <defs>
+                    //                 <clipPath id="${this.id}" clipPathUnits="objectBoundingBox">
+                    //                     ${result.join("\n")}
+                    //                     </clipPath>
+                    //             </defs>
+                    //     </svg>`;
+                    // document.body.insertAdjacentHTML("beforeend", clipPathEl);
+                    let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+                    svg.setAttributeNS("http://www.w3.org/2000/svg", "class", "clipPath")
+                    svg.setAttributeNS("http://www.w3.org/2000/svg", "viewBox", "0 0 1920 634")
+                    let clipPathEl = `<defs>
                                      <clipPath id="${this.id}" clipPathUnits="objectBoundingBox">
                                          ${result.join("")}
                                          </clipPath>
                                  </defs>`
-                svg.innerHTML = clipPathEl
-                document.body.appendChild(svg);
+                    svg.innerHTML = clipPathEl
+                    document.body.appendChild(svg);
+                }
             }
-        }
-        const square1 = new SliceSquare({
-            row: 2,
-            collumn: 3,
-            gapX: 0.00125,
-            gapY: 0.0025
-        })
-        square1.makeSquares(".clipPath defs")
-        window.onload = function () {
-
+            const square1 = new SliceSquare({
+                row: 2,
+                collumn: 3,
+                gapX: 0.00125,
+                gapY: 0.0025
+            })
+            square1.makeSquares(".clipPath defs")
 
             function bannerIn() {
                 let gg = gsap.timeline()
