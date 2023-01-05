@@ -24,7 +24,7 @@ html {
     /* IE and Edge */
     scrollbar-width: none;
     /* Firefox */
-    overscroll-behavior-y: none;
+
     scroll-behavior: smooth;
     /* Hide scrollbar for Chrome, Safari and Opera */
 
@@ -34,7 +34,7 @@ html {
 }
 
 html {
-    overflow: -moz-hidden-unscrollable;
+
     overscroll-behavior-y: none;
 }
 
