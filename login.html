@@ -78,45 +78,49 @@
             </li>
         </ul>
     </div>
-    <section class="about">
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="./img/fake img/會員登入.webp">
-
-                </div>
-
-            </div>
-        </div>
+    <section class="login">
 
     </section>
     <footer>
         <p>Copyright © 2023 森鉅建設股份有限公司版權所有<span>TEL：12345678</span>地址：臺北市松山區敦化北路167號17樓</p>
     </footer>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.148.0/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="./js/config.js"></script>
 
     <script>
         window.onload = function () {
-            const swiper = new Swiper(".swiper", {
-                loop: true,
-                effect: 'fade',
-                fadeEffect: {
-                    crossFade: true,
-                },
-                speed: 0,
-            })
-            let about = document.querySelector(".about")
-            $(".about").css("height", `${$(".about .swiper-slide-active").css("height")}`)
-            about.onclick = function () {
-                swiper.slideNext()
-                console.log($(".about .swiper-slide-active").css("height"))
-                $(".about").css("height", `${$(".about .swiper-slide-active").css("height")}`)
+            const camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.01, 10);
+            camera.position.z = 1;
+
+            const scene = new THREE.Scene();
+
+            const geometry = new THREE.BoxGeometry(0.2, 0.2, 0.2);
+            const material = new THREE.MeshNormalMaterial();
+
+            const mesh = new THREE.Mesh(geometry, material);
+            scene.add(mesh);
+
+            const renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize($(".login").innerWidth, $(".login").innerHeight);
+            renderer.setAnimationLoop(animation);
+            $(".login").append(renderer.domElement);
+
+            // animation
+
+            function animation(time) {
+
+                mesh.rotation.x = time / 2000;
+                mesh.rotation.y = time / 1000;
+
+                renderer.render(scene, camera);
+
             }
+
         }
+
 
     </script>
 </body>

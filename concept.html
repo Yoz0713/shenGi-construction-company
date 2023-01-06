@@ -247,7 +247,6 @@
                     const parser = new DOMParser();
                     const doc = parser.parseFromString(clipPathEl, "image/svg+xml")
                     const clip = document.querySelector(".clip")
-
                     clip.innerHTML = doc.documentElement.outerHTML;
 
                     // let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -281,13 +280,18 @@
             const square1 = new SliceSquare({
                 row: 6,
                 collumn: 3,
-                gapX: 0.0125,
-                gapY: 0.02
+                gapX: 0.002,
+                gapY: 0.0025
             })
             square1.makeSquares(".clipPath defs")
 
             function bannerIn() {
-                let gg = gsap.timeline()
+                let gg = gsap.timeline({
+                    onUpdate() {
+                        $(".first-page-bg :nth-child(1)").css("clip-path", "none")
+                        $(".first-page-bg :nth-child(1)").css("clip-path", "url(#clipPath1)")
+                    }
+                })
                 gsap.set("#clipPath1 rect", {
                     transformOrigin: "center center",
                 })
