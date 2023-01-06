@@ -89,7 +89,7 @@
         <section class="first-page">
             <div class="first-page-bg">
                 <img src="./img/concept/banner-page-bg.webp">
-                <img src="./img/concept/svg/SUN GLORY.svg">
+                <img src="./img/concept/svg/SUN GLORY.svg" class="glory">
 
             </div>
         </section>
@@ -192,7 +192,7 @@
     </footer>
 
 
-
+    <div class="clip"></div>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
@@ -232,53 +232,57 @@
                         }
 
                     }
-                    // let result = this.squares.map((item, i) => {
+                    let result = this.squares.map((item, i) => {
 
-                    //     item = `<rect x="${item.x}" y="${item.y}" stroke="#000000" opacity="1" width="${item.width}" height="${item.height}" />`
-                    //     return item
-                    // })
-                    // let clipPathEl = `<svg class="clipPath" viewBox="0 0 1920 634">
-                    //             <defs>
-                    //                 <clipPath id="${this.id}" clipPathUnits="objectBoundingBox">
-                    //                     ${result.join("\n")}
-                    //                     </clipPath>
-                    //             </defs>
-                    //     </svg>`;
-                    // document.body.insertAdjacentHTML("beforeend", clipPathEl);
+                        item = `<rect x="${item.x}" y="${item.y}" stroke="#000000" opacity="1" width="${item.width}" height="${item.height}" />`
+                        return item
+                    })
+                    let clipPathEl = `<svg class="clipPath" viewBox="0 0 1920 634">
+                                <defs>
+                                    <clipPath id="${this.id}" clipPathUnits="objectBoundingBox">
+                                        ${result.join("\n")}
+                                        </clipPath>
+                                </defs>
+                        </svg>`;
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(clipPathEl, "image/svg+xml")
+                    const clip = document.querySelector(".clip")
+                    console.log(doc)
+                    clip.innerHTML = clipPathEl;
 
-                    let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-                    let defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
-                    svg.setAttribute("class", "clipPath")
-                    svg.setAttribute("viewBox", "0 0 1920 634")
-                    let clipPathEl = document.createElementNS("http://www.w3.org/2000/svg", "clipPath");
-                    clipPathEl.id = this.id;
-                    clipPathEl.setAttribute("clipPathUnits", "objectBoundingBox");
-                    let fragment = document.createDocumentFragment();
-                    // Create the rect elements and append them to the clipPath element
-                    this.squares.forEach((item) => {
-                        let rectEl = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+                    // let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+                    // let defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
+                    // svg.setAttribute("class", "clipPath")
+                    // svg.setAttribute("viewBox", "0 0 1920 634")
+                    // let clipPathEl = document.createElementNS("http://www.w3.org/2000/svg", "clipPath");
+                    // clipPathEl.id = this.id;
+                    // clipPathEl.setAttribute("clipPathUnits", "objectBoundingBox");
+                    // let fragment = document.createDocumentFragment();
+                    // // Create the rect elements and append them to the clipPath element
+                    // this.squares.forEach((item) => {
+                    //     let rectEl = document.createElementNS("http://www.w3.org/2000/svg", "rect");
 
-                        rectEl.setAttribute("x", item.x);
-                        rectEl.setAttribute("y", item.y);
-                        rectEl.setAttribute("stroke", "#000000");
-                        rectEl.setAttribute("stroke-miterlimit", "10");
-                        rectEl.setAttribute("width", item.width);
-                        rectEl.setAttribute("height", item.height);
-                        clipPathEl.appendChild(rectEl);
-                    });
-                    defs.appendChild(clipPathEl)
-                    svg.appendChild(defs)
-                    fragment.appendChild(svg)
-                    // // Find the target element and append the clipPath element to it
+                    //     rectEl.setAttribute("x", item.x);
+                    //     rectEl.setAttribute("y", item.y);
+                    //     rectEl.setAttribute("stroke", "#000000");
+                    //     rectEl.setAttribute("stroke-miterlimit", "10");
+                    //     rectEl.setAttribute("width", item.width);
+                    //     rectEl.setAttribute("height", item.height);
+                    //     clipPathEl.appendChild(rectEl);
+                    // });
+                    // defs.appendChild(clipPathEl)
+                    // svg.appendChild(defs)
+                    // fragment.appendChild(svg)
+                    // // // Find the target element and append the clipPath element to it
 
-                    document.body.appendChild(fragment);
+                    // document.body.appendChild(fragment);
                 }
             }
             const square1 = new SliceSquare({
-                row: 2,
+                row: 6,
                 collumn: 3,
-                gapX: 0.00125,
-                gapY: 0.0025
+                gapX: 0,
+                gapY: 0
             })
             square1.makeSquares(".clipPath defs")
 
