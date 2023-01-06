@@ -1617,7 +1617,7 @@ header .progress-bar {
   opacity: 0.6;
   font-weight: 200;
   font-family: "Noto Sans TC", sans-serif;
-  transform: rotateX(180deg) rotateY(180deg);
+  transform: rotate(180deg);
 }
 .concept .second-page-title .en-box h2::after {
   display: block;

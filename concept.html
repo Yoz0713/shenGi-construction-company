@@ -247,8 +247,8 @@
                     const parser = new DOMParser();
                     const doc = parser.parseFromString(clipPathEl, "image/svg+xml")
                     const clip = document.querySelector(".clip")
-                    console.log(doc)
-                    clip.innerHTML = clipPathEl;
+                    console.log(doc.documentElement.outerHTML)
+                    clip.innerHTML = doc.documentElement.outerHTML;
 
                     // let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
                     // let defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
