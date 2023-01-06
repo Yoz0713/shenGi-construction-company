@@ -1575,16 +1575,14 @@ header .progress-bar {
   position: relative;
   width: 100%;
   height: 40vw;
+  -webkit-clip-path: url(#clipPath1);
+          clip-path: url(#clipPath1);
 }
 .concept .first-page-bg img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-.concept .first-page-bg > :nth-child(1) {
-  -webkit-clip-path: url(#clipPath1);
-          clip-path: url(#clipPath1);
 }
 .concept .first-page-bg > :nth-child(2) {
   position: absolute;

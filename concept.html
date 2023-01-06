@@ -247,7 +247,7 @@
                     const parser = new DOMParser();
                     const doc = parser.parseFromString(clipPathEl, "image/svg+xml")
                     const clip = document.querySelector(".clip")
-                    console.log(doc.documentElement.outerHTML)
+
                     clip.innerHTML = doc.documentElement.outerHTML;
 
                     // let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -303,7 +303,7 @@
                     duration: 1.5,
                 }, "<+1")
             }
-            // bannerIn()
+            bannerIn()
         }
 
     </script>

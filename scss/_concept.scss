@@ -10,7 +10,7 @@
             position: relative;
             width: 100%;
             height: 40vw;
-
+            clip-path: url(#clipPath1);
 
             img {
                 width: 100%;
@@ -19,9 +19,7 @@
 
             }
 
-            &> :nth-child(1) {
-                clip-path: url(#clipPath1);
-            }
+            &> :nth-child(1) {}
 
             &> :nth-child(2) {
                 position: absolute;
