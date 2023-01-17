@@ -167,6 +167,7 @@ header .progress-bar {
   font-weight: 300;
   color: rgba(0, 0, 0, 0.61);
   margin-left: 0.8vw;
+  font-family: "Noto Sans TC", sans-serif;
 }
 .menu ul li .sub-open {
   margin: 1.5vw 0vw 4.9vw 1.3vw;
@@ -183,6 +184,7 @@ header .progress-bar {
   font-size: 0.8vw;
   color: rgba(0, 0, 0, 0.5);
   letter-spacing: 0;
+  font-family: "Noto Sans TC", sans-serif;
 }
 .menu ul li .sub-open li::before {
   display: block;
