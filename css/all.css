@@ -99,7 +99,7 @@ header {
   width: 100%;
   left: 0;
   top: 0;
-  z-index: 10;
+  z-index: 15;
 }
 header .logoBox {
   mix-blend-mode: normal;
@@ -1588,6 +1588,13 @@ header .progress-bar {
 }
 .concept .first-page-bg > :nth-child(2) {
   position: absolute;
+  left: 0;
+  top: 0;
+  filter: contrast(0.7) blur(10px);
+  z-index: -1;
+}
+.concept .first-page-bg > :nth-child(3) {
+  position: absolute;
   width: 30vw;
   height: auto;
   bottom: 0;
@@ -2082,13 +2089,203 @@ header .progress-bar {
 }
 
 .login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   width: 100%;
   margin-top: 3.5vw;
   height: 50.5vw;
+  background: linear-gradient(90deg, rgb(219, 219, 219) 50%, #7ad796 100%);
+  overflow: hidden;
 }
-.login canvas {
+.login * {
+  font-family: "Noto Serif TC", sans-serif;
+}
+.login #particles-js {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
+  z-index: 10;
+}
+.login #particles-js canvas {
+  filter: blur(5px);
+  width: 100%;
+  height: 100%;
+}
+.login .sphere1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.login .sphere1 canvas {
+  position: absolute;
+  left: -72vw;
+  bottom: -35vw;
+  width: 100%;
+  height: 100%;
+}
+.login .sphere2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.login .sphere2 canvas {
+  position: absolute;
+  left: -5vw;
+  top: 0vw;
+  width: 100%;
+  height: 100%;
+}
+.login .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  height: 40vw;
+  z-index: 12;
+  background-color: rgba(255, 255, 255, 0.253);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border-radius: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.login .content-box {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.08));
+  position: relative;
+}
+.login .content-box .content-logo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.login .content-box .content-logo img {
+  width: 5vw;
+}
+.login .content-box .content-sign {
+  display: flex;
+  width: 100%;
+  font-size: 0.9vw;
+}
+.login .content-box .content-sign div {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0.3vw;
+  flex: 0 0 50%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.login .content-box .content-sign div p {
+  pointer-events: none;
+  color: rgba(0, 0, 0, 0.5);
+}
+.login .content-box .content-sign div p span {
+  font-size: 0.7vw;
+  font-weight: 300;
+}
+.login .content-box .content-sign .is-active {
+  border-bottom: 4.5px solid rgba(0, 0, 0, 0.8);
+}
+.login .content-box .content-sign .is-active p {
+  color: rgba(0, 0, 0, 0.8);
+}
+.login .content-box .content-sign .is-active p span {
+  font-weight: 600;
+}
+.login .content-box form {
+  opacity: 0;
+  pointer-events: none;
+  width: 15vw;
+  margin-top: 1vw;
+}
+.login .content-box form .form-box {
+  position: relative;
+  width: 100%;
+  margin-bottom: 2vw;
+}
+.login .content-box form .form-box > p {
+  font-size: 0.8vw;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.5vw;
+  margin-left: 0.5vw;
+  font-weight: 600;
+}
+.login .content-box form .form-box > p span {
+  font-size: 0.7vw;
+  font-weight: 300;
+}
+.login .content-box form .form-box input {
+  width: 100%;
+  background-color: transparent;
+  border: 3px solid rgba(0, 0, 0, 0.5);
+  outline: none;
+  border-radius: 40px;
+  padding: 0.5vw;
+  font-size: 0.8vw;
+  color: rgba(0, 0, 0, 0.5);
+}
+.login .content-box form .form-box input[type=submit] {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+}
+.login .content-box form .form-box .forgetPassword {
+  position: absolute;
+  right: 0.5vw;
+  bottom: -1.1vw;
+  cursor: pointer;
+}
+.login .content-box form .form-box .forgetPassword p {
+  font-size: 0.6vw;
+  color: rgba(0, 0, 0, 0.5);
+}
+.login .content-box > .signUp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: absolute;
+  top: 8vw;
+  left: -12.5vw;
+  width: 40vw;
+}
+.login .content-box > .signUp .form-box {
+  flex: 0 0 48%;
+}
+.login .content-box > .signUp :nth-child(5) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex: 0 0 100%;
+}
+.login .content-box > .signUp :nth-child(5) input {
+  width: 48%;
+}
+.login .content-box > .signUp :nth-child(5) > p {
+  margin-right: 13vw;
+}
+.login .content-box > .signUp :nth-child(6) {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 100%;
+}
+.login .content-box > .signUp :nth-child(6) input {
+  width: 48%;
+}
+.login .content-box > .is-active {
+  opacity: 1;
+  pointer-events: all;
 }
 
 * {

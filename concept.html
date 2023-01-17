@@ -89,6 +89,7 @@
         <section class="first-page">
             <div class="first-page-bg">
                 <img src="./img/concept/banner-page-bg.webp">
+                <img src="./img/concept/banner-page-bg.webp">
                 <img src="./img/concept/svg/SUN GLORY.svg" class="glory">
 
             </div>
@@ -237,6 +238,7 @@
                         item = `<rect x="${item.x}" y="${item.y}" stroke="#000000" opacity="1" width="${item.width}" height="${item.height}" />`
                         return item
                     })
+                    result.sort(() => Math.random() - 0.5);
                     let clipPathEl = `<svg class="clipPath" viewBox="0 0 1920 634">
                                 <defs>
                                     <clipPath id="${this.id}" clipPathUnits="objectBoundingBox">
@@ -249,41 +251,15 @@
                     const clip = document.querySelector(".clip")
                     clip.innerHTML = doc.documentElement.outerHTML;
 
-                    // let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-                    // let defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
-                    // svg.setAttribute("class", "clipPath")
-                    // svg.setAttribute("viewBox", "0 0 1920 634")
-                    // let clipPathEl = document.createElementNS("http://www.w3.org/2000/svg", "clipPath");
-                    // clipPathEl.id = this.id;
-                    // clipPathEl.setAttribute("clipPathUnits", "objectBoundingBox");
-                    // let fragment = document.createDocumentFragment();
-                    // // Create the rect elements and append them to the clipPath element
-                    // this.squares.forEach((item) => {
-                    //     let rectEl = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-
-                    //     rectEl.setAttribute("x", item.x);
-                    //     rectEl.setAttribute("y", item.y);
-                    //     rectEl.setAttribute("stroke", "#000000");
-                    //     rectEl.setAttribute("stroke-miterlimit", "10");
-                    //     rectEl.setAttribute("width", item.width);
-                    //     rectEl.setAttribute("height", item.height);
-                    //     clipPathEl.appendChild(rectEl);
-                    // });
-                    // defs.appendChild(clipPathEl)
-                    // svg.appendChild(defs)
-                    // fragment.appendChild(svg)
-                    // // // Find the target element and append the clipPath element to it
-
-                    // document.body.appendChild(fragment);
                 }
             }
             const square1 = new SliceSquare({
-                row: 6,
-                collumn: 3,
-                gapX: 0.002,
-                gapY: 0.0025
+                row: 10,
+                collumn: 5,
+                gapX: -0.001,
+                gapY: -0.001
             })
-            square1.makeSquares(".clipPath defs")
+            square1.makeSquares()
 
             function bannerIn() {
                 let gg = gsap.timeline({
@@ -292,20 +268,20 @@
                         $(".first-page-bg :nth-child(1)").css("clip-path", "url(#clipPath1)")
                     }
                 })
-                gsap.set("#clipPath1 rect", {
-                    transformOrigin: "center center",
+                gsap.set("#clipPath1 :nth-child(even)", {
+                    transformOrigin: "center top",
                 })
-                gg.from("#clipPath1 :nth-child(odd)", {
-                    attr: {
-                        width: 0,
-                    },
-                    duration: 1.5,
-                }).from("#clipPath1 :nth-child(even)", {
-                    attr: {
-                        width: 0,
-                    },
-                    duration: 1.5,
-                }, "<+1")
+                gsap.set("#clipPath1 :nth-child(odd)", {
+                    transformOrigin: "center bottom",
+                })
+                gg.from("#clipPath1 rect", {
+                    // attr: {
+                    //     height: 0,
+                    // },
+                    opacity: 0,
+                    duration: 1.2,
+                    stagger: 0.03
+                })
             }
             bannerIn()
         }

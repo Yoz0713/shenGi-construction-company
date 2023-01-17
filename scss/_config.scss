@@ -3,10 +3,11 @@ $gray_color: #999999;
 $para_color: #010101;
 $green_color: #56B87E;
 $ch_xs_text: 0.7vw;
+$more_text: 0.8vw;
 $ch_s_text: 0.9vw;
 $ch_m_text: 1.1vw;
 $ch_l_text: 1.7vw;
-$more_text: 0.8vw;
+
 
 .loading-page {
     display: flex;
@@ -119,7 +120,7 @@ header {
     width: 100%;
     left: 0;
     top: 0;
-    z-index: 10;
+    z-index: 15;
 
     .logoBox {
         mix-blend-mode: normal;

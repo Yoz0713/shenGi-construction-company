@@ -24,6 +24,15 @@
             }
 
             &> :nth-child(2) {
+
+                position: absolute;
+                left: 0;
+                top: 0;
+                filter: contrast(0.7) blur(10px);
+                z-index: -1;
+            }
+
+            &> :nth-child(3) {
                 position: absolute;
                 width: 30vw;
                 height: auto;
@@ -331,5 +340,6 @@
     rect {
         transform-origin: 50% 50%;
         transform-box: fill-box;
+
     }
 }

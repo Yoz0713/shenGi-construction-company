@@ -1,10 +1,245 @@
 .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     width: 100%;
     margin-top: 3.5vw;
     height: 50.5vw;
+    background: linear-gradient(90deg, rgb(219, 219, 219) 50%, #7ad796 100%);
+    overflow: hidden;
 
-    canvas {
+    * {
+        font-family: 'Noto Serif TC', sans-serif;
+    }
+
+    #particles-js {
+        position: absolute;
+        left: 0;
+        top: 0;
         width: 100%;
         height: 100%;
+        z-index: 10;
+
+        canvas {
+            filter: blur(5px);
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .sphere1 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+
+        canvas {
+            position: absolute;
+            left: -72vw;
+            bottom: -35vw;
+            width: 100%;
+            height: 100%;
+
+        }
+    }
+
+    .sphere2 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        canvas {
+            position: absolute;
+            left: -5vw;
+            top: 0vw;
+            width: 100%;
+            height: 100%;
+
+        }
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70vw;
+        height: 40vw;
+        z-index: 12;
+        background-color: rgba(255, 255, 255, 0.253);
+        backdrop-filter: blur(15px);
+        border-radius: 25px;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+
+
+        &-box {
+            width: fit-content;
+            filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.080));
+            position: relative;
+
+            .content-logo {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+
+                img {
+                    width: 5vw;
+
+                }
+            }
+
+            .content-sign {
+                display: flex;
+                width: 100%;
+                font-size: $ch_s_text;
+
+                div {
+                    display: flex;
+                    justify-content: center;
+                    padding-bottom: 0.3vw;
+                    flex: 0 0 50%;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+                    cursor: pointer;
+
+                    p {
+                        pointer-events: none;
+
+                        color: rgba(0, 0, 0, 0.5);
+
+                        span {
+                            font-size: $ch_xs_text;
+                            font-weight: 300;
+                        }
+                    }
+                }
+
+                .is-active {
+                    border-bottom: 4.5px solid rgba(0, 0, 0, 0.8);
+
+                    p {
+
+                        color: rgba(0, 0, 0, 0.8);
+
+                        span {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+
+            form {
+                opacity: 0;
+                pointer-events: none;
+                width: 15vw;
+                margin-top: 1vw;
+
+
+                .form-box {
+                    position: relative;
+                    width: 100%;
+                    margin-bottom: 2vw;
+
+
+                    >p {
+                        font-size: $more_text ;
+                        color: rgba(0, 0, 0, 0.5);
+                        margin-bottom: 0.5vw;
+                        margin-left: 0.5vw;
+                        font-weight: 600;
+
+                        span {
+                            font-size: $ch_xs_text;
+                            font-weight: 300;
+                        }
+                    }
+
+                    input {
+                        width: 100%;
+                        background-color: transparent;
+                        border: 3px solid rgba(0, 0, 0, 0.5);
+                        outline: none;
+                        border-radius: 40px;
+                        padding: 0.5vw;
+                        font-size: $more_text;
+                        color: rgba(0, 0, 0, 0.5);
+                    }
+
+                    input[type=submit] {
+                        cursor: pointer;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        color: #fff;
+                        border: none;
+                    }
+
+                    .forgetPassword {
+                        position: absolute;
+                        right: 0.5vw;
+                        bottom: -1.1vw;
+                        cursor: pointer;
+
+                        p {
+                            font-size: 0.6vw;
+                            color: rgba(0, 0, 0, 0.5);
+                        }
+                    }
+                }
+            }
+
+            &>.signUp {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                position: absolute;
+                top: 8vw;
+                left: -12.5vw;
+                width: 40vw;
+
+
+                .form-box {
+                    flex: 0 0 48%;
+                }
+
+                & :nth-child(5) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    flex: 0 0 100%;
+
+                    input {
+                        width: 48%;
+                    }
+
+                    >p {
+                        margin-right: 13vw;
+                    }
+                }
+
+                & :nth-child(6) {
+                    display: flex;
+                    justify-content: center;
+                    flex: 0 0 100%;
+
+                    input {
+                        width: 48%;
+                    }
+
+
+                }
+            }
+
+
+
+
+            >.is-active {
+
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
     }
 }
