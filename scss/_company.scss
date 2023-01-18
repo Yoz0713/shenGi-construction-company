@@ -1,0 +1,468 @@
+.company {
+    width: 100%;
+
+    .first-page {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: 7vw 0 15vw auto;
+
+        &-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .logoBox {
+                margin-bottom: 2.5vw;
+
+                img {
+                    width: 8.2vw;
+                }
+            }
+
+            .titleBox {
+                text-align: center;
+                position: relative;
+
+                h1 {
+                    font-size: 1.6vw;
+                    letter-spacing: 0.2em;
+                    font-weight: 700;
+                }
+
+                h4 {
+                    font-size: 1vw;
+                    margin-right: 0.3vw;
+                    font-weight: 300;
+                }
+
+                &::after {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    bottom: -25px;
+                    left: 0;
+                    width: 250%;
+                    height: 1px;
+                    background-color: #000;
+                }
+            }
+        }
+
+        &-bg {
+            width: 81%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .second-page {
+        width: 100%;
+        position: relative;
+
+        &-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: 0 auto 6vw 0;
+
+            .imgBox {
+                img {
+                    width: 32vw;
+                }
+            }
+
+            .paraBox {
+                margin-right: 13vw;
+
+                p {
+                    @include para();
+                    opacity: 1;
+                }
+            }
+
+
+        }
+
+        .opposite {
+            .imgBox {
+                img {
+                    width: 20.5vw;
+                }
+            }
+
+            .paraBox {
+                margin: 0 0 0 15vw;
+
+                p {
+                    @include title-s();
+                    line-height: 2em;
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        .bg {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: 5vw;
+        }
+    }
+
+    .third-page {
+        width: 100%;
+        margin-bottom: 10vw;
+
+        &-bg {
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .forth-page {
+        width: 100%;
+
+        &-top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 6vw;
+
+            h4 {
+                font-size: 0.8vw;
+                font-weight: 300
+            }
+
+            h3 {
+                @include title-s();
+            }
+        }
+
+        &-bottom {
+            display: flex;
+            width: 85%;
+            margin: 0 auto 10vw;
+
+            .box {
+                flex: 0 1 20%;
+                height: 31.5vw;
+                position: relative;
+                transition: 1s;
+                overflow: hidden;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 1;
+                    // background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.842) 0%, transparent 100%);
+                    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+                    transition: 1s;
+                }
+
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    // background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.842) 0%, transparent 100%);
+                    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+                    transition: 1s;
+                }
+
+                .imgBox {
+                    width: 100%;
+                    height: 100%;
+
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .paraBox {
+                    position: absolute;
+                    width: fit-content;
+                    left: 3.8vw;
+                    bottom: 1.5vw;
+                    color: #fff;
+                    z-index: 5;
+
+                    span {
+                        font-size: 0.9vw;
+                        opacity: 0;
+                        transition: 1s;
+                        white-space: nowrap;
+                    }
+
+                    h6 {
+                        font-size: 1.5vw;
+                        letter-spacing: 0.1em;
+                        white-space: nowrap;
+                        position: relative;
+
+                        &::after {
+                            display: block;
+                            content: "";
+                            position: absolute;
+                            left: -0.5vw;
+                            top: 0.5vw;
+                            width: 1px;
+                            height: 0;
+                            background-color: #fff;
+                            transition: 1s;
+                        }
+
+
+                    }
+                }
+
+                .numBox {
+                    position: absolute;
+                    right: 2vw;
+                    top: 1vw;
+                    color: #fff;
+                    z-index: 5;
+
+                    p {
+                        font-size: 5vw;
+                        font-family: 'Noto Serif Tamil', serif;
+                    }
+                }
+
+                &:hover {
+                    flex: 0 1 60%;
+
+                    .paraBox {
+                        span {
+                            opacity: 1;
+
+                        }
+                    }
+
+                    &::before {
+                        opacity: 0;
+
+                    }
+
+                    &::after {
+                        opacity: 1;
+                        background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.842) 0%, rgba(255, 255, 255, 0) 100%);
+                    }
+
+                    h6::after {
+                        height: 70%;
+                    }
+                }
+            }
+
+            & :nth-child(5) {
+
+                .paraBox {
+                    left: 5.2vw;
+                }
+
+
+
+            }
+        }
+    }
+
+    .fifth-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 7vw;
+
+        h3 {
+            @include title-s();
+            margin-bottom: 4vw;
+        }
+
+        p {
+            @include para();
+
+        }
+    }
+
+    .sixth-page {
+        width: 100%;
+        position: relative;
+
+        &-bg {
+            width: 100%;
+
+            img {
+                width: 100%;
+                filter: brightness(0.4);
+            }
+        }
+
+        &-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            padding-top: 4vw;
+
+            .logoBox {
+                display: flex;
+                position: relative;
+                width: 18.2vw;
+                height: 18.2vw;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(255, 255, 255, 0.3);
+                border-radius: 50%;
+
+                img {
+                    width: 4vw;
+                }
+
+                &::after {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    margin: auto;
+                    width: 17vw;
+                    height: 17vw;
+                    border-radius: 50%;
+                    border: 1px solid rgba(255, 255, 255, 0.4);
+                }
+            }
+
+            .svgBox {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 1vw;
+                margin: 0 auto;
+                width: 45vw;
+                height: 45vw;
+
+                svg {
+                    g {
+                        transform: translateX(-4px);
+                    }
+                }
+            }
+
+            .paraBox {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                width: 45vw;
+                height: 45vw;
+
+                div {
+                    display: flex;
+                    position: absolute;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    color: #fff;
+
+                    h5 {
+                        font-size: 1.3vw;
+                        font-weight: 400;
+                    }
+
+                    h6 {
+                        font-size: 0.8vw;
+                        letter-spacing: 0.1em;
+                        font-weight: 300;
+                    }
+                }
+
+                .para2,
+                .para4,
+                .para6 {
+                    h5 {
+                        margin-bottom: 2vw;
+                    }
+
+                    &::after {
+                        display: block;
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 2.2vw;
+                        margin: 0 auto;
+                        width: 1px;
+                        height: 20%;
+                        background-color: #fff;
+                    }
+                }
+
+                .para1 {
+                    left: 4.5vw;
+                    top: 14.5vw;
+                }
+
+                .para2 {
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    top: 7.5vw;
+                }
+
+                .para3 {
+                    right: 4.5vw;
+                    top: 14.5vw;
+
+                }
+
+                .para4 {
+                    right: 6vw;
+                    bottom: 12vw;
+                }
+
+                .para5 {
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    bottom: 2.5vw;
+                }
+
+                .para6 {
+                    left: 6vw;
+                    bottom: 12vw;
+                }
+            }
+        }
+
+    }
+}

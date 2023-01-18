@@ -78,13 +78,27 @@
             </a>
 
         </div>
-        <div class="menu-button">
-            <p>．</p>
-            <p>Menu</p>
-        </div>
-        <div class="progress-bar">
+        <div class="toolBox">
+            <div class="user-area">
+                <div class="user-area-button">
+                    <img src="./img/config/user.svg">
+                    <p>Name </p>
+                    <img src="./img/config/header-arrow.svg" class="arrow">
+                </div>
 
+                <div class="user-area-menu">
+                    <ul>
+                        <li><a href="user.html">會員專區</a></li>
+                        <li><a href="javascript:;">客服維修</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu-button">
+                <p>．</p>
+                <p>Menu</p>
+            </div>
         </div>
+
     </header>
     <!-- header -->
 
@@ -109,7 +123,7 @@
                             營造公司
                             <span>Company</span>
                         </a> </li>
-                    <li> <a href="javascript:;">
+                    <li><a href="./smart.html">
                             科技智慧宅
                             <span>Smart Home</span>
                         </a> </li>
@@ -416,9 +430,16 @@
                     <img src="./img/index/image/forth-page-b3.webp">
                 </div>
             </section>
-            <div class="devloping">
-                <p>以下製作中...</p>
-            </div>
+            <section class="sixth-page">
+                <div class="content">
+                    <video src="./video/logo5.mp4" muted playsinline="true"></video>
+                    <div class="paraBox">
+                        <h4>Sun Glory Archi Group</h4>
+                        <h6>建築永恆 ৹ 延續幸福</h6>
+                    </div>
+
+                </div>
+            </section>
         </section>
     </section>
 
@@ -482,6 +503,8 @@
                 //first-page
                 splitTextAnimation(".first-page .paraBox p")
                 splitTextAnimation(".first-page .paraBox h2")
+                splitTextAnimation(".sixth-page .paraBox h4")
+                splitTextAnimation(".sixth-page .paraBox h6")
                 //first-page
             }
             split()
@@ -1005,13 +1028,49 @@
                     scaleY: 1.01,
                     duration: 4,
 
-                }, "<+4").to(".devloping", {
-
-                    y: "-100vh",
+                }, "<+4").from(".sixth-page .content", {
+                    y: "100vh",
                     duration: 6,
+                    onStart: () => {
+                        setTimeout(() => {
+                            if (!videoPlayed) {
+                                videoPlayed = true
+                                let video = document.querySelector(".sixth-page video");
+                                video.play();
+                                setTimeout(() => {
+                                    $(".menu").css("right", "0")
 
+                                    $(".index").css({
+                                        filter: "blur(5px)"
+                                    })
+                                    $(".loading-page").css({
+                                        filter: "blur(5px)"
+                                    })
+                                }, 4500)
+                            }
+
+                            let gg = gsap.timeline({
+                                delay: 2.8
+                            })
+
+                            gg.to(".sixth-page .paraBox h4 span", {
+                                opacity: 1,
+                                duration: 0.8,
+                                stagger: 0.02,
+
+                            }).to(".sixth-page .paraBox h6 span", {
+                                opacity: 1,
+                                duration: 0.8,
+                                stagger: 0.02
+                            }, ">-0.7")
+                        }, 300)
+
+
+                    }
                 }, "<-4")
             }
+
+            let videoPlayed = false
         }
 
 

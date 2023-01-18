@@ -3,6 +3,7 @@
         width: 100%;
         height: auto;
         position: relative;
+        margin-top: 3.5vw;
 
         &-bg {
             width: 100%;
@@ -32,15 +33,15 @@
             }
 
             h2 {
-                font-size: 1.4vw;
+                font-size: 1.6vw;
                 letter-spacing: 0.2em;
-                font-weight: 600;
+                font-weight: 700;
             }
 
             h3 {
-                font-size: 0.8vw;
+                font-size: 0.9vw;
                 margin-right: 0.3vw;
-
+                font-weight: 300;
             }
 
             svg {

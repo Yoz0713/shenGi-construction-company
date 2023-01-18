@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.css">
+    <title>森鉅建設</title>
+    <style>
+        .swiper {
+            width: 100%;
+
+        }
+
+        .swiper-wrapper {
+            width: 100%;
+        }
+
+        .swiper-wrapper .swiper-slide {
+            width: 100%;
+        }
+
+        .swiper-wrapper .swiper-slide img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logoBox">
+            <a href="./index.html">
+                <img src="./img/index/svg/logo.svg" alt="logo">
+            </a>
+
+        </div>
+        <div class="toolBox">
+            <div class="user-area">
+                <div class="user-area-button">
+                    <img src="./img/config/user.svg">
+                    <p>Name </p>
+                    <img src="./img/config/header-arrow.svg" class="arrow">
+                </div>
+
+                <div class="user-area-menu">
+                    <ul>
+                        <li><a href="user.html">會員專區</a></li>
+                        <li><a href="javascript:;">客服維修</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu-button">
+                <p>．</p>
+                <p>Menu</p>
+            </div>
+        </div>
+
+    </header>
+    <div class="menu">
+        <div class="close">
+            <img src="./img/index/svg/bx_x.svg" alt="">
+        </div>
+        <ul>
+            <li>
+
+                關於森鉅
+                <span>Sun Glory</span>
+
+                <ul class="sub-open">
+                    <li> <a href="./concept.html">
+                            品牌理念
+                            <span>Concept</span>
+                        </a> </li>
+                    <li> <a href="./company.html">
+                            營造公司
+                            <span>Company</span>
+                        </a> </li>
+                    <li> <a href="./smart.html">
+                            科技智慧宅
+                            <span>Smart Home</span>
+                        </a> </li>
+                </ul>
+            </li>
+            <li>
+                <a href="./constrction.html" class="sub">
+                    熱銷建案
+                    <span>Construction</span>
+                </a>
+
+            </li>
+            <li>
+                <a href="./portfolio.html" class="sub">
+                    經典業績
+                    <span>Portfolio</span>
+                </a>
+
+            </li>
+            <li>
+                <a href="./contact.html" class="sub">
+                    聯絡我們
+                    <span>Contact Us</span>
+                </a>
+
+            </li>
+            <li>
+                <a href="./login.html">
+                    會員登入
+                    <span>Log In</span>
+                </a>
+
+            </li>
+        </ul>
+    </div>
+    <section class="user">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./img/fake img/會員資料A.png">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/fake img/會員資料B.png">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/fake img/會員資料C-1.jpg">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/fake img/會員資料C-2.jpg">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/fake img/會員資料C-3.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Copyright © 2023 森鉅建設股份有限公司版權所有<span>TEL：12345678</span>地址：臺北市松山區敦化北路167號17樓</p>
+    </footer>
+    <script src="./js/paticles.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./js/config.js"></script>
+
+    <script>
+        const swiper = new Swiper(".swiper", {
+            loop: true,
+            effect: "fade"
+        })
+        $(".swiper img").click(() => {
+            swiper.slideNext()
+        })
+    </script>
+</body>
+
+</html>

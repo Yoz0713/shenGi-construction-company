@@ -342,3 +342,12 @@ $(".menu-button").mouseleave((e) => {
     })
 })
 //Menu點點浮動
+
+//user-menu-toggle
+
+$(".user-area-button").click(() => {
+    $(".user-area-menu").slideToggle()
+    $(".user-area .arrow").toggleClass("is-active")
+})
+
+//user-menu-toggle

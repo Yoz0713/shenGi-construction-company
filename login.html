@@ -18,10 +18,27 @@
             </a>
 
         </div>
-        <div class="menu-button">
-            <p>．</p>
-            <p>Menu</p>
+        <div class="toolBox">
+            <div class="user-area">
+                <div class="user-area-button">
+                    <img src="./img/config/user.svg">
+                    <p>Name </p>
+                    <img src="./img/config/header-arrow.svg" class="arrow">
+                </div>
+
+                <div class="user-area-menu">
+                    <ul>
+                        <li><a href="user.html">會員專區</a></li>
+                        <li><a href="javascript:;">客服維修</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu-button">
+                <p>．</p>
+                <p>Menu</p>
+            </div>
         </div>
+
     </header>
     <div class="menu">
         <div class="close">
@@ -42,7 +59,7 @@
                             營造公司
                             <span>Company</span>
                         </a> </li>
-                    <li> <a href="javascript:;">
+                    <li> <a href="./smart.html">
                             科技智慧宅
                             <span>Smart Home</span>
                         </a> </li>
@@ -82,16 +99,11 @@
         <div id="particles-js">
 
         </div>
-        <div class="sphere1">
 
-        </div>
-        <div class="sphere2">
-
-        </div>
-        <div class="content">
+        <div class="content is-active2">
             <div class="content-box">
                 <div class="content-logo">
-                    <img src="./img/login/SVG/logo-black.svg">
+                    <img src="./img/login/SVG/logo-green.svg">
                 </div>
                 <div class="content-sign">
                     <div class="signIn is-active">
@@ -137,14 +149,49 @@
                     <div class="form-box">
                         <p>密碼 <span>PASSWORD</span></p>
                         <input type="text">
-                        <div class="forgetPassword">
-                            <p>忘記密碼</p>
-                        </div>
+
                     </div>
                     <div class="form-box">
                         <input type="submit" value="SIGN UP">
                     </div>
                 </form>
+            </div>
+
+        </div>
+        <div class="content content2">
+            <div class="content-box">
+                <div class="content-logo">
+                    <img src="./img/login/SVG/logo-green.svg">
+                </div>
+                <div class="content-sign">
+                    <p>忘記密碼</p>
+                </div>
+                <form class="signIn is-active">
+                    <div class="form-box">
+                        <p>信箱 <span>MAIL</span></p>
+                        <input type="text">
+                    </div>
+                    <div class="form-box verification">
+                        <p>輸入驗證碼 <span>VERIFICATION CODE</span></p>
+                        <input type="text">
+                        <div class="hint">
+                            <img src="./img/login/SVG/wrong.svg" class="wrong">
+                            <img src="./img/login/SVG/check.svg" class="check">
+                        </div>
+                    </div>
+                    <div class="form-box">
+                        <p>輸入新密碼 <span>NEW PASSWORD</span></p>
+                        <input type="text">
+                    </div>
+                    <div class="form-box">
+                        <p>確認新密碼 <span>CHECK PASSWORD</span></p>
+                        <input type="text">
+                    </div>
+                    <div class="form-box">
+                        <input type="submit" value="提交">
+                    </div>
+                </form>
+
             </div>
 
         </div>
@@ -155,23 +202,23 @@
     <script src="./js/paticles.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.148.0/three.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="./js/config.js"></script>
 
     <script>
-
+        //background flowing round effect
         let getJSON = async (url) => {
             let response = await fetch(url);
             let json = await response.json();
 
             particlesJS("particles-js", { "particles": { "number": { "value": 33, "density": { "enable": true, "value_area": 1815.039575754227 } }, "color": { "value": "#26dc90" }, "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 4 }, "image": { "src": "img/login/3d-texture.png", "width": 100, "height": 100 } }, "opacity": { "value": 0.71010661384636, "random": true, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } }, "size": { "value": 200.24033491425909, "random": true, "anim": { "enable": true, "speed": 16.783216783216783, "size_min": 2.3976023976023977, "sync": false } }, "line_linked": { "enable": false, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 }, "move": { "enable": true, "speed": 3, "direction": "top-right", "random": true, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1104.8066982851817 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": false, "mode": "push" }, "resize": true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true })
-            console.log(JSON.stringify(json))
+
         }
 
         getJSON('./js/particlesjs-config.json')
-
+        //background flowing round effect
         $(".content-sign").click((e) => {
 
             if (e.target.classList[0] == "signIn" && e.target.classList[1] !== "is-active") {
@@ -183,198 +230,41 @@
 
             }
         })
+
+        //change to forget
+        $(".forgetPassword").click(() => {
+            $(".content").removeClass("is-active2");
+            $(".content2").addClass("is-active2");
+        })
+        //change to forget
+
+
+        //submit click effect 
+        $("input[type=submit]").on("mousedown", () => {
+            $("input[type=submit]").css("background-color", "#003720c4");
+            $("input[type=submit]").on("mouseup", () => {
+                $("input[type=submit]").css();
+            })
+        })
+        //submit click effect
+
+        //verification check or wrong icon
+        let verificationCode = "123" // <---信箱驗證碼
+        $(".verification input").keyup(() => {
+            if ($(".verification input").val() !== verificationCode && $(".verification input").val() !== "") {
+                $(".verification .check").removeClass("is-active")
+                $(".verification .wrong").addClass("is-active")
+            } else if ($(".verification input").val() == "") {
+                $(".verification img").removeClass("is-active")
+            } else if ($(".verification input").val() == verificationCode) {
+                $(".verification .check").addClass("is-active")
+                $(".verification .wrong").removeClass("is-active")
+            }
+        })
+        //verification check or wrong icon
     </script>
 
-    <!-- <script type="module">
-        import { SphereGeometry, MeshStandardMaterial, MeshLambertMaterial, TextureLoader } from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/0.148.0/three.module.js';
 
-        window.onload = function () {
-            function sphere1() {
-                let scene = new THREE.Scene();
-
-                scene.rotation.y = Math.PI / 1.2;
-
-                let camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-                let renderer = new THREE.WebGLRenderer();
-                renderer.setClearColor(0xffffff, 0);
-                let geometry = new THREE.SphereGeometry(2.3, 64, 64);
-                let texture = new THREE.TextureLoader().load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxSdFkoNaVT7FQhkCZPgQXbJseyEsevYo_4UsJJs7dTGKXPDoZ77olGj5d99UOgpH__GA&usqp=CAU");
-                texture.wrapS = THREE.RepeatWrapping;
-                texture.wrapT = THREE.RepeatWrapping;
-                // let material = new THREE.MeshStandardMaterial({
-                //         map: texture,
-                //         metalness: 1,
-                //         roughness: 0.5,
-                // });
-                let material = new MeshLambertMaterial({
-                    bumpMap: texture,
-                    color: 0x1AD1AD, // apple green
-                });
-                let light = new THREE.HemisphereLight(0xffffbb, 0x080820, 1);
-                light.position.set(-5, 5, -5)
-                light.intensity = 0.8
-
-                let light2 = new THREE.HemisphereLight(0xffffbb, 0x080820, 1);
-                light2.position.set(5, -5, 10)
-                light2.intensity = 1
-                let sphere = new THREE.Mesh(geometry, material);
-                function create3JS() {
-                    renderer.setSize($(".login").width() * 2, $(".login").height() * 2);
-                    window.onresize = () => {
-                        renderer.setSize($(".login").width() * 2, $(".login").height() * 2);
-                    }
-                    $(".login .sphere1").append(renderer.domElement);
-                    scene.add(sphere);
-                    scene.add(light);
-                    scene.add(light2);
-
-                }
-                create3JS()
-                const radius = 5;
-
-                // Set the angle of rotation (in radians)
-                let angle = 90;
-
-                // Set the angular velocity of the orbit (in radians per frame)
-                const angularVelocity = 0.003;
-
-                function animate() {
-                    // Update the angle of rotation
-                    angle += angularVelocity;
-
-                    // Calculate the camera's position on the orbit
-                    const x = radius * Math.sin(angle);
-                    const z = radius * Math.cos(angle);
-
-                    // Set the camera's position
-                    camera.position.set(x, 0, z);
-
-                    // Make the camera look at the object
-                    camera.lookAt(0, 0, 0);
-
-                    // Render the scene
-                    renderer.render(scene, camera);
-
-                    // Request the next frame
-                    requestAnimationFrame(animate);
-                }
-
-                // Start the animation loop
-                animate();
-            }
-            sphere1()
-            function sphere2() {
-                let scene = new THREE.Scene();
-
-                scene.rotation.y = Math.PI;
-
-                let camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-                let renderer = new THREE.WebGLRenderer();
-                renderer.setClearColor(0xffffff, 0);
-                let geometry = new THREE.SphereGeometry(2, 64, 64);
-                let texture = new THREE.TextureLoader().load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxSdFkoNaVT7FQhkCZPgQXbJseyEsevYo_4UsJJs7dTGKXPDoZ77olGj5d99UOgpH__GA&usqp=CAU");
-                texture.wrapS = THREE.RepeatWrapping;
-                texture.wrapT = THREE.RepeatWrapping;
-                let material = new MeshStandardMaterial({
-                    map: texture,
-                    color: 0x9AD5AD, // apple green
-                    roughness: 1,
-                    metalness: 0,
-
-                });
-                let light = new THREE.HemisphereLight(0xffffbb, 0x080820, 1);
-                light.position.set(-5, 5, -5)
-                light.intensity = 1.3
-
-                let light2 = new THREE.HemisphereLight(0xffffbb, 0x080820, 1);
-                light2.position.set(5, -5, 10)
-                light2.intensity = 0.8
-                let sphere = new THREE.Mesh(geometry, material);
-                function create3JS() {
-                    renderer.setSize($(".login").width(), $(".login").height());
-                    window.onresize = () => {
-                        renderer.setSize($(".login").width(), $(".login").height());
-                    }
-                    $(".login .sphere2").append(renderer.domElement);
-                    scene.add(sphere);
-                    scene.add(light);
-                    scene.add(light2);
-
-                }
-                create3JS()
-                // Set the radius of the orbit
-                const radius = 5;
-
-                // Set the angle of rotation (in radians)
-                let angle = 90;
-
-                // Set the angular velocity of the orbit (in radians per frame)
-                const angularVelocity = 0.022;
-
-                function animate() {
-                    // Update the angle of rotation
-                    angle += angularVelocity;
-
-                    // Calculate the camera's position on the orbit
-                    const x = radius * Math.sin(angle);
-                    const z = radius * Math.cos(angle);
-
-                    // Set the camera's position
-                    camera.position.set(x, 0, z);
-
-                    // Make the camera look at the object
-                    camera.lookAt(0, 0, 0);
-
-                    // Render the scene
-                    renderer.render(scene, camera);
-
-                    // Request the next frame
-                    requestAnimationFrame(animate);
-                }
-
-                // Start the animation loop
-                animate();
-            }
-            sphere2()
-
-            function rotate() {
-                let gg = gsap.timeline({
-                    repeat: -1,
-                    ease: "power4.inOut"
-                })
-
-                gg.to(".sphere2", {
-                    keyframes: {
-                        x: ["0", "32vw", "-90vw"],
-                        y: ["0", "-5vw", "25vw"],
-                        ease: "none"
-                    },
-
-
-                    duration: 15
-                }).to(".sphere2", {
-                    zIndex: 3,
-                    duration: 0.001
-                }, "<+7")
-            }
-            rotate()
-
-            //toggle sign in or up
-            $(".content-sign").click((e) => {
-
-                if (e.target.classList[0] == "signIn" && e.target.classList[1] !== "is-active") {
-                    $(".signUp").removeClass("is-active")
-                    $(".signIn").addClass("is-active")
-                } else if (e.target.classList[0] == "signUp" && e.target.classList[1] !== "is-active") {
-                    $(".signIn").removeClass("is-active")
-                    $(".signUp").addClass("is-active")
-
-                }
-            })
-        }
-
-
-    </script> -->
 </body>
 
 </html>

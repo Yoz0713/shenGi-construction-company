@@ -1,3 +1,7 @@
+$dark-green: #126233;
+$semi-green: #126233cb;
+$light-green: #1262338e;
+
 .login {
     display: flex;
     justify-content: center;
@@ -28,44 +32,8 @@
         }
     }
 
-    .sphere1 {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-
-        canvas {
-            position: absolute;
-            left: -72vw;
-            bottom: -35vw;
-            width: 100%;
-            height: 100%;
-
-        }
-    }
-
-    .sphere2 {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-
-        canvas {
-            position: absolute;
-            left: -5vw;
-            top: 0vw;
-            width: 100%;
-            height: 100%;
-
-        }
-    }
-
     .content {
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         width: 70vw;
@@ -74,13 +42,13 @@
         background-color: rgba(255, 255, 255, 0.253);
         backdrop-filter: blur(15px);
         border-radius: 25px;
-        border: 1px solid rgba(0, 0, 0, 0.5);
+        border: 1px solid #fff;
 
 
         &-box {
             width: fit-content;
-            filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.080));
             position: relative;
+            padding-bottom: 4vw;
 
             .content-logo {
                 display: flex;
@@ -97,37 +65,55 @@
                 display: flex;
                 width: 100%;
                 font-size: $ch_s_text;
+                margin: 1vw 0 2vw;
 
                 div {
                     display: flex;
                     justify-content: center;
                     padding-bottom: 0.3vw;
                     flex: 0 0 50%;
-                    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
                     cursor: pointer;
+                    border-bottom: 1px solid $light-green;
 
                     p {
                         pointer-events: none;
 
-                        color: rgba(0, 0, 0, 0.5);
+                        color: $light-green;
+
+                        font-weight: 600;
 
                         span {
                             font-size: $ch_xs_text;
-                            font-weight: 300;
                         }
                     }
                 }
 
+                .signIn {
+                    position: relative;
+
+                    &::after {
+                        display: block;
+                        content: "";
+                        position: absolute;
+                        left: 100%;
+                        bottom: 0;
+                        width: 100%;
+                        height: 2.5px;
+                        background-color: $dark-green;
+                        transition: 0.5s;
+                    }
+                }
+
                 .is-active {
-                    border-bottom: 4.5px solid rgba(0, 0, 0, 0.8);
 
                     p {
+                        color: $dark-green;
+                    }
 
-                        color: rgba(0, 0, 0, 0.8);
+                    &::after {
 
-                        span {
-                            font-weight: 600;
-                        }
+                        left: 0%;
+
                     }
                 }
             }
@@ -136,24 +122,24 @@
                 opacity: 0;
                 pointer-events: none;
                 width: 15vw;
-                margin-top: 1vw;
+                transition: 0.3s;
 
 
                 .form-box {
                     position: relative;
                     width: 100%;
-                    margin-bottom: 2vw;
+                    margin-bottom: 0.5vw;
 
 
                     >p {
-                        font-size: $more_text ;
-                        color: rgba(0, 0, 0, 0.5);
-                        margin-bottom: 0.5vw;
+                        font-size: 0.8vw;
+                        color: $semi-green;
+                        margin-bottom: 5px;
                         margin-left: 0.5vw;
                         font-weight: 600;
 
                         span {
-                            font-size: $ch_xs_text;
+                            font-size: 0.65vw;
                             font-weight: 300;
                         }
                     }
@@ -161,7 +147,7 @@
                     input {
                         width: 100%;
                         background-color: transparent;
-                        border: 3px solid rgba(0, 0, 0, 0.5);
+                        border: 2px solid rgba(0, 0, 0, 0.5);
                         outline: none;
                         border-radius: 40px;
                         padding: 0.5vw;
@@ -171,20 +157,26 @@
 
                     input[type=submit] {
                         cursor: pointer;
-                        background-color: rgba(0, 0, 0, 0.5);
+                        background-color: $light-green;
                         color: #fff;
                         border: none;
+                        margin-top: 1.5vw;
+
+                        &:hover {
+                            background-color: #00372041;
+                        }
                     }
 
                     .forgetPassword {
                         position: absolute;
+                        z-index: 5;
                         right: 0.5vw;
                         bottom: -1.1vw;
                         cursor: pointer;
 
                         p {
                             font-size: 0.6vw;
-                            color: rgba(0, 0, 0, 0.5);
+                            color: $dark-green;
                         }
                     }
                 }
@@ -195,7 +187,7 @@
                 flex-wrap: wrap;
                 justify-content: space-between;
                 position: absolute;
-                top: 8vw;
+                top: 11vw;
                 left: -12.5vw;
                 width: 40vw;
 
@@ -215,7 +207,7 @@
                     }
 
                     >p {
-                        margin-right: 13vw;
+                        margin-right: 13.2vw;
                     }
                 }
 
@@ -236,10 +228,82 @@
 
 
             >.is-active {
-
+                animation-name: up;
+                animation-duration: 0.3s;
+                animation-fill-mode: forwards;
+                animation-timing-function: linear;
                 opacity: 1;
                 pointer-events: all;
             }
         }
+    }
+
+    .content2 {
+        display: none;
+        position: relative;
+
+        .content-logo {
+            position: absolute;
+            width: fit-content;
+            left: -18vw;
+            top: -3vw;
+        }
+
+        .content-sign {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            border-bottom: 3px solid $dark-green;
+            padding-bottom: 0.5vw;
+            margin-bottom: 2.5vw;
+            font-weight: 600;
+            color: $dark-green;
+        }
+
+        .content-box {
+            padding: 0;
+
+            form {
+                width: 20vw;
+
+                .verification {
+                    position: relative;
+
+                    .hint {
+                        position: absolute;
+                        width: 1.5vw;
+                        height: 1.5vw;
+                        bottom: 0.5vw;
+                        right: -2.5vw;
+
+                        img {
+                            opacity: 0;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                        }
+
+                        .is-active {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .is-active2 {
+        display: flex;
+    }
+}
+
+@keyframes up {
+    0% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0px);
     }
 }

@@ -25,10 +25,27 @@
             </a>
 
         </div>
-        <div class="menu-button">
-            <p>．</p>
-            <p>Menu</p>
+        <div class="toolBox">
+            <div class="user-area">
+                <div class="user-area-button">
+                    <img src="./img/config/user.svg">
+                    <p>Name </p>
+                    <img src="./img/config/header-arrow.svg" class="arrow">
+                </div>
+
+                <div class="user-area-menu">
+                    <ul>
+                        <li><a href="user.html">會員專區</a></li>
+                        <li><a href="javascript:;">客服維修</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu-button">
+                <p>．</p>
+                <p>Menu</p>
+            </div>
         </div>
+
     </header>
     <div class="menu">
         <div class="close">
@@ -49,7 +66,7 @@
                             營造公司
                             <span>Company</span>
                         </a> </li>
-                    <li> <a href="javascript:;">
+                    <li> <a href="./smart.html">
                             科技智慧宅
                             <span>Smart Home</span>
                         </a> </li>
@@ -177,15 +194,26 @@
             </div>
         </section>
         <section class="fifth-page">
-            <div class="imgBox">
-                <img src="./img/concept/fifth-page-bg1.webp">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="imgBox">
+                            <img src="./img/concept/fifth-page-bg1.webp">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="imgBox">
+                            <img src="./img/concept/fifth-page-bg2.webp">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="imgBox">
+                            <img src="./img/concept/fifth-page-bg3.webp">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="imgBox">
-                <img src="./img/concept/fifth-page-bg2.webp">
-            </div>
-            <div class="imgBox">
-                <img src="./img/concept/fifth-page-bg3.webp">
-            </div>
+
         </section>
     </section>
     <footer>
@@ -205,6 +233,14 @@
     <script>
 
         window.onload = function () {
+            const swiper1 = new Swiper(".fifth-page .swiper", {
+                loop: true,
+                autoplay: true,
+                slidesPerView: 3,
+                centeredSlides: true,
+            })
+
+
             class SliceSquare {
                 static i = 0
 

@@ -108,16 +108,75 @@ header .logoBox {
 header .logoBox img {
   width: 5vw;
 }
-header .menu-button {
+header .toolBox {
+  display: flex;
+  align-items: center;
+}
+header .toolBox .user-area {
+  padding: 0.2vw 0.5vw 0;
+  margin-right: 2.5vw;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+}
+header .toolBox .user-area-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+header .toolBox .user-area img {
+  display: block;
+  width: 1.5vw;
+}
+header .toolBox .user-area p {
+  font-size: 0.8vw;
+  margin: 0 6px 0 20px;
+}
+header .toolBox .user-area .arrow {
+  transform: rotate(180deg);
+  width: 1.2vw;
+  margin-top: 0.2vw;
+}
+header .toolBox .user-area .is-active {
+  transform: none;
+}
+header .toolBox .user-area-menu {
+  display: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  padding: 1vw 0.5vw;
+  background-color: rgb(255, 255, 255);
+}
+header .toolBox .user-area-menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+header .toolBox .user-area-menu ul li {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 0.8vw;
+  color: rgba(0, 0, 0, 0.85);
+  margin-top: 0.3vw;
+  cursor: pointer;
+}
+header .toolBox .user-area-menu ul :not(:last-child) {
+  padding-bottom: 0.3vw;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.308);
+}
+header .toolBox .menu-button {
   display: flex;
   align-items: center;
   color: #000;
   cursor: pointer;
 }
-header .menu-button :nth-child(1) {
+header .toolBox .menu-button :nth-child(1) {
   font-size: 2.5vw;
 }
-header .menu-button :nth-child(2) {
+header .toolBox .menu-button :nth-child(2) {
   font-size: 0.8vw;
 }
 header .progress-bar {
@@ -945,17 +1004,43 @@ header .progress-bar {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.container .index .devloping {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.container .index .sixth-page {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  position: absolute;
-  bottom: -100vh;
 }
-.container .index .devloping p {
-  font-size: 4vw;
+.container .index .sixth-page .content {
+  width: 36%;
+  margin: 10vw auto 0;
+  pointer-events: none;
+}
+.container .index .sixth-page .content video {
+  width: 100%;
+  height: 100%;
+}
+.container .index .sixth-page .content .paraBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: -2.5vw;
+}
+.container .index .sixth-page .content .paraBox h4,
+.container .index .sixth-page .content .paraBox h6 {
+  text-align: center;
+}
+.container .index .sixth-page .content .paraBox h4 span,
+.container .index .sixth-page .content .paraBox h6 span {
+  opacity: 0;
+}
+.container .index .sixth-page .content .paraBox h4 {
+  font-size: 1.6vw;
+  margin-bottom: 1.5vw;
+}
+.container .index .sixth-page .content .paraBox h6 {
+  font-size: 1.3vw;
   font-weight: 600;
 }
 
@@ -963,6 +1048,7 @@ header .progress-bar {
   width: 100%;
   height: auto;
   position: relative;
+  margin-top: 3.5vw;
 }
 .construction .first-page-bg {
   width: 100%;
@@ -991,13 +1077,14 @@ header .progress-bar {
   text-align: center;
 }
 .construction .first-page-title h2 {
-  font-size: 1.4vw;
+  font-size: 1.6vw;
   letter-spacing: 0.2em;
-  font-weight: 600;
+  font-weight: 700;
 }
 .construction .first-page-title h3 {
-  font-size: 0.8vw;
+  font-size: 0.9vw;
   margin-right: 0.3vw;
+  font-weight: 300;
 }
 .construction .first-page-title svg {
   position: absolute;
@@ -1066,7 +1153,7 @@ header .progress-bar {
   margin-bottom: 1vw;
 }
 .construction .second-page ul li .paraBox-title h3 {
-  font-size: 1.1vw;
+  font-size: 1.3vw;
   letter-spacing: 0.1em;
   margin-right: 1vw;
 }
@@ -1079,7 +1166,7 @@ header .progress-bar {
   background-color: rgb(233, 233, 233);
 }
 .construction .second-page ul li .paraBox > p {
-  font-size: 0.9vw;
+  font-size: 1.1vw;
   letter-spacing: 0.1em;
 }
 .construction .second-page ul li .paraBox a {
@@ -1094,7 +1181,7 @@ header .progress-bar {
   height: fit-content;
 }
 .construction .second-page ul li .paraBox span {
-  font-size: 0.8vw;
+  font-size: 1vw;
   letter-spacing: 0.2em;
   border-bottom: 1px solid #888888;
   padding: 0 1.5vw 0.3vw 0.5vw;
@@ -1203,7 +1290,7 @@ header .progress-bar {
   margin-bottom: 3vw;
 }
 .constrctionInner .second-page-top .caseName h2 {
-  font-size: 1.1vw;
+  font-size: 1.3vw;
   opacity: 0.8;
   font-weight: 600;
 }
@@ -1220,7 +1307,7 @@ header .progress-bar {
   margin-right: 0.5vw;
 }
 .constrctionInner .second-page-top .contact div p {
-  font-size: 0.7vw;
+  font-size: 0.9vw;
   opacity: 0.8;
   letter-spacing: 0.1em;
 }
@@ -1243,20 +1330,20 @@ header .progress-bar {
   margin-bottom: 4vw;
 }
 .constrctionInner .second-page-bottom-left ul li h4 {
-  font-size: 0.8vw;
+  font-size: 1vw;
   opacity: 0.8;
   font-weight: 300;
   letter-spacing: 0.1em;
   margin-bottom: 1.2vw;
 }
 .constrctionInner .second-page-bottom-left ul li p {
-  font-size: 0.7vw;
+  font-size: 0.9vw;
   opacity: 0.8;
   font-weight: 300;
   letter-spacing: 0.2em;
 }
 .constrctionInner .second-page-bottom-left ul :nth-child(4) p, .constrctionInner .second-page-bottom-left ul :nth-child(5) p, .constrctionInner .second-page-bottom-left ul :nth-child(6) p {
-  font-size: 1.1vw;
+  font-size: 1.3vw;
   font-weight: 900;
 }
 .constrctionInner .second-page-bottom-left ul :nth-child(7) p {
@@ -1289,7 +1376,7 @@ header .progress-bar {
   margin-right: 2vw;
 }
 .constrctionInner .second-page-bottom-right ul li a p {
-  font-size: 0.8vw;
+  font-size: 1vw;
   font-weight: 300;
   letter-spacing: 0.2em;
 }
@@ -1331,7 +1418,7 @@ header .progress-bar {
   margin-bottom: 3vw;
 }
 .constrctionInner .form-page-title h4 {
-  font-size: 1.1vw;
+  font-size: 1.3vw;
   opacity: 0.7;
   position: relative;
   letter-spacing: 0.2em;
@@ -1369,7 +1456,7 @@ header .progress-bar {
   margin-top: 6vw;
 }
 .constrctionInner .form-page form .box-submit input {
-  font-size: 0.8vw;
+  font-size: 1vw;
   padding: 0.4vw 10vw;
   color: #fff;
   background-color: #6A6A6A;
@@ -1394,7 +1481,7 @@ header .progress-bar {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #000;
-  font-size: 0.7vw;
+  font-size: 0.9vw;
 }
 .constrctionInner .form-page form div .form-box {
   display: flex;
@@ -1414,7 +1501,7 @@ header .progress-bar {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #000;
-  font-size: 0.7vw;
+  font-size: 0.9vw;
 }
 .constrctionInner .form-page form div .form-box:not(:last-child) {
   margin-bottom: 3vw;
@@ -1617,7 +1704,7 @@ header .progress-bar {
   position: relative;
   align-items: flex-end;
   margin-right: 2.5vw;
-  font-size: 0.9vw;
+  font-size: 1.1vw;
   -ms-writing-mode: tb-lr;
       writing-mode: vertical-lr;
 }
@@ -1640,7 +1727,7 @@ header .progress-bar {
   opacity: 0.6;
 }
 .concept .second-page-title .ch-box {
-  font-size: 1.1vw;
+  font-size: 1.3vw;
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
   margin-top: 6vw;
@@ -1655,7 +1742,7 @@ header .progress-bar {
   margin-right: 1vw;
 }
 .concept .second-page-para p {
-  font-size: 0.9vw;
+  font-size: 1.1vw;
   letter-spacing: 0.3em;
   line-height: 2.5;
   margin-bottom: -3.5vw;
@@ -1709,7 +1796,7 @@ header .progress-bar {
 }
 .concept .third-page-para1 p {
   position: absolute;
-  font-size: 1.1vw;
+  font-size: 1.3vw;
   font-weight: 600;
   letter-spacing: 0.2em;
   left: 6vw;
@@ -1728,7 +1815,7 @@ header .progress-bar {
   top: 28vw;
 }
 .concept .third-page-para2 p {
-  font-size: 0.9vw;
+  font-size: 1.1vw;
   letter-spacing: 0.15em;
   line-height: 2.3;
   color: #010101;
@@ -1767,7 +1854,7 @@ header .progress-bar {
   margin-top: 13.5vw;
 }
 .concept .forth-page-para p {
-  font-size: 0.9vw;
+  font-size: 1.1vw;
   letter-spacing: 0.15em;
   line-height: 2.3;
   color: #010101;
@@ -1783,7 +1870,7 @@ header .progress-bar {
   display: flex;
   position: relative;
   margin-right: 2.5vw;
-  font-size: 0.9vw;
+  font-size: 1.1vw;
   -ms-writing-mode: tb-lr;
       writing-mode: vertical-lr;
 }
@@ -1806,7 +1893,7 @@ header .progress-bar {
   opacity: 0.6;
 }
 .concept .forth-page-title .ch-box {
-  font-size: 1.1vw;
+  font-size: 1.3vw;
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
   margin-top: 3vw;
@@ -1829,14 +1916,37 @@ header .progress-bar {
   display: flex;
   align-items: center;
   width: 100%;
-  justify-content: space-between;
   margin-bottom: 12vw;
 }
-.concept .fifth-page :nth-child(1) img, .concept .fifth-page :nth-child(3) img {
-  width: 29vw;
+.concept .fifth-page .swiper {
+  width: 100%;
+  margin: 0;
 }
-.concept .fifth-page :nth-child(2) img {
-  width: 35vw;
+.concept .fifth-page .swiper .swiper-wrapper {
+  width: 100%;
+}
+.concept .fifth-page .swiper .swiper-wrapper .swiper-slide {
+  width: 100%;
+}
+.concept .fifth-page .swiper .swiper-wrapper .swiper-slide .imgBox {
+  width: 100%;
+}
+.concept .fifth-page .swiper .swiper-wrapper .swiper-slide .imgBox img {
+  width: 100%;
+  height: 25vw;
+  transform: scale(0.8);
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 1s;
+}
+.concept .fifth-page .swiper .swiper-wrapper .swiper-slide-prev .imgBox img {
+  transform-origin: left center;
+}
+.concept .fifth-page .swiper .swiper-wrapper .swiper-slide-next .imgBox img {
+  transform-origin: right center;
+}
+.concept .fifth-page .swiper .swiper-wrapper .swiper-slide-active .imgBox img {
+  transform: scale(1);
 }
 
 .clipPath {
@@ -1964,11 +2074,16 @@ header .progress-bar {
 }
 .portfolio .second-page-content .content-box-top img {
   width: 15vw;
+  opacity: 0;
+  transition: 0.8s;
 }
 .portfolio .second-page-content .content-box-bottom p {
-  font-size: 1.1vw;
+  font-size: 1.3vw;
   opacity: 0.6;
   line-height: 1.7em;
+}
+.portfolio .second-page-content .content-box:hover .content-box-top img {
+  opacity: 1;
 }
 .portfolio .second-page-content :nth-child(even) {
   align-self: flex-start;
@@ -2003,7 +2118,7 @@ header .progress-bar {
   order: -1;
 }
 .portfolio .second-page-content :nth-child(even) .content-box-bottom p {
-  font-size: 1.1vw;
+  font-size: 1.3vw;
   opacity: 0.6;
 }
 .portfolio .second-page-content > :last-child {
@@ -2061,7 +2176,7 @@ header .progress-bar {
 .contact .first-page .form form .form-box label {
   display: flex;
   align-items: center;
-  font-size: 0.7vw;
+  font-size: 0.9vw;
   color: #fff;
   margin-bottom: 0.3vw;
 }
@@ -2076,7 +2191,7 @@ header .progress-bar {
   width: 21vw;
   outline: none;
   color: #fff;
-  font-size: 0.7vw;
+  font-size: 0.9vw;
 }
 .contact .first-page .form form > :last-child {
   display: flex;
@@ -2117,38 +2232,8 @@ header .progress-bar {
   width: 100%;
   height: 100%;
 }
-.login .sphere1 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-}
-.login .sphere1 canvas {
-  position: absolute;
-  left: -72vw;
-  bottom: -35vw;
-  width: 100%;
-  height: 100%;
-}
-.login .sphere2 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-.login .sphere2 canvas {
-  position: absolute;
-  left: -5vw;
-  top: 0vw;
-  width: 100%;
-  height: 100%;
-}
 .login .content {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   width: 70vw;
@@ -2158,14 +2243,14 @@ header .progress-bar {
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
   border-radius: 25px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid #fff;
 }
 .login .content-box {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.08));
   position: relative;
+  padding-bottom: 4vw;
 }
 .login .content-box .content-logo {
   display: flex;
@@ -2178,87 +2263,104 @@ header .progress-bar {
 .login .content-box .content-sign {
   display: flex;
   width: 100%;
-  font-size: 0.9vw;
+  font-size: 1.1vw;
+  margin: 1vw 0 2vw;
 }
 .login .content-box .content-sign div {
   display: flex;
   justify-content: center;
   padding-bottom: 0.3vw;
   flex: 0 0 50%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   cursor: pointer;
+  border-bottom: 1px solid rgba(18, 98, 51, 0.5568627451);
 }
 .login .content-box .content-sign div p {
   pointer-events: none;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(18, 98, 51, 0.5568627451);
+  font-weight: 600;
 }
 .login .content-box .content-sign div p span {
-  font-size: 0.7vw;
-  font-weight: 300;
+  font-size: 0.9vw;
 }
-.login .content-box .content-sign .is-active {
-  border-bottom: 4.5px solid rgba(0, 0, 0, 0.8);
+.login .content-box .content-sign .signIn {
+  position: relative;
+}
+.login .content-box .content-sign .signIn::after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 100%;
+  bottom: 0;
+  width: 100%;
+  height: 2.5px;
+  background-color: #126233;
+  transition: 0.5s;
 }
 .login .content-box .content-sign .is-active p {
-  color: rgba(0, 0, 0, 0.8);
+  color: #126233;
 }
-.login .content-box .content-sign .is-active p span {
-  font-weight: 600;
+.login .content-box .content-sign .is-active::after {
+  left: 0%;
 }
 .login .content-box form {
   opacity: 0;
   pointer-events: none;
   width: 15vw;
-  margin-top: 1vw;
+  transition: 0.3s;
 }
 .login .content-box form .form-box {
   position: relative;
   width: 100%;
-  margin-bottom: 2vw;
+  margin-bottom: 0.5vw;
 }
 .login .content-box form .form-box > p {
   font-size: 0.8vw;
-  color: rgba(0, 0, 0, 0.5);
-  margin-bottom: 0.5vw;
+  color: rgba(18, 98, 51, 0.7960784314);
+  margin-bottom: 5px;
   margin-left: 0.5vw;
   font-weight: 600;
 }
 .login .content-box form .form-box > p span {
-  font-size: 0.7vw;
+  font-size: 0.65vw;
   font-weight: 300;
 }
 .login .content-box form .form-box input {
   width: 100%;
   background-color: transparent;
-  border: 3px solid rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(0, 0, 0, 0.5);
   outline: none;
   border-radius: 40px;
   padding: 0.5vw;
-  font-size: 0.8vw;
+  font-size: 1vw;
   color: rgba(0, 0, 0, 0.5);
 }
 .login .content-box form .form-box input[type=submit] {
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(18, 98, 51, 0.5568627451);
   color: #fff;
   border: none;
+  margin-top: 1.5vw;
+}
+.login .content-box form .form-box input[type=submit]:hover {
+  background-color: rgba(0, 55, 32, 0.2549019608);
 }
 .login .content-box form .form-box .forgetPassword {
   position: absolute;
+  z-index: 5;
   right: 0.5vw;
   bottom: -1.1vw;
   cursor: pointer;
 }
 .login .content-box form .form-box .forgetPassword p {
   font-size: 0.6vw;
-  color: rgba(0, 0, 0, 0.5);
+  color: #126233;
 }
 .login .content-box > .signUp {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   position: absolute;
-  top: 8vw;
+  top: 11vw;
   left: -12.5vw;
   width: 40vw;
 }
@@ -2275,7 +2377,7 @@ header .progress-bar {
   width: 48%;
 }
 .login .content-box > .signUp :nth-child(5) > p {
-  margin-right: 13vw;
+  margin-right: 13.2vw;
 }
 .login .content-box > .signUp :nth-child(6) {
   display: flex;
@@ -2286,8 +2388,745 @@ header .progress-bar {
   width: 48%;
 }
 .login .content-box > .is-active {
+  -webkit-animation-name: up;
+          animation-name: up;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   opacity: 1;
   pointer-events: all;
+}
+.login .content2 {
+  display: none;
+  position: relative;
+}
+.login .content2 .content-logo {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: -18vw;
+  top: -3vw;
+}
+.login .content2 .content-sign {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 3px solid #126233;
+  padding-bottom: 0.5vw;
+  margin-bottom: 2.5vw;
+  font-weight: 600;
+  color: #126233;
+}
+.login .content2 .content-box {
+  padding: 0;
+}
+.login .content2 .content-box form {
+  width: 20vw;
+}
+.login .content2 .content-box form .verification {
+  position: relative;
+}
+.login .content2 .content-box form .verification .hint {
+  position: absolute;
+  width: 1.5vw;
+  height: 1.5vw;
+  bottom: 0.5vw;
+  right: -2.5vw;
+}
+.login .content2 .content-box form .verification .hint img {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.login .content2 .content-box form .verification .hint .is-active {
+  opacity: 1;
+}
+.login .is-active2 {
+  display: flex;
+}
+
+@-webkit-keyframes up {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes up {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.smart .first-page {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-top: 3.5vw;
+}
+.smart .first-page-bg {
+  width: 100%;
+  height: 35vw;
+}
+.smart .first-page-bg img {
+  width: 100%;
+  height: auto;
+}
+.smart .first-page-title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+.smart .first-page-title h2,
+.smart .first-page-title h3 {
+  text-align: center;
+}
+.smart .first-page-title h2 {
+  font-size: 1.6vw;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+}
+.smart .first-page-title h3 {
+  font-size: 1vw;
+  margin-right: 0.3vw;
+  font-weight: 300;
+}
+.smart .first-page-title svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.smart .first-page-title svg text:nth-child(2) {
+  font-weight: 600;
+  letter-spacing: 0.15em;
+}
+.smart .second-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 5vw 0 15vw;
+}
+.smart .second-page-para {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.smart .second-page-para .para1 {
+  text-align: center;
+  margin-bottom: 1.5vw;
+}
+.smart .second-page-para .para1 h3 {
+  font-size: 1.4vw;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  margin-top: 5px;
+}
+.smart .second-page-para .para1 h4 {
+  font-size: 1vw;
+  font-weight: 300;
+}
+.smart .second-page-para .para2 {
+  position: relative;
+  margin-bottom: 12vw;
+}
+.smart .second-page-para .para2 p {
+  text-align: center;
+  line-height: 2.5em;
+  font-size: 1.1vw;
+  opacity: 0.8;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+}
+.smart .second-page-para .para2::after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 112%;
+  width: 1px;
+  height: 8vw;
+  background-color: rgba(0, 0, 0, 0.401);
+}
+.smart .second-page-para .para3 {
+  margin-bottom: 5vw;
+}
+.smart .second-page-para .para3 p {
+  color: #56B87E;
+  font-size: 1.3vw;
+  letter-spacing: 0.2em;
+  font-weight: 300;
+}
+.smart .second-page-img {
+  width: 85%;
+  margin: 0 auto;
+}
+.smart .second-page-img img {
+  width: 100%;
+}
+.smart .third-page {
+  width: 60%;
+  margin: 0 auto 15vw;
+}
+.smart .third-page-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.smart .third-page-box .imgBox {
+  flex: 0 0 40%;
+}
+.smart .third-page-box .imgBox img {
+  width: 100%;
+  height: auto;
+}
+.smart .third-page-box .paraBox {
+  text-align: end;
+}
+.smart .third-page-box .paraBox h4 {
+  font-size: 1.4vw;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  margin-bottom: 15px;
+}
+.smart .third-page-box .paraBox p {
+  line-height: 2.5em;
+  font-size: 1.1vw;
+  opacity: 0.8;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+}
+.smart .third-page .opposite .imgBox {
+  margin-top: -2vw;
+}
+.smart .third-page .opposite .paraBox {
+  order: -1;
+  text-align: left;
+}
+.smart .forth-page {
+  width: 100%;
+  position: relative;
+  margin-bottom: 15vw;
+}
+.smart .forth-page-bg {
+  width: 100%;
+}
+.smart .forth-page-bg img {
+  width: 100%;
+}
+.smart .forth-page-para {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  z-index: 10;
+  background-image: url(../img/smart/webp/forth-page-bg-white.webp);
+  background-position: center center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.smart .forth-page-para h4 {
+  font-size: 1.4vw;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  margin: 1.5vw;
+}
+.smart .forth-page-para p {
+  line-height: 2.5em;
+  font-size: 1.1vw;
+  opacity: 0.8;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+}
+.smart .forth-page-para :nth-child(2) {
+  margin-bottom: 3vw;
+}
+.smart .fifth-page {
+  width: 80%;
+  margin: 0 auto 5vw;
+}
+.smart .fifth-page-top {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  margin-bottom: 5vw;
+}
+.smart .fifth-page-top h4 {
+  font-size: 1.4vw;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+.smart .fifth-page-top img {
+  position: absolute;
+  width: 8.2vw;
+  right: 0;
+  bottom: 0;
+}
+.smart .fifth-page-bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.smart .fifth-page-bottom .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 19%;
+  height: 28vw;
+  padding: 0 2vw;
+  background-color: #F8F8F8;
+}
+.smart .fifth-page-bottom .box .imgBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vw;
+}
+.smart .fifth-page-bottom .box .imgBox img {
+  height: 4.5vw;
+  width: auto;
+  margin-top: 4.5vw;
+}
+.smart .fifth-page-bottom .box .imgBox .car {
+  height: 2.2vw;
+}
+.smart .fifth-page-bottom .box h4 {
+  font-size: 1.2vw;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  margin: 6vw 0 2vw;
+  white-space: nowrap;
+}
+.smart .fifth-page-bottom .box p {
+  line-height: 1.6em;
+  font-size: 0.9vw;
+  opacity: 0.8;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+}
+
+.company {
+  width: 100%;
+}
+.company .first-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 7vw 0 15vw auto;
+}
+.company .first-page-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.company .first-page-title .logoBox {
+  margin-bottom: 2.5vw;
+}
+.company .first-page-title .logoBox img {
+  width: 8.2vw;
+}
+.company .first-page-title .titleBox {
+  text-align: center;
+  position: relative;
+}
+.company .first-page-title .titleBox h1 {
+  font-size: 1.6vw;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+}
+.company .first-page-title .titleBox h4 {
+  font-size: 1vw;
+  margin-right: 0.3vw;
+  font-weight: 300;
+}
+.company .first-page-title .titleBox::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 250%;
+  height: 1px;
+  background-color: #000;
+}
+.company .first-page-bg {
+  width: 81%;
+}
+.company .first-page-bg img {
+  width: 100%;
+}
+.company .second-page {
+  width: 100%;
+  position: relative;
+}
+.company .second-page-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto 6vw 0;
+}
+.company .second-page-box .imgBox img {
+  width: 32vw;
+}
+.company .second-page-box .paraBox {
+  margin-right: 13vw;
+}
+.company .second-page-box .paraBox p {
+  line-height: 2.5em;
+  font-size: 1.1vw;
+  opacity: 0.8;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  opacity: 1;
+}
+.company .second-page .opposite .imgBox img {
+  width: 20.5vw;
+}
+.company .second-page .opposite .paraBox {
+  margin: 0 0 0 15vw;
+}
+.company .second-page .opposite .paraBox p {
+  font-size: 1.4vw;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  line-height: 2em;
+  opacity: 0.8;
+}
+.company .second-page .bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 5vw;
+}
+.company .third-page {
+  width: 100%;
+  margin-bottom: 10vw;
+}
+.company .third-page-bg {
+  width: 100%;
+}
+.company .third-page-bg img {
+  width: 100%;
+}
+.company .forth-page {
+  width: 100%;
+}
+.company .forth-page-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 6vw;
+}
+.company .forth-page-top h4 {
+  font-size: 0.8vw;
+  font-weight: 300;
+}
+.company .forth-page-top h3 {
+  font-size: 1.4vw;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+.company .forth-page-bottom {
+  display: flex;
+  width: 85%;
+  margin: 0 auto 10vw;
+}
+.company .forth-page-bottom .box {
+  flex: 0 1 20%;
+  height: 31.5vw;
+  position: relative;
+  transition: 1s;
+  overflow: hidden;
+}
+.company .forth-page-bottom .box::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+  transition: 1s;
+}
+.company .forth-page-bottom .box::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+  transition: 1s;
+}
+.company .forth-page-bottom .box .imgBox {
+  width: 100%;
+  height: 100%;
+}
+.company .forth-page-bottom .box .imgBox img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.company .forth-page-bottom .box .paraBox {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 3.8vw;
+  bottom: 1.5vw;
+  color: #fff;
+  z-index: 5;
+}
+.company .forth-page-bottom .box .paraBox span {
+  font-size: 0.9vw;
+  opacity: 0;
+  transition: 1s;
+  white-space: nowrap;
+}
+.company .forth-page-bottom .box .paraBox h6 {
+  font-size: 1.5vw;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  position: relative;
+}
+.company .forth-page-bottom .box .paraBox h6::after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: -0.5vw;
+  top: 0.5vw;
+  width: 1px;
+  height: 0;
+  background-color: #fff;
+  transition: 1s;
+}
+.company .forth-page-bottom .box .numBox {
+  position: absolute;
+  right: 2vw;
+  top: 1vw;
+  color: #fff;
+  z-index: 5;
+}
+.company .forth-page-bottom .box .numBox p {
+  font-size: 5vw;
+  font-family: "Noto Serif Tamil", serif;
+}
+.company .forth-page-bottom .box:hover {
+  flex: 0 1 60%;
+}
+.company .forth-page-bottom .box:hover .paraBox span {
+  opacity: 1;
+}
+.company .forth-page-bottom .box:hover::before {
+  opacity: 0;
+}
+.company .forth-page-bottom .box:hover::after {
+  opacity: 1;
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.842) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.company .forth-page-bottom .box:hover h6::after {
+  height: 70%;
+}
+.company .forth-page-bottom :nth-child(5) .paraBox {
+  left: 5.2vw;
+}
+.company .fifth-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 7vw;
+}
+.company .fifth-page h3 {
+  font-size: 1.4vw;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  margin-bottom: 4vw;
+}
+.company .fifth-page p {
+  line-height: 2.5em;
+  font-size: 1.1vw;
+  opacity: 0.8;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+}
+.company .sixth-page {
+  width: 100%;
+  position: relative;
+}
+.company .sixth-page-bg {
+  width: 100%;
+}
+.company .sixth-page-bg img {
+  width: 100%;
+  filter: brightness(0.4);
+}
+.company .sixth-page-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 4vw;
+}
+.company .sixth-page-content .logoBox {
+  display: flex;
+  position: relative;
+  width: 18.2vw;
+  height: 18.2vw;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+.company .sixth-page-content .logoBox img {
+  width: 4vw;
+}
+.company .sixth-page-content .logoBox::after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 17vw;
+  height: 17vw;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.company .sixth-page-content .svgBox {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1vw;
+  margin: 0 auto;
+  width: 45vw;
+  height: 45vw;
+}
+.company .sixth-page-content .svgBox svg g {
+  transform: translateX(-4px);
+}
+.company .sixth-page-content .paraBox {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 45vw;
+  height: 45vw;
+}
+.company .sixth-page-content .paraBox div {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.company .sixth-page-content .paraBox div h5 {
+  font-size: 1.3vw;
+  font-weight: 400;
+}
+.company .sixth-page-content .paraBox div h6 {
+  font-size: 0.8vw;
+  letter-spacing: 0.1em;
+  font-weight: 300;
+}
+.company .sixth-page-content .paraBox .para2 h5,
+.company .sixth-page-content .paraBox .para4 h5,
+.company .sixth-page-content .paraBox .para6 h5 {
+  margin-bottom: 2vw;
+}
+.company .sixth-page-content .paraBox .para2::after,
+.company .sixth-page-content .paraBox .para4::after,
+.company .sixth-page-content .paraBox .para6::after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 2.2vw;
+  margin: 0 auto;
+  width: 1px;
+  height: 20%;
+  background-color: #fff;
+}
+.company .sixth-page-content .paraBox .para1 {
+  left: 4.5vw;
+  top: 14.5vw;
+}
+.company .sixth-page-content .paraBox .para2 {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 7.5vw;
+}
+.company .sixth-page-content .paraBox .para3 {
+  right: 4.5vw;
+  top: 14.5vw;
+}
+.company .sixth-page-content .paraBox .para4 {
+  right: 6vw;
+  bottom: 12vw;
+}
+.company .sixth-page-content .paraBox .para5 {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 2.5vw;
+}
+.company .sixth-page-content .paraBox .para6 {
+  left: 6vw;
+  bottom: 12vw;
 }
 
 * {
@@ -2359,41 +3198,6 @@ body {
     transform: rotate(360deg);
   }
 }
-.about {
-  width: 100%;
-  z-index: -1;
-  overflow: hidden;
-  cursor: pointer;
-}
-.about .swiper-wrapper {
-  width: 100%;
-}
-.about .swiper-wrapper .swiper-slide {
-  width: 100%;
-  position: relative;
-}
-.about .swiper-wrapper .swiper-slide video {
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  filter: brightness(0.5);
-}
-.about .swiper-wrapper .swiper-slide img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-top: -4vw;
-}
-.about .swiper-wrapper .swiper-slide p {
-  position: fixed !important;
-  left: 2vw;
-  top: 5vw;
-  font-size: 1.3vw;
-  color: rgb(0, 0, 0);
-  filter: drop-shadow(1px 1px 1px #fff);
-}
-
 footer {
   display: flex;
   justify-content: center;

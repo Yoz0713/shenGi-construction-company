@@ -2,11 +2,11 @@
     width: 100%;
     overflow: hidden;
 
+
     .index {
         position: fixed;
         width: 100%;
         background-color: #fff;
-
         transition: 1s; // for menu blur
         overflow: hidden;
         bottom: 0;
@@ -869,19 +869,53 @@
         }
 
 
-        .devloping {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .sixth-page {
+            position: absolute;
+            left: 0;
+            top: 0;
             width: 100%;
             height: 100%;
-            position: absolute;
-            bottom: -100vh;
 
-            p {
-                font-size: 4vw;
-                font-weight: 600;
+            .content {
+
+                width: 36%;
+                margin: 10vw auto 0;
+                pointer-events: none;
+
+                video {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .paraBox {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                    margin-top: -2.5vw;
+
+                    h4,
+                    h6 {
+                        text-align: center;
+
+                        span {
+                            opacity: 0;
+                        }
+                    }
+
+                    h4 {
+                        font-size: 1.6vw;
+                        margin-bottom: 1.5vw;
+                    }
+
+                    h6 {
+                        font-size: 1.3vw;
+                        font-weight: 600;
+                    }
+                }
+
             }
+
         }
     }
 }

@@ -2,12 +2,25 @@ $en_style: 'Cormorant Garamond', serif;
 $gray_color: #999999;
 $para_color: #010101;
 $green_color: #56B87E;
-$ch_xs_text: 0.7vw;
-$more_text: 0.8vw;
-$ch_s_text: 0.9vw;
-$ch_m_text: 1.1vw;
+$ch_xs_text: 0.9vw;
+$more_text: 1vw;
+$ch_s_text: 1.1vw;
+$ch_m_text: 1.3vw;
 $ch_l_text: 1.7vw;
 
+@mixin para {
+    line-height: 2.5em;
+    font-size: $ch_s_text;
+    opacity: 0.8;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+}
+
+@mixin title-s {
+    font-size: 1.4vw;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+}
 
 .loading-page {
     display: flex;
@@ -132,22 +145,95 @@ header {
         }
     }
 
-    .menu-button {
+    .toolBox {
         display: flex;
         align-items: center;
-        color: #000;
-        cursor: pointer;
 
-        & :nth-child(1) {
-            font-size: 2.5vw;
+        .user-area {
+            padding: 0.2vw 0.5vw 0;
+            margin-right: 2.5vw;
 
+            position: relative;
+            background-color: rgba(255, 255, 255);
+
+            &-button {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            img {
+                display: block;
+                width: 1.5vw;
+            }
+
+            p {
+                font-size: 0.8vw;
+                margin: 0 6px 0 20px;
+            }
+
+            .arrow {
+                transform: rotate(180deg);
+                width: 1.2vw;
+                margin-top: 0.2vw;
+            }
+
+            .is-active {
+                transform: none;
+            }
+
+            &-menu {
+                display: none;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 100%;
+                padding: 1vw 0.5vw;
+                background-color: rgba(255, 255, 255);
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+
+
+                    li {
+                        display: flex;
+                        justify-content: center;
+                        width: 100%;
+                        font-size: 0.8vw;
+                        color: rgba(0, 0, 0, 0.85);
+                        margin-top: 0.3vw;
+                        cursor: pointer;
+                    }
+
+                    & :not(:last-child) {
+                        padding-bottom: 0.3vw;
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.308);
+                    }
+                }
+            }
         }
 
-        & :nth-child(2) {
-            font-size: 0.8vw;
+        .menu-button {
+            display: flex;
+            align-items: center;
+            color: #000;
+            cursor: pointer;
 
+            & :nth-child(1) {
+                font-size: 2.5vw;
+
+            }
+
+            & :nth-child(2) {
+                font-size: 0.8vw;
+
+            }
         }
     }
+
 
     .progress-bar {
         width: 0;
