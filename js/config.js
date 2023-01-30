@@ -200,7 +200,7 @@ function loadingPageAnimaiton(func) {
                     rotate: 90,
                     transformOrigin: "center",
                     duration: 0.8,
-                    x: "-2.5%",
+                    x: "-3%",
                 }, "<").to(".g1",
                     {
                         opacity: 0,
