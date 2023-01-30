@@ -98,7 +98,9 @@
                 <p>Menu</p>
             </div>
         </div>
+        <div class="progress-bar">
 
+        </div>
     </header>
     <!-- header -->
 
@@ -302,7 +304,8 @@
                     <img src="./img/index/image/second-page-bg-3-1080.webp">
                     <img src="./img/index/image/second-page-3-(2).webp">
                 </div>
-                <img src="./img/index/svg/circle-text.svg" class="circle">
+                <img src="./img/index/svg/circle-text.svg" class="circle computer">
+                <img src="./img/index/svg/circle-text-ph.svg" class="circle phone">
             </section>
             <section class="third-page">
                 <div class="third-page-bg">
@@ -399,7 +402,7 @@
 
                     </div>
                 </div>
-                <div class="forth-page-bg">
+                <div class="forth-page-bg computer">
                     <div class="left-top-box">
                         <img src="./img/index/image/forth-page-lt2.webp">
                         <img src="./img/index/image/forth-page-lt1.webp">
@@ -421,21 +424,30 @@
                         <img src="./img/index/image/forth-page-rc1.webp">
                     </div>
                 </div>
-            </section>
-            <section class="fifth-page">
-
-                <div class="fifth-page-bg">
-                    <img src="./img/index/image/forth-page-b1.webp">
-                    <img src="./img/index/image/forth-page-b2.webp">
-                    <img src="./img/index/image/forth-page-b3.webp">
+                <div class="forth-page-bg2 phone">
+                    <div class="imgBox">
+                        <img src="./img/index/image/forth-page-lt2.webp">
+                        <img src="./img/index/image/forth-page-lb2.webp">
+                        <img src="./img/index/image/forth-page-lc2.webp">
+                        <img src="./img/index/image/forth-page-c2.webp">
+                        <img src="./img/index/image/forth-page-rc2.webp">
+                    </div>
+                    <div class="imgBox">
+                        <img src="./img/index/image/forth-page-lt1.webp">
+                        <img src="./img/index/image/forth-page-lb1.webp">
+                        <img src="./img/index/image/forth-page-lc1.webp">
+                        <img src="./img/index/image/forth-page-c1.webp">
+                        <img src="./img/index/image/forth-page-rc1.webp">
+                    </div>
                 </div>
             </section>
-            <section class="sixth-page">
+
+            <section class="fifth-page">
                 <div class="content">
                     <video src="./video/logo5.mp4" muted playsinline="true"></video>
                     <div class="paraBox">
                         <h4>Sun Glory Archi Group</h4>
-                        <h6>建築永恆 ৹ 延續幸福</h6>
+                        <h6>建築永恆•延續幸福</h6>
                     </div>
 
                 </div>
@@ -447,13 +459,13 @@
 
     <!-- 主畫面 -->
 
+    <div class="clip"></div>
 
 
 
 
 
-
-
+    <script src="./js/sliceSquare.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -468,6 +480,7 @@
             // })
 
             //在Loading及開場動畫結束前取消滾動
+
             function splitTextAnimation(wrap) {
                 wrap = document.querySelector(`${wrap}`);
                 text = wrap.innerText
@@ -503,35 +516,43 @@
                 //first-page
                 splitTextAnimation(".first-page .paraBox p")
                 splitTextAnimation(".first-page .paraBox h2")
-                splitTextAnimation(".sixth-page .paraBox h4")
-                splitTextAnimation(".sixth-page .paraBox h6")
+                splitTextAnimation(".fifth-page .paraBox h4")
+                splitTextAnimation(".fifth-page .paraBox h6")
                 //first-page
             }
             split()
+            function slice() {
+                const square1 = new SliceSquare({
+                    row: 2,
+                    collumn: 1,
+                    gapX: 0,
+                    gapY: 0
+                })
+                square1.makeSquares()
+            }
+            slice()
+            // loading結束後緊接著的首屏進場動畫
             let pageInAnimation = gsap.timeline()
 
             function firstPageAnimaiton() {
-
-
                 pageInAnimation.to(".loading-page", {
                     backgroundColor: "transparent",
                     duration: 2,
                 }).to(".loading-page .contentBox", {
-                    y: "-14vw",
+                    y: "-11vw",
                     duration: 1.5,
                 }, "<+0.2").to(".rotate",
                     {
 
                         rotate: 0,
-                        scaleY: 0.25,
-                        scaleX: 0.22,
+                        scaleY: 0.5,
+                        scaleX: 0.45,
                         transformOrigin: "center",
                         duration: 0.8,
 
                     }, "<").to(".loading-page .titleBox",
                         {
                             scale: 0.7,
-                            y: "-0.7vw",
                             duration: 0.8,
                             onComplete: () => {
                                 let gg = gsap.timeline()
@@ -566,25 +587,29 @@
 
                         }, ">-0.4")
             }
-            loadingPageAnimaiton(firstPageAnimaiton)
-            firstScroll()
-            function firstScroll() {
+            loadingPageAnimaiton(firstPageAnimaiton) // this loadingPageAnimation is from config.js
+            // loading結束後緊接著的首屏進場動畫
+
+            // desktop or mobile animation
+            const deskTopQuery = '(min-width: 1040px)';
+            const mobileQuery = '(max-width: 1039px)';
+            const mediaQueryList = gsap.matchMedia();
+            mediaQueryList.add(deskTopQuery, () => {
+                deskTopAnimation();
+
+            })
+            mediaQueryList.add(mobileQuery, () => {
+                mobileAnimation();
 
 
+            })
+            // desktop or mobile animation
+
+            //desktop animation function
+            function deskTopAnimation() {
                 let gg = gsap.timeline({
-                    // scrollTrigger:{
-                    //     trigger:".first-page",
-                    //     scrub:2,
-                    //     pin:".index",
-                    //     toggleActions:"play reverse play reverse",
-                    //     end:"+=24000",
-                    //     anticipatePin:1,
-
-                    // },
                     ease: "Linear.easeNone",
                     overwrite: "auto",
-
-
                 })
 
                 let st = ScrollTrigger.create({
@@ -597,11 +622,12 @@
                     lazy: true,
 
                 })
+
                 //reset animation on refresh
                 ScrollTrigger.addEventListener("refresh", () => st.scroll(0))
                 //reset animation on refresh
 
-                //progress
+                //progress bar width animation
                 window.onscroll = (e) => {
                     let progress = gsap.timeline()
 
@@ -611,14 +637,11 @@
                     })
 
                 }
-                //progress
+                //progress bar width animation
 
 
                 //animation start
-                gsap.set(".first-page .imgBox > img", {
-                    scale: 1.6,
-                    y: "15vw"
-                })
+
                 gg.to(".first-page .paraBox", {
                     y: "-100vh",
                     duration: 10,
@@ -630,28 +653,14 @@
                     scale: 1,
                     y: 0,
                     duration: 6
-                }, "<").fromTo(".first-page .imgBox .para img", {
-                    y: 30,
-                    opacity: 0,
-
-                }, {
-
+                }, "<").to(".first-page .imgBox .para img", {
                     opacity: 1,
                     y: 0,
                     duration: 6
-                }, "<+3.5").fromTo(".first-page .imgBox .para svg .fp-line", {
-                    strokeDashoffset: 2000,
-                    strokeDasharray: 2000
-                }, {
+                }, "<+3.5").to(".first-page .imgBox .para svg .fp-line", {
                     strokeDashoffset: 1700,
-
                     duration: 12,
-
-                }, "<+5").fromTo(".first-page .imgBox .para p", {
-                    y: 30,
-                    opacity: 0,
-
-                }, {
+                }, "<+5").to(".first-page .imgBox .para p", {
 
                     opacity: 1,
                     y: 0,
@@ -659,29 +668,19 @@
                 }, "<+1.5").to(".first-page .imgBox", {
                     x: "-105vw",
                     duration: 12
-                }, "<+9").fromTo(".second-page-bg img", {
-                    x: "100vw",
-                }, {
+                }, "<+9").to(".second-page-bg img", {
                     x: 0,
                     duration: 12
-                }, "<").fromTo(".second-page-bg :nth-child(1)", {
-                    opacity: 0
-                }, {
+                }, "<").to(".second-page-bg :nth-child(1)", {
                     opacity: 1,
                     duration: 6
-                }, "<+3").fromTo(".second-page h4", {
-                    y: "80vh"
-                }, {
+                }, "<+3").to(".second-page h4", {
                     y: 0,
                     duration: 6
-                }, "<+4").fromTo(".second-page h3", {
-                    y: "80vh"
-                }, {
+                }, "<+4").to(".second-page h3", {
                     y: 0,
                     duration: 6
-                }, "<+1.2").fromTo(".second-page h2", {
-                    y: "80vh"
-                }, {
+                }, "<+1.2").to(".second-page h2", {
                     y: 0,
                     duration: 6,
                     onComplete: () => {
@@ -709,12 +708,8 @@
 
                     scale: 1.035,
                     duration: 4
-                }, "<").fromTo(".second-page .svgBox path", {
-                    strokeDashoffset: 2000,
-                    strokeDasharray: 2000
-                }, {
+                }, "<").to(".second-page .svgBox path", {
                     strokeDashoffset: 420,
-
                     duration: 10,
 
                 }, "<+3").fromTo(".second-page-bg :nth-child(4)", {
@@ -722,10 +717,7 @@
                 }, {
                     clipPath: "polygon(0 0 , 0% 0, 0% 100% , 0 100% , 0 0 )",
                     duration: 8
-                }).fromTo(".second-page-bg :nth-child(3)", {
-                    width: "25%",
-                    height: "49%"
-                }, {
+                }).to(".second-page-bg :nth-child(3)", {
                     width: "101%",
                     height: "100%",
                     filter: "brightness(0.4)",
@@ -783,11 +775,6 @@
                     clipPath: "circle(100%)"
                 }, {
                     clipPath: "circle(8%)",
-                    // width:"15vw",
-                    // height:"15vw",
-                    // borderRadius:"50%",
-
-
                     duration: 6
                 }, ">+2").to(".second-page-paraBox .para", {
                     x: "3.5vw",
@@ -994,83 +981,437 @@
                     y: "-120vh",
                     duration: 6,
                     stagger: 0.5
-                }, "<+5").to(".fifth-page-bg :nth-child(1)", {
-                    y: "-180vh",
-                    duration: 6,
-
-                }, "<+3").to(".fifth-page-bg :nth-child(2)", {
-                    y: "-180vh",
-                    duration: 6,
-
-                }, "<+0.5").fromTo(".fifth-page-bg", {
-                    x: "55vw"
-                }, {
-
-
-                    duration: 6,
-
-                }, "<+0.5").fromTo(".fifth-page-bg :nth-child(3)", {
-                    scaleX: 0.5,
-                    scaleY: 0.5,
-
-                }, {
-                    scaleX: 0.5,
-                    scaleY: 0.5,
-                    y: "-120.1vh",
-                    duration: 4,
-
-                }, "<").to(".fifth-page-bg", {
-                    x: 0,
-                    duration: 4.5,
-
-                }, "<+4.5").to(".fifth-page-bg :nth-child(3)", {
-                    scaleX: 1.01,
-                    scaleY: 1.01,
-                    duration: 4,
-
-                }, "<+4").from(".sixth-page .content", {
+                }, "<+5").from(".fifth-page .content", {
                     y: "100vh",
+                    opacity: 0,
                     duration: 6,
                     onStart: () => {
+                        video.pause();
+                        video.currentTime = 0;
+                        videoTitle.seek(0).clear().pause();
+
+                    },
+                    onComplete: () => {
+
                         setTimeout(() => {
-                            if (!videoPlayed) {
-                                videoPlayed = true
-                                let video = document.querySelector(".sixth-page video");
-                                video.play();
-                                setTimeout(() => {
-                                    $(".menu").css("right", "0")
+                            $(".menu").css("right", "0")
 
-                                    $(".index").css({
-                                        filter: "blur(5px)"
-                                    })
-                                    $(".loading-page").css({
-                                        filter: "blur(5px)"
-                                    })
-                                }, 4500)
-                            }
-
-                            let gg = gsap.timeline({
-                                delay: 2.8
+                            $(".index").css({
+                                filter: "blur(5px)"
                             })
-
-                            gg.to(".sixth-page .paraBox h4 span", {
-                                opacity: 1,
-                                duration: 0.8,
-                                stagger: 0.02,
-
-                            }).to(".sixth-page .paraBox h6 span", {
-                                opacity: 1,
-                                duration: 0.8,
-                                stagger: 0.02
-                            }, ">-0.7")
-                        }, 300)
+                            $(".loading-page").css({
+                                filter: "blur(5px)"
+                            })
+                        }, 10000)
 
 
+
+
+
+                        let videoIn = gsap.timeline({
+                            paused: true,
+
+                        })
+
+                        videoIn.play()
+
+                        video.play();
+
+
+                        videoTitle.fromTo(".fifth-page .paraBox h4 span", {
+                            opacity: 0
+                        }, {
+                            opacity: 1,
+                            duration: 0.8,
+                            stagger: 0.02,
+
+                        }).fromTo(".fifth-page .paraBox h6 span", {
+                            opacity: 0
+                        }, {
+                            opacity: 1,
+                            duration: 0.8,
+                            stagger: 0.02,
+                        }, ">-0.7")
+
+                        setTimeout(() => {
+                            videoTitle.play()
+                        }, 2800)
                     }
-                }, "<-4")
+                }, "<+1.5")
             }
+            let video = document.querySelector(".fifth-page video");
+            let videoTitle = gsap.timeline()
 
-            let videoPlayed = false
+            function mobileAnimation() {
+                let gg = gsap.timeline({
+                    ease: "Linear.easeNone",
+                    overwrite: "auto",
+                })
+
+                let st = ScrollTrigger.create({
+                    scrub: 2,
+                    pin: ".index",
+                    toggleActions: "play none none reverse",
+                    end: "+=24000",
+                    anticipatePin: 1,
+                    animation: gg,
+                    lazy: true,
+
+                })
+
+                //reset animation on refresh
+                ScrollTrigger.addEventListener("refresh", () => st.scroll(0))
+                //reset animation on refresh
+
+                //progress bar width animation
+                window.onscroll = (e) => {
+                    let progress = gsap.timeline()
+
+                    progress.to("header .progress-bar", {
+                        width: `${st.progress * 100}%`,
+                        overwrite: "auto"
+                    })
+
+                }
+                //progress bar width animation
+
+
+                //animation start
+
+                gg.to(".first-page .paraBox", {
+                    y: "-100vh",
+                    duration: 10,
+                }).to(".loading-page", {
+                    y: "-100vh",
+                    duration: 10,
+
+                }, "<").to(".first-page .imgBox > img", {
+                    scale: 1,
+                    y: 0,
+                    duration: 6
+                }, "<").to(".first-page .imgBox .para img", {
+                    opacity: 1,
+                    y: 0,
+                    duration: 6
+                }, "<+3.5").to(".first-page .imgBox .para svg .fp-line", {
+                    strokeDashoffset: 1700,
+                    duration: 12,
+                }, "<+5").to(".first-page .imgBox .para p", {
+
+                    opacity: 1,
+                    y: 0,
+                    duration: 6
+                }, "<+1.5").to(".first-page .imgBox", {
+                    x: "-105vw",
+                    duration: 12
+                }, "<+9").to(".second-page-bg img", {
+                    x: 0,
+                    duration: 12
+                }, "<").to(".second-page h4", {
+                    y: 0,
+                    duration: 6
+                }, "<+4").to(".second-page h3", {
+                    y: 0,
+                    duration: 6
+                }, "<+1.2").to(".second-page h2", {
+                    y: 0,
+                    duration: 6,
+                    onComplete: () => {
+                        $(".second-page h4").addClass("active1");
+                        $(".second-page h3").addClass("active2");
+                    }
+                }, "<+1.2").to(".second-page h3 span", {
+                    color: "rgb(86,184,126)",
+                    duration: 6,
+                }).to(".second-page h2 .green", {
+                    color: "rgb(86,184,126)",
+                    duration: 6,
+                }).to(".second-page .svgBox path", {
+                    strokeDashoffset: 470,
+                    duration: 10,
+
+                }, "<+3").to(".second-page-bg :nth-child(3)", {
+                    opacity: 1,
+                    duration: 5,
+
+                }, ">+3").to(".second-page h4", {
+                    opacity: 0,
+                    duration: 5
+                }, "<").to(".second-page h3", {
+                    opacity: 0,
+                    duration: 5
+                }, "<").to(".second-page h2", {
+                    opacity: 0,
+                    duration: 5,
+                }, "<").to(".second-page-bg :nth-child(3)", {
+                    filter: "brightness(0.4)",
+                    duration: 5,
+
+                }).fromTo(".second-page .svgBox", {
+                    filter: `brightness(1)`,
+                }, {
+                    x: "6vw",
+                    y: "1.5vw",
+                    scale: 0.7,
+                    filter: `brightness(2)`,
+                    duration: 4,
+                }, "<").to(".second-page .svgBox svg", {
+                    rotate: -22,
+                    duration: 6,
+                }, "<").to(".second-page .svgBox svg path", {
+                    strokeDashoffset: 530,
+                    duration: 6,
+                }, "<").to(".second-page-bg :nth-child(1)", {
+                    display: "none"
+                }, "<+5").to(".second-page-bg :nth-child(2)", {
+                    display: "none"
+                }, "<").fromTo(".second-page .para .imgBox svg > :nth-child(1) > :nth-child(1)", {
+                    y: 30
+                }, {
+                    y: 0,
+                    opacity: 1,
+                    duration: 4,
+                }, "<+1").fromTo(".second-page .para .imgBox svg .rigin", {
+                    y: 30
+                }, {
+                    y: 0,
+                    opacity: 1,
+                    duration: 5,
+                    stagger: 0.8
+                }, "<+3").fromTo(".second-page .para .imgBox svg > :nth-child(2) ", {
+                    y: 30,
+                    opacity: 0
+                }, {
+                    y: 0,
+                    opacity: 1,
+                    duration: 5,
+                }, "<+3").fromTo(".second-page-bg :nth-child(3)", {
+
+                    clipPath: "circle(100%)"
+                }, {
+                    clipPath: "circle(22%)",
+                    duration: 6
+                }, ">+2").to(".second-page-paraBox .para", {
+                    x: "-1vw",
+                    scale: 0.7,
+                    duration: 6
+                }, "<+1").from(".second-page .circle", {
+                    scale: 0,
+
+                    duration: 10
+                }).to(".second-page .circle", {
+                    rotate: 195,
+
+                    duration: 16
+                }).fromTo(".third-page-bg", {
+                    opacity: 0
+                }, {
+
+                    opacity: 1,
+                    duration: 1
+                }, "<").fromTo("#clipPath1 :nth-child(1)", {
+                    transformOrigin: "left center"
+                }, {
+                    scaleX: 0,
+                    duration: 16,
+                    onUpdate: () => {
+                        $(".second-page").css("clip-path", "none")
+                        $(".second-page").css("clip-path", "url(#clipPath1)")
+                    },
+                }).fromTo("#clipPath1 :nth-child(2)", {
+                    transformOrigin: "left center"
+                }, {
+
+                    scaleX: 0,
+                    duration: 16,
+                    onUpdate: () => {
+                        $(".second-page").css("clip-path", "none")
+                        $(".second-page").css("clip-path", "url(#clipPath1)")
+                    },
+                }, "<").fromTo(".third-page-bg .paraBox h2", {
+                    x: "85vw"
+                }, {
+                    x: 0,
+                    duration: 6
+                }, "<+5.5").fromTo(".third-page-bg .paraBox h3", {
+                    x: "85vw"
+                }, {
+                    x: 0,
+                    duration: 6,
+                    stagger: 1.5
+                }, "<+2").fromTo(".third-page-bg > :nth-child(2)", {
+                    x: "85vw"
+
+
+                }, {
+                    x: 0,
+                    duration: 10,
+                }, "<+3.5").to(".third-page-bg .paraBox h2", {
+                    x: "-85vw",
+                    duration: 10,
+                }, "<+3").to(".third-page-bg .paraBox h3", {
+                    x: "-85vw",
+                    duration: 10,
+                    stagger: 0.8
+                }, "<+0.8").to(".third-page-bg > :nth-child(2)", {
+                    width: "100%",
+                    height: "100%",
+                    duration: 4,
+
+                }, "<+4").to(".third-page-bg > :nth-child(2)", {
+                    width: "100vw",
+                    height: "100%",
+                    duration: 6,
+                    filter: "brightness(0.2)"
+                }).to(".third-page-bg", {
+                    backgroundImage: "none",
+                    duration: 1
+                }, "<").fromTo(".third-page-paraBox h2", {
+                    opacity: 0,
+                    y: 30,
+                }, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 2,
+                }, "<").fromTo(".third-page-paraBox ul .line", {
+                    opacity: 0,
+                    y: -30,
+                }, {
+                    opacity: 1,
+                    y: 0,
+                    stagger: 1.5,
+                    duration: 2,
+                }, "<+2.5").fromTo(".third-page-paraBox ul :nth-child(odd)", {
+                    opacity: 0,
+                    y: 30,
+                }, {
+                    opacity: 1,
+                    y: 0,
+                    stagger: 1.5,
+                    duration: 2,
+                }, "<+1").fromTo(".third-page-paraBox .box h3", {
+                    opacity: 0,
+                    x: -30,
+                    filter: "blur(5px)",
+                }, {
+                    filter: "blur(0px)",
+                    opacity: 1,
+                    y: 0,
+                    stagger: 1.5,
+                    duration: 4.5,
+                }, "<+5").fromTo(".third-page-paraBox .box svg", {
+                    opacity: 0,
+                    y: 30,
+                }, {
+                    opacity: 1,
+                    y: 0,
+                    stagger: 1.5,
+                    duration: 3.5,
+                }, "<+1").to(".third-page-paraBox .box svg > rect", {
+                    fill: "#7c8c5b",
+                    duration: 6
+                }, "<+3").fromTo(".third-page-paraBox .box svg", {
+                    strokeDashoffset: 2000,
+                    strokeDasharray: 2000
+                }, {
+                    strokeDashoffset: 1300,
+                    duration: 13,
+                }, "<+3").to(".third-page-bg > :nth-child(2) img", {
+                    scale: 0,
+                    duration: 10
+                }, "<+6.5").to(".third-page-paraBox ", {
+                    opacity: 0,
+                    filter: "blur(4px)",
+                    duration: 2.5,
+                }, "<").fromTo(".forth-page-bg2 > :nth-child(1)", {
+                    x: "105%",
+                }, {
+                    x: "-180%",
+                    duration: 45
+                }).fromTo(".forth-page-bg2 > :nth-child(2)", {
+                    x: "-180%",
+                }, {
+                    x: "180%",
+                    duration: 45
+                }, "<").fromTo(".forth-page-para .box1", {
+                    x: "30vw",
+                    opacity: 0
+                }, {
+                    opacity: 1,
+                    x: 0,
+                    duration: 8,
+                }, "<").fromTo(".forth-page-para .box1-2", {
+                    clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
+                }, {
+                    clipPath: "polygon(0 100% , 100% 100%, 100% 100% , 0 100% , 0 0 )",
+                    duration: 6,
+                    stagger: 1
+                }, "<+12").to(".forth-page-para div", {
+                    opacity: 0,
+                    duration: 6
+
+                }, ">+4.5").to(".forth-page-bg > div", {
+
+                    y: "-120vh",
+                    duration: 6,
+                    stagger: 0.5
+                }, "<+5").from(".fifth-page .content", {
+                    y: "100vh",
+                    opacity: 0,
+                    duration: 6,
+                    onStart: () => {
+                        video.pause();
+                        video.currentTime = 0;
+                        videoTitle.seek(0).clear().pause();
+
+                    },
+                    onComplete: () => {
+
+                        setTimeout(() => {
+                            $(".menu").css("right", "0")
+
+                            $(".index").css({
+                                filter: "blur(5px)"
+                            })
+                            $(".loading-page").css({
+                                filter: "blur(5px)"
+                            })
+                        }, 10000)
+
+
+
+
+
+                        let videoIn = gsap.timeline({
+                            paused: true,
+
+                        })
+
+                        videoIn.play()
+                        video.play();
+
+
+                        videoTitle.fromTo(".fifth-page .paraBox h4 span", {
+                            opacity: 0
+                        }, {
+                            opacity: 1,
+                            duration: 0.8,
+                            stagger: 0.02,
+
+                        }).fromTo(".fifth-page .paraBox h6 span", {
+                            opacity: 0
+                        }, {
+                            opacity: 1,
+                            duration: 0.8,
+                            stagger: 0.02,
+                        }, ">-0.7")
+
+                        setTimeout(() => {
+                            videoTitle.play()
+                        }, 2800)
+                    }
+                }, "<+1.5")
+            }
         }
 
 

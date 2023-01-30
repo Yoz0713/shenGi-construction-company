@@ -26,13 +26,14 @@
                 max-height: 100vh;
                 transform: translate3d(0, 0, 0);
 
-                img {
+                >img {
                     display: block;
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
                     overflow: hidden;
                     color: #3db66d;
+                    transform: scale(1.6) translateY(15vw);
                 }
 
                 .para {
@@ -49,6 +50,8 @@
                             width: 25vw;
                             left: 0;
                             top: 0;
+                            transform: translateY(30px);
+                            opacity: 0;
                         }
 
                         svg {
@@ -56,6 +59,11 @@
                             width: 16vw;
                             left: -2vw;
                             top: -2vw;
+
+                            .fp-line {
+                                stroke-dashoffset: 2000;
+                                stroke-dasharray: 2000;
+                            }
                         }
                     }
 
@@ -67,6 +75,8 @@
                         letter-spacing: 0.2em;
                         line-height: 1.8em;
                         font-family: 'Noto Serif TC', sans-serif;
+                        transform: translateY(30px);
+                        opacity: 0;
                     }
 
                     & :nth-child(3) {
@@ -168,6 +178,7 @@
 
                 img {
                     position: absolute;
+                    transform: translateX(100vw);
                 }
 
                 & :nth-child(1) {
@@ -177,7 +188,7 @@
                     left: 5vw;
                     will-change: opacity;
                     top: 5.5vw;
-
+                    opacity: 0;
                 }
 
                 & :nth-child(2) {
@@ -196,9 +207,8 @@
                     bottom: 0;
                     object-fit: cover;
                     filter: brightness(1);
-                    transform: translate3d(0, 0, 0);
+                    transform: translate3d(0, 0, 0) translateX(100vw);
                     will-change: width, height, filter;
-
                 }
 
                 & :nth-child(4) {
@@ -237,6 +247,7 @@
                         text-align: start;
                         color: #3e3a39;
                         position: relative;
+                        transform: translateY(80vh);
 
                         &::after {
                             display: block;
@@ -270,6 +281,7 @@
                         text-align: start;
                         color: #3E3A39;
                         position: relative;
+                        transform: translateY(80vh);
 
                         &::after {
                             display: block;
@@ -315,6 +327,7 @@
                         font-size: 1.3vw;
                         letter-spacing: 0.1em;
                         color: #1A1A1A;
+                        transform: translateY(80vh);
 
                         .dot {
                             font-size: 0.8vw;
@@ -335,6 +348,11 @@
                     svg {
 
                         transform: rotate(-22deg);
+
+                        path {
+                            stroke-dashoffset: 2000;
+                            stroke-dasharray: 2000;
+                        }
 
                         g {
                             transform-origin: center;
@@ -827,49 +845,10 @@
 
         }
 
+
+
+
         .fifth-page {
-            display: none;
-            width: 100%;
-            height: 220vw;
-            max-height: 100vh;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-
-            &-bg {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-
-                img {
-                    position: absolute;
-                }
-
-                & :nth-child(1) {
-                    width: 13vw;
-                    left: -30vw;
-                    top: 0vw;
-                }
-
-                & :nth-child(2) {
-                    width: 14.7vw;
-                    left: 8vw;
-                    top: 0vw;
-                }
-
-                & :nth-child(3) {
-                    right: 0;
-                    bottom: 0;
-                    width: 100%;
-
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-        }
-
-
-        .sixth-page {
             position: absolute;
             left: 0;
             top: 0;
@@ -911,11 +890,520 @@
                     h6 {
                         font-size: 1.3vw;
                         font-weight: 600;
+
+                        .dot {
+                            font-size: 0.5vw;
+                        }
                     }
                 }
 
             }
 
         }
+    }
+}
+
+
+
+@media all and (max-width:1039px) {
+    .container {
+        .index {
+            .first-page {
+                z-index: 10;
+
+                .imgBox {
+                    margin-top: 7vw;
+
+                    >img {
+                        transform: scale(1.6) translateY(15vw);
+                    }
+
+                    .para {
+                        position: absolute;
+                        width: fit-content;
+                        height: fit-content;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+
+
+                        .box {
+                            margin-bottom: 9vw;
+                            margin-left: 5vw;
+
+                            img {
+                                width: 70vw;
+
+                            }
+
+                            svg {
+                                position: absolute;
+                                width: 45vw;
+                                left: -2vw;
+                                top: -5vw;
+                            }
+                        }
+
+                        p {
+                            font-size: 3vw;
+                            width: fit-content;
+                        }
+
+                        & :nth-child(2) {
+                            line-height: 2.5;
+                        }
+
+                        & :nth-child(3) {
+                            margin-top: 4.5vw;
+                            margin-left: 33vw;
+                            position: relative;
+
+                            &::after {
+
+                                width: 90%;
+
+                                right: 115%;
+
+
+                            }
+                        }
+                    }
+                }
+
+                .paraBox {
+                    width: 100vw;
+                    height: 110vw;
+
+                    .para {
+
+                        bottom: 30vw;
+
+                        &> :nth-child(1) {
+
+                            span {
+                                font-size: 2.8vw;
+                            }
+
+                        }
+
+                        &> :nth-child(2) {
+
+                            span {
+                                font-size: 5.5vw;
+                            }
+
+                            margin: 3.2vw 0vw 0vw;
+                        }
+
+                        &> :nth-child(3) {
+                            display: none;
+                        }
+
+
+                    }
+                }
+            }
+
+            .second-page {
+                clip-path: url(#clipPath1);
+                background-color: #fff;
+                z-index: 9;
+
+                &-bg {
+
+                    z-index: 1;
+
+                    & :nth-child(1) {
+                        display: none;
+                    }
+
+                    & :nth-child(2) {
+                        display: none;
+
+                    }
+
+                    & :nth-child(3) {
+                        width: 100%;
+                        height: 100%;
+                        right: 0;
+                        bottom: 0;
+                        opacity: 0;
+                    }
+
+                    & :nth-child(4) {
+                        display: none;
+
+                    }
+                }
+
+                &-paraBox {
+
+                    .para {
+                        margin-left: 25vw;
+                        width: 50%;
+
+                        h4 {
+                            font-size: 7vw;
+
+                            &::after {
+                                width: 0;
+                            }
+
+                        }
+
+                        h3 {
+                            font-size: 6vw;
+
+
+
+                            span {
+                                font-size: 5vw;
+
+                            }
+                        }
+
+                        .active1 {
+                            &::after {
+                                width: 8vw;
+                            }
+                        }
+
+                        .active2 {
+                            &::after {
+                                width: 8vw;
+                            }
+                        }
+
+                        h2 {
+                            font-size: 2.8vw;
+                            margin-top: 1vw;
+
+                            .dot {
+                                font-size: 2vw;
+                            }
+                        }
+
+                    }
+
+                    .svgBox {
+                        width: 115%;
+                        height: 100%;
+                        position: absolute;
+                        left: -28vw;
+                        top: -15vw;
+
+                        svg {
+
+                            transform: rotate(-22deg);
+
+                            path {
+                                stroke-dashoffset: 2000;
+                                stroke-dasharray: 2000;
+                            }
+
+                            g {
+                                transform-origin: center;
+                                transform: rotateY(180deg) rotate(183deg);
+
+                            }
+                        }
+                    }
+
+                    .imgBox {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        left: -3vw;
+                        top: 0vw;
+
+                        svg {
+
+                            width: 80%;
+                            height: 80%;
+
+                            &> :nth-child(1) {
+                                path {
+                                    opacity: 0;
+                                }
+                            }
+
+                            &> :nth-child(2) {
+                                opacity: 0;
+                            }
+                        }
+                    }
+                }
+
+                .circle {
+                    width: 95vw;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    margin: auto;
+                    z-index: 0;
+                }
+
+            }
+
+            .third-page {
+
+                z-index: 8;
+
+                &-bg {
+
+                    img {
+                        position: absolute;
+                        object-fit: cover;
+                    }
+
+                    .para {
+                        display: none;
+                    }
+
+                    .imgBox {
+
+                        width: 25vw;
+                        height: 25vw;
+
+                        img {
+                            transform-origin: 0% 0%;
+                        }
+                    }
+
+                    .paraBox {
+
+
+                        h2 {
+                            margin-bottom: 2vw;
+                            font-size: 5vw;
+
+                            &::after {
+
+                                right: 105%;
+
+                            }
+
+                            &::before {
+
+                                left: 105%;
+
+
+                            }
+                        }
+
+                        h3 {
+                            font-size: 3.5vw;
+                            margin-bottom: 1vw;
+
+                        }
+                    }
+                }
+
+                &-paraBox {
+
+
+                    h2 {
+                        margin-bottom: 2vw;
+                        font-size: 3vw;
+
+
+
+                    }
+
+                    .box {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 3vw;
+
+                        h3 {
+
+                            color: #fff;
+                            font-size: 8vw;
+                            letter-spacing: 0.2em;
+                            font-weight: 400;
+                            line-height: 1em;
+                            margin-right: -2vw;
+                        }
+
+                        svg {
+                            width: 20vw;
+                        }
+                    }
+
+                    ul {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+
+                        li {
+                            color: #fff;
+                            font-size: 3.5vw;
+                            height: fit-content;
+                        }
+
+                        .line {
+                            font-size: 3.2vw;
+                            margin: 0 1.5vw;
+                            color: #ccc;
+                        }
+
+                        p {
+                            margin: 0 2vw;
+                        }
+                    }
+
+                }
+            }
+
+            .forth-page {
+
+
+                &-para {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    margin-top: 2vw;
+
+                    .box1 {
+                        position: absolute;
+                        width: fit-content;
+                        height: fit-content;
+                        right: 15vw;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto 0;
+
+                        p {
+                            font-size: 3.2vw;
+                        }
+
+                        .box1-1 {
+
+                            h4 {
+                                font-size: 5vw;
+
+                                &::after {
+                                    top: 3vw;
+                                    right: -6vw;
+                                }
+                            }
+                        }
+
+                        .box1-2 {
+                            background-color: #fff;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+
+                            h4 {
+                                position: relative;
+                                text-align: end;
+                                white-space: nowrap;
+                                font-size: 5vw;
+                                font-family: $en_style;
+                                font-weight: 600;
+
+                                &::after {
+                                    top: 3vw;
+                                    right: -6vw;
+                                }
+                            }
+                        }
+                    }
+
+                    .box2 {
+                        display: none;
+
+                    }
+
+                    .box3 {
+                        display: none;
+
+                    }
+                }
+
+                &-bg2 {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    padding: 15vw 0 10vw;
+
+                    .imgBox {
+                        display: flex;
+
+                        img {
+                            height: 40vw;
+                            width: auto;
+                            margin-right: 5vw;
+                        }
+                    }
+                }
+
+            }
+
+            .fifth-page {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+
+                .content {
+
+                    width: 90%;
+                    margin: 30vw auto 0;
+                    pointer-events: none;
+
+                    video {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .paraBox {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 100%;
+                        margin-top: -8vw;
+
+                        h4,
+                        h6 {
+                            text-align: center;
+
+                            span {
+                                opacity: 0;
+                            }
+                        }
+
+                        h4 {
+                            font-size: 3.6vw;
+                            margin-bottom: 1.5vw;
+                        }
+
+                        h6 {
+                            font-size: 3.2vw;
+                            font-weight: 600;
+
+                            .dot {
+                                font-size: 0.5vw;
+                            }
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+
     }
 }

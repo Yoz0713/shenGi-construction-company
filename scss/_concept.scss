@@ -364,17 +364,3 @@
         }
     }
 }
-
-.clipPath {
-    top: 0;
-    pointer-events: none;
-    position: fixed;
-    z-index: -1;
-
-
-    rect {
-        transform-origin: 50% 50%;
-        transform-box: fill-box;
-
-    }
-}

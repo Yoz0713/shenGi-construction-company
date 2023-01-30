@@ -223,7 +223,7 @@
 
     <div class="clip"></div>
 
-
+    <script src="./js/sliceSquare.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
@@ -241,54 +241,7 @@
             })
 
 
-            class SliceSquare {
-                static i = 0
 
-                constructor(data) {
-                    SliceSquare.i += 1
-                    this.id = `clipPath${SliceSquare.i}`;
-                    this.row = data.row;
-                    this.collumn = data.collumn;
-                    this.gapX = data.gapX;
-                    this.gapY = data.gapY;
-                    this.squares = []
-                    this.square = {
-                        width: 1 / data.row - (data.gapX * (data.row - 1) / data.row),
-                        height: 1 / data.collumn - (data.gapY * (data.collumn - 1) / data.collumn)
-                    }
-
-                }
-
-                makeSquares(target) {
-                    for (let i = 0; i < this.row; i++) {
-                        this.square.x = i * this.square.width + (i == 0 ? 0 : this.gapX * i)
-                        for (let j = 0; j < this.collumn; j++) {
-                            this.square.y = j * this.square.height + (j == 0 ? 0 : this.gapY * j)
-                            this.squares.push({ ...this.square })
-
-                        }
-
-                    }
-                    let result = this.squares.map((item, i) => {
-
-                        item = `<rect x="${item.x}" y="${item.y}" stroke="#000000" opacity="1" width="${item.width}" height="${item.height}" />`
-                        return item
-                    })
-                    result.sort(() => Math.random() - 0.5);
-                    let clipPathEl = `<svg class="clipPath" viewBox="0 0 1920 634">
-                                <defs>
-                                    <clipPath id="${this.id}" clipPathUnits="objectBoundingBox">
-                                        ${result.join("\n")}
-                                        </clipPath>
-                                </defs>
-                        </svg>`;
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(clipPathEl, "image/svg+xml")
-                    const clip = document.querySelector(".clip")
-                    clip.innerHTML = doc.documentElement.outerHTML;
-
-                }
-            }
             const square1 = new SliceSquare({
                 row: 10,
                 collumn: 5,
@@ -302,7 +255,8 @@
                     onUpdate() {
                         $(".first-page-bg :nth-child(1)").css("clip-path", "none")
                         $(".first-page-bg :nth-child(1)").css("clip-path", "url(#clipPath1)")
-                    }
+                    },
+
                 })
                 gsap.set("#clipPath1 :nth-child(even)", {
                     transformOrigin: "center top",

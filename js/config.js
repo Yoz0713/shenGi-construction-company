@@ -195,12 +195,12 @@ function loadingPageAnimaiton(func) {
                 duration: 1.2,
             }, "<").to(".rotate",
                 {
-
+                    scaleY: 0.65,
+                    scaleX: 0.6,
                     rotate: 90,
-                    scale: 0.2,
                     transformOrigin: "center",
                     duration: 0.8,
-                    x: "-1.7%"
+                    x: "-2.5%",
                 }, "<").to(".g1",
                     {
                         opacity: 0,
@@ -262,8 +262,7 @@ function loadingPageAnimaiton(func) {
             {
 
                 rotate: 0,
-                scaleY: 0.45,
-                scaleX: 0.4,
+
                 transformOrigin: "center",
                 duration: 0.8,
 
@@ -281,7 +280,7 @@ function loadingPageAnimaiton(func) {
                 y: 0,
                 opacity: 1,
                 duration: 0.8
-            }, "<+0.5").then(func)
+            }, "<+0.5").then(func) // this paramater will from index.js 
 
 
 

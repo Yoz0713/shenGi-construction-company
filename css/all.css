@@ -30,9 +30,9 @@
   top: 10vw;
 }
 .loading-page .contentBox .svgBox {
-  width: 80vw;
-  height: 30vw;
-  transform: scale(1.2);
+  width: 60vw;
+  height: 22.5vw;
+  transform: scale(1.1);
 }
 .loading-page .contentBox .svgBox svg {
   width: 100%;
@@ -258,6 +258,109 @@ header .progress-bar {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.clipPath {
+  top: 0;
+  pointer-events: none;
+  position: fixed;
+  z-index: -1;
+}
+.clipPath rect {
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+}
+
+.phone {
+  display: none;
+}
+
+@media all and (max-width: 1039px) {
+  .computer {
+    display: none;
+  }
+  .phone {
+    display: block;
+  }
+  .loading-page .contentBox {
+    top: 40vw;
+  }
+  .loading-page .contentBox .svgBox {
+    width: 80vw;
+    height: 30vw;
+    transform: scale(2);
+  }
+  .loading-page .titleBox {
+    padding-top: 32vw;
+  }
+  .loading-page .titleBox h1 {
+    font-size: 7.5vw;
+  }
+  .loading-page .titleBox h5 {
+    font-size: 2.8vw;
+  }
+  header {
+    padding: 0vw 2vw;
+  }
+  header .logoBox img {
+    width: 15vw;
+  }
+  header .toolBox .user-area img {
+    width: 4.5vw;
+  }
+  header .toolBox .user-area p {
+    font-size: 2.8vw;
+  }
+  header .toolBox .user-area .arrow {
+    width: 5vw;
+  }
+  header .toolBox .user-area-menu {
+    display: none;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    padding: 1vw 0.5vw;
+    background-color: rgb(255, 255, 255);
+  }
+  header .toolBox .user-area-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  header .toolBox .user-area-menu ul li {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 2.8vw;
+    color: rgba(0, 0, 0, 0.85);
+    margin-top: 1.5vw;
+    cursor: pointer;
+  }
+  header .toolBox .user-area-menu ul :not(:last-child) {
+    padding-bottom: 2vw;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.308);
+  }
+  header .toolBox .menu-button {
+    display: flex;
+    align-items: center;
+    color: #000;
+    cursor: pointer;
+  }
+  header .toolBox .menu-button :nth-child(1) {
+    font-size: 7vw;
+  }
+  header .toolBox .menu-button :nth-child(2) {
+    font-size: 2.8vw;
+  }
+  header .progress-bar {
+    width: 0;
+    height: 4px;
+    background-color: #000;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+  }
+}
 .container {
   width: 100%;
   overflow: hidden;
@@ -285,7 +388,7 @@ header .progress-bar {
   max-height: 100vh;
   transform: translate3d(0, 0, 0);
 }
-.container .index .first-page .imgBox img {
+.container .index .first-page .imgBox > img {
   display: block;
   width: 100%;
   height: 100%;
@@ -293,6 +396,7 @@ header .progress-bar {
      object-fit: cover;
   overflow: hidden;
   color: #3db66d;
+  transform: scale(1.6) translateY(15vw);
 }
 .container .index .first-page .imgBox .para {
   position: absolute;
@@ -307,12 +411,18 @@ header .progress-bar {
   width: 25vw;
   left: 0;
   top: 0;
+  transform: translateY(30px);
+  opacity: 0;
 }
 .container .index .first-page .imgBox .para .box svg {
   position: absolute;
   width: 16vw;
   left: -2vw;
   top: -2vw;
+}
+.container .index .first-page .imgBox .para .box svg .fp-line {
+  stroke-dashoffset: 2000;
+  stroke-dasharray: 2000;
 }
 .container .index .first-page .imgBox .para p {
   color: #fff;
@@ -321,6 +431,8 @@ header .progress-bar {
   letter-spacing: 0.2em;
   line-height: 1.8em;
   font-family: "Noto Serif TC", sans-serif;
+  transform: translateY(30px);
+  opacity: 0;
 }
 .container .index .first-page .imgBox .para :nth-child(3) {
   margin-top: 2vw;
@@ -406,6 +518,7 @@ header .progress-bar {
 }
 .container .index .second-page-bg img {
   position: absolute;
+  transform: translateX(100vw);
 }
 .container .index .second-page-bg :nth-child(1) {
   position: relative;
@@ -414,6 +527,7 @@ header .progress-bar {
   left: 5vw;
   will-change: opacity;
   top: 5.5vw;
+  opacity: 0;
 }
 .container .index .second-page-bg :nth-child(2) {
   width: 25%;
@@ -431,7 +545,7 @@ header .progress-bar {
   -o-object-fit: cover;
      object-fit: cover;
   filter: brightness(1);
-  transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0) translateX(100vw);
   will-change: width, height, filter;
 }
 .container .index .second-page-bg :nth-child(4) {
@@ -468,6 +582,7 @@ header .progress-bar {
   text-align: start;
   color: #3e3a39;
   position: relative;
+  transform: translateY(80vh);
 }
 .container .index .second-page-paraBox .para h4::after {
   display: block;
@@ -496,6 +611,7 @@ header .progress-bar {
   text-align: start;
   color: #3E3A39;
   position: relative;
+  transform: translateY(80vh);
 }
 .container .index .second-page-paraBox .para h3::after {
   display: block;
@@ -534,6 +650,7 @@ header .progress-bar {
   font-size: 1.3vw;
   letter-spacing: 0.1em;
   color: #1A1A1A;
+  transform: translateY(80vh);
 }
 .container .index .second-page-paraBox .para h2 .dot {
   font-size: 0.8vw;
@@ -548,6 +665,10 @@ header .progress-bar {
 }
 .container .index .second-page-paraBox .svgBox svg {
   transform: rotate(-22deg);
+}
+.container .index .second-page-paraBox .svgBox svg path {
+  stroke-dashoffset: 2000;
+  stroke-dasharray: 2000;
 }
 .container .index .second-page-paraBox .svgBox svg g {
   transform-origin: center;
@@ -970,80 +1091,408 @@ header .progress-bar {
   top: 18vw;
 }
 .container .index .fifth-page {
-  display: none;
-  width: 100%;
-  height: 220vw;
-  max-height: 100vh;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-.container .index .fifth-page-bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.container .index .fifth-page-bg img {
-  position: absolute;
-}
-.container .index .fifth-page-bg :nth-child(1) {
-  width: 13vw;
-  left: -30vw;
-  top: 0vw;
-}
-.container .index .fifth-page-bg :nth-child(2) {
-  width: 14.7vw;
-  left: 8vw;
-  top: 0vw;
-}
-.container .index .fifth-page-bg :nth-child(3) {
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.container .index .sixth-page {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
 }
-.container .index .sixth-page .content {
+.container .index .fifth-page .content {
   width: 36%;
   margin: 10vw auto 0;
   pointer-events: none;
 }
-.container .index .sixth-page .content video {
+.container .index .fifth-page .content video {
   width: 100%;
   height: 100%;
 }
-.container .index .sixth-page .content .paraBox {
+.container .index .fifth-page .content .paraBox {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   margin-top: -2.5vw;
 }
-.container .index .sixth-page .content .paraBox h4,
-.container .index .sixth-page .content .paraBox h6 {
+.container .index .fifth-page .content .paraBox h4,
+.container .index .fifth-page .content .paraBox h6 {
   text-align: center;
 }
-.container .index .sixth-page .content .paraBox h4 span,
-.container .index .sixth-page .content .paraBox h6 span {
+.container .index .fifth-page .content .paraBox h4 span,
+.container .index .fifth-page .content .paraBox h6 span {
   opacity: 0;
 }
-.container .index .sixth-page .content .paraBox h4 {
+.container .index .fifth-page .content .paraBox h4 {
   font-size: 1.6vw;
   margin-bottom: 1.5vw;
 }
-.container .index .sixth-page .content .paraBox h6 {
+.container .index .fifth-page .content .paraBox h6 {
   font-size: 1.3vw;
   font-weight: 600;
 }
+.container .index .fifth-page .content .paraBox h6 .dot {
+  font-size: 0.5vw;
+}
 
+@media all and (max-width: 1039px) {
+  .container .index .first-page {
+    z-index: 10;
+  }
+  .container .index .first-page .imgBox {
+    margin-top: 7vw;
+  }
+  .container .index .first-page .imgBox > img {
+    transform: scale(1.6) translateY(15vw);
+  }
+  .container .index .first-page .imgBox .para {
+    position: absolute;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .container .index .first-page .imgBox .para .box {
+    margin-bottom: 9vw;
+    margin-left: 5vw;
+  }
+  .container .index .first-page .imgBox .para .box img {
+    width: 70vw;
+  }
+  .container .index .first-page .imgBox .para .box svg {
+    position: absolute;
+    width: 45vw;
+    left: -2vw;
+    top: -5vw;
+  }
+  .container .index .first-page .imgBox .para p {
+    font-size: 3vw;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .container .index .first-page .imgBox .para :nth-child(2) {
+    line-height: 2.5;
+  }
+  .container .index .first-page .imgBox .para :nth-child(3) {
+    margin-top: 4.5vw;
+    margin-left: 33vw;
+    position: relative;
+  }
+  .container .index .first-page .imgBox .para :nth-child(3)::after {
+    width: 90%;
+    right: 115%;
+  }
+  .container .index .first-page .paraBox {
+    width: 100vw;
+    height: 110vw;
+  }
+  .container .index .first-page .paraBox .para {
+    bottom: 30vw;
+  }
+  .container .index .first-page .paraBox .para > :nth-child(1) span {
+    font-size: 2.8vw;
+  }
+  .container .index .first-page .paraBox .para > :nth-child(2) {
+    margin: 3.2vw 0vw 0vw;
+  }
+  .container .index .first-page .paraBox .para > :nth-child(2) span {
+    font-size: 5.5vw;
+  }
+  .container .index .first-page .paraBox .para > :nth-child(3) {
+    display: none;
+  }
+  .container .index .second-page {
+    -webkit-clip-path: url(#clipPath1);
+            clip-path: url(#clipPath1);
+    background-color: #fff;
+    z-index: 9;
+  }
+  .container .index .second-page-bg {
+    z-index: 1;
+  }
+  .container .index .second-page-bg :nth-child(1) {
+    display: none;
+  }
+  .container .index .second-page-bg :nth-child(2) {
+    display: none;
+  }
+  .container .index .second-page-bg :nth-child(3) {
+    width: 100%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+  }
+  .container .index .second-page-bg :nth-child(4) {
+    display: none;
+  }
+  .container .index .second-page-paraBox .para {
+    margin-left: 25vw;
+    width: 50%;
+  }
+  .container .index .second-page-paraBox .para h4 {
+    font-size: 7vw;
+  }
+  .container .index .second-page-paraBox .para h4::after {
+    width: 0;
+  }
+  .container .index .second-page-paraBox .para h3 {
+    font-size: 6vw;
+  }
+  .container .index .second-page-paraBox .para h3 span {
+    font-size: 5vw;
+  }
+  .container .index .second-page-paraBox .para .active1::after {
+    width: 8vw;
+  }
+  .container .index .second-page-paraBox .para .active2::after {
+    width: 8vw;
+  }
+  .container .index .second-page-paraBox .para h2 {
+    font-size: 2.8vw;
+    margin-top: 1vw;
+  }
+  .container .index .second-page-paraBox .para h2 .dot {
+    font-size: 2vw;
+  }
+  .container .index .second-page-paraBox .svgBox {
+    width: 115%;
+    height: 100%;
+    position: absolute;
+    left: -28vw;
+    top: -15vw;
+  }
+  .container .index .second-page-paraBox .svgBox svg {
+    transform: rotate(-22deg);
+  }
+  .container .index .second-page-paraBox .svgBox svg path {
+    stroke-dashoffset: 2000;
+    stroke-dasharray: 2000;
+  }
+  .container .index .second-page-paraBox .svgBox svg g {
+    transform-origin: center;
+    transform: rotateY(180deg) rotate(183deg);
+  }
+  .container .index .second-page-paraBox .imgBox {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -3vw;
+    top: 0vw;
+  }
+  .container .index .second-page-paraBox .imgBox svg {
+    width: 80%;
+    height: 80%;
+  }
+  .container .index .second-page-paraBox .imgBox svg > :nth-child(1) path {
+    opacity: 0;
+  }
+  .container .index .second-page-paraBox .imgBox svg > :nth-child(2) {
+    opacity: 0;
+  }
+  .container .index .second-page .circle {
+    width: 95vw;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 0;
+  }
+  .container .index .third-page {
+    z-index: 8;
+  }
+  .container .index .third-page-bg img {
+    position: absolute;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .container .index .third-page-bg .para {
+    display: none;
+  }
+  .container .index .third-page-bg .imgBox {
+    width: 25vw;
+    height: 25vw;
+  }
+  .container .index .third-page-bg .imgBox img {
+    transform-origin: 0% 0%;
+  }
+  .container .index .third-page-bg .paraBox h2 {
+    margin-bottom: 2vw;
+    font-size: 5vw;
+  }
+  .container .index .third-page-bg .paraBox h2::after {
+    right: 105%;
+  }
+  .container .index .third-page-bg .paraBox h2::before {
+    left: 105%;
+  }
+  .container .index .third-page-bg .paraBox h3 {
+    font-size: 3.5vw;
+    margin-bottom: 1vw;
+  }
+  .container .index .third-page-paraBox h2 {
+    margin-bottom: 2vw;
+    font-size: 3vw;
+  }
+  .container .index .third-page-paraBox .box {
+    display: flex;
+    align-items: center;
+    margin-top: 3vw;
+  }
+  .container .index .third-page-paraBox .box h3 {
+    color: #fff;
+    font-size: 8vw;
+    letter-spacing: 0.2em;
+    font-weight: 400;
+    line-height: 1em;
+    margin-right: -2vw;
+  }
+  .container .index .third-page-paraBox .box svg {
+    width: 20vw;
+  }
+  .container .index .third-page-paraBox ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .container .index .third-page-paraBox ul li {
+    color: #fff;
+    font-size: 3.5vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .container .index .third-page-paraBox ul .line {
+    font-size: 3.2vw;
+    margin: 0 1.5vw;
+    color: #ccc;
+  }
+  .container .index .third-page-paraBox ul p {
+    margin: 0 2vw;
+  }
+  .container .index .forth-page-para {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 2vw;
+  }
+  .container .index .forth-page-para .box1 {
+    position: absolute;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    right: 15vw;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+  }
+  .container .index .forth-page-para .box1 p {
+    font-size: 3.2vw;
+  }
+  .container .index .forth-page-para .box1 .box1-1 h4 {
+    font-size: 5vw;
+  }
+  .container .index .forth-page-para .box1 .box1-1 h4::after {
+    top: 3vw;
+    right: -6vw;
+  }
+  .container .index .forth-page-para .box1 .box1-2 {
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .container .index .forth-page-para .box1 .box1-2 h4 {
+    position: relative;
+    text-align: end;
+    white-space: nowrap;
+    font-size: 5vw;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+  }
+  .container .index .forth-page-para .box1 .box1-2 h4::after {
+    top: 3vw;
+    right: -6vw;
+  }
+  .container .index .forth-page-para .box2 {
+    display: none;
+  }
+  .container .index .forth-page-para .box3 {
+    display: none;
+  }
+  .container .index .forth-page-bg2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15vw 0 10vw;
+  }
+  .container .index .forth-page-bg2 .imgBox {
+    display: flex;
+  }
+  .container .index .forth-page-bg2 .imgBox img {
+    height: 40vw;
+    width: auto;
+    margin-right: 5vw;
+  }
+  .container .index .fifth-page {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .container .index .fifth-page .content {
+    width: 90%;
+    margin: 30vw auto 0;
+    pointer-events: none;
+  }
+  .container .index .fifth-page .content video {
+    width: 100%;
+    height: 100%;
+  }
+  .container .index .fifth-page .content .paraBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: -8vw;
+  }
+  .container .index .fifth-page .content .paraBox h4,
+.container .index .fifth-page .content .paraBox h6 {
+    text-align: center;
+  }
+  .container .index .fifth-page .content .paraBox h4 span,
+.container .index .fifth-page .content .paraBox h6 span {
+    opacity: 0;
+  }
+  .container .index .fifth-page .content .paraBox h4 {
+    font-size: 3.6vw;
+    margin-bottom: 1.5vw;
+  }
+  .container .index .fifth-page .content .paraBox h6 {
+    font-size: 3.2vw;
+    font-weight: 600;
+  }
+  .container .index .fifth-page .content .paraBox h6 .dot {
+    font-size: 0.5vw;
+  }
+}
 .construction .first-page {
   width: 100%;
   height: auto;
@@ -1947,17 +2396,6 @@ header .progress-bar {
 }
 .concept .fifth-page .swiper .swiper-wrapper .swiper-slide-active .imgBox img {
   transform: scale(1);
-}
-
-.clipPath {
-  top: 0;
-  pointer-events: none;
-  position: fixed;
-  z-index: -1;
-}
-.clipPath rect {
-  transform-origin: 50% 50%;
-  transform-box: fill-box;
 }
 
 .portfolio {

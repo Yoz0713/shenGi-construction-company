@@ -50,9 +50,9 @@ $ch_l_text: 1.7vw;
         top: 10vw;
 
         .svgBox {
-            width: 80vw;
-            height: 30vw;
-            transform: scale(1.2);
+            width: 60vw;
+            height: 22.5vw;
+            transform: scale(1.1);
 
             svg {
                 width: 100%;
@@ -322,6 +322,155 @@ header {
                     }
                 }
             }
+        }
+    }
+}
+
+//slice square init
+.clipPath {
+    top: 0;
+    pointer-events: none;
+    position: fixed;
+    z-index: -1;
+
+
+    rect {
+        transform-origin: 50% 50%;
+        transform-box: fill-box;
+
+    }
+}
+
+//slice square init
+.phone {
+    display: none;
+}
+
+@media all and(max-width:1039px) {
+    .computer {
+        display: none;
+    }
+
+    .phone {
+        display: block;
+    }
+
+    .loading-page {
+        .contentBox {
+
+            top: 40vw;
+
+            .svgBox {
+                width: 80vw;
+                height: 30vw;
+                transform: scale(2);
+            }
+        }
+
+        .titleBox {
+
+            padding-top: 32vw;
+
+            h1 {
+                font-size: 7.5vw;
+            }
+
+            h5 {
+                font-size: 2.8vw;
+            }
+
+        }
+    }
+
+    header {
+        padding: 0vw 2vw;
+
+        .logoBox {
+            img {
+
+                width: 15vw;
+            }
+        }
+
+        .toolBox {
+            .user-area {
+
+
+
+                img {
+                    width: 4.5vw;
+                }
+
+                p {
+                    font-size: 2.8vw;
+                }
+
+                .arrow {
+                    width: 5vw;
+                }
+
+
+
+                &-menu {
+                    display: none;
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    padding: 1vw 0.5vw;
+                    background-color: rgba(255, 255, 255);
+
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 100%;
+
+
+                        li {
+                            display: flex;
+                            justify-content: center;
+                            width: 100%;
+                            font-size: 2.8vw;
+                            color: rgba(0, 0, 0, 0.85);
+                            margin-top: 1.5vw;
+                            cursor: pointer;
+                        }
+
+                        & :not(:last-child) {
+                            padding-bottom: 2vw;
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.308);
+                        }
+                    }
+                }
+            }
+
+            .menu-button {
+                display: flex;
+                align-items: center;
+                color: #000;
+                cursor: pointer;
+
+                & :nth-child(1) {
+                    font-size: 7vw;
+
+                }
+
+                & :nth-child(2) {
+                    font-size: 2.8vw;
+
+                }
+            }
+        }
+
+
+        .progress-bar {
+            width: 0;
+            height: 4px;
+            background-color: #000;
+            position: absolute;
+            bottom: -3px;
+            left: 0;
         }
     }
 }
