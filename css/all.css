@@ -1,3 +1,11 @@
+:root {
+  --ch_xs_text: 0.9vw;
+  --more_text: 1vw;
+  --ch_s_text: 1.1vw;
+  --ch_m_text: 1.3vw;
+  --ch_l_text: 1.7vw;
+}
+
 .loading-page {
   display: flex;
   align-items: center;
@@ -272,6 +280,13 @@ header .progress-bar {
 }
 
 @media all and (max-width: 1039px) {
+  :root {
+    --ch_xs_text: 0.9vw;
+    --more_text: 1vw;
+    --ch_s_text: 2.8vw;
+    --ch_m_text: 3.5vw;
+    --ch_l_text: 4vw;
+  }
   .computer {
     display: none;
   }
@@ -423,7 +438,7 @@ header .progress-bar {
     height: 220vw;
   }
   .menu .close img {
-    width: 10vw;
+    width: 9vw;
   }
   .menu ul {
     margin-top: 20vw;
@@ -455,6 +470,57 @@ header .progress-bar {
     margin: auto 0;
     width: 3%;
     height: 3.5px;
+  }
+  header {
+    padding: 0vw 5vw;
+  }
+  header .logoBox img {
+    width: 18vw;
+    margin-bottom: -1vw;
+  }
+  header .toolBox .user-area img {
+    width: 5vw;
+  }
+  header .toolBox .user-area p {
+    font-size: 3.2vw;
+  }
+  header .toolBox .user-area .arrow {
+    width: 5vw;
+  }
+  header .toolBox .user-area-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  header .toolBox .user-area-menu ul li {
+    font-size: 3.2vw;
+    margin-top: 2.5vw;
+    cursor: pointer;
+  }
+  header .toolBox .user-area-menu ul :not(:last-child) {
+    padding-bottom: 3.5vw;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.308);
+  }
+  header .toolBox .menu-button {
+    display: flex;
+    align-items: center;
+    color: #000;
+    cursor: pointer;
+  }
+  header .toolBox .menu-button :nth-child(1) {
+    font-size: 9vw;
+  }
+  header .toolBox .menu-button :nth-child(2) {
+    font-size: 3.2vw;
+  }
+  header .progress-bar {
+    width: 0;
+    height: 4px;
+    background-color: #000;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
   }
 }
 .container {
@@ -1722,7 +1788,7 @@ header .progress-bar {
   margin-bottom: 1vw;
 }
 .construction .second-page ul li .paraBox-title h3 {
-  font-size: 1.3vw;
+  font-size: var(--ch_m_text);
   letter-spacing: 0.1em;
   margin-right: 1vw;
 }
@@ -1735,7 +1801,7 @@ header .progress-bar {
   background-color: rgb(233, 233, 233);
 }
 .construction .second-page ul li .paraBox > p {
-  font-size: 1.1vw;
+  font-size: var(--ch_s_text);
   letter-spacing: 0.1em;
 }
 .construction .second-page ul li .paraBox a {
@@ -1750,7 +1816,7 @@ header .progress-bar {
   height: fit-content;
 }
 .construction .second-page ul li .paraBox span {
-  font-size: 1vw;
+  font-size: var(--more_text);
   letter-spacing: 0.2em;
   border-bottom: 1px solid #888888;
   padding: 0 1.5vw 0.3vw 0.5vw;
@@ -1859,7 +1925,7 @@ header .progress-bar {
   margin-bottom: 3vw;
 }
 .constrctionInner .second-page-top .caseName h2 {
-  font-size: 1.3vw;
+  font-size: var(--ch_m_text);
   opacity: 0.8;
   font-weight: 600;
 }
@@ -1876,7 +1942,7 @@ header .progress-bar {
   margin-right: 0.5vw;
 }
 .constrctionInner .second-page-top .contact div p {
-  font-size: 0.9vw;
+  font-size: var(--ch_xs_text);
   opacity: 0.8;
   letter-spacing: 0.1em;
 }
@@ -1899,20 +1965,20 @@ header .progress-bar {
   margin-bottom: 4vw;
 }
 .constrctionInner .second-page-bottom-left ul li h4 {
-  font-size: 1vw;
+  font-size: var(--more_text);
   opacity: 0.8;
   font-weight: 300;
   letter-spacing: 0.1em;
   margin-bottom: 1.2vw;
 }
 .constrctionInner .second-page-bottom-left ul li p {
-  font-size: 0.9vw;
+  font-size: var(--ch_xs_text);
   opacity: 0.8;
   font-weight: 300;
   letter-spacing: 0.2em;
 }
 .constrctionInner .second-page-bottom-left ul :nth-child(4) p, .constrctionInner .second-page-bottom-left ul :nth-child(5) p, .constrctionInner .second-page-bottom-left ul :nth-child(6) p {
-  font-size: 1.3vw;
+  font-size: var(--ch_m_text);
   font-weight: 900;
 }
 .constrctionInner .second-page-bottom-left ul :nth-child(7) p {
@@ -1945,7 +2011,7 @@ header .progress-bar {
   margin-right: 2vw;
 }
 .constrctionInner .second-page-bottom-right ul li a p {
-  font-size: 1vw;
+  font-size: var(--more_text);
   font-weight: 300;
   letter-spacing: 0.2em;
 }
@@ -1987,7 +2053,7 @@ header .progress-bar {
   margin-bottom: 3vw;
 }
 .constrctionInner .form-page-title h4 {
-  font-size: 1.3vw;
+  font-size: var(--ch_m_text);
   opacity: 0.7;
   position: relative;
   letter-spacing: 0.2em;
@@ -2025,7 +2091,7 @@ header .progress-bar {
   margin-top: 6vw;
 }
 .constrctionInner .form-page form .box-submit input {
-  font-size: 1vw;
+  font-size: var(--more_text);
   padding: 0.4vw 10vw;
   color: #fff;
   background-color: #6A6A6A;
@@ -2050,7 +2116,7 @@ header .progress-bar {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #000;
-  font-size: 0.9vw;
+  font-size: var(--ch_xs_text);
 }
 .constrctionInner .form-page form div .form-box {
   display: flex;
@@ -2070,7 +2136,7 @@ header .progress-bar {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #000;
-  font-size: 0.9vw;
+  font-size: var(--ch_xs_text);
 }
 .constrctionInner .form-page form div .form-box:not(:last-child) {
   margin-bottom: 3vw;
@@ -2273,7 +2339,7 @@ header .progress-bar {
   position: relative;
   align-items: flex-end;
   margin-right: 2.5vw;
-  font-size: 1.1vw;
+  font-size: var(--ch_s_text);
   -ms-writing-mode: tb-lr;
       writing-mode: vertical-lr;
 }
@@ -2296,7 +2362,7 @@ header .progress-bar {
   opacity: 0.6;
 }
 .concept .second-page-title .ch-box {
-  font-size: 1.3vw;
+  font-size: var(--ch_m_text);
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
   margin-top: 6vw;
@@ -2311,12 +2377,15 @@ header .progress-bar {
   margin-right: 1vw;
 }
 .concept .second-page-para p {
-  font-size: 1.1vw;
+  font-size: var(--ch_s_text);
   letter-spacing: 0.3em;
   line-height: 2.5;
   margin-bottom: -3.5vw;
   color: #010101;
   opacity: 0.8;
+}
+.concept .second-page-para p span {
+  color: #56B87E;
 }
 .concept .second-page-bg img {
   width: 36vw;
@@ -2365,7 +2434,7 @@ header .progress-bar {
 }
 .concept .third-page-para1 p {
   position: absolute;
-  font-size: 1.3vw;
+  font-size: var(--ch_m_text);
   font-weight: 600;
   letter-spacing: 0.2em;
   left: 6vw;
@@ -2375,8 +2444,8 @@ header .progress-bar {
 }
 .concept .third-page-para1 p span {
   margin-left: 0.5vw;
-  font-size: 1.7vw;
-  color: #000;
+  font-size: var(--ch_l_text);
+  color: #56B87E;
 }
 .concept .third-page-para2 {
   position: absolute;
@@ -2384,7 +2453,7 @@ header .progress-bar {
   top: 28vw;
 }
 .concept .third-page-para2 p {
-  font-size: 1.1vw;
+  font-size: var(--ch_s_text);
   letter-spacing: 0.15em;
   line-height: 2.3;
   color: #010101;
@@ -2423,7 +2492,7 @@ header .progress-bar {
   margin-top: 13.5vw;
 }
 .concept .forth-page-para p {
-  font-size: 1.1vw;
+  font-size: var(--ch_s_text);
   letter-spacing: 0.15em;
   line-height: 2.3;
   color: #010101;
@@ -2439,7 +2508,7 @@ header .progress-bar {
   display: flex;
   position: relative;
   margin-right: 2.5vw;
-  font-size: 1.1vw;
+  font-size: var(--ch_s_text);
   -ms-writing-mode: tb-lr;
       writing-mode: vertical-lr;
 }
@@ -2462,7 +2531,7 @@ header .progress-bar {
   opacity: 0.6;
 }
 .concept .forth-page-title .ch-box {
-  font-size: 1.3vw;
+  font-size: var(--ch_m_text);
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
   margin-top: 3vw;
@@ -2518,6 +2587,209 @@ header .progress-bar {
   transform: scale(1);
 }
 
+@media all and (max-width: 1039px) {
+  .concept .first-page {
+    padding-top: 10vw;
+    margin-bottom: 12vw;
+    width: 100%;
+  }
+  .concept .first-page-bg {
+    position: relative;
+    width: 100%;
+    height: 60vw;
+  }
+  .concept .first-page-bg img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .concept .first-page-bg > :nth-child(3) {
+    width: 45vw;
+  }
+  .concept .second-page {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 0 0 auto;
+    margin-bottom: 20vw;
+  }
+  .concept .second-page-title {
+    display: flex;
+    margin: 0 6vw 7vw 0vw;
+    padding-top: 3vw;
+    order: -1;
+  }
+  .concept .second-page-title .en-box {
+    margin-right: 4vw;
+  }
+  .concept .second-page-title .ch-box {
+    -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+    margin-top: 15vw;
+    font-size: var(--ch_m_text);
+  }
+  .concept .second-page-title .ch-box h2 {
+    letter-spacing: 0.5em;
+    font-family: "Noto Serif TC", sans-serif;
+  }
+  .concept .second-page-para {
+    width: 75%;
+    order: 2;
+  }
+  .concept .second-page-para p {
+    font-size: var(--ch_s_text);
+  }
+  .concept .second-page-para p br {
+    display: none;
+  }
+  .concept .second-page-bg {
+    order: 1;
+  }
+  .concept .second-page-bg img {
+    width: 65vw;
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+  .concept .third-page {
+    width: 80%;
+    margin: 0 auto;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 25vw;
+    position: relative;
+  }
+  .concept .third-page-bg {
+    display: flex;
+    flex-direction: column;
+  }
+  .concept .third-page-bg img {
+    position: static;
+  }
+  .concept .third-page-bg :nth-child(1) {
+    width: 50vw;
+    margin-bottom: 20vw;
+  }
+  .concept .third-page-bg :nth-child(2) {
+    width: 50vw;
+    align-self: flex-end;
+    margin-bottom: 50vw;
+  }
+  .concept .third-page-bg :nth-child(3) {
+    width: 100%;
+  }
+  .concept .third-page-para1 {
+    position: static;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: transparent;
+    -webkit-clip-path: none;
+            clip-path: none;
+    margin: 0 auto 10vw;
+  }
+  .concept .third-page-para1 p {
+    position: static;
+    text-align: center;
+  }
+  .concept .third-page-para1 p span {
+    margin-left: 0;
+    margin-top: 2.5vw;
+    font-size: var(--ch_l_text);
+    color: #56B87E;
+  }
+  .concept .third-page-para2 {
+    position: absolute;
+    right: auto;
+    left: 0;
+    top: 185vw;
+  }
+  .concept .third-page-para2 p br {
+    display: none;
+  }
+  .concept .third-page .box1 {
+    position: absolute;
+    left: 5vw;
+    bottom: auto;
+    top: 98vw;
+    width: 8.5vw;
+    height: 10vw;
+  }
+  .concept .third-page .box2 {
+    position: absolute;
+    right: 0;
+    bottom: 109vw;
+    width: 8.5vw;
+    height: 10vw;
+  }
+  .concept .forth-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 15vw;
+  }
+  .concept .forth-page-bg {
+    margin-left: -2vw;
+  }
+  .concept .forth-page-bg img {
+    width: 50vw;
+  }
+  .concept .forth-page-para {
+    margin-left: 5vw;
+    margin-top: 13.5vw;
+    order: 3;
+  }
+  .concept .forth-page-para p {
+    font-size: var(--ch_s_text);
+  }
+  .concept .forth-page-para p:not(:last-child) {
+    margin-bottom: 10vw;
+  }
+  .concept .forth-page-title {
+    display: flex;
+    padding-top: 3vw;
+  }
+  .concept .forth-page-title .en-box {
+    margin-right: 4vw;
+  }
+  .concept .forth-page-title .ch-box {
+    margin-top: 10vw;
+  }
+  .concept .forth-page .box {
+    position: absolute;
+    left: -12%;
+    top: 19vw;
+    z-index: -1;
+    width: 100vw;
+    height: 40vw;
+    background-color: #F6F6F6;
+  }
+  .concept .fifth-page {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 12vw;
+  }
+  .concept .fifth-page .swiper .swiper-wrapper .swiper-slide .imgBox img {
+    width: 100%;
+    height: 45vw;
+    transform: scale(0.9);
+    -o-object-fit: cover;
+       object-fit: cover;
+    transition: 1s;
+  }
+  .concept .fifth-page .swiper .swiper-wrapper .swiper-slide-active .imgBox img {
+    transform: scale(1);
+  }
+}
 .portfolio {
   width: 100%;
 }
@@ -2622,13 +2894,13 @@ header .progress-bar {
 }
 .portfolio .second-page-content .content-box-top .box p {
   opacity: 0.8;
-  font-size: 1.7vw;
+  font-size: var(--ch_l_text);
   font-weight: 700;
   margin-right: 1.4vw;
 }
 .portfolio .second-page-content .content-box-top .box h4 {
   color: #56B87E;
-  font-size: 1.7vw;
+  font-size: var(--ch_l_text);
 }
 .portfolio .second-page-content .content-box-top img {
   width: 15vw;
@@ -2636,7 +2908,7 @@ header .progress-bar {
   transition: 0.8s;
 }
 .portfolio .second-page-content .content-box-bottom p {
-  font-size: 1.3vw;
+  font-size: var(--ch_m_text);
   opacity: 0.6;
   line-height: 1.7em;
 }
@@ -2676,7 +2948,7 @@ header .progress-bar {
   order: -1;
 }
 .portfolio .second-page-content :nth-child(even) .content-box-bottom p {
-  font-size: 1.3vw;
+  font-size: var(--ch_m_text);
   opacity: 0.6;
 }
 .portfolio .second-page-content > :last-child {
@@ -2734,7 +3006,7 @@ header .progress-bar {
 .contact .first-page .form form .form-box label {
   display: flex;
   align-items: center;
-  font-size: 0.9vw;
+  font-size: var(--ch_xs_text);
   color: #fff;
   margin-bottom: 0.3vw;
 }
@@ -2749,7 +3021,7 @@ header .progress-bar {
   width: 21vw;
   outline: none;
   color: #fff;
-  font-size: 0.9vw;
+  font-size: var(--ch_xs_text);
 }
 .contact .first-page .form form > :last-child {
   display: flex;
@@ -2821,7 +3093,7 @@ header .progress-bar {
 .login .content-box .content-sign {
   display: flex;
   width: 100%;
-  font-size: 1.1vw;
+  font-size: var(--ch_s_text);
   margin: 1vw 0 2vw;
 }
 .login .content-box .content-sign div {
@@ -2838,7 +3110,7 @@ header .progress-bar {
   font-weight: 600;
 }
 .login .content-box .content-sign div p span {
-  font-size: 0.9vw;
+  font-size: var(--ch_xs_text);
 }
 .login .content-box .content-sign .signIn {
   position: relative;
@@ -2889,7 +3161,7 @@ header .progress-bar {
   outline: none;
   border-radius: 40px;
   padding: 0.5vw;
-  font-size: 1vw;
+  font-size: var(--more_text);
   color: rgba(0, 0, 0, 0.5);
 }
 .login .content-box form .form-box input[type=submit] {
@@ -3100,7 +3372,7 @@ header .progress-bar {
   margin-top: 5px;
 }
 .smart .second-page-para .para1 h4 {
-  font-size: 1vw;
+  font-size: var(--more_text);
   font-weight: 300;
 }
 .smart .second-page-para .para2 {
@@ -3132,7 +3404,7 @@ header .progress-bar {
 }
 .smart .second-page-para .para3 p {
   color: #56B87E;
-  font-size: 1.3vw;
+  font-size: var(--ch_m_text);
   letter-spacing: 0.2em;
   font-weight: 300;
 }

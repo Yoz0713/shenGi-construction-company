@@ -60,7 +60,7 @@
                 position: relative;
                 align-items: flex-end;
                 margin-right: 2.5vw;
-                font-size: $ch_s_text;
+                font-size: var(--ch_s_text);
                 writing-mode: vertical-lr;
 
                 h2 {
@@ -87,7 +87,7 @@
             }
 
             .ch-box {
-                font-size: $ch_m_text;
+                font-size: var(--ch_m_text);
                 writing-mode: vertical-rl;
                 margin-top: 6vw;
 
@@ -105,12 +105,16 @@
             margin-right: 1vw;
 
             p {
-                font-size: $ch_s_text;
+                font-size: var(--ch_s_text);
                 letter-spacing: 0.3em;
                 line-height: 2.5;
                 margin-bottom: -3.5vw;
                 color: $para_color;
                 opacity: 0.8;
+
+                span {
+                    color: $green_color;
+                }
             }
         }
 
@@ -168,7 +172,7 @@
 
             p {
                 position: absolute;
-                font-size: $ch_m_text;
+                font-size: var(--ch_m_text);
                 font-weight: 600;
                 letter-spacing: 0.2em;
                 left: 6vw;
@@ -178,8 +182,8 @@
 
                 span {
                     margin-left: 0.5vw;
-                    font-size: $ch_l_text;
-                    color: #000;
+                    font-size: var(--ch_l_text);
+                    color: $green_color;
 
                 }
             }
@@ -191,7 +195,7 @@
             top: 28vw;
 
             p {
-                font-size: $ch_s_text;
+                font-size: var(--ch_s_text);
                 letter-spacing: 0.15em;
                 line-height: 2.3;
                 color: $para_color;
@@ -237,7 +241,7 @@
             margin-top: 13.5vw;
 
             p {
-                font-size: $ch_s_text;
+                font-size: var(--ch_s_text);
                 letter-spacing: 0.15em;
                 line-height: 2.3;
                 color: $para_color;
@@ -257,7 +261,7 @@
                 position: relative;
 
                 margin-right: 2.5vw;
-                font-size: $ch_s_text;
+                font-size: var(--ch_s_text);
                 writing-mode: vertical-lr;
 
                 h2 {
@@ -285,7 +289,7 @@
             }
 
             .ch-box {
-                font-size: $ch_m_text;
+                font-size: var(--ch_m_text);
                 writing-mode: vertical-rl;
                 margin-top: 3vw;
                 margin-right: 2vw;
@@ -359,6 +363,273 @@
                             transform: scale(1);
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:1039px) {
+    .concept {
+        .first-page {
+            padding-top: 10vw;
+            margin-bottom: 12vw;
+            width: 100%;
+
+            &-bg {
+                position: relative;
+                width: 100%;
+                height: 60vw;
+
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+
+                }
+
+
+                &> :nth-child(3) {
+                    width: 45vw;
+
+                }
+
+
+            }
+        }
+
+        .second-page {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 90%;
+            margin: 0 0 0 auto;
+            margin-bottom: 20vw;
+
+            &-title {
+                display: flex;
+                margin: 0 6vw 7vw 0vw;
+                padding-top: 3vw;
+                order: -1;
+
+                .en-box {
+                    margin-right: 4vw;
+                }
+
+                .ch-box {
+
+                    writing-mode: vertical-rl;
+                    margin-top: 15vw;
+                    font-size: var(--ch_m_text);
+
+                    h2 {
+                        letter-spacing: 0.5em;
+                        font-family: 'Noto Serif TC', sans-serif;
+                    }
+                }
+            }
+
+            &-para {
+                width: 75%;
+                order: 2;
+
+                p {
+                    font-size: var(--ch_s_text);
+
+
+                    br {
+                        display: none;
+                    }
+
+                }
+            }
+
+            &-bg {
+                order: 1;
+
+                img {
+                    width: 65vw;
+                    clip-path: none;
+                }
+            }
+        }
+
+        .third-page {
+            width: 80%;
+            margin: 0 auto;
+            height: fit-content;
+            margin-bottom: 25vw;
+            position: relative;
+
+            &-bg {
+                display: flex;
+                flex-direction: column;
+
+
+                img {
+                    position: static;
+                }
+
+                & :nth-child(1) {
+                    width: 50vw;
+                    margin-bottom: 20vw;
+                }
+
+                & :nth-child(2) {
+                    width: 50vw;
+                    align-self: flex-end;
+                    margin-bottom: 50vw;
+                }
+
+                & :nth-child(3) {
+                    width: 100%;
+
+                }
+            }
+
+            &-para1 {
+
+                position: static;
+                width: fit-content;
+                height: fit-content;
+                background-color: transparent;
+                clip-path: none;
+                margin: 0 auto 10vw;
+
+                p {
+                    position: static;
+
+                    text-align: center;
+
+                    span {
+                        margin-left: 0;
+                        margin-top: 2.5vw;
+                        font-size: var(--ch_l_text);
+                        color: $green_color;
+
+                    }
+                }
+            }
+
+            &-para2 {
+                position: absolute;
+                right: auto;
+                left: 0;
+                top: 185vw;
+
+                p {
+                    br {
+                        display: none;
+                    }
+                }
+            }
+
+            .box1 {
+                position: absolute;
+                left: 5vw;
+                bottom: auto;
+                top: 98vw;
+                width: 8.5vw;
+                height: 10vw;
+            }
+
+            .box2 {
+                position: absolute;
+                right: 0;
+                bottom: 109vw;
+                width: 8.5vw;
+                height: 10vw;
+            }
+        }
+
+        .forth-page {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 80%;
+            margin: 0 auto;
+            position: relative;
+            margin-bottom: 15vw;
+
+            &-bg {
+                margin-left: -2vw;
+
+                img {
+                    width: 50vw;
+                }
+            }
+
+            &-para {
+                margin-left: 5vw;
+                margin-top: 13.5vw;
+                order: 3;
+
+                p {
+                    font-size: var(--ch_s_text);
+
+
+                    &:not(:last-child) {
+                        margin-bottom: 10vw;
+                    }
+                }
+            }
+
+            &-title {
+                display: flex;
+                padding-top: 3vw;
+
+                .en-box {
+                    margin-right: 4vw;
+                }
+
+                .ch-box {
+                    margin-top: 10vw;
+                }
+            }
+
+            .box {
+                position: absolute;
+                left: -12%;
+                top: 19vw;
+                z-index: -1;
+                width: 100vw;
+                height: 40vw;
+                background-color: #F6F6F6;
+            }
+        }
+
+        .fifth-page {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 12vw;
+
+            .swiper {
+
+                .swiper-wrapper {
+
+                    .swiper-slide {
+
+                        .imgBox {
+                            img {
+                                width: 100%;
+                                height: 45vw;
+                                transform: scale(0.9);
+                                object-fit: cover;
+                                transition: 1s;
+                            }
+                        }
+                    }
+
+                    .swiper-slide-active {
+                        .imgBox {
+                            img {
+                                transform: scale(1);
+                            }
+                        }
+                    }
+
                 }
             }
         }

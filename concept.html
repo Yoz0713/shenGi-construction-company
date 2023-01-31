@@ -121,9 +121,9 @@
                 </div>
             </div>
             <div class="second-page-para">
-                <p>源自40年建築老字「森聯機構」同根生，<br>
+                <p>源自40年建築老字 <span>「森聯機構」</span>同根生，<br>
                     近半世紀營造專業穩健實力，隨著世代交替的蛻變新生，<br>
-                    自創「森鉅」品牌非橫空出世。<br>
+                    自創<span>「森鉅」</span>品牌非橫空出世。<br>
                     融合科技人的理性及創意人熱情，追求建築精神獨立與自由，<br>
                     專注把每一件事做好，大膽創意不受捆綁，精工專研，<br>
                     未來期許，不斷呈現出建築嶄新的視野與格局。</p>
@@ -133,14 +133,16 @@
             </div>
         </section>
         <section class="third-page">
+            <div class="third-page-para1">
+                <p>雲世代 新思維建築家 <br class="phone"> <span>森鉅建築</span></p>
+            </div>
             <div class="third-page-bg">
                 <img src="./img/concept/third-page-bg1.webp">
-                <img src="./img/concept/third-page-bg2.webp">
                 <img src="./img/concept/third-page-bg3.webp">
+                <img src="./img/concept/third-page-bg2.webp">
+
             </div>
-            <div class="third-page-para1">
-                <p>雲世代 新思維建築家 <span>森鉅建築</span></p>
-            </div>
+
             <div class="third-page-para2">
                 <p>如同老子『抱一』哲學<br>
                     把世界價值錯綜複雜<br>
@@ -236,8 +238,17 @@
             const swiper1 = new Swiper(".fifth-page .swiper", {
                 loop: true,
                 autoplay: true,
-                slidesPerView: 3,
+                slidesPerView: 1.3,
                 centeredSlides: true,
+                breakpoints: {
+                    500: {  //当屏幕宽度大于等于500
+                        slidesPerView: 1.5,
+                    },
+
+                    1039: {  //当屏幕宽度大于等于1039
+                        slidesPerView: 3,
+                    }
+                }
             })
 
 

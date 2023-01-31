@@ -79,7 +79,7 @@
                 }
 
                 h4 {
-                    font-size: $more_text;
+                    font-size: var(--more_text);
                     font-weight: 300;
                 }
             }
@@ -112,7 +112,7 @@
 
                 p {
                     color: #56B87E;
-                    font-size: $ch_m_text;
+                    font-size: var(--ch_m_text);
                     letter-spacing: 0.2em;
                     font-weight: 300;
                 }

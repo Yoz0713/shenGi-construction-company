@@ -118,14 +118,14 @@
 
                         p {
                             opacity: 0.8;
-                            font-size: $ch_l_text;
+                            font-size: var(--ch_l_text);
                             font-weight: 700;
                             margin-right: 1.4vw;
                         }
 
                         h4 {
                             color: $green_color;
-                            font-size: $ch_l_text;
+                            font-size: var(--ch_l_text);
                         }
                     }
 
@@ -140,7 +140,7 @@
 
                 &-bottom {
                     p {
-                        font-size: $ch_m_text;
+                        font-size: var(--ch_m_text);
                         opacity: 0.6;
                         line-height: 1.7em;
                     }
@@ -200,7 +200,7 @@
 
                 .content-box-bottom {
                     p {
-                        font-size: $ch_m_text;
+                        font-size: var(--ch_m_text);
                         opacity: 0.6;
                     }
                 }

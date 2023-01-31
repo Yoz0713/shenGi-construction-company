@@ -2,15 +2,20 @@ $en_style: 'Cormorant Garamond', serif;
 $gray_color: #999999;
 $para_color: #010101;
 $green_color: #56B87E;
-$ch_xs_text: 0.9vw;
-$more_text: 1vw;
-$ch_s_text: 1.1vw;
-$ch_m_text: 1.3vw;
-$ch_l_text: 1.7vw;
+
+:root {
+    --ch_xs_text: 0.9vw;
+    --more_text: 1vw;
+    --ch_s_text: 1.1vw;
+    --ch_m_text: 1.3vw;
+    --ch_l_text: 1.7vw;
+}
+
+
 
 @mixin para {
     line-height: 2.5em;
-    font-size: $ch_s_text;
+    font-size: 1.1vw;
     opacity: 0.8;
     font-weight: 300;
     letter-spacing: 0.2em;
@@ -345,6 +350,16 @@ header {
 }
 
 @media all and(max-width:1039px) {
+    :root {
+        --ch_xs_text: 0.9vw;
+        --more_text: 1vw;
+        --ch_s_text: 2.8vw;
+        --ch_m_text: 3.5vw;
+        --ch_l_text: 4vw;
+    }
+
+
+
     .computer {
         display: none;
     }
@@ -551,7 +566,7 @@ header {
 
             .close {
                 img {
-                    width: 10vw;
+                    width: 9vw;
                 }
             }
 
@@ -596,6 +611,89 @@ header {
                         }
                     }
                 }
+            }
+        }
+
+        header {
+            padding: 0vw 5vw;
+
+            .logoBox {
+                img {
+
+                    width: 18vw;
+                    margin-bottom: -1vw;
+                }
+            }
+
+            .toolBox {
+                .user-area {
+
+
+
+                    img {
+                        width: 5vw;
+                    }
+
+                    p {
+                        font-size: 3.2vw;
+                    }
+
+                    .arrow {
+                        width: 5vw;
+                    }
+
+
+
+                    &-menu {
+
+
+                        ul {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            width: 100%;
+
+
+                            li {
+                                font-size: 3.2vw;
+                                margin-top: 2.5vw;
+                                cursor: pointer;
+                            }
+
+                            & :not(:last-child) {
+                                padding-bottom: 3.5vw;
+                                border-bottom: 1px solid rgba(0, 0, 0, 0.308);
+                            }
+                        }
+                    }
+                }
+
+                .menu-button {
+                    display: flex;
+                    align-items: center;
+                    color: #000;
+                    cursor: pointer;
+
+                    & :nth-child(1) {
+                        font-size: 9vw;
+
+                    }
+
+                    & :nth-child(2) {
+                        font-size: 3.2vw;
+
+                    }
+                }
+            }
+
+
+            .progress-bar {
+                width: 0;
+                height: 4px;
+                background-color: #000;
+                position: absolute;
+                bottom: -3px;
+                left: 0;
             }
         }
     }

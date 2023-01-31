@@ -60,7 +60,7 @@
                     label {
                         display: flex;
                         align-items: center;
-                        font-size: $ch_xs_text;
+                        font-size: var(--ch_xs_text);
                         color: #fff;
                         margin-bottom: 0.3vw;
 
@@ -78,7 +78,7 @@
 
                         outline: none;
                         color: #fff;
-                        font-size: $ch_xs_text;
+                        font-size: var(--ch_xs_text);
                     }
 
                 }

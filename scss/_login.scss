@@ -64,7 +64,7 @@ $light-green: #1262338e;
             .content-sign {
                 display: flex;
                 width: 100%;
-                font-size: $ch_s_text;
+                font-size: var(--ch_s_text);
                 margin: 1vw 0 2vw;
 
                 div {
@@ -83,7 +83,7 @@ $light-green: #1262338e;
                         font-weight: 600;
 
                         span {
-                            font-size: $ch_xs_text;
+                            font-size: var(--ch_xs_text);
                         }
                     }
                 }
@@ -151,7 +151,7 @@ $light-green: #1262338e;
                         outline: none;
                         border-radius: 40px;
                         padding: 0.5vw;
-                        font-size: $more_text;
+                        font-size: var(--more_text);
                         color: rgba(0, 0, 0, 0.5);
                     }
 
