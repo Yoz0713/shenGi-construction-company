@@ -19,11 +19,11 @@
         .first-page {
             position: relative;
             width: 100%;
+            height: 51.5vw;
 
             .imgBox {
                 width: 100%;
-                height: 220vw;
-                max-height: 100vh;
+                height: 100%;
                 transform: translate3d(0, 0, 0);
 
                 >img {
@@ -162,8 +162,7 @@
 
         .second-page {
             width: 100%;
-            height: 220vw;
-            max-height: 100vh;
+            height: 51.5vw;
             position: absolute;
             right: 0;
             top: 0;
@@ -400,8 +399,7 @@
 
         .third-page {
             width: 100%;
-            height: 220vw;
-            max-height: 100vh;
+            height: 51.5vw;
             position: absolute;
             right: 0;
             top: 0;
@@ -648,8 +646,7 @@
         .forth-page {
 
             width: 100%;
-            height: 220vw;
-            max-height: 100vh;
+            height: 51.5vw;
             position: absolute;
             overflow: hidden;
             left: 0;
@@ -853,7 +850,7 @@
             left: 0;
             top: 0;
             width: 100%;
-            height: 100%;
+            height: 51.5vw;
 
             .content {
 
@@ -862,8 +859,10 @@
                 pointer-events: none;
 
                 video {
+                    position: relative;
                     width: 100%;
                     height: 100%;
+                    z-index: 2;
                 }
 
                 .paraBox {
@@ -872,6 +871,8 @@
                     align-items: center;
                     width: 100%;
                     margin-top: -2.5vw;
+                    position: relative;
+                    z-index: 5;
 
                     h4,
                     h6 {
@@ -910,6 +911,7 @@
         .index {
             .first-page {
                 z-index: 10;
+                height: 145vw;
 
                 .imgBox {
                     margin-top: 7vw;
@@ -1010,6 +1012,7 @@
                 clip-path: url(#clipPath1);
                 background-color: #fff;
                 z-index: 9;
+                height: 145vw;
 
                 &-bg {
 
@@ -1151,6 +1154,7 @@
             .third-page {
 
                 z-index: 8;
+                height: 145vw;
 
                 &-bg {
 
@@ -1261,6 +1265,7 @@
 
             .forth-page {
 
+                height: 145vw;
 
                 &-para {
                     position: relative;
@@ -1355,7 +1360,7 @@
                 left: 0;
                 top: 0;
                 width: 100%;
-                height: 100%;
+                height: 145vw;
 
                 .content {
 
@@ -1405,5 +1410,31 @@
         }
 
 
+    }
+
+    @media all and (max-width:500px) {
+        .container {
+            .index {
+                .first-page {
+                    height: 220vw;
+                }
+
+                .second-page {
+                    height: 220vw;
+                }
+
+                .third-page {
+                    height: 220vw;
+                }
+
+                .forth-page {
+                    height: 220vw;
+                }
+
+                .fifth-page {
+                    height: 220vw;
+                }
+            }
+        }
     }
 }

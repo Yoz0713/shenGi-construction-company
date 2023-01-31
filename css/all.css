@@ -381,11 +381,11 @@ header .progress-bar {
 .container .index .first-page {
   position: relative;
   width: 100%;
+  height: 51.5vw;
 }
 .container .index .first-page .imgBox {
   width: 100%;
-  height: 220vw;
-  max-height: 100vh;
+  height: 100%;
   transform: translate3d(0, 0, 0);
 }
 .container .index .first-page .imgBox > img {
@@ -502,8 +502,7 @@ header .progress-bar {
 }
 .container .index .second-page {
   width: 100%;
-  height: 220vw;
-  max-height: 100vh;
+  height: 51.5vw;
   position: absolute;
   right: 0;
   top: 0;
@@ -700,8 +699,7 @@ header .progress-bar {
 }
 .container .index .third-page {
   width: 100%;
-  height: 220vw;
-  max-height: 100vh;
+  height: 51.5vw;
   position: absolute;
   right: 0;
   top: 0;
@@ -923,8 +921,7 @@ header .progress-bar {
 }
 .container .index .forth-page {
   width: 100%;
-  height: 220vw;
-  max-height: 100vh;
+  height: 51.5vw;
   position: absolute;
   overflow: hidden;
   left: 0;
@@ -1095,7 +1092,7 @@ header .progress-bar {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 51.5vw;
 }
 .container .index .fifth-page .content {
   width: 36%;
@@ -1103,8 +1100,10 @@ header .progress-bar {
   pointer-events: none;
 }
 .container .index .fifth-page .content video {
+  position: relative;
   width: 100%;
   height: 100%;
+  z-index: 2;
 }
 .container .index .fifth-page .content .paraBox {
   display: flex;
@@ -1112,6 +1111,8 @@ header .progress-bar {
   align-items: center;
   width: 100%;
   margin-top: -2.5vw;
+  position: relative;
+  z-index: 5;
 }
 .container .index .fifth-page .content .paraBox h4,
 .container .index .fifth-page .content .paraBox h6 {
@@ -1136,6 +1137,7 @@ header .progress-bar {
 @media all and (max-width: 1039px) {
   .container .index .first-page {
     z-index: 10;
+    height: 145vw;
   }
   .container .index .first-page .imgBox {
     margin-top: 7vw;
@@ -1212,6 +1214,7 @@ header .progress-bar {
             clip-path: url(#clipPath1);
     background-color: #fff;
     z-index: 9;
+    height: 145vw;
   }
   .container .index .second-page-bg {
     z-index: 1;
@@ -1307,6 +1310,7 @@ header .progress-bar {
   }
   .container .index .third-page {
     z-index: 8;
+    height: 145vw;
   }
   .container .index .third-page-bg img {
     position: absolute;
@@ -1377,6 +1381,9 @@ header .progress-bar {
   }
   .container .index .third-page-paraBox ul p {
     margin: 0 2vw;
+  }
+  .container .index .forth-page {
+    height: 145vw;
   }
   .container .index .forth-page-para {
     position: relative;
@@ -1455,7 +1462,7 @@ header .progress-bar {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 145vw;
   }
   .container .index .fifth-page .content {
     width: 90%;
@@ -1491,6 +1498,23 @@ header .progress-bar {
   }
   .container .index .fifth-page .content .paraBox h6 .dot {
     font-size: 0.5vw;
+  }
+}
+@media all and (max-width: 1039px) and (max-width: 500px) {
+  .container .index .first-page {
+    height: 220vw;
+  }
+  .container .index .second-page {
+    height: 220vw;
+  }
+  .container .index .third-page {
+    height: 220vw;
+  }
+  .container .index .forth-page {
+    height: 220vw;
+  }
+  .container .index .fifth-page {
+    height: 220vw;
   }
 }
 .construction .first-page {
