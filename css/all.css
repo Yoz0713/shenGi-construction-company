@@ -4261,6 +4261,10 @@ footer p span {
   .company .forth-page-bottom .active {
     flex: 0 1 60%;
   }
+  .company .forth-page-bottom .active .imgBox img {
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%;
+  }
   .company .forth-page-bottom .active .paraBox span {
     opacity: 1;
   }

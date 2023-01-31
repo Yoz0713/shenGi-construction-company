@@ -687,6 +687,12 @@
                 .active {
                     flex: 0 1 60%;
 
+                    .imgBox {
+                        img {
+                            object-position: 50% 50%;
+                        }
+                    }
+
                     .paraBox {
                         span {
                             opacity: 1;
