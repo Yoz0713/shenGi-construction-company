@@ -561,9 +561,9 @@ header {
     @media all and (max-width: 500px) {
         :root {
             --ch_xs_text: 0.9vw;
-            --more_text: 1vw;
+            --more_text: 2.6vw;
             --ch_s_text: 3.5vw;
-            --ch_m_text: 4vw;
+            --ch_m_text: 3.7vw;
             --ch_l_text: 4.5vw;
         }
 
@@ -580,7 +580,7 @@ header {
 
             ul {
                 margin-top: 20vw;
-                margin-left: 18vw;
+                margin-left: 14vw;
 
                 li {
                     font-size: 4.8vw;

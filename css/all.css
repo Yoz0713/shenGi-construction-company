@@ -433,9 +433,9 @@ header .progress-bar {
 @media all and (max-width: 1039px) and (max-width: 500px) {
   :root {
     --ch_xs_text: 0.9vw;
-    --more_text: 1vw;
+    --more_text: 2.6vw;
     --ch_s_text: 3.5vw;
-    --ch_m_text: 4vw;
+    --ch_m_text: 3.7vw;
     --ch_l_text: 4.5vw;
   }
   .menu {
@@ -448,7 +448,7 @@ header .progress-bar {
   }
   .menu ul {
     margin-top: 20vw;
-    margin-left: 18vw;
+    margin-left: 14vw;
   }
   .menu ul li {
     font-size: 4.8vw;
@@ -2366,7 +2366,7 @@ header .progress-bar {
   position: relative;
   align-items: flex-end;
   margin-right: 2.5vw;
-  font-size: var(--ch_s_text);
+  font-size: var(--more_text);
   -ms-writing-mode: tb-lr;
       writing-mode: vertical-lr;
 }
@@ -2535,7 +2535,7 @@ header .progress-bar {
   display: flex;
   position: relative;
   margin-right: 2.5vw;
-  font-size: var(--ch_s_text);
+  font-size: var(--more_text);
   -ms-writing-mode: tb-lr;
       writing-mode: vertical-lr;
 }
@@ -2843,14 +2843,24 @@ header .progress-bar {
     width: 80%;
   }
   .concept .third-page-bg :nth-child(1) {
+    width: 60vw;
     margin-bottom: 25vw;
   }
   .concept .third-page-bg :nth-child(2) {
+    width: 60vw;
     margin-bottom: 65vw;
+  }
+  .concept .third-page-bg :nth-child(3) {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .concept .third-page-para2 {
+    top: 210vw;
   }
   .concept .third-page .box1 {
     width: 9.5vw;
     height: 12vw;
+    top: 110vw;
   }
   .concept .third-page .box2 {
     position: absolute;

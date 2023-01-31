@@ -60,7 +60,7 @@
                 position: relative;
                 align-items: flex-end;
                 margin-right: 2.5vw;
-                font-size: var(--ch_s_text);
+                font-size: var(--more_text);
                 writing-mode: vertical-lr;
 
                 h2 {
@@ -261,7 +261,7 @@
                 position: relative;
 
                 margin-right: 2.5vw;
-                font-size: var(--ch_s_text);
+                font-size: var(--more_text);
                 writing-mode: vertical-lr;
 
                 h2 {
@@ -676,27 +676,36 @@
             }
 
             .third-page {
-
-
                 &-bg {
 
 
                     & :nth-child(1) {
+                        width: 60vw;
                         margin-bottom: 25vw;
                     }
 
                     & :nth-child(2) {
+                        width: 60vw;
                         margin-bottom: 65vw;
                     }
 
+                    & :nth-child(3) {
+                        width: 95%;
+                        margin: 0 auto;
+                    }
 
                 }
 
+                &-para2 {
+                    top: 210vw;
+
+                }
 
 
                 .box1 {
                     width: 9.5vw;
                     height: 12vw;
+                    top: 110vw;
                 }
 
                 .box2 {
