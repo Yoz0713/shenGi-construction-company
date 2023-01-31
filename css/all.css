@@ -528,6 +528,26 @@ header .progress-bar {
     bottom: -3px;
     left: 0;
   }
+  .loading-page {
+    height: 220vw;
+  }
+  .loading-page .contentBox {
+    top: 40vw;
+  }
+  .loading-page .contentBox .svgBox {
+    width: 80vw;
+    height: 30vw;
+    transform: scale(2);
+  }
+  .loading-page .titleBox {
+    padding-top: 32vw;
+  }
+  .loading-page .titleBox h1 {
+    font-size: 7.5vw;
+  }
+  .loading-page .titleBox h5 {
+    font-size: 2.8vw;
+  }
 }
 .container {
   width: 100%;

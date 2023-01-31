@@ -704,5 +704,34 @@ header {
                 left: 0;
             }
         }
+
+        .loading-page {
+            height: 220vw;
+
+            .contentBox {
+
+                top: 40vw;
+
+                .svgBox {
+                    width: 80vw;
+                    height: 30vw;
+                    transform: scale(2);
+                }
+            }
+
+            .titleBox {
+
+                padding-top: 32vw;
+
+                h1 {
+                    font-size: 7.5vw;
+                }
+
+                h5 {
+                    font-size: 2.8vw;
+                }
+
+            }
+        }
     }
 }
