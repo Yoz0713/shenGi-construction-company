@@ -581,7 +581,7 @@ header .progress-bar {
   text-align: start;
   color: #3e3a39;
   position: relative;
-  transform: translateY(80vh);
+  transform: translateY(45vw);
 }
 .container .index .second-page-paraBox .para h4::after {
   display: block;
@@ -610,7 +610,7 @@ header .progress-bar {
   text-align: start;
   color: #3E3A39;
   position: relative;
-  transform: translateY(80vh);
+  transform: translateY(45vw);
 }
 .container .index .second-page-paraBox .para h3::after {
   display: block;
@@ -649,7 +649,7 @@ header .progress-bar {
   font-size: 1.3vw;
   letter-spacing: 0.1em;
   color: #1A1A1A;
-  transform: translateY(80vh);
+  transform: translateY(45vw);
 }
 .container .index .second-page-paraBox .para h2 .dot {
   font-size: 0.8vw;

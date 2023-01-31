@@ -643,10 +643,10 @@
                 //animation start
 
                 gg.to(".first-page .paraBox", {
-                    y: "-100vh",
+                    y: "-100%",
                     duration: 10,
                 }).to(".loading-page", {
-                    y: "-100vh",
+                    y: "-100%",
                     duration: 10,
 
                 }, "<").to(".first-page .imgBox > img", {
@@ -924,13 +924,13 @@
                     filter: "blur(4px)",
                     duration: 2.5,
                 }, "<").fromTo(".forth-page-bg .imgBox", {
-                    y: "120vh"
+                    y: "160%"
                 }, {
-                    y: "0vh",
+                    y: "0",
                     duration: 10,
                     stagger: 1
                 }, "<+3").fromTo(".forth-page-bg .left-top-box", {
-                    y: "-50vh"
+                    y: "-100%"
                 }, {
                     y: 0,
                     duration: 10,
@@ -1049,7 +1049,7 @@
                 })
 
                 let st = ScrollTrigger.create({
-                    scrub: 4,
+                    scrub: 1.5,
                     pin: ".index",
                     toggleActions: "play none none reverse",
                     end: "+=27000",
@@ -1079,10 +1079,10 @@
                 //animation start
 
                 gg.to(".first-page .paraBox", {
-                    y: "-100vh",
+                    y: "-100%",
                     duration: 10,
                 }).to(".loading-page", {
-                    y: "-100vh",
+                    y: "-100%",
                     duration: 10,
 
                 }, "<").to(".first-page .imgBox > img", {
@@ -1198,7 +1198,7 @@
                 }, "<+1").from(".second-page .circle", {
                     scale: 0,
 
-                    duration: 10
+                    duration: 6
                 }).to(".second-page .circle", {
                     rotate: 195,
 
@@ -1213,7 +1213,7 @@
                     transformOrigin: "left center"
                 }, {
                     scaleX: 0,
-                    duration: 16,
+                    duration: 10,
                     onUpdate: () => {
                         $(".second-page").css("clip-path", "none")
                         $(".second-page").css("clip-path", "url(#clipPath1)")
@@ -1223,7 +1223,7 @@
                 }, {
 
                     scaleX: 0,
-                    duration: 16,
+                    duration: 10,
                     onUpdate: () => {
                         $(".second-page").css("clip-path", "none")
                         $(".second-page").css("clip-path", "url(#clipPath1)")
@@ -1233,7 +1233,7 @@
                 }, {
                     x: 0,
                     duration: 6
-                }, "<+5.5").fromTo(".third-page-bg .paraBox h3", {
+                }, "<+8").fromTo(".third-page-bg .paraBox h3", {
                     x: "85vw"
                 }, {
                     x: 0,
@@ -1246,7 +1246,7 @@
                 }, {
                     x: 0,
                     duration: 10,
-                }, "<+3.5").to(".third-page-bg .paraBox h2", {
+                }, "<+5").to(".third-page-bg .paraBox h2", {
                     x: "-85vw",
                     duration: 10,
                 }, "<+3").to(".third-page-bg .paraBox h3", {
@@ -1327,12 +1327,12 @@
                     x: "105%",
                 }, {
                     x: "-180%",
-                    duration: 45
+                    duration: 35
                 }).fromTo(".forth-page-bg2 > :nth-child(2)", {
                     x: "-180%",
                 }, {
                     x: "180%",
-                    duration: 45
+                    duration: 35
                 }, "<").fromTo(".forth-page-para .box1", {
                     x: "30vw",
                     opacity: 0
@@ -1350,12 +1350,7 @@
                     opacity: 0,
                     duration: 6
 
-                }, ">+4.5").to(".forth-page-bg > div", {
-
-                    y: "-120vh",
-                    duration: 6,
-                    stagger: 0.5
-                }, "<+5").from(".fifth-page .content", {
+                }, ">+4.5").from(".fifth-page .content", {
                     y: "100vh",
                     opacity: 0,
                     duration: 6,
@@ -1410,7 +1405,7 @@
                             videoTitle.play()
                         }, 2800)
                     }
-                }, "<+1.5")
+                }, "<+11")
             }
         }
 
