@@ -294,7 +294,7 @@ function loadingPageAnimaiton(func) {
 //menu開啟關閉與模糊
 
 $(".close").click(() => {
-    $(".menu").css("right", "-30%")
+    $(".menu").css("right", "-100%")
     $(".index").css({
         filter: "blur(0px)"
     })

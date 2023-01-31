@@ -2,8 +2,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  height: 220vw;
-  max-height: 100vh;
+  height: 51.5vw;
   transition: filter 1s;
   overflow: hidden;
   background-color: #fff;
@@ -193,8 +192,7 @@ header .progress-bar {
   right: -30%;
   top: 0;
   width: 26vw;
-  height: 220vw;
-  max-height: 100vh;
+  height: 51.5vw;
   background-color: #fff;
   z-index: 20;
   padding: 1vw 1.5vw;
@@ -280,6 +278,9 @@ header .progress-bar {
   .phone {
     display: block;
   }
+  .loading-page {
+    height: 155vw;
+  }
   .loading-page .contentBox {
     top: 40vw;
   }
@@ -359,6 +360,101 @@ header .progress-bar {
     position: absolute;
     bottom: -3px;
     left: 0;
+  }
+  .menu {
+    position: fixed;
+    right: -100vw;
+    top: 0;
+    width: 100%;
+    height: 155vw;
+    background-color: #fff;
+    z-index: 20;
+    transition: right 1.5s;
+  }
+  .menu .close {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    cursor: pointer;
+  }
+  .menu .close img {
+    width: 6.5vw;
+  }
+  .menu ul {
+    margin-top: 16vw;
+    margin-left: 16vw;
+  }
+  .menu ul li {
+    font-size: 3.6vw;
+    margin-bottom: 10vw;
+    opacity: 1;
+  }
+  .menu ul li span {
+    font-size: 3.2vw;
+    margin-left: 2vw;
+  }
+  .menu ul li .sub-open {
+    margin: 6vw 0vw 10vw 4vw;
+  }
+  .menu ul li .sub-open li {
+    margin-bottom: 4vw;
+    font-size: 2.8vw;
+  }
+  .menu ul li .sub-open li span {
+    font-size: 2.6vw;
+  }
+  .menu ul li .sub-open li::before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: -3vw;
+    bottom: 0;
+    top: 0;
+    margin: auto 0;
+    width: 2%;
+    height: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+@media all and (max-width: 1039px) and (max-width: 500px) {
+  .menu {
+    right: -100vw;
+    width: 100%;
+    height: 220vw;
+  }
+  .menu .close img {
+    width: 10vw;
+  }
+  .menu ul {
+    margin-top: 20vw;
+    margin-left: 18vw;
+  }
+  .menu ul li {
+    font-size: 4.8vw;
+    margin-bottom: 13vw;
+    opacity: 1;
+  }
+  .menu ul li span {
+    font-size: 4.3vw;
+    margin-left: 2vw;
+  }
+  .menu ul li .sub-open {
+    margin: 8vw 0vw 18vw 7vw;
+  }
+  .menu ul li .sub-open li {
+    margin-bottom: 8.5vw;
+    font-size: 3.8vw;
+  }
+  .menu ul li .sub-open li span {
+    font-size: 3.5vw;
+  }
+  .menu ul li .sub-open li::before {
+    left: -5vw;
+    bottom: 0;
+    top: 0;
+    margin: auto 0;
+    width: 3%;
+    height: 3.5px;
   }
 }
 .container {
