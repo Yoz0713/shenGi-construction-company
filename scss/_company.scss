@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:ital,wght@1,600&display=swap');
+
 .company {
     width: 100%;
     overflow: hidden;
@@ -300,11 +302,18 @@
         h3 {
             @include title-s();
             margin-bottom: 4vw;
+
+            span {
+                color: $orange_color;
+            }
         }
 
         p {
             @include para();
 
+            span {
+                color: $orange_color;
+            }
         }
     }
 
@@ -710,6 +719,146 @@
 
                 }
             }
+        }
+
+        .fifth-page {
+
+            text-align: start;
+            width: 85%;
+            margin: 0 auto 25vw;
+
+            h3 {
+                font-size: var(--ch_l_text);
+                margin-bottom: 4vw;
+
+                span {
+                    color: $orange_color;
+                }
+            }
+
+            p {
+                @include para();
+
+                br {
+                    display: none;
+                }
+
+                span {
+                    color: $orange_color;
+                }
+            }
+        }
+
+        .sixth-page {
+            width: 100%;
+            position: relative;
+
+            &-bg {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    filter: brightness(0.4);
+                }
+            }
+
+            &-content {
+
+
+                .logoBox {
+                    width: 36vw;
+                    height: 36vw;
+                    margin-top: 8.2vw;
+
+                    img {
+                        width: 10vw;
+                    }
+
+                    &::after {
+                        width: 32vw;
+                        height: 32vw;
+
+                    }
+                }
+
+                .svgBox {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0vw;
+                    bottom: 0;
+                    margin: auto;
+                    width: 90vw;
+                    height: 90vw;
+
+                }
+
+                .paraBox {
+
+                    width: 70vw;
+                    height: 70vw;
+
+                    div {
+
+
+                        h5 {
+                            font-size: 3.5vw;
+                        }
+
+                        h6 {
+                            font-size: 2.5vw;
+                            font-weight: 300;
+                            opacity: 0.8;
+                        }
+                    }
+
+                    .para2,
+                    .para4,
+                    .para6 {
+                        h5 {
+                            margin-bottom: 5vw;
+                        }
+
+                        &::after {
+
+                            top: 6vw;
+
+                        }
+                    }
+
+                    .para1 {
+                        left: -3vw;
+                        top: 17vw;
+                    }
+
+                    .para2 {
+                        left: 0;
+                        right: 0;
+                        margin: 0 auto;
+                        top: 4.5vw;
+                    }
+
+                    .para3 {
+                        right: -3vw;
+                        top: 17vw;
+
+                    }
+
+                    .para4 {
+                        right: -1vw;
+                        bottom: 12vw;
+                    }
+
+                    .para5 {
+                        bottom: -8vw;
+                    }
+
+                    .para6 {
+                        left: -1vw;
+                    }
+                }
+            }
+
         }
     }
 

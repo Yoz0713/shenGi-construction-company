@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:ital,wght@1,600&display=swap");
 :root {
   --ch_xs_text: 0.9vw;
   --more_text: 1vw;
@@ -3951,12 +3952,18 @@ footer p span {
   letter-spacing: 0.2em;
   margin-bottom: 4vw;
 }
+.company .fifth-page h3 span {
+  color: #F0822B;
+}
 .company .fifth-page p {
   line-height: 2.5em;
   font-size: var(--ch_s_text);
   opacity: 0.8;
   font-weight: 300;
   letter-spacing: 0.2em;
+}
+.company .fifth-page p span {
+  color: #F0822B;
 }
 .company .sixth-page {
   width: 100%;
@@ -4269,6 +4276,110 @@ footer p span {
   }
   .company .forth-page-bottom :nth-child(5) .paraBox {
     left: 5.2vw;
+  }
+  .company .fifth-page {
+    text-align: start;
+    width: 85%;
+    margin: 0 auto 25vw;
+  }
+  .company .fifth-page h3 {
+    font-size: var(--ch_l_text);
+    margin-bottom: 4vw;
+  }
+  .company .fifth-page h3 span {
+    color: #F0822B;
+  }
+  .company .fifth-page p {
+    line-height: 2.5em;
+    font-size: var(--ch_s_text);
+    opacity: 0.8;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+  }
+  .company .fifth-page p br {
+    display: none;
+  }
+  .company .fifth-page p span {
+    color: #F0822B;
+  }
+  .company .sixth-page {
+    width: 100%;
+    position: relative;
+  }
+  .company .sixth-page-bg {
+    width: 100%;
+  }
+  .company .sixth-page-bg img {
+    width: 100%;
+    filter: brightness(0.4);
+  }
+  .company .sixth-page-content .logoBox {
+    width: 36vw;
+    height: 36vw;
+    margin-top: 8.2vw;
+  }
+  .company .sixth-page-content .logoBox img {
+    width: 10vw;
+  }
+  .company .sixth-page-content .logoBox::after {
+    width: 32vw;
+    height: 32vw;
+  }
+  .company .sixth-page-content .svgBox {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0vw;
+    bottom: 0;
+    margin: auto;
+    width: 90vw;
+    height: 90vw;
+  }
+  .company .sixth-page-content .paraBox {
+    width: 70vw;
+    height: 70vw;
+  }
+  .company .sixth-page-content .paraBox div h5 {
+    font-size: 3.5vw;
+  }
+  .company .sixth-page-content .paraBox div h6 {
+    font-size: 2.5vw;
+    font-weight: 300;
+    opacity: 0.8;
+  }
+  .company .sixth-page-content .paraBox .para2 h5,
+.company .sixth-page-content .paraBox .para4 h5,
+.company .sixth-page-content .paraBox .para6 h5 {
+    margin-bottom: 5vw;
+  }
+  .company .sixth-page-content .paraBox .para2::after,
+.company .sixth-page-content .paraBox .para4::after,
+.company .sixth-page-content .paraBox .para6::after {
+    top: 6vw;
+  }
+  .company .sixth-page-content .paraBox .para1 {
+    left: -3vw;
+    top: 17vw;
+  }
+  .company .sixth-page-content .paraBox .para2 {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 4.5vw;
+  }
+  .company .sixth-page-content .paraBox .para3 {
+    right: -3vw;
+    top: 17vw;
+  }
+  .company .sixth-page-content .paraBox .para4 {
+    right: -1vw;
+    bottom: 12vw;
+  }
+  .company .sixth-page-content .paraBox .para5 {
+    bottom: -8vw;
+  }
+  .company .sixth-page-content .paraBox .para6 {
+    left: -1vw;
   }
 }
 * {
