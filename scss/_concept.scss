@@ -634,4 +634,79 @@
             }
         }
     }
+
+    @media all and (max-width:500px) {
+        .concept {
+            .first-page {
+                padding-top: 13vw;
+                margin-bottom: 20vw;
+                width: 100%;
+
+
+            }
+
+            .second-page {
+                width: 90%;
+                margin-bottom: 20vw;
+
+                &-title {
+                    display: flex;
+                    margin: 0 4vw 7vw 0vw;
+                    padding-top: 3vw;
+                    order: -1;
+
+                    .en-box {
+                        margin-right: 3vw;
+                    }
+
+                    .ch-box {
+
+                        margin-top: 20vw;
+
+
+                    }
+                }
+
+                &-para {
+                    width: 80%;
+
+                }
+
+
+            }
+
+            .third-page {
+
+
+                &-bg {
+
+
+                    & :nth-child(1) {
+                        margin-bottom: 25vw;
+                    }
+
+                    & :nth-child(2) {
+                        margin-bottom: 65vw;
+                    }
+
+
+                }
+
+
+
+                .box1 {
+                    width: 9.5vw;
+                    height: 12vw;
+                }
+
+                .box2 {
+                    position: absolute;
+                    right: 0;
+                    bottom: 112vw;
+                    width: 9.5vw;
+                    height: 12vw;
+                }
+            }
+        }
+    }
 }

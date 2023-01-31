@@ -432,6 +432,13 @@ header .progress-bar {
   }
 }
 @media all and (max-width: 1039px) and (max-width: 500px) {
+  :root {
+    --ch_xs_text: 0.9vw;
+    --more_text: 1vw;
+    --ch_s_text: 3.5vw;
+    --ch_m_text: 4vw;
+    --ch_l_text: 4.5vw;
+  }
   .menu {
     right: -100vw;
     width: 100%;
@@ -2788,6 +2795,49 @@ header .progress-bar {
   }
   .concept .fifth-page .swiper .swiper-wrapper .swiper-slide-active .imgBox img {
     transform: scale(1);
+  }
+}
+@media all and (max-width: 1039px) and (max-width: 500px) {
+  .concept .first-page {
+    padding-top: 13vw;
+    margin-bottom: 20vw;
+    width: 100%;
+  }
+  .concept .second-page {
+    width: 90%;
+    margin-bottom: 20vw;
+  }
+  .concept .second-page-title {
+    display: flex;
+    margin: 0 4vw 7vw 0vw;
+    padding-top: 3vw;
+    order: -1;
+  }
+  .concept .second-page-title .en-box {
+    margin-right: 3vw;
+  }
+  .concept .second-page-title .ch-box {
+    margin-top: 20vw;
+  }
+  .concept .second-page-para {
+    width: 80%;
+  }
+  .concept .third-page-bg :nth-child(1) {
+    margin-bottom: 25vw;
+  }
+  .concept .third-page-bg :nth-child(2) {
+    margin-bottom: 65vw;
+  }
+  .concept .third-page .box1 {
+    width: 9.5vw;
+    height: 12vw;
+  }
+  .concept .third-page .box2 {
+    position: absolute;
+    right: 0;
+    bottom: 112vw;
+    width: 9.5vw;
+    height: 12vw;
   }
 }
 .portfolio {

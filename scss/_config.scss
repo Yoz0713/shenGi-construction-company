@@ -559,6 +559,14 @@ header {
     }
 
     @media all and (max-width: 500px) {
+        :root {
+            --ch_xs_text: 0.9vw;
+            --more_text: 1vw;
+            --ch_s_text: 3.5vw;
+            --ch_m_text: 4vw;
+            --ch_l_text: 4.5vw;
+        }
+
         .menu {
             right: -100vw;
             width: 100%;
