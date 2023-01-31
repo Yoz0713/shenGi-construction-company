@@ -1,6 +1,7 @@
 .concept {
     width: 100%;
 
+
     .first-page {
         padding-top: 3.5vw;
         margin-bottom: 8vw;
@@ -249,6 +250,10 @@
 
                 &:not(:last-child) {
                     margin-bottom: 2.5vw;
+                }
+
+                span {
+                    color: $green_color;
                 }
             }
         }
@@ -499,7 +504,7 @@
 
                 p {
                     position: static;
-
+                    font-size: var(--ch_l_text);
                     text-align: center;
 
                     span {
@@ -638,11 +643,19 @@
     @media all and (max-width:500px) {
         .concept {
             .first-page {
-                padding-top: 13vw;
+                padding-top: 0vw;
                 margin-bottom: 20vw;
+                margin-top: -10vw;
                 width: 100%;
 
+                &-bg {
+                    width: 100%;
+                    height: 70vw;
 
+                    img {
+                        object-position: 55% 100%;
+                    }
+                }
             }
 
             .second-page {
@@ -711,7 +724,7 @@
                 .box2 {
                     position: absolute;
                     right: 0;
-                    bottom: 112vw;
+                    bottom: 107vw;
                     width: 9.5vw;
                     height: 12vw;
                 }

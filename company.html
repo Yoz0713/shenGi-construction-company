@@ -13,6 +13,8 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;600;700;900&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:ital,wght@1,600&display=swap"
+        rel="stylesheet">
     <title>森鉅建設</title>
 </head>
 
@@ -146,7 +148,8 @@
         </section>
         <section class="third-page">
             <div class="third-page-bg">
-                <img src="./img/company/webp/third-page-bg.webp">
+                <img src="./img/company/webp/third-page-bg.webp" class="computer">
+                <img src="./img/company/webp/third-page-bg-ph.webp" class="phone">
             </div>
         </section>
         <section class="forth-page">
@@ -295,6 +298,11 @@
     <script src="./js/config.js"></script>
 
     <script>
+        window.onload = function () {
+            $(".forth-page-bottom .box").click((target) => {
+                $(target).toggleClass("active")
+            })
+        }
     </script>
 </body>
 

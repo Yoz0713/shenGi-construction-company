@@ -1,5 +1,6 @@
 .company {
     width: 100%;
+    overflow: hidden;
 
     .first-page {
         display: flex;
@@ -112,6 +113,7 @@
             right: 0;
             margin: 0 auto;
             bottom: 5vw;
+            width: 100%;
         }
     }
 
@@ -465,4 +467,250 @@
         }
 
     }
+}
+
+@media all and (max-width:1039px) {
+    .company {
+        .first-page {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 100%;
+            margin: 16vw 0 15vw auto;
+
+            &-title {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                margin-top: 10vw;
+
+                .logoBox {
+                    margin-right: 12vw;
+                    margin-top: -6vw;
+
+                    img {
+                        width: 25vw;
+                    }
+                }
+
+                .titleBox {
+                    order: -1;
+                    padding-left: 6vw;
+
+                    h1 {
+                        font-size: var(--ch_l_text);
+                    }
+
+                    h4 {
+                        font-size: 2.4vw;
+                    }
+
+                    &::after {
+                        width: 230%;
+                    }
+                }
+            }
+
+            &-bg {
+                width: 90%;
+                height: auto;
+                order: -1;
+
+            }
+        }
+
+        .second-page {
+            width: 100%;
+            position: relative;
+            margin-bottom: 30vw;
+
+            &-box {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                width: 92.5%;
+                margin: 0 auto 6vw 0;
+
+                .imgBox {
+                    img {
+                        width: 62vw;
+                    }
+                }
+
+                .paraBox {
+                    margin: 0;
+                    align-self: flex-end;
+                    margin-top: 15vw;
+
+                    p {
+                        text-align: end;
+                    }
+                }
+
+
+            }
+
+            .opposite {
+                .imgBox {
+                    align-self: flex-end;
+                    margin-right: 8vw;
+
+                    img {
+                        width: 55vw;
+                    }
+                }
+
+                .paraBox {
+                    margin: 0 0 15vw 10vw;
+                    align-self: flex-start;
+
+                    p {
+                        text-align: start;
+                    }
+                }
+            }
+
+            .bg {
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                bottom: 5vw;
+            }
+        }
+
+        .third-page {
+            width: 100%;
+            margin-bottom: 25vw;
+
+            &-bg {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .forth-page {
+            width: 100%;
+
+            &-top {
+
+                h4 {
+                    font-size: 2.4vw;
+                    font-weight: 300
+                }
+
+                h3 {
+                    font-size: var(--ch_l_text);
+                }
+            }
+
+            &-bottom {
+                display: flex;
+                flex-direction: column;
+                width: 85%;
+                height: 135vw;
+                margin: 0 auto 25vw;
+
+                .box {
+                    flex: 0 1 20%;
+                    height: auto;
+
+                    .imgBox {
+
+
+                        img {
+                            object-position: 50% 100%;
+                        }
+                    }
+
+                    .paraBox {
+                        position: absolute;
+                        width: fit-content;
+                        left: 3.8vw;
+                        bottom: 1.5vw;
+                        color: #fff;
+                        z-index: 5;
+
+                        span {
+                            font-size: 2.6vw;
+                            opacity: 0;
+                            transition: 1s;
+                            white-space: nowrap;
+                        }
+
+                        h6 {
+                            font-size: 3.2vw;
+                            margin-top: 1vw;
+                            font-weight: 400;
+
+                            &::after {
+                                left: -1.5vw;
+                                top: 1vw;
+
+                            }
+
+
+                        }
+                    }
+
+                    .numBox {
+                        position: absolute;
+                        right: 3.5vw;
+                        top: 1vw;
+                        color: #fff;
+                        z-index: 5;
+
+                        p {
+                            font-size: 10vw;
+                            font-family: 'Noto Serif Tamil', serif;
+                        }
+                    }
+
+
+                }
+
+                .active {
+                    flex: 0 1 60%;
+
+                    .paraBox {
+                        span {
+                            opacity: 1;
+
+                        }
+                    }
+
+                    &::before {
+                        opacity: 0;
+
+                    }
+
+                    &::after {
+                        opacity: 1;
+                        background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.842) 0%, rgba(255, 255, 255, 0) 100%);
+                    }
+
+                    h6::after {
+                        height: 70%;
+                    }
+                }
+
+                & :nth-child(5) {
+
+                    .paraBox {
+                        left: 5.2vw;
+                    }
+
+
+
+                }
+            }
+        }
+    }
+
 }

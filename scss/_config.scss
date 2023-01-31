@@ -15,14 +15,14 @@ $green_color: #56B87E;
 
 @mixin para {
     line-height: 2.5em;
-    font-size: 1.1vw;
+    font-size: var(--ch_s_text);
     opacity: 0.8;
     font-weight: 300;
     letter-spacing: 0.2em;
 }
 
 @mixin title-s {
-    font-size: 1.4vw;
+    font-size: var(--ch_m_text);
     font-weight: 600;
     letter-spacing: 0.2em;
 }
@@ -329,6 +329,28 @@ header {
     }
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+
+    z-index: 10;
+    background-color: #fff;
+    padding: 1.2vw 0;
+    border-top: 1px solid #000;
+
+    p {
+        font-size: 0.7vw;
+        letter-spacing: 0.1em;
+
+        span {
+            margin: 0 1vw;
+        }
+    }
+}
+
 //slice square init
 .clipPath {
     top: 0;
@@ -558,13 +580,30 @@ header {
         }
     }
 
+    footer {
+
+        padding: 5vw 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.5);
+
+        p {
+            font-size: 2.8vw;
+            text-align: center;
+            line-height: 2;
+            color: rgba(0, 0, 0, 0.5);
+
+            span {
+                margin: 0 1vw;
+            }
+        }
+    }
+
     @media all and (max-width: 500px) {
         :root {
             --ch_xs_text: 0.9vw;
             --more_text: 2.6vw;
             --ch_s_text: 3.5vw;
             --ch_m_text: 3.7vw;
-            --ch_l_text: 4.5vw;
+            --ch_l_text: 4.8vw;
         }
 
         .menu {
@@ -705,6 +744,18 @@ header {
             }
         }
 
+        footer {
+
+            padding: 6vw 0;
+
+            p {
+                font-size: 3.2vw;
+                text-align: center;
+                line-height: 2;
+                color: rgba(0, 0, 0, 0.5);
+            }
+        }
+
         .loading-page {
             height: 220vw;
 
@@ -733,5 +784,7 @@ header {
 
             }
         }
+
+
     }
 }
