@@ -41,6 +41,10 @@ html {
     overscroll-behavior-y: none;
 }
 
+body {
+    overscroll-behavior-y: none;
+}
+
 h1,
 h2,
 h3,
@@ -64,9 +68,6 @@ span {
     display: inline-block;
 }
 
-body {
-    overscroll-behavior-y: none;
-}
 
 // body::-webkit-scrollbar {
 //     display: none;
@@ -91,13 +92,15 @@ body {
 }
 
 @media all and (max-width:1039px) {
+
+
     html {
-        height: 155vw;
+        height: fit-content;
     }
 
     @media all and (max-width:500px) {
         html {
-            height: 220vw;
+            height: fit-content;
         }
     }
 }

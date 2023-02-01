@@ -19,7 +19,7 @@
         .first-page {
             position: relative;
             width: 100%;
-            height: 51.5vw;
+            height: 100vh;
 
             .imgBox {
                 width: 100%;
@@ -162,7 +162,7 @@
 
         .second-page {
             width: 100%;
-            height: 51.5vw;
+            height: 100vh;
             position: absolute;
             right: 0;
             top: 0;
@@ -399,7 +399,7 @@
 
         .third-page {
             width: 100%;
-            height: 51.5vw;
+            height: 100vh;
             position: absolute;
             right: 0;
             top: 0;
@@ -646,7 +646,7 @@
         .forth-page {
 
             width: 100%;
-            height: 51.5vw;
+            height: 100vh;
             position: absolute;
             overflow: hidden;
             left: 0;
@@ -850,7 +850,7 @@
             left: 0;
             top: 0;
             width: 100%;
-            height: 51.5vw;
+            height: 100vh;
 
             .content {
 
@@ -909,7 +909,11 @@
 
 @media all and (max-width:1039px) {
     .container {
+
         .index {
+
+            height: fit-content;
+
             .first-page {
                 z-index: 10;
                 height: 145vw;
@@ -1010,6 +1014,7 @@
             }
 
             .second-page {
+                position: static;
                 clip-path: url(#clipPath1);
                 background-color: #fff;
                 z-index: 9;

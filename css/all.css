@@ -314,6 +314,7 @@ footer p span {
   }
   .loading-page {
     height: 155vw;
+    position: absolute;
   }
   .loading-page .contentBox {
     top: 40vw;
@@ -610,7 +611,7 @@ footer p span {
 .container .index .first-page {
   position: relative;
   width: 100%;
-  height: 51.5vw;
+  height: 100vh;
 }
 .container .index .first-page .imgBox {
   width: 100%;
@@ -731,7 +732,7 @@ footer p span {
 }
 .container .index .second-page {
   width: 100%;
-  height: 51.5vw;
+  height: 100vh;
   position: absolute;
   right: 0;
   top: 0;
@@ -928,7 +929,7 @@ footer p span {
 }
 .container .index .third-page {
   width: 100%;
-  height: 51.5vw;
+  height: 100vh;
   position: absolute;
   right: 0;
   top: 0;
@@ -1150,7 +1151,7 @@ footer p span {
 }
 .container .index .forth-page {
   width: 100%;
-  height: 51.5vw;
+  height: 100vh;
   position: absolute;
   overflow: hidden;
   left: 0;
@@ -1321,7 +1322,7 @@ footer p span {
   left: 0;
   top: 0;
   width: 100%;
-  height: 51.5vw;
+  height: 100vh;
 }
 .container .index .fifth-page .content {
   width: 36%;
@@ -1365,6 +1366,11 @@ footer p span {
 }
 
 @media all and (max-width: 1039px) {
+  .container .index {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
   .container .index .first-page {
     z-index: 10;
     height: 145vw;
@@ -1440,6 +1446,7 @@ footer p span {
     display: none;
   }
   .container .index .second-page {
+    position: static;
     -webkit-clip-path: url(#clipPath1);
             clip-path: url(#clipPath1);
     background-color: #fff;
@@ -4412,6 +4419,10 @@ html {
   overscroll-behavior-y: none;
 }
 
+body {
+  overscroll-behavior-y: none;
+}
+
 h1,
 h2,
 h3,
@@ -4434,10 +4445,6 @@ span {
   display: inline-block;
 }
 
-body {
-  overscroll-behavior-y: none;
-}
-
 @-webkit-keyframes rotate {
   0% {
     transform: rotate(0);
@@ -4457,11 +4464,15 @@ body {
 }
 @media all and (max-width: 1039px) {
   html {
-    height: 155vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }
 @media all and (max-width: 1039px) and (max-width: 500px) {
   html {
-    height: 220vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }

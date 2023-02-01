@@ -599,8 +599,8 @@
 
             })
             mediaQueryList.add(mobileQuery, () => {
-                mobileAnimation();
-
+                // mobileAnimation();
+                reNewAnimation()
 
             })
             // desktop or mobile animation
@@ -643,10 +643,10 @@
                 //animation start
 
                 gg.to(".first-page .paraBox", {
-                    y: "-100%",
+                    y: "-100vh",
                     duration: 10,
                 }).to(".loading-page", {
-                    y: "-100%",
+                    y: "-100vh",
                     duration: 10,
 
                 }, "<").to(".first-page .imgBox > img", {
@@ -924,13 +924,13 @@
                     filter: "blur(4px)",
                     duration: 2.5,
                 }, "<").fromTo(".forth-page-bg .imgBox", {
-                    y: "160%"
+                    y: "100vh"
                 }, {
                     y: "0",
                     duration: 10,
                     stagger: 1
                 }, "<+3").fromTo(".forth-page-bg .left-top-box", {
-                    y: "-100%"
+                    y: "-100vh"
                 }, {
                     y: 0,
                     duration: 10,
@@ -1050,11 +1050,11 @@
                 })
 
                 let st = ScrollTrigger.create({
-                    // scrub: 1.5,
-                    // pin: ".index",
-                    // toggleActions: "play none none reverse",
-                    // end: "+=24000",
-                    // anticipatePin: 1,
+                    scrub: 1.5,
+                    pin: ".index",
+                    toggleActions: "play none none reverse",
+                    end: "+=24000",
+                    anticipatePin: 1,
                     animation: gg,
                     lazy: true,
 
@@ -1407,6 +1407,21 @@
                         }, 2800)
                     }
                 }, "<+2")
+            }
+
+            function reNewAnimation() {
+                let firstPage = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".first-page",
+                        start: "10% top",
+                        scrub: 1
+                    }
+                })
+                firstPage.to(".loading-page", {
+                    y: "-100%",
+                    duration: 10,
+
+                }, "<")
             }
         }
 
