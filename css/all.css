@@ -1333,7 +1333,9 @@ footer p span {
   z-index: 2;
   pointer-events: none;
   filter: brightness(1.085);
-  -webkit-filter: none;
+}
+.container .index .fifth-page .content video::-webkit-media-controls-panel {
+  display: none !important;
 }
 .container .index .fifth-page .content .paraBox {
   display: flex;
@@ -1380,11 +1382,11 @@ footer p span {
   }
   .container .index .first-page {
     z-index: 10;
-    height: 220vw;
+    height: 280vw;
     overflow: hidden;
   }
   .container .index .first-page .imgBox {
-    margin-top: 7vw;
+    margin-top: 55vw;
     position: relative;
   }
   .container .index .first-page .imgBox > img {
@@ -1399,7 +1401,7 @@ footer p span {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    bottom: 30vw;
+    bottom: 120vw;
     left: 0;
     right: 0;
     margin: 0 auto;

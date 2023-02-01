@@ -866,7 +866,10 @@
                     z-index: 2;
                     pointer-events: none;
                     filter: brightness(1.085);
-                    -webkit-filter: none
+                }
+
+                video::-webkit-media-controls-panel {
+                    display: none !important;
                 }
 
                 .paraBox {
@@ -922,11 +925,11 @@
 
             .first-page {
                 z-index: 10;
-                height: 220vw;
+                height: 280vw;
                 overflow: hidden;
 
                 .imgBox {
-                    margin-top: 7vw;
+                    margin-top: 55vw;
                     position: relative;
 
                     >img {
@@ -938,7 +941,7 @@
                         position: absolute;
                         width: fit-content;
                         height: fit-content;
-                        bottom: 30vw;
+                        bottom: 120vw;
                         left: 0;
                         right: 0;
                         margin: 0 auto;

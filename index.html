@@ -481,6 +481,11 @@
 
             //在Loading及開場動畫結束前取消滾動
 
+            //video 兼容
+            if (isSafari = navigator.userAgent.indexOf("Safari") > 0) {
+                $(".fifth-page video").css("filter", "none")
+            }
+            //video 兼容
             function splitTextAnimation(wrap) {
                 wrap = document.querySelector(`${wrap}`);
                 text = wrap.innerText
@@ -1413,7 +1418,7 @@
                 let firstPage = gsap.timeline({
                     scrollTrigger: {
                         trigger: ".first-page",
-                        start: "50% 80%",
+                        start: "50% 75%",
                         scrub: 1,
                         end: "+=1200"
                     }
