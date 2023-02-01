@@ -188,7 +188,7 @@
                     height: 100%;
                     opacity: 0;
                     // background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.842) 0%, transparent 100%);
-                    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+                    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.842) 0%, rgba(255, 255, 255, 0) 100%);
                     transition: 1s;
                 }
 
@@ -271,7 +271,7 @@
 
                     &::after {
                         opacity: 1;
-                        background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.842) 0%, rgba(255, 255, 255, 0) 100%);
+
                     }
 
                     h6::after {
@@ -623,7 +623,7 @@
                 display: flex;
                 flex-direction: column;
                 width: 85%;
-                height: 135vw;
+                height: 160vw;
                 margin: 0 auto 25vw;
 
                 .box {
@@ -707,7 +707,6 @@
 
                     &::after {
                         opacity: 1;
-                        background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.842) 0%, rgba(255, 255, 255, 0) 100%);
                     }
 
                     h6::after {

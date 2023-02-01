@@ -4106,7 +4106,7 @@ footer p span {
   width: 100%;
   height: 100%;
   opacity: 0;
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.842) 0%, rgba(255, 255, 255, 0) 100%);
   transition: 1s;
 }
 .company .forth-page-bottom .box .imgBox {
@@ -4175,7 +4175,6 @@ footer p span {
 }
 .company .forth-page-bottom .box:hover::after {
   opacity: 1;
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.842) 0%, rgba(255, 255, 255, 0) 100%);
 }
 .company .forth-page-bottom .box:hover h6::after {
   height: 70%;
@@ -4455,7 +4454,7 @@ footer p span {
     display: flex;
     flex-direction: column;
     width: 85%;
-    height: 135vw;
+    height: 160vw;
     margin: 0 auto 25vw;
   }
   .company .forth-page-bottom .box {
@@ -4517,7 +4516,6 @@ footer p span {
   }
   .company .forth-page-bottom .active::after {
     opacity: 1;
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.842) 0%, rgba(255, 255, 255, 0) 100%);
   }
   .company .forth-page-bottom .active h6::after {
     height: 70%;
