@@ -925,7 +925,7 @@
 
             .first-page {
                 z-index: 10;
-                height: 280vw;
+                height: 270vw;
                 overflow: hidden;
 
                 .imgBox {
@@ -1035,6 +1035,8 @@
 
                     z-index: 1;
 
+
+
                     & :nth-child(1) {
                         display: none;
                     }
@@ -1114,10 +1116,10 @@
                     }
 
                     .svgBox {
-                        width: 115%;
+                        width: 100%;
                         height: 100%;
                         position: absolute;
-                        left: -28vw;
+                        left: -22vw;
                         top: -15vw;
 
                         svg {
@@ -1141,13 +1143,13 @@
                         width: 100%;
                         height: 100%;
                         position: absolute;
-                        left: -3vw;
-                        top: 0vw;
+                        left: -10vw;
+                        top: 1vw;
 
                         svg {
 
-                            width: 80%;
-                            height: 80%;
+                            width: 95%;
+                            height: 95%;
 
                             &> :nth-child(1) {
                                 path {
@@ -1464,7 +1466,7 @@
                             &> :nth-child(1) {
 
                                 span {
-                                    font-size: 2.8vw;
+                                    font-size: 3.7vw;
                                 }
 
                             }
@@ -1472,7 +1474,7 @@
                             &> :nth-child(2) {
 
                                 span {
-                                    font-size: 5.5vw;
+                                    font-size: 6.3vw;
                                 }
 
                                 margin: 3.2vw 0vw 0vw;
@@ -1488,15 +1490,222 @@
                 }
 
                 .second-page {
-                    height: 220vw;
+
+                    height: 200vw;
+                    overflow: hidden;
+
+
+                    &-paraBox {
+
+                        .para {
+                            margin-left: 25vw;
+                            width: 50%;
+
+                            h4 {
+                                font-size: 9vw;
+
+
+                            }
+
+                            h3 {
+                                font-size: 8vw;
+
+
+
+                                span {
+                                    font-size: 7vw;
+
+                                }
+                            }
+
+                            .active1 {
+                                &::after {
+                                    width: 8vw;
+                                }
+                            }
+
+                            .active2 {
+                                &::after {
+                                    width: 8vw;
+                                }
+                            }
+
+                            h2 {
+                                font-size: 3.5vw;
+                                margin-top: 2vw;
+
+                            }
+
+                        }
+
+                        .svgBox {
+                            width: 115%;
+                            left: -28vw;
+
+                        }
+
+                        .imgBox {
+                            width: 120%;
+                            height: 120%;
+                            position: absolute;
+                            left: -15vw;
+                            top: -2vw;
+
+                            svg {
+
+                                width: 100%;
+                                height: 100%;
+
+
+                            }
+                        }
+                    }
+
+
+
                 }
 
                 .third-page {
                     height: 220vw;
+
+                    &-bg {
+
+
+
+                        .paraBox {
+
+
+                            h2 {
+                                margin-bottom: 6vw;
+                                font-size: 4vw;
+
+                                &::after {
+                                    width: 15%;
+                                    right: 80%;
+                                }
+
+                                &::before {
+                                    width: 15%;
+                                    left: 80%;
+                                }
+                            }
+
+                            h3 {
+                                font-size: 7vw;
+                                margin-bottom: 2vw;
+
+                            }
+                        }
+                    }
+
+                    &-paraBox {
+                        width: fit-content;
+
+                        h2 {
+                            margin-bottom: 6vw;
+                            font-size: 3.6vw;
+
+
+
+                        }
+
+                        .box {
+                            margin-top: 6vw;
+                            padding-left: 10vw;
+
+                            h3 {
+
+                                color: #fff;
+                                font-size: 8.5vw;
+                                margin-right: -6vw;
+
+                            }
+
+                            svg {
+                                width: 28vw;
+                            }
+                        }
+
+                        ul {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 100%;
+
+                            li {
+                                color: #fff;
+                                font-size: 4.5vw;
+                                height: fit-content;
+                            }
+
+                            .line {
+                                font-size: 4.2vw;
+                                margin: 0 1.5vw;
+                                color: #ccc;
+                            }
+
+                            p {
+                                margin: 0 2vw;
+                            }
+                        }
+
+                    }
                 }
 
                 .forth-page {
                     height: 200vw;
+
+                    &-para {
+                        margin-top: -3vw;
+
+                        .box1 {
+                            right: 15vw;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto 0;
+
+                            p {
+                                font-size: 4vw;
+                            }
+
+                            .box1-1 {
+
+                                h4 {
+                                    font-size: 5.5vw;
+                                }
+                            }
+
+                            .box1-2 {
+
+                                h4 {
+                                    font-size: 7vw;
+                                }
+                            }
+                        }
+                    }
+
+                    &-bg2 {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        padding: 20vw 0 20vw;
+
+                        .imgBox {
+                            display: flex;
+
+                            img {
+                                height: 60vw;
+                                width: auto;
+                                margin-right: 5vw;
+                            }
+                        }
+                    }
+
                 }
 
                 .fifth-page {

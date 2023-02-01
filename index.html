@@ -1435,28 +1435,25 @@
                     y: 0,
                     duration: 8
                 }, "<")
-
-                let secondPage = gsap.timeline({
+                let secondPage1 = gsap.timeline({
                     scrollTrigger: {
-                        trigger: ".second-page",
-                        start: "top top",
+                        trigger: ".first-page",
+                        start: "top 45%",
                         scrub: 1,
-                        pin: ".second-page",
-                        end: "+=16500"
+                        end: "+=5000",
                     }
                 })
-
-                secondPage.to(".second-page-bg img", {
+                secondPage1.to(".second-page-bg img", {
                     x: 0,
-                    duration: 12
-                }, "<").from(".second-page h4", {
-                    y: "56vh",
+                    duration: 5
+                }, "<").from(".second-page h2", {
+                    y: "-60vh",
                     duration: 6
                 }, "<+4").from(".second-page h3", {
-                    y: "56vh",
+                    y: "-60vh",
                     duration: 6
-                }, "<+1.2").from(".second-page h2", {
-                    y: "100vh",
+                }, "<+1.2").from(".second-page h4", {
+                    y: "-60vh",
                     duration: 6,
                     onComplete: () => {
                         $(".second-page h4").addClass("active1");
@@ -1468,11 +1465,22 @@
                 }).to(".second-page h2 .green", {
                     color: "rgb(86,184,126)",
                     duration: 6,
-                }).to(".second-page .svgBox path", {
-                    strokeDashoffset: 470,
+                })
+                let secondPage2 = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".second-page",
+                        start: "top top",
+                        scrub: 1,
+                        pin: ".second-page",
+                        end: "+=16500"
+                    }
+                })
+
+                secondPage2.to(".second-page .svgBox path", {
+                    strokeDashoffset: 510,
                     duration: 10,
 
-                }, "<+3").to(".second-page-bg :nth-child(3)", {
+                }, "<+8").to(".second-page-bg :nth-child(3)", {
                     opacity: 1,
                     duration: 5,
 
@@ -1492,9 +1500,9 @@
                 }).fromTo(".second-page .svgBox", {
                     filter: `brightness(1)`,
                 }, {
-                    x: "6vw",
+                    x: "3vw",
                     y: "1.5vw",
-                    scale: 0.7,
+                    scale: 1,
                     filter: `brightness(2)`,
                     duration: 4,
                 }, "<").to(".second-page .svgBox svg", {
@@ -1531,7 +1539,7 @@
 
                     clipPath: "circle(100%)"
                 }, {
-                    clipPath: "circle(22%)",
+                    clipPath: "circle(18%)",
                     duration: 6
                 }, ">+2").to(".second-page-paraBox .para", {
                     x: "-1vw",
@@ -1550,7 +1558,7 @@
                     duration: 14
                 }).fromTo(".second-page-bg :nth-child(3)", {
 
-                    clipPath: "circle(22%)"
+                    clipPath: "circle(18%)"
                 }, {
                     clipPath: "circle(0%)",
                     duration: 10
@@ -1666,13 +1674,13 @@
                 }, "<").fromTo(".forth-page-bg2 > :nth-child(1)", {
                     x: "105%",
                 }, {
-                    x: "-180%",
-                    duration: 35
+                    x: "-300%",
+                    duration: 42
                 }).fromTo(".forth-page-bg2 > :nth-child(2)", {
-                    x: "-180%",
+                    x: "-300%",
                 }, {
                     x: "180%",
-                    duration: 35
+                    duration: 42
                 }, "<").fromTo(".forth-page-para .box1", {
                     x: "30vw",
                     opacity: 0
@@ -1745,7 +1753,7 @@
                             videoTitle.play()
                         }, 2800)
                     }
-                }, "<+2")
+                }, "<+3")
             }
         }
 
