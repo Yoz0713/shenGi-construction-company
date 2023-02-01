@@ -642,20 +642,20 @@
                         position: absolute;
                         width: fit-content;
                         left: 3.8vw;
-                        bottom: 1.5vw;
+                        bottom: 3vw;
                         color: #fff;
                         z-index: 5;
 
                         span {
-                            font-size: 2.6vw;
+                            font-size: 3.2vw;
                             opacity: 0;
                             transition: 1s;
                             white-space: nowrap;
                         }
 
                         h6 {
-                            font-size: 3.2vw;
-                            margin-top: 1vw;
+                            font-size: 3.8vw;
+                            margin-top: 2vw;
                             font-weight: 400;
 
                             &::after {

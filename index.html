@@ -1710,18 +1710,21 @@
                     onComplete: () => {
 
                         videoTitle.fromTo(".fifth-page .paraBox h4 span", {
+                            y: 30,
                             opacity: 0
                         }, {
+                            y: 0,
                             opacity: 1,
-                            duration: 0.8,
-                            stagger: 0.02,
-
+                            duration: 0.5,
+                            stagger: 0.015
                         }).fromTo(".fifth-page .paraBox h6 span", {
+                            y: 30,
                             opacity: 0
                         }, {
+                            y: 0,
                             opacity: 1,
-                            duration: 0.8,
-                            stagger: 0.02,
+                            duration: 0.5,
+                            stagger: 0.015
                         }, ">-0.7")
 
                         setTimeout(() => {
