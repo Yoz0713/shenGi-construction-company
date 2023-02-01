@@ -444,7 +444,8 @@
 
             <section class="fifth-page">
                 <div class="content">
-                    <video src="./video/logo5.mp4" muted playsinline="true"></video>
+                    <video src="./video/logo5.mp4" muted playsinline="true" class="computer"></video>
+                    <img src="./img/index/svg/logo-vertical.svg" class="phone">
                     <div class="paraBox">
                         <h4>Sun Glory Archi Group</h4>
                         <h6>建築永恆•延續幸福</h6>
@@ -1540,7 +1541,7 @@
                     clipPath: "circle(100%)"
                 }, {
                     clipPath: "circle(18%)",
-                    duration: 6
+                    duration: 10
                 }, ">+2").to(".second-page-paraBox .para", {
                     x: "-1vw",
                     scale: 0.7,
@@ -1597,10 +1598,10 @@
                     stagger: 1.5
                 }, "<+2").to(".third-page-bg .paraBox h2", {
                     y: "-85vh",
-                    duration: 10,
+                    duration: 16,
                 }, ">+3").to(".third-page-bg .paraBox h3", {
                     y: "-85vh",
-                    duration: 10,
+                    duration: 16,
                     stagger: 0.8
                 }, "<+0.8").from(".third-page-bg > :nth-child(2)", {
                     scale: 0,
@@ -1609,7 +1610,7 @@
                 }, "<+2").to(".third-page-bg > :nth-child(2)", {
                     width: "100vw",
                     height: "100%",
-                    duration: 8,
+                    duration: 10,
                     filter: "brightness(0.2)"
                 }).to(".third-page-bg", {
                     backgroundImage: "none",
@@ -1703,36 +1704,10 @@
                     opacity: 0,
                     duration: 6,
                     onStart: () => {
-                        video.pause();
-                        video.currentTime = 0;
                         videoTitle.seek(0).clear().pause();
 
                     },
                     onComplete: () => {
-
-                        // setTimeout(() => {
-                        //     $(".menu").css("right", "0")
-
-                        //     $(".index").css({
-                        //         filter: "blur(5px)"
-                        //     })
-                        //     $(".loading-page").css({
-                        //         filter: "blur(5px)"
-                        //     })
-                        // }, 10000)
-
-
-
-
-
-                        let videoIn = gsap.timeline({
-                            paused: true,
-
-                        })
-
-                        videoIn.play()
-                        video.play();
-
 
                         videoTitle.fromTo(".fifth-page .paraBox h4 span", {
                             opacity: 0
@@ -1751,7 +1726,7 @@
 
                         setTimeout(() => {
                             videoTitle.play()
-                        }, 2800)
+                        }, 100)
                     }
                 }, "<+3")
             }
