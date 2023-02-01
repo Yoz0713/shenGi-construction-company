@@ -295,22 +295,25 @@ function loadingPageAnimaiton(func) {
 
 $(".close").click(() => {
     $(".menu").css("right", "-100%")
-    $(".index").css({
-        filter: "blur(0px)"
-    })
-    $(".loading-page").css({
-        filter: "blur(0px)"
-    })
+    $(".index").removeClass("blur")
+    $(".loading-page").removeClass("blur")
+    // $(".index").css({
+    //     filter: "blur(0px)"
+    // })
+    // $(".loading-page").css({
+    //     filter: "blur(0px)"
+    // })
 })
 $(".menu-button").click(() => {
     $(".menu").css("right", "0")
-
-    $(".index").css({
-        filter: "blur(5px)"
-    })
-    $(".loading-page").css({
-        filter: "blur(5px)"
-    })
+    $(".index").addClass("blur")
+    $(".loading-page").removeClass("blur")
+    // $(".index").css({
+    //     filter: "blur(5px)"
+    // })
+    // $(".loading-page").css({
+    //     filter: "blur(5px)"
+    // })
 })
 //Menu開啟關閉模糊
 

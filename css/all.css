@@ -7,6 +7,10 @@
   --ch_l_text: 1.7vw;
 }
 
+.blur {
+  filter: blur(5px);
+}
+
 .loading-page {
   display: flex;
   align-items: center;
@@ -311,6 +315,9 @@ footer p span {
   }
   .phone {
     display: block;
+  }
+  .blur {
+    filter: none;
   }
   .loading-page {
     position: absolute;
@@ -1761,10 +1768,10 @@ footer p span {
 }
 @media all and (max-width: 1039px) and (max-width: 500px) {
   .container .index .first-page {
-    height: 280vw;
+    height: 370vw;
   }
   .container .index .first-page .imgBox > img {
-    height: 180vw;
+    height: 210vw;
     transform: scale(2.5) translateY(15vw);
   }
   .container .index .first-page .paraBox {

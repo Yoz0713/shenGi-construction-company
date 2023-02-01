@@ -481,11 +481,6 @@
 
             //在Loading及開場動畫結束前取消滾動
 
-            //video 兼容
-            if (isSafari = navigator.userAgent.indexOf("Safari") > 0) {
-                $(".fifth-page video").css("filter", "none")
-            }
-            //video 兼容
             function splitTextAnimation(wrap) {
                 wrap = document.querySelector(`${wrap}`);
                 text = wrap.innerText
@@ -1430,15 +1425,15 @@
                 }, "<").to(".first-page .imgBox .para img", {
                     opacity: 1,
                     y: 0,
-                    duration: 6
+                    duration: 8
                 }, "<+3.5").to(".first-page .imgBox .para svg .fp-line", {
                     strokeDashoffset: 1700,
-                    duration: 12,
+                    duration: 14,
                 }, "<+3").to(".first-page .imgBox .para p", {
 
                     opacity: 1,
                     y: 0,
-                    duration: 6
+                    duration: 8
                 }, "<")
 
                 let secondPage = gsap.timeline({
@@ -1447,7 +1442,7 @@
                         start: "top top",
                         scrub: 1,
                         pin: ".second-page",
-                        end: "+=9000"
+                        end: "+=13500"
                     }
                 })
 
@@ -1578,7 +1573,7 @@
                         start: "top top",
                         scrub: 1,
                         pin: ".third-page",
-                        end: "+=8000"
+                        end: "+=12000"
                     }
                 })
                 restPage.fromTo(".third-page-bg .paraBox h2", {

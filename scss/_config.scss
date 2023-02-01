@@ -28,6 +28,12 @@ $orange_color: #F0822B;
     letter-spacing: 0.2em;
 }
 
+//menu 模糊class
+.blur {
+    filter: blur(5px);
+}
+
+//menu 模糊class
 .loading-page {
     display: flex;
     align-items: center;
@@ -390,6 +396,13 @@ footer {
     .phone {
         display: block;
     }
+
+    //menu 模糊class
+    .blur {
+        filter: none;
+    }
+
+    //menu 模糊class
 
     .loading-page {
         position: absolute;
