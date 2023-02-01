@@ -1335,6 +1335,8 @@ footer p span {
   height: 100%;
   z-index: 2;
   background-color: #fff;
+  pointer-events: none;
+  filter: brightness(1.085);
 }
 .container .index .fifth-page .content .paraBox {
   display: flex;
@@ -1366,6 +1368,9 @@ footer p span {
 }
 
 @media all and (max-width: 1039px) {
+  .container {
+    overflow: auto;
+  }
   .container .index {
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -1374,6 +1379,7 @@ footer p span {
   .container .index .first-page {
     z-index: 10;
     height: 145vw;
+    overflow: hidden;
   }
   .container .index .first-page .imgBox {
     margin-top: 7vw;
@@ -1546,6 +1552,7 @@ footer p span {
     z-index: 0;
   }
   .container .index .third-page {
+    position: static;
     z-index: 8;
     height: 145vw;
   }

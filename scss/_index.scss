@@ -864,6 +864,8 @@
                     height: 100%;
                     z-index: 2;
                     background-color: #fff;
+                    pointer-events: none;
+                    filter: brightness(1.085);
                 }
 
                 .paraBox {
@@ -909,14 +911,15 @@
 
 @media all and (max-width:1039px) {
     .container {
+        overflow: auto;
 
         .index {
-
             height: fit-content;
 
             .first-page {
                 z-index: 10;
                 height: 145vw;
+                overflow: hidden;
 
                 .imgBox {
                     margin-top: 7vw;
@@ -1158,7 +1161,7 @@
             }
 
             .third-page {
-
+                position: static;
                 z-index: 8;
                 height: 145vw;
 
