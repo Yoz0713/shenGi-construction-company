@@ -1413,15 +1413,328 @@
                 let firstPage = gsap.timeline({
                     scrollTrigger: {
                         trigger: ".first-page",
-                        start: "10% top",
-                        scrub: 1
+                        start: "50% 70%",
+                        scrub: 1,
+                        end: "+=1400"
                     }
                 })
-                firstPage.to(".loading-page", {
-                    y: "-100%",
+                firstPage.to(".first-page .imgBox > img", {
+                    scale: 2,
+                    y: 0,
+                    duration: 16
+                }, "<").to(".first-page .imgBox .para img", {
+                    opacity: 1,
+                    y: 0,
+                    duration: 6
+                }, "<+3.5").to(".first-page .imgBox .para svg .fp-line", {
+                    strokeDashoffset: 1700,
+                    duration: 12,
+                }, "<+3").to(".first-page .imgBox .para p", {
+
+                    opacity: 1,
+                    y: 0,
+                    duration: 6
+                }, "<+1.5")
+
+                let secondPage = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".second-page",
+                        start: "top top",
+                        scrub: 1,
+                        pin: ".second-page",
+                        end: "+=9000"
+                    }
+                })
+
+                secondPage.to(".second-page-bg img", {
+                    x: 0,
+                    duration: 12
+                }, "<").from(".second-page h4", {
+                    y: "100vh",
+                    duration: 6
+                }, "<+4").from(".second-page h3", {
+                    y: "100vh",
+                    duration: 6
+                }, "<+1.2").from(".second-page h2", {
+                    y: "100vh",
+                    duration: 6,
+                    onComplete: () => {
+                        $(".second-page h4").addClass("active1");
+                        $(".second-page h3").addClass("active2");
+                    }
+                }, "<+1.2").to(".second-page h3 span", {
+                    color: "rgb(86,184,126)",
+                    duration: 6,
+                }).to(".second-page h2 .green", {
+                    color: "rgb(86,184,126)",
+                    duration: 6,
+                }).to(".second-page .svgBox path", {
+                    strokeDashoffset: 470,
                     duration: 10,
 
+                }, "<+3").to(".second-page-bg :nth-child(3)", {
+                    opacity: 1,
+                    duration: 5,
+
+                }, ">+3").to(".second-page h4", {
+                    opacity: 0,
+                    duration: 5
+                }, "<").to(".second-page h3", {
+                    opacity: 0,
+                    duration: 5
+                }, "<").to(".second-page h2", {
+                    opacity: 0,
+                    duration: 5,
+                }, "<").to(".second-page-bg :nth-child(3)", {
+                    filter: "brightness(0.4)",
+                    duration: 5,
+
+                }).fromTo(".second-page .svgBox", {
+                    filter: `brightness(1)`,
+                }, {
+                    x: "6vw",
+                    y: "1.5vw",
+                    scale: 0.7,
+                    filter: `brightness(2)`,
+                    duration: 4,
+                }, "<").to(".second-page .svgBox svg", {
+                    rotate: -22,
+                    duration: 6,
+                }, "<").to(".second-page .svgBox svg path", {
+                    strokeDashoffset: 530,
+                    duration: 6,
+                }, "<").to(".second-page-bg :nth-child(1)", {
+                    display: "none"
+                }, "<+5").to(".second-page-bg :nth-child(2)", {
+                    display: "none"
+                }, "<").fromTo(".second-page .para .imgBox svg > :nth-child(1) > :nth-child(1)", {
+                    y: 30
+                }, {
+                    y: 0,
+                    opacity: 1,
+                    duration: 4,
+                }, "<+1").fromTo(".second-page .para .imgBox svg .rigin", {
+                    y: 30
+                }, {
+                    y: 0,
+                    opacity: 1,
+                    duration: 5,
+                    stagger: 0.8
+                }, "<+3").fromTo(".second-page .para .imgBox svg > :nth-child(2) ", {
+                    y: 30,
+                    opacity: 0
+                }, {
+                    y: 0,
+                    opacity: 1,
+                    duration: 5,
+                }, "<+3").fromTo(".second-page-bg :nth-child(3)", {
+
+                    clipPath: "circle(100%)"
+                }, {
+                    clipPath: "circle(22%)",
+                    duration: 6
+                }, ">+2").to(".second-page-paraBox .para", {
+                    x: "-1vw",
+                    scale: 0.7,
+                    duration: 6
+                }, "<+1").from(".second-page .circle", {
+                    scale: 0,
+
+                    duration: 8
+                }).to(".second-page .circle", {
+                    rotate: 195,
+
+                    duration: 20
+                }).to(".second-page .circle", {
+                    scale: 3.5,
+                    duration: 14
+                }).fromTo(".second-page-bg :nth-child(3)", {
+
+                    clipPath: "circle(22%)"
+                }, {
+                    clipPath: "circle(0%)",
+                    duration: 10
                 }, "<")
+
+                let thirdPage = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".third-page",
+                        start: "top top",
+                        scrub: 1,
+                        pin: ".third-page",
+                        end: "+=8000"
+                    }
+                })
+                thirdPage.fromTo(".third-page-bg .paraBox h2", {
+                    x: "85vw"
+                }, {
+                    x: 0,
+                    duration: 6
+                }, "<+8").fromTo(".third-page-bg .paraBox h3", {
+                    x: "85vw"
+                }, {
+                    x: 0,
+                    duration: 6,
+                    stagger: 1.5
+                }, "<+2").to(".third-page-bg .paraBox h2", {
+                    y: "-85vh",
+                    duration: 10,
+                }, ">+3").to(".third-page-bg .paraBox h3", {
+                    y: "-85vh",
+                    duration: 10,
+                    stagger: 0.8
+                }, "<+0.8").from(".third-page-bg > :nth-child(2)", {
+                    scale: 0,
+                    duration: 8,
+
+                }, "<+2").to(".third-page-bg > :nth-child(2)", {
+                    width: "100vw",
+                    height: "100%",
+                    duration: 6,
+                    filter: "brightness(0.2)"
+                }).to(".third-page-bg", {
+                    backgroundImage: "none",
+                    duration: 1
+                }, "<").fromTo(".third-page-paraBox h2", {
+                    opacity: 0,
+                    y: 30,
+                }, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 2,
+                }, "<").fromTo(".third-page-paraBox ul .line", {
+                    opacity: 0,
+                    y: -30,
+                }, {
+                    opacity: 1,
+                    y: 0,
+                    stagger: 1.5,
+                    duration: 2,
+                }, "<+2.5").fromTo(".third-page-paraBox ul :nth-child(odd)", {
+                    opacity: 0,
+                    y: 30,
+                }, {
+                    opacity: 1,
+                    y: 0,
+                    stagger: 1.5,
+                    duration: 2,
+                }, "<+1").fromTo(".third-page-paraBox .box h3", {
+                    opacity: 0,
+                    x: -30,
+                    filter: "blur(5px)",
+                }, {
+                    filter: "blur(0px)",
+                    opacity: 1,
+                    y: 0,
+                    stagger: 1.5,
+                    duration: 4.5,
+                }, "<+5").fromTo(".third-page-paraBox .box svg", {
+                    opacity: 0,
+                    y: 30,
+                }, {
+                    opacity: 1,
+                    y: 0,
+                    stagger: 1.5,
+                    duration: 3.5,
+                }, "<+1").to(".third-page-paraBox .box svg > rect", {
+                    fill: "#7c8c5b",
+                    duration: 6
+                }, "<+3").fromTo(".third-page-paraBox .box svg", {
+                    strokeDashoffset: 2000,
+                    strokeDasharray: 2000
+                }, {
+                    strokeDashoffset: 1300,
+                    duration: 13,
+                }, "<+3").to(".third-page-bg > :nth-child(2) img", {
+                    opacity: 0,
+                    duration: 10
+                }, "<+6.5").to(".third-page-paraBox ", {
+                    opacity: 0,
+                    filter: "blur(4px)",
+                    duration: 2.5,
+                }, "<").fromTo(".forth-page-bg2 > :nth-child(1)", {
+                    x: "105%",
+                }, {
+                    x: "-180%",
+                    duration: 35
+                }).fromTo(".forth-page-bg2 > :nth-child(2)", {
+                    x: "-180%",
+                }, {
+                    x: "180%",
+                    duration: 35
+                }, "<").fromTo(".forth-page-para .box1", {
+                    x: "30vw",
+                    opacity: 0
+                }, {
+                    opacity: 1,
+                    x: 0,
+                    duration: 8,
+                }, "<").fromTo(".forth-page-para .box1-2", {
+                    clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
+                }, {
+                    clipPath: "polygon(0 100% , 100% 100%, 100% 100% , 0 100% , 0 0 )",
+                    duration: 6,
+                    stagger: 1
+                }, "<+12").to(".forth-page-para div", {
+                    opacity: 0,
+                    duration: 6
+
+                }, ">+4.5").from(".fifth-page .content", {
+                    y: "100%",
+                    opacity: 0,
+                    duration: 6,
+                    onStart: () => {
+                        video.pause();
+                        video.currentTime = 0;
+                        videoTitle.seek(0).clear().pause();
+
+                    },
+                    onComplete: () => {
+
+                        // setTimeout(() => {
+                        //     $(".menu").css("right", "0")
+
+                        //     $(".index").css({
+                        //         filter: "blur(5px)"
+                        //     })
+                        //     $(".loading-page").css({
+                        //         filter: "blur(5px)"
+                        //     })
+                        // }, 10000)
+
+
+
+
+
+                        let videoIn = gsap.timeline({
+                            paused: true,
+
+                        })
+
+                        videoIn.play()
+                        video.play();
+
+
+                        videoTitle.fromTo(".fifth-page .paraBox h4 span", {
+                            opacity: 0
+                        }, {
+                            opacity: 1,
+                            duration: 0.8,
+                            stagger: 0.02,
+
+                        }).fromTo(".fifth-page .paraBox h6 span", {
+                            opacity: 0
+                        }, {
+                            opacity: 1,
+                            duration: 0.8,
+                            stagger: 0.02,
+                        }, ">-0.7")
+
+                        setTimeout(() => {
+                            videoTitle.play()
+                        }, 2800)
+                    }
+                }, "<+2")
             }
         }
 

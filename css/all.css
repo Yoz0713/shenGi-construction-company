@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  height: 51.5vw;
+  height: 100vh;
   transition: filter 1s;
   overflow: hidden;
   background-color: #fff;
@@ -313,8 +313,8 @@ footer p span {
     display: block;
   }
   .loading-page {
-    height: 155vw;
     position: absolute;
+    opacity: 0;
   }
   .loading-page .contentBox {
     top: 40vw;
@@ -570,9 +570,6 @@ footer p span {
     line-height: 2;
     color: rgba(0, 0, 0, 0.5);
   }
-  .loading-page {
-    height: 220vw;
-  }
   .loading-page .contentBox {
     top: 40vw;
   }
@@ -750,12 +747,13 @@ footer p span {
   transform: translateX(100vw);
 }
 .container .index .second-page-bg :nth-child(1) {
-  position: relative;
   width: 28.8vw;
   height: auto;
   left: 5vw;
   will-change: opacity;
-  top: 5.5vw;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
   opacity: 0;
 }
 .container .index .second-page-bg :nth-child(2) {
@@ -1370,22 +1368,29 @@ footer p span {
 @media all and (max-width: 1039px) {
   .container {
     overflow: auto;
-  }
-  .container .index {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
+  .container .index {
+    position: static;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    transform: none;
+  }
   .container .index .first-page {
     z-index: 10;
-    height: 145vw;
+    height: 220vw;
     overflow: hidden;
   }
   .container .index .first-page .imgBox {
     margin-top: 7vw;
+    position: relative;
   }
   .container .index .first-page .imgBox > img {
-    transform: scale(1.6) translateY(15vw);
+    height: 145vw;
+    transform: scale(2.5) translateY(15vw);
   }
   .container .index .first-page .imgBox .para {
     position: absolute;
@@ -1395,11 +1400,11 @@ footer p span {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    bottom: 30vw;
     left: 0;
     right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+    margin: 0 auto;
+    top: auto;
   }
   .container .index .first-page .imgBox .para .box {
     margin-bottom: 9vw;
@@ -1452,12 +1457,11 @@ footer p span {
     display: none;
   }
   .container .index .second-page {
-    position: static;
-    -webkit-clip-path: url(#clipPath1);
-            clip-path: url(#clipPath1);
+    position: relative;
     background-color: #fff;
     z-index: 9;
     height: 145vw;
+    overflow: hidden;
   }
   .container .index .second-page-bg {
     z-index: 1;
@@ -1481,6 +1485,11 @@ footer p span {
   .container .index .second-page-paraBox .para {
     margin-left: 25vw;
     width: 50%;
+  }
+  .container .index .second-page-paraBox .para h4,
+.container .index .second-page-paraBox .para h3,
+.container .index .second-page-paraBox .para h2 {
+    transform: none;
   }
   .container .index .second-page-paraBox .para h4 {
     font-size: 7vw;
@@ -1552,21 +1561,25 @@ footer p span {
     z-index: 0;
   }
   .container .index .third-page {
-    position: static;
     z-index: 8;
     height: 145vw;
+    position: relative;
   }
   .container .index .third-page-bg img {
     position: absolute;
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .container .index .third-page-bg > img {
+    width: 100%;
+    height: 100%;
+  }
   .container .index .third-page-bg .para {
     display: none;
   }
   .container .index .third-page-bg .imgBox {
-    width: 25vw;
-    height: 25vw;
+    width: 100%;
+    height: 100%;
   }
   .container .index .third-page-bg .imgBox img {
     transform-origin: 0% 0%;
@@ -1627,13 +1640,14 @@ footer p span {
     margin: 0 2vw;
   }
   .container .index .forth-page {
+    position: fixed;
     height: 145vw;
   }
   .container .index .forth-page-para {
     position: relative;
     width: 100%;
     height: 100%;
-    margin-top: 2vw;
+    margin-top: -3vw;
   }
   .container .index .forth-page-para .box1 {
     position: absolute;
@@ -1691,7 +1705,7 @@ footer p span {
     top: 0;
     width: 100%;
     height: 100%;
-    padding: 15vw 0 10vw;
+    padding: 15vw 0 20vw;
   }
   .container .index .forth-page-bg2 .imgBox {
     display: flex;
@@ -1702,7 +1716,7 @@ footer p span {
     margin-right: 5vw;
   }
   .container .index .fifth-page {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;

@@ -181,12 +181,13 @@
                 }
 
                 & :nth-child(1) {
-                    position: relative;
                     width: 28.8vw;
                     height: auto;
                     left: 5vw;
                     will-change: opacity;
-                    top: 5.5vw;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto 0;
                     opacity: 0;
                 }
 
@@ -912,32 +913,36 @@
 @media all and (max-width:1039px) {
     .container {
         overflow: auto;
+        height: fit-content;
 
         .index {
+            position: static;
             height: fit-content;
+            transform: none;
 
             .first-page {
                 z-index: 10;
-                height: 145vw;
+                height: 220vw;
                 overflow: hidden;
 
                 .imgBox {
                     margin-top: 7vw;
+                    position: relative;
 
                     >img {
-                        transform: scale(1.6) translateY(15vw);
+                        height: 145vw;
+                        transform: scale(2.5) translateY(15vw);
                     }
 
                     .para {
                         position: absolute;
                         width: fit-content;
                         height: fit-content;
+                        bottom: 30vw;
                         left: 0;
                         right: 0;
-                        top: 0;
-                        bottom: 0;
-                        margin: auto;
-
+                        margin: 0 auto;
+                        top: auto;
 
                         .box {
                             margin-bottom: 9vw;
@@ -1017,11 +1022,11 @@
             }
 
             .second-page {
-                position: static;
-                clip-path: url(#clipPath1);
+                position: relative;
                 background-color: #fff;
                 z-index: 9;
                 height: 145vw;
+                overflow: hidden;
 
                 &-bg {
 
@@ -1055,6 +1060,12 @@
                     .para {
                         margin-left: 25vw;
                         width: 50%;
+
+                        h4,
+                        h3,
+                        h2 {
+                            transform: none;
+                        }
 
                         h4 {
                             font-size: 7vw;
@@ -1161,9 +1172,9 @@
             }
 
             .third-page {
-                position: static;
                 z-index: 8;
                 height: 145vw;
+                position: relative;
 
                 &-bg {
 
@@ -1172,14 +1183,18 @@
                         object-fit: cover;
                     }
 
+                    >img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
                     .para {
                         display: none;
                     }
 
                     .imgBox {
-
-                        width: 25vw;
-                        height: 25vw;
+                        width: 100%;
+                        height: 100%;
 
                         img {
                             transform-origin: 0% 0%;
@@ -1273,14 +1288,14 @@
             }
 
             .forth-page {
-
+                position: fixed;
                 height: 145vw;
 
                 &-para {
                     position: relative;
                     width: 100%;
                     height: 100%;
-                    margin-top: 2vw;
+                    margin-top: -3vw;
 
                     .box1 {
                         position: absolute;
@@ -1349,7 +1364,7 @@
                     top: 0;
                     width: 100%;
                     height: 100%;
-                    padding: 15vw 0 10vw;
+                    padding: 15vw 0 20vw;
 
                     .imgBox {
                         display: flex;
@@ -1365,7 +1380,7 @@
             }
 
             .fifth-page {
-                position: absolute;
+                position: fixed;
                 left: 0;
                 top: 0;
                 width: 100%;
