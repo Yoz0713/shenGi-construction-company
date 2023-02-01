@@ -1331,9 +1331,9 @@ footer p span {
   width: 100%;
   height: 100%;
   z-index: 2;
-  background-color: #fff;
   pointer-events: none;
   filter: brightness(1.085);
+  -webkit-filter: none;
 }
 .container .index .fifth-page .content .paraBox {
   display: flex;
@@ -3341,7 +3341,7 @@ footer p span {
 .login .content-box form .form-box input {
   width: 100%;
   background-color: transparent;
-  border: 2px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   outline: none;
   border-radius: 40px;
   padding: 0.5vw;

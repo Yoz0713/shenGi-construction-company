@@ -864,9 +864,9 @@
                     width: 100%;
                     height: 100%;
                     z-index: 2;
-                    background-color: #fff;
                     pointer-events: none;
                     filter: brightness(1.085);
+                    -webkit-filter: none
                 }
 
                 .paraBox {
