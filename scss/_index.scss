@@ -1453,6 +1453,35 @@
                             height: 210vw;
                             transform: scale(2.5) translateY(15vw);
                         }
+
+                        .para {
+                            bottom: 120vw;
+
+                            .box {
+                                margin-bottom: 9vw;
+                                margin-left: 5vw;
+
+                                img {
+                                    width: 80vw;
+
+                                }
+
+                                svg {
+                                    position: absolute;
+                                    width: 50vw;
+                                    left: -2vw;
+                                    top: -5vw;
+                                }
+                            }
+
+                            p {
+                                font-size: 3.8vw;
+                            }
+
+                            & :nth-child(3) {
+                                margin-left: 42vw;
+                            }
+                        }
                     }
 
                     .paraBox {
@@ -1566,7 +1595,7 @@
                 }
 
                 .third-page {
-                    height: 220vw;
+                    height: 210vw;
 
                     &-bg {
 

@@ -1775,6 +1775,28 @@ footer p span {
     height: 210vw;
     transform: scale(2.5) translateY(15vw);
   }
+  .container .index .first-page .imgBox .para {
+    bottom: 120vw;
+  }
+  .container .index .first-page .imgBox .para .box {
+    margin-bottom: 9vw;
+    margin-left: 5vw;
+  }
+  .container .index .first-page .imgBox .para .box img {
+    width: 80vw;
+  }
+  .container .index .first-page .imgBox .para .box svg {
+    position: absolute;
+    width: 50vw;
+    left: -2vw;
+    top: -5vw;
+  }
+  .container .index .first-page .imgBox .para p {
+    font-size: 3.8vw;
+  }
+  .container .index .first-page .imgBox .para :nth-child(3) {
+    margin-left: 42vw;
+  }
   .container .index .first-page .paraBox {
     width: 100vw;
     height: 160vw;
@@ -1837,7 +1859,7 @@ footer p span {
     height: 100%;
   }
   .container .index .third-page {
-    height: 220vw;
+    height: 210vw;
   }
   .container .index .third-page-bg .paraBox h2 {
     margin-bottom: 6vw;
