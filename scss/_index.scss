@@ -1440,7 +1440,48 @@
         .container {
             .index {
                 .first-page {
-                    height: 220vw;
+                    height: 280vw;
+
+                    .imgBox {
+
+                        >img {
+                            height: 180vw;
+                            transform: scale(2.5) translateY(15vw);
+                        }
+                    }
+
+                    .paraBox {
+                        width: 100vw;
+                        height: 160vw;
+
+                        .para {
+
+                            bottom: 60vw;
+
+                            &> :nth-child(1) {
+
+                                span {
+                                    font-size: 2.8vw;
+                                }
+
+                            }
+
+                            &> :nth-child(2) {
+
+                                span {
+                                    font-size: 5.5vw;
+                                }
+
+                                margin: 3.2vw 0vw 0vw;
+                            }
+
+                            &> :nth-child(3) {
+                                display: none;
+                            }
+
+
+                        }
+                    }
                 }
 
                 .second-page {

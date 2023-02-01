@@ -314,7 +314,6 @@ footer p span {
   }
   .loading-page {
     position: absolute;
-    opacity: 0;
   }
   .loading-page .contentBox {
     top: 40vw;
@@ -571,7 +570,7 @@ footer p span {
     color: rgba(0, 0, 0, 0.5);
   }
   .loading-page .contentBox {
-    top: 40vw;
+    top: 55vw;
   }
   .loading-page .contentBox .svgBox {
     width: 80vw;
@@ -1760,7 +1759,30 @@ footer p span {
 }
 @media all and (max-width: 1039px) and (max-width: 500px) {
   .container .index .first-page {
-    height: 220vw;
+    height: 280vw;
+  }
+  .container .index .first-page .imgBox > img {
+    height: 180vw;
+    transform: scale(2.5) translateY(15vw);
+  }
+  .container .index .first-page .paraBox {
+    width: 100vw;
+    height: 160vw;
+  }
+  .container .index .first-page .paraBox .para {
+    bottom: 60vw;
+  }
+  .container .index .first-page .paraBox .para > :nth-child(1) span {
+    font-size: 2.8vw;
+  }
+  .container .index .first-page .paraBox .para > :nth-child(2) {
+    margin: 3.2vw 0vw 0vw;
+  }
+  .container .index .first-page .paraBox .para > :nth-child(2) span {
+    font-size: 5.5vw;
+  }
+  .container .index .first-page .paraBox .para > :nth-child(3) {
+    display: none;
   }
   .container .index .second-page {
     height: 220vw;

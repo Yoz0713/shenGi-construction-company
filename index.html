@@ -1413,9 +1413,9 @@
                 let firstPage = gsap.timeline({
                     scrollTrigger: {
                         trigger: ".first-page",
-                        start: "50% 70%",
+                        start: "50% 80%",
                         scrub: 1,
-                        end: "+=1400"
+                        end: "+=1200"
                     }
                 })
                 firstPage.to(".first-page .imgBox > img", {
@@ -1434,7 +1434,7 @@
                     opacity: 1,
                     y: 0,
                     duration: 6
-                }, "<+1.5")
+                }, "<")
 
                 let secondPage = gsap.timeline({
                     scrollTrigger: {
@@ -1555,8 +1555,19 @@
                     clipPath: "circle(0%)",
                     duration: 10
                 }, "<")
-
                 let thirdPage = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".third-page",
+                        start: "top 80%",
+                        toggleActions: "play none none reverse"
+                    }
+                })
+                thirdPage.from(".third-page-bg", {
+                    opacity: 0,
+                    y: 30,
+                    duration: 1.5
+                })
+                let restPage = gsap.timeline({
                     scrollTrigger: {
                         trigger: ".third-page",
                         start: "top top",
@@ -1565,7 +1576,7 @@
                         end: "+=8000"
                     }
                 })
-                thirdPage.fromTo(".third-page-bg .paraBox h2", {
+                restPage.fromTo(".third-page-bg .paraBox h2", {
                     x: "85vw"
                 }, {
                     x: 0,
