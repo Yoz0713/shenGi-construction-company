@@ -8,7 +8,8 @@ class SliceSquare {
         this.collumn = data.collumn;
         this.gapX = data.gapX;
         this.gapY = data.gapY;
-        this.squares = []
+        this.mode = data.mode
+        this.squares = [];
         this.square = {
             width: 1 / data.row - (data.gapX * (data.row - 1) / data.row),
             height: 1 / data.collumn - (data.gapY * (data.collumn - 1) / data.collumn)
@@ -31,7 +32,11 @@ class SliceSquare {
             item = `<rect x="${item.x}" y="${item.y}" stroke="#000000" opacity="1" width="${item.width}" height="${item.height}" />`
             return item
         })
-        result.sort(() => Math.random() - 0.5);
+
+        //隨機方塊配置
+        if (this.mode == "random") {
+            result.sort(() => Math.random() - 0.5);
+        }
         let clipPathEl = `<svg class="clipPath" viewBox="0 0 1920 634">
                     <defs>
                         <clipPath id="${this.id}" clipPathUnits="objectBoundingBox">
