@@ -1187,6 +1187,7 @@ footer p span {
   font-size: 2vw;
   font-family: "Cormorant Garamond", serif;
   font-weight: 600;
+  color: #56B87E;
 }
 .container .index .forth-page-para .box1 .box1-1 h4::after {
   position: absolute;
@@ -1234,6 +1235,9 @@ footer p span {
   text-align: end;
   font-family: "Cormorant Garamond", serif;
   font-weight: 500;
+}
+.container .index .forth-page-para .box2 .box1-1 {
+  color: #56B87E;
 }
 .container .index .forth-page-para .box2 .box1-2 {
   position: absolute;
@@ -1328,6 +1332,7 @@ footer p span {
   top: 0;
   width: 100%;
   height: 100vh;
+  z-index: 20;
 }
 .container .index .fifth-page .content {
   width: 36%;
@@ -1817,7 +1822,7 @@ footer p span {
     display: none;
   }
   .container .index .second-page {
-    height: 200vw;
+    height: 210vw;
     overflow: hidden;
   }
   .container .index .second-page-paraBox .para {
@@ -1859,7 +1864,7 @@ footer p span {
     height: 100%;
   }
   .container .index .third-page {
-    height: 210vw;
+    height: 220vw;
   }
   .container .index .third-page-bg .paraBox h2 {
     margin-bottom: 6vw;
@@ -1920,7 +1925,7 @@ footer p span {
     margin: 0 2vw;
   }
   .container .index .forth-page {
-    height: 200vw;
+    height: 210vw;
   }
   .container .index .forth-page-para {
     margin-top: -3vw;
@@ -2767,7 +2772,7 @@ footer p span {
 .concept .third-page-para2 p {
   font-size: var(--ch_s_text);
   letter-spacing: 0.15em;
-  line-height: 2.3;
+  line-height: 2.5;
   color: #010101;
   opacity: 0.8;
 }
@@ -2806,7 +2811,7 @@ footer p span {
 .concept .forth-page-para p {
   font-size: var(--ch_s_text);
   letter-spacing: 0.15em;
-  line-height: 2.3;
+  line-height: 2.5;
   color: #010101;
   opacity: 0.8;
 }
@@ -2950,11 +2955,12 @@ footer p span {
     font-family: "Noto Serif TC", sans-serif;
   }
   .concept .second-page-para {
-    width: 75%;
+    width: 90%;
     order: 2;
   }
   .concept .second-page-para p {
     font-size: var(--ch_s_text);
+    text-align: justify;
   }
   .concept .second-page-para p br {
     display: none;
@@ -2988,7 +2994,7 @@ footer p span {
     margin-bottom: 20vw;
   }
   .concept .third-page-bg :nth-child(2) {
-    width: 50vw;
+    width: 55vw;
     align-self: flex-end;
     margin-bottom: 50vw;
   }
@@ -3037,6 +3043,7 @@ footer p span {
     height: 10vw;
   }
   .concept .third-page .box2 {
+    display: none;
     position: absolute;
     right: 0;
     bottom: 109vw;
@@ -3109,7 +3116,7 @@ footer p span {
 @media all and (max-width: 1039px) and (max-width: 500px) {
   .concept .first-page {
     padding-top: 0vw;
-    margin-bottom: 20vw;
+    margin-bottom: 30vw;
     margin-top: -10vw;
     width: 100%;
   }
@@ -3123,11 +3130,11 @@ footer p span {
   }
   .concept .second-page {
     width: 90%;
-    margin-bottom: 20vw;
+    margin-bottom: 30vw;
   }
   .concept .second-page-title {
     display: flex;
-    margin: 0 4vw 7vw 0vw;
+    margin: 0 4vw 20vw 0vw;
     padding-top: 3vw;
     order: -1;
   }
@@ -3138,27 +3145,30 @@ footer p span {
     margin-top: 20vw;
   }
   .concept .second-page-para {
-    width: 80%;
+    width: 89%;
+  }
+  .concept .third-page-para1 {
+    margin-bottom: 20vw;
   }
   .concept .third-page-bg :nth-child(1) {
     width: 60vw;
-    margin-bottom: 25vw;
+    margin-bottom: 30vw;
   }
   .concept .third-page-bg :nth-child(2) {
     width: 60vw;
-    margin-bottom: 65vw;
+    margin-bottom: 85vw;
   }
   .concept .third-page-bg :nth-child(3) {
     width: 95%;
     margin: 0 auto;
   }
   .concept .third-page-para2 {
-    top: 210vw;
+    top: 235vw;
   }
   .concept .third-page .box1 {
     width: 9.5vw;
     height: 12vw;
-    top: 110vw;
+    top: 120vw;
   }
   .concept .third-page .box2 {
     position: absolute;

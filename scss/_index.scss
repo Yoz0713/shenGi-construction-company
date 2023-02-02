@@ -681,6 +681,7 @@
                             font-size: 2vw;
                             font-family: $en_style;
                             font-weight: 600;
+                            color: $green_color;
 
                             &::after {
                                 position: absolute;
@@ -734,9 +735,13 @@
                         white-space: nowrap;
                         font-size: 1.3vw;
                         text-align: end;
-
                         font-family: $en_style;
                         font-weight: 500;
+                    }
+
+                    .box1-1 {
+
+                        color: $green_color;
                     }
 
                     .box1-2 {
@@ -852,6 +857,8 @@
             top: 0;
             width: 100%;
             height: 100vh;
+
+            z-index: 20;
 
             .content {
 
@@ -1520,7 +1527,7 @@
 
                 .second-page {
 
-                    height: 200vw;
+                    height: 210vw;
                     overflow: hidden;
 
 
@@ -1595,7 +1602,7 @@
                 }
 
                 .third-page {
-                    height: 210vw;
+                    height: 220vw;
 
                     &-bg {
 
@@ -1682,7 +1689,7 @@
                 }
 
                 .forth-page {
-                    height: 200vw;
+                    height: 210vw;
 
                     &-para {
                         margin-top: -3vw;

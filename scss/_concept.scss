@@ -198,7 +198,7 @@
             p {
                 font-size: var(--ch_s_text);
                 letter-spacing: 0.15em;
-                line-height: 2.3;
+                line-height: 2.5;
                 color: $para_color;
                 opacity: 0.8;
             }
@@ -244,7 +244,7 @@
             p {
                 font-size: var(--ch_s_text);
                 letter-spacing: 0.15em;
-                line-height: 2.3;
+                line-height: 2.5;
                 color: $para_color;
                 opacity: 0.8;
 
@@ -436,12 +436,12 @@
             }
 
             &-para {
-                width: 75%;
+                width: 90%;
                 order: 2;
 
                 p {
                     font-size: var(--ch_s_text);
-
+                    text-align: justify;
 
                     br {
                         display: none;
@@ -482,7 +482,7 @@
                 }
 
                 & :nth-child(2) {
-                    width: 50vw;
+                    width: 55vw;
                     align-self: flex-end;
                     margin-bottom: 50vw;
                 }
@@ -540,6 +540,7 @@
             }
 
             .box2 {
+                display: none;
                 position: absolute;
                 right: 0;
                 bottom: 109vw;
@@ -644,7 +645,7 @@
         .concept {
             .first-page {
                 padding-top: 0vw;
-                margin-bottom: 20vw;
+                margin-bottom: 30vw;
                 margin-top: -10vw;
                 width: 100%;
 
@@ -660,11 +661,11 @@
 
             .second-page {
                 width: 90%;
-                margin-bottom: 20vw;
+                margin-bottom: 30vw;
 
                 &-title {
                     display: flex;
-                    margin: 0 4vw 7vw 0vw;
+                    margin: 0 4vw 20vw 0vw;
                     padding-top: 3vw;
                     order: -1;
 
@@ -681,7 +682,7 @@
                 }
 
                 &-para {
-                    width: 80%;
+                    width: 89%;
 
                 }
 
@@ -689,17 +690,21 @@
             }
 
             .third-page {
+                &-para1 {
+                    margin-bottom: 20vw;
+                }
+
                 &-bg {
 
 
                     & :nth-child(1) {
                         width: 60vw;
-                        margin-bottom: 25vw;
+                        margin-bottom: 30vw;
                     }
 
                     & :nth-child(2) {
                         width: 60vw;
-                        margin-bottom: 65vw;
+                        margin-bottom: 85vw;
                     }
 
                     & :nth-child(3) {
@@ -710,7 +715,7 @@
                 }
 
                 &-para2 {
-                    top: 210vw;
+                    top: 235vw;
 
                 }
 
@@ -718,10 +723,11 @@
                 .box1 {
                     width: 9.5vw;
                     height: 12vw;
-                    top: 110vw;
+                    top: 120vw;
                 }
 
                 .box2 {
+
                     position: absolute;
                     right: 0;
                     bottom: 107vw;

@@ -670,12 +670,30 @@
                     x: "-105vw",
                     duration: 12
                 }, "<+9").to(".second-page-bg img", {
-                    x: 0,
+                    x: "-8vw",
                     duration: 12
+                }, "<").to(".second-page-paraBox", {
+                    x: "-8vw",
+                    duration: 12
+                }, "<").to(".second-page .circle", {
+                    x: "-8vw",
+                    duration: 0.001
                 }, "<").to(".second-page-bg :nth-child(1)", {
                     opacity: 1,
                     duration: 6
-                }, "<+3").to(".second-page h4", {
+                }, "<+3").to(".second-page-bg :nth-child(2)", {
+
+                    scale: 1.04,
+                    duration: 4
+                }, "<+6").to(".second-page-bg :nth-child(4)", {
+
+                    scale: 1.04,
+                    duration: 4
+                }, "<").to(".second-page-bg :nth-child(3)", {
+
+                    scale: 1.04,
+                    duration: 4
+                }, "<").to(".second-page h4", {
                     y: 0,
                     duration: 6
                 }, "<+4").to(".second-page h3", {
@@ -694,22 +712,7 @@
                 }).to(".second-page h2 .green", {
                     color: "rgb(86,184,126)",
                     duration: 6,
-                }).to(".second-page", {
-                    x: "-8vw",
-                    duration: 6
-                }, "<+1").to(".second-page-bg :nth-child(2)", {
-
-                    scale: 1.035,
-                    duration: 4
-                }, "<+2").to(".second-page-bg :nth-child(4)", {
-
-                    scale: 1.035,
-                    duration: 4
-                }, "<").to(".second-page-bg :nth-child(3)", {
-
-                    scale: 1.035,
-                    duration: 4
-                }, "<").to(".second-page .svgBox path", {
+                }).to(".second-page .svgBox path", {
                     strokeDashoffset: 420,
                     duration: 10,
 
@@ -981,36 +984,29 @@
 
                     y: "-120vh",
                     duration: 6,
-                    stagger: 0.5
-                }, "<+5").from(".fifth-page .content", {
+                    stagger: 0.5,
+                }, "<+5").from(".fifth-page", {
                     y: "100vh",
                     opacity: 0,
                     duration: 6,
                     onStart: () => {
-                        video.pause();
-                        video.currentTime = 0;
-                        videoTitle.seek(0).clear().pause();
-
+                        // video.pause();
+                        // video.currentTime = 0;
+                        // videoTitle.seek(0).clear().pause();
+                        // clearTimeout(stt)
                     },
                     onComplete: () => {
 
-                        setTimeout(() => {
+                        stt = setTimeout(() => {
                             $(".menu").css("right", "0")
 
                             $(".index").addClass("blur")
                             $(".loading-page").addClass("blur")
-                        }, 10000)
+                        }, 3000)
 
 
 
 
-
-                        let videoIn = gsap.timeline({
-                            paused: true,
-
-                        })
-
-                        videoIn.play()
 
                         video.play();
 
@@ -1029,16 +1025,31 @@
                             duration: 0.8,
                             stagger: 0.02,
                         }, ">-0.7")
+                        video.addEventListener("play", () => {
+                            setTimeout(() => {
+                                videoTitle.play()
+                            }, 3000)
 
-                        setTimeout(() => {
-                            videoTitle.play()
-                        }, 2800)
+                        })
+
                     }
-                }, "<+1.5")
+                }, "<")
+
             }
             let video = document.querySelector(".fifth-page video");
-            video.play();
-            let videoTitle = gsap.timeline()
+            let stt; //當用戶離開最後頁面時用來取消menu展開
+            $(".fifth-page").on("mousewheel", (e) => {
+                if (e.originalEvent.deltaY < 0) {
+
+                    video.pause();
+                    video.currentTime = 0;
+                    videoTitle.seek(0).clear().pause();
+                    clearTimeout(stt)
+                }
+            })
+            let videoTitle = gsap.timeline({
+                paused: true
+            })
 
             function mobileAnimation() {
                 let gg = gsap.timeline({

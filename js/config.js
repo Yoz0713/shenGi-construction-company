@@ -4,32 +4,32 @@ function loadingPageAnimaiton(func) {
     g.fromTo(".loading-page .rotate .g1", {
         opacity: 0
     }, {
-        opacity: 1,
-        duration: 1.32,
 
+        opacity: 1,
+        duration: 2.3,
     }).fromTo(".loading-page .rotate .g2 ", {
         opacity: 0
     }, {
         opacity: 1,
-        duration: 1.32,
+        duration: 2.3,
 
-    }, "<+0.3").fromTo(".loading-page .rotate .g3", {
-        opacity: 0
-    }, {
-        opacity: 1,
-        duration: 1.32,
-
-    }, "<").fromTo(".loading-page .rotate .g2 ", {
+    }, "<+1").fromTo(".loading-page .rotate .g2 ", {
         x: "-3vw"
     }, {
         x: 0,
-        duration: 1.3,
+        duration: 1.5,
 
     }, '<').fromTo(".loading-page .rotate .g3 ", {
         x: "3vw"
     }, {
         x: 0,
-        duration: 1.3,
+        duration: 1.5,
+
+    }, "<+1").fromTo(".loading-page .rotate .g3", {
+        opacity: 0
+    }, {
+        opacity: 1,
+        duration: 2.3,
 
     }, "<")
     let gg = gsap.timeline()
@@ -41,7 +41,7 @@ function loadingPageAnimaiton(func) {
         strokeDashoffset: 1000,
         duration: 1.5,
         ease: "none",
-        delay: 0.5
+        delay: 2
     }).fromTo(".loading-page .g1 .circle2", {
         strokeDasharray: 1000,
         strokeDashoffset: 100
@@ -57,9 +57,7 @@ function loadingPageAnimaiton(func) {
             strokeDashoffset: 1050,
             duration: 1.5,
             ease: "none"
-        }, "<+0.1").fromTo(".loading-page .g1 .circle1", {
-
-        }, {
+        }, "<+0.1").to(".loading-page .g1 .circle1", {
 
             strokeDashoffset: 230,
             duration: 1.5,
@@ -95,7 +93,7 @@ function loadingPageAnimaiton(func) {
         strokeDashoffset: 1000,
         duration: 1.5,
         ease: "none",
-        delay: 0.5
+        delay: 2
     }, "<+0.7").fromTo(".loading-page .g2 .circle2", {
         strokeDasharray: 1000,
         strokeDashoffset: 100
@@ -148,7 +146,7 @@ function loadingPageAnimaiton(func) {
         strokeDashoffset: 1000,
         duration: 1.5,
         ease: "none",
-        delay: 0.5
+        delay: 2
     }, "<+0.3").fromTo(".loading-page .g3 .circle2", {
         strokeDasharray: 1000,
         strokeDashoffset: 100
