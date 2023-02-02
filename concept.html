@@ -256,11 +256,11 @@
 
 
             const square1 = new SliceSquare({
-                row: 10,
-                collumn: 5,
+                row: 2,
+                collumn: 1,
                 gapX: -0.001,
                 gapY: -0.001,
-                mode: "random"
+                // mode: "random"
             })
             square1.makeSquares()
 
@@ -273,14 +273,15 @@
 
                 })
                 gsap.set("#clipPath1 rect", {
-                    transformOrigin: "center top",
+                    svgOrigin: "center center",
+                    clipPath: "polygon(0 0 ,100% 0 , 100% 100%  , 0 100% )",
                 })
 
                 gg.from("#clipPath1 rect", {
                     // attr: {
-                    //     height: 0,
+                    //     fill: "#000"
                     // },
-                    scaleY: 0,
+                    clipPath: "polygon(0% 0% , 100% 100% ,100% 100%,0% 100%)",
                     duration: 1.2,
                     stagger: 0.03
                 })

@@ -990,47 +990,52 @@
                     opacity: 0,
                     duration: 6,
                     onStart: () => {
-                        // video.pause();
-                        // video.currentTime = 0;
-                        // videoTitle.seek(0).clear().pause();
-                        // clearTimeout(stt)
+                        video.pause();
+                        video.currentTime = 0;
+                        videoTitle.seek(0).clear().pause();
+                        flag = true
+
                     },
                     onComplete: () => {
+                        if (flag) {
+                            clearTimeout(stt2)
+                            flag = false
+                            stt = setTimeout(() => {
+                                $(".menu").css("right", "0")
 
-                        stt = setTimeout(() => {
-                            $(".menu").css("right", "0")
-
-                            $(".index").addClass("blur")
-                            $(".loading-page").addClass("blur")
-                        }, 3000)
-
-
-
-
-
-                        video.play();
+                                $(".index").addClass("blur")
+                                $(".loading-page").addClass("blur")
+                            }, 6000)
 
 
-                        videoTitle.fromTo(".fifth-page .paraBox h4 span", {
-                            opacity: 0
-                        }, {
-                            opacity: 1,
-                            duration: 0.8,
-                            stagger: 0.02,
 
-                        }).fromTo(".fifth-page .paraBox h6 span", {
-                            opacity: 0
-                        }, {
-                            opacity: 1,
-                            duration: 0.8,
-                            stagger: 0.02,
-                        }, ">-0.7")
-                        video.addEventListener("play", () => {
-                            setTimeout(() => {
-                                videoTitle.play()
-                            }, 3000)
 
-                        })
+
+                            video.play();
+
+
+                            videoTitle.fromTo(".fifth-page .paraBox h4 span", {
+                                opacity: 0
+                            }, {
+                                opacity: 1,
+                                duration: 0.8,
+                                stagger: 0.02,
+
+                            }).fromTo(".fifth-page .paraBox h6 span", {
+                                opacity: 0
+                            }, {
+                                opacity: 1,
+                                duration: 0.8,
+                                stagger: 0.02,
+                            }, ">-0.7")
+                            video.addEventListener("play", () => {
+                                stt2 = setTimeout(() => {
+                                    videoTitle.play()
+                                }, 3000)
+
+                            })
+
+                        }
 
                     }
                 }, "<")
@@ -1038,13 +1043,12 @@
             }
             let video = document.querySelector(".fifth-page video");
             let stt; //當用戶離開最後頁面時用來取消menu展開
+            let stt2; // 用當用戶離開最後頁面時用來取消文字進場
+            let flag = true; //偵測最後頁面動畫有無撥放完畢
             $(".fifth-page").on("mousewheel", (e) => {
                 if (e.originalEvent.deltaY < 0) {
-
-                    video.pause();
-                    video.currentTime = 0;
-                    videoTitle.seek(0).clear().pause();
                     clearTimeout(stt)
+
                 }
             })
             let videoTitle = gsap.timeline({

@@ -452,7 +452,7 @@ footer p span {
     top: 0;
     margin: auto 0;
     width: 2%;
-    height: 5px;
+    height: 1px;
     background-color: rgba(0, 0, 0, 0.5);
   }
   footer {
@@ -481,13 +481,14 @@ footer p span {
     right: -100vw;
     width: 100%;
     height: 220vw;
+    padding: 6vw 5vw;
   }
   .menu .close img {
     width: 9vw;
   }
   .menu ul {
     margin-top: 20vw;
-    margin-left: 14vw;
+    margin-left: 10vw;
   }
   .menu ul li {
     font-size: 4.8vw;
@@ -514,7 +515,7 @@ footer p span {
     top: 0;
     margin: auto 0;
     width: 3%;
-    height: 3.5px;
+    height: 1px;
   }
   header {
     padding: 0vw 5vw;
