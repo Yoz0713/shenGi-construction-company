@@ -272,17 +272,12 @@
                     },
 
                 })
-                gsap.set("#clipPath1 :nth-child(even)", {
-                    transformOrigin: "center top",
-                })
-                gsap.set("#clipPath1 :nth-child(odd)", {
-                    transformOrigin: "center bottom",
-                })
-                gg.from("#clipPath1 rect", {
-                    attr: {
-                        opacity: 0,
-                    },
 
+                gg.from("#clipPath1 rect", {
+                    // attr: {
+                    //     height: 0,
+                    // },
+                    scaleY: 0,
                     duration: 1.2,
                     stagger: 0.03
                 })
