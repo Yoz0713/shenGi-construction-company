@@ -307,7 +307,7 @@ $(".close").click(() => {
 $(".menu-button").click(() => {
     $(".menu").css("right", "0")
     $(".index").addClass("blur")
-    $(".loading-page").removeClass("blur")
+    $(".loading-page").addClass("blur")
     // $(".index").css({
     //     filter: "blur(5px)"
     // })
