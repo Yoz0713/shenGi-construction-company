@@ -308,9 +308,9 @@ footer p span {
 
 @media all and (max-width: 1039px) {
   :root {
-    --ch_xs_text: 0.9vw;
-    --more_text: 2.6vw;
-    --ch_s_text: 2.8vw;
+    --ch_xs_text: 2.6vw;
+    --more_text: 2.8vw;
+    --ch_s_text: 3vw;
     --ch_m_text: 3.5vw;
     --ch_l_text: 4vw;
   }
@@ -2301,6 +2301,7 @@ footer p span {
 }
 .constrctionInner {
   width: 100%;
+  overflow: hidden;
 }
 .constrctionInner .first-page {
   display: flex;
@@ -2603,6 +2604,163 @@ footer p span {
   margin-bottom: 3vw;
 }
 
+@media all and (max-width: 1039px) {
+  .constrctionInner .first-page {
+    display: flex;
+    flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 20vw 0 15vw;
+  }
+  .constrctionInner .first-page .swiper1 {
+    width: 100%;
+    height: 62vw;
+    padding: 0 8vw 8vw 0;
+    margin: 0;
+  }
+  .constrctionInner .first-page .swiper2 {
+    width: 100%;
+    height: 22vw;
+    padding-left: 6vw;
+  }
+  .constrctionInner .first-page .swiper2 .swiper-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  .constrctionInner .first-page .swiper2 .swiper-wrapper .swiper-slide {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.5);
+  }
+  .constrctionInner .first-page .swiper2 .swiper-wrapper .swiper-slide-active {
+    filter: brightness(1);
+  }
+  .constrctionInner .second-page {
+    width: 85%;
+    margin: 0 auto 6vw;
+    position: relative;
+    padding-left: 10vw;
+  }
+  .constrctionInner .second-page-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 13vw;
+  }
+  .constrctionInner .second-page-top .caseName {
+    margin-bottom: 3.5vw;
+  }
+  .constrctionInner .second-page-top .caseName h2 {
+    font-size: 5vw;
+    font-weight: 800;
+  }
+  .constrctionInner .second-page-top .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+  }
+  .constrctionInner .second-page-top .contact div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3vw;
+  }
+  .constrctionInner .second-page-top .contact div img {
+    width: 3.5vw;
+    margin-right: 2.5vw;
+  }
+  .constrctionInner .second-page-top .contact div p {
+    font-size: var(--ch_s_text);
+  }
+  .constrctionInner .second-page-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .constrctionInner .second-page-bottom-left {
+    margin-bottom: 8vw;
+  }
+  .constrctionInner .second-page-bottom-left ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .constrctionInner .second-page-bottom-left ul li {
+    flex: 0 0 40%;
+    margin-bottom: 6vw;
+  }
+  .constrctionInner .second-page-bottom-left ul li h4 {
+    font-size: var(--ch_m_text);
+    margin-bottom: 1.5vw;
+  }
+  .constrctionInner .second-page-bottom-left ul li p {
+    font-size: var(--ch_s_text);
+    font-weight: 900;
+  }
+  .constrctionInner .second-page-bottom-left ul > :nth-child(3n) {
+    flex: 0 0 100%;
+    margin-bottom: 15vw;
+  }
+  .constrctionInner .second-page-bottom-left ul :nth-child(7) {
+    flex: 0 0 100%;
+  }
+  .constrctionInner .second-page-bottom-left ul :nth-child(7) p {
+    line-height: 2.6;
+    font-weight: 300;
+    opacity: 0.7;
+  }
+  .constrctionInner .second-page-bottom-left ul :nth-child(7) p:not(:first-child) {
+    margin-top: 2.5vw;
+  }
+  .constrctionInner .second-page-bottom-right {
+    flex: 0 0 12%;
+    margin-right: 13.5vw;
+  }
+  .constrctionInner .second-page-bottom-right ul {
+    width: 100%;
+  }
+  .constrctionInner .second-page-bottom-right ul li {
+    width: 100%;
+    margin-bottom: 1vw;
+    padding: 0.6vw 1vw;
+    border: 1px solid rgba(0, 0, 0, 0.801);
+    cursor: pointer;
+  }
+  .constrctionInner .second-page-bottom-right ul li a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  .constrctionInner .second-page-bottom-right ul li a svg {
+    width: 1vw;
+    margin-right: 2vw;
+  }
+  .constrctionInner .second-page-bottom-right ul li a p {
+    font-size: var(--more_text);
+    font-weight: 300;
+    letter-spacing: 0.2em;
+  }
+  .constrctionInner .second-page-bottom-right ul li:hover {
+    background-color: #6A6A6A;
+    border: 1px solid #6A6A6A;
+  }
+  .constrctionInner .second-page-bottom-right ul li:hover a svg {
+    color: #fff;
+  }
+  .constrctionInner .second-page-bottom-right ul li:hover a p {
+    color: #fff;
+  }
+  .constrctionInner .second-page-bottom-right ul .is-active {
+    background-color: #56B87E !important;
+    border: none !important;
+  }
+  .constrctionInner .second-page::after {
+    left: 3vw;
+    top: -40vw;
+    height: 51%;
+  }
+}
 .body-noscroll {
   overflow: hidden !important;
 }

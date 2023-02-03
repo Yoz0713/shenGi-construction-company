@@ -354,11 +354,20 @@
             })
             const swiper2 = new Swiper(".first-page .swiper2", {
                 speed: 1000,
-                loopedSlides: 5,
-                direction: 'vertical',
-                slidesPerView: 4.5,
-                spaceBetween: 25,
-                freeMode: true
+                loopedSlides: $(".first-page .swiper2 .swiper-slide").length,
+                slidesPerView: 2.5,
+                spaceBetween: 5,
+                freeMode: true,
+                breakpoints: {
+                    500: {
+                        spaceBetween: 15,
+                    },
+                    1039: {  //当屏幕宽度大于等于1039
+                        direction: 'vertical',
+                        spaceBetween: 25,
+                        slidesPerView: 4.5,
+                    }
+                }
             })
             $(".first-page .swiper2 .swiper-slide").each((i, item) => {
 
