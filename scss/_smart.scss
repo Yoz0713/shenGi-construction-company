@@ -1,4 +1,6 @@
 .smart {
+    overflow: hidden;
+
     .first-page {
         width: 100%;
         height: auto;
@@ -33,13 +35,13 @@
             }
 
             h2 {
-                font-size: 1.6vw;
+                font-size: var(--ch_l_text);
                 letter-spacing: 0.2em;
                 font-weight: 700;
             }
 
             h3 {
-                font-size: 1vw;
+                font-size: var(--more_text);
                 margin-right: 0.3vw;
                 font-weight: 300;
             }
@@ -159,7 +161,11 @@
                 }
 
                 p {
-                    @include para()
+                    @include para();
+
+                    span {
+                        color: $green_color
+                    }
                 }
             }
         }
@@ -292,6 +298,444 @@
                     opacity: 0.8;
                     font-weight: 300;
                     letter-spacing: 0.2em;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:1039px) {
+    .smart {
+        .first-page {
+            padding-top: 5vw;
+            margin-bottom: 12vw;
+
+            &-bg {
+                position: relative;
+                width: 100%;
+                height: 45vw;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+
+                }
+            }
+
+            &-title {
+                top: auto;
+                bottom: 15vw;
+
+                h2 {
+
+                    letter-spacing: 0.2em;
+                    font-weight: 700;
+                }
+
+                h3 {
+                    margin-right: 0.3vw;
+                    font-weight: 300;
+                }
+
+            }
+        }
+
+        .second-page {
+            &-para {
+
+                .para1 {
+                    margin-bottom: 5vw;
+
+                    h4 {
+                        font-size: var(--more_text);
+                    }
+
+                    h3 {
+                        font-size: var(--ch_l_text);
+                    }
+                }
+
+                .para2 {
+                    position: relative;
+                    margin-bottom: 42vw;
+
+                    &::after {
+                        height: 30vw;
+                    }
+                }
+
+                .para3 {
+                    margin-bottom: 15vw;
+
+                    p {
+                        color: #56B87E;
+                        font-size: var(--ch_m_text);
+                        letter-spacing: 0.2em;
+                        font-weight: 300;
+                        text-align: center;
+                        line-height: 2.5;
+                    }
+                }
+            }
+
+            &-img {
+                width: 100%;
+            }
+        }
+
+        .third-page {
+
+            width: 85%;
+            margin: 0 auto 30vw;
+
+            &-box {
+                display: flex;
+                flex-direction: column;
+
+                .imgBox {
+                    align-self: flex-start;
+                    width: 73%;
+                    margin-bottom: 18vw;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+                .paraBox {
+                    text-align: end;
+                    order: -1;
+                    align-self: flex-end;
+                    margin-bottom: 18vw;
+
+                    h4 {
+                        font-size: var(--ch_l_text);
+                        margin-bottom: 40px;
+
+                    }
+
+                    p {
+                        @include para()
+                    }
+                }
+            }
+
+            .opposite {
+
+                .imgBox {
+                    margin-top: -2vw;
+                    align-self: flex-end;
+                }
+
+                .paraBox {
+                    align-self: flex-start;
+                }
+
+            }
+        }
+
+        .forth-page {
+            width: 100%;
+            position: relative;
+            margin-bottom: 30vw;
+
+            &-bg {
+                position: relative;
+                width: 100%;
+
+
+                img {
+                    width: 100%;
+                }
+
+                &::after {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url(../img/smart/webp/forth-page-bg-white-ph.webp);
+                    background-position: center center;
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            &-para {
+                width: 55%;
+                margin: auto;
+                background-image: none;
+
+                h4 {
+                    @include title-s();
+                    font-size: var(--ch_l_text);
+                    margin: 0 0 10vw;
+
+                    br {
+                        display: none;
+                    }
+                }
+
+                p {
+                    @include para();
+
+                    br {
+                        display: none;
+                    }
+
+                }
+
+                & :nth-child(2) {
+                    margin-bottom: 6.5vw;
+                }
+            }
+        }
+
+        .fifth-page {
+            width: 85%;
+            margin: 0 auto 10vw;
+
+
+            &-top {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 5vw;
+
+                h4 {
+                    margin-bottom: 5vw;
+                    font-size: var(--ch_l_text);
+                }
+
+                img {
+                    position: relative;
+                    width: 30vw;
+                    right: 0;
+                    bottom: 0;
+                    margin-bottom: 6vw;
+                }
+            }
+
+            &-bottom {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .box {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    flex: 0 0 19%;
+                    height: fit-content;
+                    padding: 15vw 10vw;
+                    margin-bottom: 15px;
+
+                    .imgBox {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 5vw;
+
+                        img {
+                            height: 10vw;
+                            width: auto;
+                            margin-top: 4.5vw;
+                        }
+
+                        .car {
+                            height: 6vw;
+                        }
+                    }
+
+
+                    h4 {
+                        font-size: var(--ch_m_text);
+                        margin: 10vw 0 2vw;
+                    }
+
+                    p {
+                        line-height: 2;
+                        font-size: var(--ch_s_text);
+                    }
+                }
+            }
+        }
+    }
+
+    @media all and(max-width:500px) {
+        .smart {
+            .first-page {
+                padding-top: 9vw;
+                margin-bottom: 15vw;
+
+                &-bg {
+                    position: relative;
+                    width: 100%;
+                    height: 50vw;
+                }
+
+                &-title {
+                    top: auto;
+                    bottom: 18vw;
+
+                }
+            }
+
+            .second-page {
+                &-para {
+                    width: 85%;
+
+                    .para1 {
+                        margin-bottom: 10vw;
+
+                        h3 {
+                            margin-top: -0.2vw;
+                        }
+                    }
+
+                    .para2 {
+                        position: relative;
+                        margin-bottom: 75vw;
+
+                        &::after {
+                            height: 40vw;
+                            top: 130%;
+                        }
+                    }
+
+                    .para3 {
+                        margin-bottom: 28vw;
+
+                        p {
+                            color: #56B87E;
+                            font-size: var(--ch_m_text);
+                            letter-spacing: 0.2em;
+                            font-weight: 300;
+                            text-align: center;
+                            line-height: 2.5;
+                        }
+                    }
+                }
+
+                &-img {
+                    width: 100%;
+                }
+            }
+
+            .third-page {
+
+                width: 85%;
+                margin: 0 auto 30vw;
+
+                &-box {
+                    display: flex;
+                    flex-direction: column;
+
+                    .imgBox {
+                        align-self: flex-start;
+                        width: 73%;
+                        margin-bottom: 30vw;
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+
+                    .paraBox {
+                        text-align: end;
+                        order: -1;
+                        align-self: flex-end;
+                        margin-bottom: 25vw;
+
+                        h4 {
+                            font-size: var(--ch_l_text);
+                            margin-bottom: 40px;
+
+                        }
+
+
+                    }
+                }
+
+                .opposite {
+
+                    .paraBox {
+
+                        p {
+                            width: 85%;
+                        }
+                    }
+
+                }
+            }
+
+            .forth-page {
+                margin-bottom: 35vw;
+
+                &-para {
+                    width: 65%;
+
+
+                    & :nth-child(2) {
+                        margin-bottom: 10vw;
+                    }
+                }
+            }
+
+            .fifth-page {
+                margin: 0 auto 15vw;
+
+
+                &-top {
+                    margin-bottom: 10vw;
+
+                    h4 {
+                        margin-bottom: 7vw;
+                    }
+
+                    img {
+                        width: 35vw;
+                        margin-bottom: 10vw;
+                    }
+                }
+
+                &-bottom {
+
+                    .box {
+                        padding: 20vw 10vw;
+                        margin-bottom: 15px;
+
+                        .imgBox {
+                            height: 5vw;
+
+                            img {
+                                height: 13vw;
+                                width: auto;
+                                margin-top: 4.5vw;
+                            }
+
+                            .car {
+                                height: 7vw;
+                            }
+                        }
+
+
+                        h4 {
+                            font-size: var(--ch_m_text);
+                            margin: 13vw 0 4vw;
+                        }
+
+                        p {
+                            line-height: 2;
+                            font-size: var(--ch_s_text);
+                        }
+                    }
                 }
             }
         }

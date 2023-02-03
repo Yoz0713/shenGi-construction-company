@@ -49,7 +49,7 @@
     </header>
     <div class="menu">
         <div class="close">
-            <img src="./img/index/svg/bx_x.svg" alt="">
+            <img src="./img/config/bx_x.svg" alt="x">
         </div>
         <ul>
             <li>
@@ -153,6 +153,21 @@
                                     <img src="./img/progress/slide6.webp">
                                 </div>
                             </div>
+                            <div class="swiper-slide">
+                                <div class="imgBox">
+                                    <img src="./img/progress/slide4.webp">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="imgBox">
+                                    <img src="./img/progress/slide5.webp">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="imgBox">
+                                    <img src="./img/progress/slide6.webp">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -163,6 +178,13 @@
                     <img src="./img/progress/slide4.webp">
                     <img src="./img/progress/slide5.webp">
                     <img src="./img/progress/slide6.webp">
+                    <img src="./img/progress/slide4.webp">
+                    <img src="./img/progress/slide5.webp">
+                    <img src="./img/progress/slide6.webp">
+                    <img src="./img/progress/slide6.webp">
+                    <div class="more">
+                        <p>更多</p>
+                    </div>
                 </div>
             </div>
             <div class="content">
@@ -212,6 +234,9 @@
                     <img src="./img/progress/slide4.webp">
                     <img src="./img/progress/slide5.webp">
                     <img src="./img/progress/slide6.webp">
+                    <div class="more">
+                        <p>更多</p>
+                    </div>
                 </div>
             </div>
             <div class="content">
@@ -261,6 +286,27 @@
                     <img src="./img/progress/slide4.webp">
                     <img src="./img/progress/slide5.webp">
                     <img src="./img/progress/slide6.webp">
+                    <div class="more">
+                        <p>更多</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pop-up">
+                <div class="pop-up-close">
+                    <img src="./img/config/bx_x.svg" alt="x">
+                </div>
+                <div class="pop-up-content">
+                    <div class="title">
+                    </div>
+                    <div class="pop-up-content-top">
+                        <div class="swiper swiper swiper-no-swiping">
+                            <div class="swiper-wrapper">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pop-up-content-bottom">
+                    </div>
                 </div>
             </div>
         </main>
@@ -281,6 +327,10 @@
     <script>
 
         window.onload = function () {
+
+            popUpImg()
+
+
             const swiper1 = new Swiper(".content .swiper1", {
                 effect: 'fade',
                 fadeEffect: {
@@ -289,18 +339,147 @@
 
                 speed: 1000,
             })
+            const swiper2 = new Swiper(".pop-up .swiper", {
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true,
+                },
+
+                speed: 1000,
+            })
+            //點小圖換輪播圖
+
             function thumbs() {
+
                 $(".content-right").each((i, item) => {
                     $(item.children).each((j, item) => {
                         $(item).click(function (e) {
-                            swiper1[i].slideTo(j)
-                            $(item).parent().find("img").removeClass("is-active")
-                            $(item).addClass("is-active")
+                            if ((item.nodeName).toUpperCase() == "IMG") {
+                                swiper1[i].slideTo(j)
+                                $(item).parent().find("img").removeClass("is-active")
+                                $(item).addClass("is-active")
+                            }
+
                         })
                     })
                 })
+
+
             }
             thumbs()
+
+
+            function more() {
+
+
+                //當圖片超過九個時顯示'更多'按鈕
+                $(".content-right").each((i, item) => {
+                    if (item.childElementCount >= 11) {
+                        $(item).addClass("more-active")
+                    }
+                })
+
+
+
+                //pop up 
+
+                $(".content .more").click((e) => {
+                    //視窗開啟
+                    $(".pop-up").addClass("pop-up-active")
+                    //視窗開啟時 禁用body的滾動
+                    $("body").addClass("body-noscroll")
+
+
+                })
+
+
+                $(".pop-up-close").click(() => {
+                    //視窗關閉
+                    $(".pop-up").removeClass("pop-up-active")
+                    //視窗關閉時 開啟body的滾動
+                    $("body").removeClass("body-noscroll");
+
+                })
+            }
+            more()
+
+
+
+            //視窗開啟時，抓取當月進度欄位的圖片(包含輪播圖、小圖及title)塞入pop up視窗
+            function popUpImg() {
+                //pop up part
+                let insert = new Promise((resolve, reject) => {
+                    $(".content .more").each((i, item) => {
+                        $(item).click((e) => {
+
+                            //輪播圖抓取
+                            let slide = [];
+                            $($(".content")[i]).find(".swiper-slide").children().each((j, item) => {
+                                slide.push(`<div class="swiper-slide">${$($(item))[0].outerHTML}</div>`)
+                            })
+
+                            for (let j = 0; j < $($(".content")[i]).find(".swiper-slide").length; j++) {
+
+
+                                $(".pop-up .swiper-wrapper").append(slide[j])
+                            }
+                            //小圖抓取
+                            let slide2 = []
+                            $($(".content")[i]).find(".content-right img").each((j, item) => {
+
+                                slide2.push(`${$($(item))[0].outerHTML}`)
+
+                            })
+
+                            for (let j = 0; j < $($(".content")[i]).find(".content-right img").length; j++) {
+                                $(slide2[0]).addClass("is-active")
+                                $(".pop-up-content-bottom").append(slide2[j])
+
+                            }
+
+                            //title 抓取
+                            console.log($($($(".content")[i]).find(".title")[0]).children().html())
+                            $(".pop-up .title").append(`${$($($(".content")[i]).find(".title")[0]).html()}`)
+
+
+
+                            resolve()
+                        })
+                    })
+                }).then(() => {
+                    $(".pop-up-content-bottom img").each((i, item) => {
+
+                        // $(item).on("click", function (e) {
+                        //     console.log(e)
+                        //     if ((item.nodeName).toUpperCase() == "IMG") {
+                        //         swiper2.slideTo(i)
+                        //         $(item).parent().find("img").removeClass("is-active")
+                        //         $(item).addClass("is-active")
+                        //     }
+                        // })
+                        $(".pop-up-content-bottom").on("click", (e) => {
+
+                            if (e.target == $($(".pop-up-content-bottom img")[i])[0]) {
+                                swiper2.slideTo(i)
+                                $(item).parent().find("img").removeClass("is-active")
+                                $(item).addClass("is-active")
+
+                            }
+
+                        })
+                    })
+                })
+
+                //關閉視窗時清除圖片內容
+                $(".pop-up-close").click(() => {
+                    setTimeout(() => {
+                        $(".pop-up .swiper-wrapper").empty()
+                        $(".pop-up-content-bottom").empty()
+                        $(".pop-up .title").empty()
+                    }, 450)
+
+                })
+            }
 
         }
     </script>

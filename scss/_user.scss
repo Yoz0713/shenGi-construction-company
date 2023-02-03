@@ -1,0 +1,171 @@
+.user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-top: 3.5vw;
+    height: 50.5vw;
+    background: linear-gradient(90deg, rgb(255, 255, 255) 50%, #7ad796 100%);
+    overflow: hidden;
+
+    #particles-js {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+
+        canvas {
+            filter: blur(5px);
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70vw;
+        height: 40vw;
+        z-index: 12;
+        background-color: rgba(255, 255, 255, 0.53);
+        backdrop-filter: blur(25px);
+        border-radius: 25px;
+        border: 1px solid #fff;
+
+        &-box {
+            width: 55%;
+            margin: 6vw auto 0;
+            position: relative;
+            padding-bottom: 4vw;
+
+
+            .title {
+                width: 100%;
+                border-bottom: 4px solid $dark-green;
+                padding-bottom: 0.6vw;
+
+                h1 {
+                    font-size: var(--ch_m_text);
+                    color: $semi-green;
+                    font-weight: 500;
+                }
+            }
+
+            form {
+                width: 85%;
+                margin: 3vw auto 0;
+
+                .form-box {
+                    display: flex;
+                    align-items: baseline;
+                    width: 100%;
+                    margin-bottom: 2.5vw;
+
+                    label {
+                        display: flex;
+                        align-items: center;
+                        font-size: var(--ch_xs_text);
+                        margin-right: 1vw;
+
+                        input {
+                            width: 0.8vw;
+                            height: 0.8vw;
+                            margin-right: 15px;
+
+                        }
+                    }
+
+                    p {
+                        margin-right: 20px;
+                        font-size: var(--ch_xs_text);
+                        color: $dark-green;
+                        flex: 0 0 10%;
+                    }
+
+                    input {
+                        background-color: transparent;
+                        border: none;
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.322);
+                        flex: 0 1 90%;
+                        font-size: 0.7vw;
+                        letter-spacing: 0.1em;
+                        padding-left: 5px;
+                        padding-bottom: 8px;
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+
+                    select {
+                        position: relative;
+                        flex: 0 0 30%;
+                        margin-right: 1vw;
+                        padding: 0 0.5vw;
+                        font-size: 0.7vw;
+                        height: 1.5vw;
+                        align-self: center;
+                        border-radius: 40px;
+                        background-color: transparent;
+                        color: rgba(0, 0, 0, 0.514);
+                        cursor: pointer;
+
+
+                        &:focus {
+                            outline: none;
+                        }
+
+
+                    }
+
+                    .floor {
+                        margin-left: 0.5vw;
+                    }
+                }
+
+                &> :last-child {
+                    position: absolute;
+                    width: fit-content;
+                    bottom: 4vw;
+                    right: -13vw;
+
+                    input {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex: none;
+                        padding: 0.4vw 2.5vw;
+                        border-radius: 40px;
+                        font-size: var(--ch_xs_text);
+                        cursor: pointer;
+                        border: none;
+                    }
+
+                    &> :nth-child(1) {
+
+                        color: $dark-green;
+
+                        input {
+                            background-color: #fff;
+                            pointer-events: none;
+
+                        }
+                    }
+
+                    &> :nth-child(2) {
+                        background-color: $light-green;
+                        color: #fff;
+                    }
+
+                    a {
+                        margin-right: 1vw;
+                    }
+                }
+            }
+        }
+    }
+}

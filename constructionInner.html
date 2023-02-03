@@ -49,7 +49,7 @@
     </header>
     <div class="menu">
         <div class="close">
-            <img src="./img/index/svg/bx_x.svg" alt="">
+            <img src="./img/config/bx_x.svg" alt="x">
         </div>
         <ul>
             <li>
@@ -270,7 +270,7 @@
                                 <p>工程進度</p>
                             </a>
                         </li>
-                        <li>
+                        <li class="toForm">
                             <a href="javascript:;">
                                 <svg viewBox="0 0 23 23" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_413_1503)">
@@ -294,7 +294,7 @@
                 </div>
             </div>
         </section>
-        <section class="form-page">
+        <section class="form-page" id="form">
             <div class="form-page-title">
                 <h4>預約賞屋</h4>
             </div>
@@ -334,6 +334,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
     <script src="./js/config.js"></script>
 
     <script>
@@ -387,6 +388,10 @@
             mouseToggleColor(".second-page-bottom-right ul li:nth-child(1)")
             mouseToggleColor(".second-page-bottom-right ul li:nth-child(2)")
             mouseToggleColor(".second-page-bottom-right ul li:nth-child(3)")
+
+            $(".toForm").click(() => {
+                gsap.to(window, { duration: 1, scrollTo: "#form", ease: "none" });
+            })
         }
     </script>
 </body>

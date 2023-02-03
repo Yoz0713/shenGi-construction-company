@@ -15,24 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;600;700;900&display=swap"
         rel="stylesheet">
     <title>森鉅建設</title>
-    <style>
-        .swiper {
-            width: 100%;
-
-        }
-
-        .swiper-wrapper {
-            width: 100%;
-        }
-
-        .swiper-wrapper .swiper-slide {
-            width: 100%;
-        }
-
-        .swiper-wrapper .swiper-slide img {
-            width: 100%;
-        }
-    </style>
 </head>
 
 <body>
@@ -67,7 +49,7 @@
     </header>
     <div class="menu">
         <div class="close">
-            <img src="./img/index/svg/bx_x.svg" alt="">
+            <img src="./img/config/bx_x.svg" alt="x">
         </div>
         <ul>
             <li>
@@ -121,20 +103,61 @@
         </ul>
     </div>
     <section class="user">
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="./img/fake img/會員資料A.png">
-                </div>
-                <div class="swiper-slide">
-                    <img src="./img/fake img/會員資料B.png">
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="./img/fake img/會員資料C-3.jpg">
-                </div>
-            </div>
+        <div id="particles-js">
         </div>
+        <div class="content is-active2">
+            <div class="content-box">
+                <div class="title">
+                    <h1>基本資料</h1>
+                </div>
+                <form>
+                    <div class="form-box">
+                        <p>姓名</p>
+                        <input type="text">
+                    </div>
+                    <div class="form-box">
+                        <p>性別</p>
+                        <label> <input type="radio" name="gentle" id="male">男</label>
+                        <label><input type="radio" name="gentle" id="female">女</label>
+
+                    </div>
+                    <div class="form-box">
+                        <p>生日</p>
+                        <input type="text" placeholder="YYYY/MM/DD">
+                    </div>
+                    <div class="form-box">
+                        <p>身分證</p>
+                        <input type="text" placeholder="A123456789">
+                    </div>
+                    <div class="form-box">
+                        <p>社區名稱</p>
+                        <select name="community" id="community">
+                            <option disabled selected hidden>社區</option>
+                        </select>
+                        <input type="text" placeholder="戶別">
+                        <input type="text" placeholder="樓層" class="floor">
+                    </div>
+                    <div class="form-box">
+                        <p>行動電話</p>
+                        <input type="text" placeholder="09-12-345-678">
+                    </div>
+                    <div class="form-box">
+                        <p>電子郵件</p>
+                        <input type="text">
+                    </div>
+                    <div class="form-box">
+                        <a href="./index.html">
+                            <input type="submit" value="取消">
+                        </a>
+
+                        <input type="submit" value="確認">
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+
     </section>
     <footer>
         <p class="computer">Copyright © 2023 森鉅建設股份有限公司版權所有<span>TEL：12345678</span>地址：臺北市松山區敦化北路167號17樓</p>
@@ -144,19 +167,20 @@
     <script src="./js/paticles.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="./js/config.js"></script>
-
     <script>
-        const swiper = new Swiper(".swiper", {
-            loop: true,
-            effect: "fade"
-        })
-        $(".swiper img").click(() => {
-            swiper.slideNext()
-        })
+
+        particlesJS("particles-js", { "particles": { "number": { "value": 33, "density": { "enable": true, "value_area": 1815.039575754227 } }, "color": { "value": "#26dc90" }, "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 4 }, "image": { "src": "img/login/3d-texture.png", "width": 100, "height": 100 } }, "opacity": { "value": 0.71010661384636, "random": true, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } }, "size": { "value": 200.24033491425909, "random": true, "anim": { "enable": true, "speed": 16.783216783216783, "size_min": 2.3976023976023977, "sync": false } }, "line_linked": { "enable": false, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 }, "move": { "enable": true, "speed": 3, "direction": "top-right", "random": true, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1104.8066982851817 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": false, "mode": "push" }, "resize": true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true })
+
+
+
     </script>
+
+
+
 </body>
 
 </html>

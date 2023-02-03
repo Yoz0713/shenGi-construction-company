@@ -20,16 +20,30 @@
 
             }
 
-            &> :nth-child(1) {
-                clip-path: url(#clipPath1);
+            .imgBox {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                -webkit-mask: url(../img/ink-transition-sprite2.png);
+                -webkit-mask-size: 5350% 100%;
+                -webkit-animation: ink-transition 3.5s steps(37) forwards;
+                width: 100%;
+                filter: contrast(0.7) blur(10px);
+                height: 100%;
+                left: 0;
+                top: 0;
+                background-color: #fff;
+                background-image: url(../img/concept/banner-page-bg.webp);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
             }
 
             &> :nth-child(2) {
-
                 position: absolute;
                 left: 0;
                 top: 0;
-                filter: contrast(0.7) blur(10px);
+                height: 100%;
                 z-index: -1;
             }
 
@@ -737,5 +751,25 @@
                 }
             }
         }
+    }
+}
+
+
+
+@keyframes ink-transition {
+    from {
+        -webkit-mask-position: 0 100%;
+        -ms-mask-position: 0 100%;
+        -moz-mask-position: 0 100%;
+        -o-mask-position: 0 100%;
+        mask-position: 0 100%;
+    }
+
+    to {
+        -webkit-mask-position: 100% 100%;
+        -ms-mask-position: 100% 100%;
+        -moz-mask-position: 100% 100%;
+        -o-mask-position: 100% 100%;
+        mask-position: 100% 100%;
     }
 }
