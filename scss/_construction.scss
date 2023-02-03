@@ -33,13 +33,13 @@
             }
 
             h2 {
-                font-size: 1.6vw;
+                font-size: var(--ch_l_text);
                 letter-spacing: 0.2em;
                 font-weight: 700;
             }
 
             h3 {
-                font-size: 0.9vw;
+                font-size: var(--more_text);
                 margin-right: 0.3vw;
                 font-weight: 300;
             }
@@ -176,4 +176,196 @@
 .filter {
     display: none;
 
+}
+
+@media all and (max-width:1039px) {
+    .construction {
+        .first-page {
+            margin-top: 10vw;
+
+            &-bg {
+                width: 100%;
+                height: 45vw;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &-title {
+
+                h2,
+                h3 {
+                    text-align: center;
+
+                }
+
+                h3 {
+                    margin-right: 0.3vw;
+                }
+
+
+            }
+        }
+
+        .second-page {
+            width: 100%;
+            padding: 18vw 0;
+
+            ul {
+                width: 80%;
+                margin: 0 auto;
+
+                li {
+                    width: 100%;
+                    position: relative;
+
+                    &:not(:first-child) {
+                        margin-top: 15vw;
+                    }
+
+                    .imgBox {
+                        display: flex;
+                        justify-content: center;
+                        width: 100%;
+                        position: relative;
+                        margin-bottom: 7.5vw;
+
+                        a {
+                            width: 100%;
+
+                            img {
+                                width: 100%;
+                                height: 45vw;
+
+                                margin-right: 0vw;
+
+                            }
+                        }
+
+                        &::after {
+                            right: -11.6vw;
+                            bottom: -2vw;
+                            width: 42%;
+                            transform: rotate(-45.5deg);
+                        }
+                    }
+
+                    .paraBox {
+                        position: relative;
+                        width: 90%;
+                        margin: 0 auto;
+                        right: auto;
+                        bottom: auto;
+
+                        &-title {
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 3vw;
+
+                            h3 {
+                                font-size: var(--ch_m_text);
+                                letter-spacing: 0.1em;
+                                margin-right: 8vw;
+                            }
+
+                            p {
+                                font-size: var(--ch_s_text);
+                                padding: 1vw 2vw;
+
+                            }
+                        }
+
+
+
+
+                        span {
+                            padding: 0 4vw 1.5vw 1vw;
+
+                            &::after {
+                                display: block;
+                                content: "";
+                                position: absolute;
+                                width: 18%;
+                                height: 1px;
+                                background-color: #888888;
+                                bottom: -0.3px;
+                                right: 0;
+                                transform: rotate(30deg);
+                                transform-origin: right center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media all and (max-width:500px) {
+        .construction {
+            .first-page {
+                margin-top: 13vw;
+            }
+
+            .second-page {
+                width: 100%;
+                padding: 30vw 0;
+
+                ul {
+
+                    li {
+
+                        &:not(:first-child) {
+                            margin-top: 25vw;
+                        }
+
+                        .imgBox {
+                            margin-bottom: 8.5vw;
+                        }
+
+                        .paraBox {
+                            &-title {
+                                display: flex;
+                                align-items: center;
+                                margin-bottom: 4vw;
+
+                                h3 {
+                                    margin-right: 10vw;
+                                }
+
+                                p {
+                                    padding: 1vw 3vw;
+
+                                }
+                            }
+
+                            a {
+                                bottom: -10vw;
+                            }
+
+                            span {
+                                padding: 0 5vw 2vw 1.5vw;
+
+                                &::after {
+                                    display: block;
+                                    content: "";
+                                    position: absolute;
+                                    width: 18%;
+                                    height: 1px;
+                                    background-color: #888888;
+                                    bottom: -0.3px;
+                                    right: 0;
+                                    transform: rotate(30deg);
+                                    transform-origin: right center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
 }
