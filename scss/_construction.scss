@@ -103,7 +103,7 @@
                         height: 1px;
                         transform: rotate(-46.2deg);
                         transform-origin: left center;
-                        background-color: #8888887e;
+                        background-color: #88888870;
                     }
                 }
 
@@ -130,7 +130,7 @@
                             font-weight: 700;
                             letter-spacing: 0.1em;
                             color: $green_color;
-                            background-color: rgb(233, 233, 233);
+                            background-color: rgb(245, 244, 244);
                         }
                     }
 
@@ -332,7 +332,7 @@
                                 margin-bottom: 4vw;
 
                                 h3 {
-                                    margin-right: 10vw;
+                                    margin-right: 8vw;
                                 }
 
                                 p {
@@ -347,6 +347,7 @@
 
                             span {
                                 padding: 0 5vw 2vw 1.5vw;
+                                font-weight: 700;
 
                                 &::after {
                                     display: block;
