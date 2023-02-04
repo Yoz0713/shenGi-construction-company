@@ -2097,7 +2097,7 @@ footer p span {
   height: 1px;
   transform: rotate(-46.2deg);
   transform-origin: left center;
-  background-color: rgba(136, 136, 136, 0.4392156863);
+  background-color: rgba(136, 136, 136, 0.2745098039);
 }
 .construction .second-page ul li .paraBox {
   position: absolute;
@@ -2141,7 +2141,7 @@ footer p span {
 .construction .second-page ul li .paraBox span {
   font-size: var(--more_text);
   letter-spacing: 0.2em;
-  border-bottom: 1px solid #888888;
+  border-bottom: 1px solid rgba(136, 136, 136, 0.2745098039);
   padding: 0 1.5vw 0.3vw 0.5vw;
 }
 .construction .second-page ul li .paraBox span::after {
@@ -2150,7 +2150,7 @@ footer p span {
   position: absolute;
   width: 18%;
   height: 1px;
-  background-color: #888888;
+  background-color: rgba(136, 136, 136, 0.2745098039);
   bottom: -0.3px;
   right: 0;
   transform: rotate(30deg);
@@ -2248,7 +2248,6 @@ footer p span {
     position: absolute;
     width: 18%;
     height: 1px;
-    background-color: #888888;
     bottom: -0.3px;
     right: 0;
     transform: rotate(30deg);
@@ -2344,7 +2343,7 @@ footer p span {
   position: absolute;
   width: 18%;
   height: 1px;
-  background-color: #999999;
+  background-color: rgba(136, 136, 136, 0.2745098039);
   right: -2.8vw;
   bottom: 3.3vw;
   transform: rotate(-44deg);
@@ -2436,7 +2435,7 @@ footer p span {
 }
 .constrctionInner .second-page-bottom-left ul li p {
   font-size: var(--ch_xs_text);
-  opacity: 0.8;
+  opacity: 0.7;
   font-weight: 300;
   letter-spacing: 0.2em;
 }
@@ -2500,7 +2499,7 @@ footer p span {
   top: -8.2vw;
   width: 1px;
   height: 51%;
-  background-color: #888888;
+  background-color: rgba(136, 136, 136, 0.2745098039);
 }
 .constrctionInner .form-page {
   display: flex;
@@ -2860,12 +2859,19 @@ footer p span {
   .constrctionInner .first-page .swiper1 {
     width: 100%;
     height: 70vw;
-    padding: 0 10vw 10vw 0;
+    padding: 0 10vw 6.5vw 0;
     margin: 0;
+  }
+  .constrctionInner .first-page .swiper1 .swiper-wrapper .swiper-slide::after {
+    width: 18%;
+    height: 1px;
+    right: -3vw;
+    bottom: 4vw;
+    transform: rotate(-47deg);
   }
   .constrctionInner .first-page .swiper2 {
     width: 100%;
-    height: 25vw;
+    height: 23vw;
     padding-left: 6vw;
   }
   .constrctionInner .second-page {
@@ -2956,7 +2962,7 @@ footer p span {
   .constrctionInner .second-page::after {
     left: 1vw;
     top: -50vw;
-    height: 36.5%;
+    height: 34.5%;
   }
   .constrctionInner .form-page-title h4 {
     font-size: var(--ch_l_text);
@@ -3013,12 +3019,12 @@ footer p span {
   text-align: center;
 }
 .progress .first-page-title h2 {
-  font-size: 1.4vw;
+  font-size: var(--ch_m_text);
   letter-spacing: 0.2em;
   font-weight: 600;
 }
 .progress .first-page-title h3 {
-  font-size: 0.8vw;
+  font-size: var(--ch_xs_text);
   margin-right: 0.3vw;
 }
 .progress .first-page-title::after {
@@ -3050,7 +3056,7 @@ footer p span {
   position: relative;
 }
 .progress .first-page .caseName h2 {
-  font-size: 1.4vw;
+  font-size: var(--ch_m_text);
   letter-spacing: 0.3em;
   margin-right: -0.6vw;
 }
@@ -3085,12 +3091,12 @@ footer p span {
   margin-bottom: 2vw;
 }
 .progress main .content .title p {
-  font-size: 1.2vw;
+  font-size: var(--ch_s_text);
   font-weight: 600;
 }
 .progress main .content .title p span {
   color: #56B87E;
-  font-size: 1.4vw;
+  font-size: var(--ch_m_text);
   margin-right: 1.2vw;
 }
 .progress main .content-left {
@@ -3212,13 +3218,13 @@ footer p span {
   width: fit-content;
 }
 .progress main .pop-up-content .title p {
-  font-size: 1.2vw;
+  font-size: var(--ch_s_text);
   font-weight: 600;
   color: #fff;
 }
 .progress main .pop-up-content .title p span {
   color: #56B87E;
-  font-size: 1.4vw;
+  font-size: var(--ch_m_text);
   margin-right: 1.2vw;
 }
 .progress main .pop-up-content-top .swiper {
@@ -3268,6 +3274,213 @@ footer p span {
   z-index: 300;
 }
 
+@media all and (max-width: 1039px) {
+  .progress .first-page {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-top: 22vw;
+    margin-bottom: 16vw;
+  }
+  .progress .first-page-title {
+    margin-bottom: 10vw;
+  }
+  .progress .first-page-title p {
+    font-size: var(--ch_m_text);
+  }
+  .progress .first-page-title p span {
+    font-size: var(--ch_l_text);
+  }
+  .progress .first-page-title::after {
+    bottom: -6vw;
+    height: 3.5vw;
+  }
+  .progress .first-page .caseName {
+    margin-top: 10vw;
+  }
+  .progress .first-page .caseName h2 {
+    font-size: var(--ch_l_text);
+    letter-spacing: 0.3em;
+    margin-right: -0.6vw;
+  }
+  .progress .first-page .caseName::after {
+    top: -6vw;
+    height: 3.5vw;
+  }
+  .progress main {
+    width: 90%;
+    margin: 0 auto 10vw;
+  }
+  .progress main .content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 10vw;
+  }
+  .progress main .content .title {
+    padding-bottom: 2.5vw;
+    padding-left: 1.5vw;
+    margin-bottom: 7vw;
+  }
+  .progress main .content .title p span {
+    margin-right: 2vw;
+  }
+  .progress main .content-left {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-left: 0vw;
+    margin-bottom: 3vw;
+  }
+  .progress main .content-left .swiper1 {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .progress main .content-left .swiper1 .swiper-wrapper {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .progress main .content-left .swiper1 .swiper-wrapper .swiper-slide {
+    display: none;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .progress main .content-left .swiper1 .swiper-wrapper .swiper-slide .imgBox {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .progress main .content-left .swiper1 .swiper-wrapper .swiper-slide .imgBox img {
+    width: 100%;
+    height: 65vw;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .progress main .content-left .swiper1 .swiper-wrapper .swiper-slide:nth-child(-n+9) {
+    display: block;
+  }
+  .progress main .content-right {
+    width: 100%;
+    padding: 0;
+  }
+  .progress main .content-right img {
+    width: 32%;
+    height: 23vw;
+    margin-right: 0.8vw;
+    margin-bottom: 1.4vw;
+  }
+  .progress main .content-right .is-active {
+    filter: none;
+  }
+  .progress main .content-right :nth-child(3n) {
+    margin-right: 0;
+  }
+  .progress main .content-right img:nth-child(-n+9) {
+    display: block;
+  }
+  .progress main .content-right .more {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    padding: 2vw 0;
+    margin: 4vw auto 0;
+    border: 1px solid #000;
+    cursor: pointer;
+  }
+  .progress main .content-right .more p {
+    font-size: var(--ch_s_text);
+  }
+  .progress main .content .more-active {
+    height: auto;
+  }
+  .progress main .content .more-active img {
+    margin-right: 0.8vw;
+    margin-bottom: 1.4vw;
+  }
+  .progress main .pop-up {
+    padding-top: 20vw;
+  }
+  .progress main .pop-up-close {
+    position: absolute;
+    right: 4vw;
+    top: 6vw;
+  }
+  .progress main .pop-up-close img {
+    width: 7vw;
+  }
+  .progress main .pop-up-content {
+    width: 90%;
+  }
+  .progress main .pop-up-content .title {
+    margin: 0 0 6vw;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .progress main .pop-up-content .title p {
+    font-size: var(--ch_m_text);
+  }
+  .progress main .pop-up-content .title p span {
+    font-size: var(--ch_l_text);
+    margin-right: 1.5vw;
+  }
+  .progress main .pop-up-content-top .swiper {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .progress main .pop-up-content-top .swiper .swiper-wrapper {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .progress main .pop-up-content-top .swiper .swiper-wrapper .swiper-slide {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .progress main .pop-up-content-top .swiper .swiper-wrapper .swiper-slide .imgBox {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .progress main .pop-up-content-top .swiper .swiper-wrapper .swiper-slide .imgBox img {
+    width: 100%;
+    height: 70vw;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .progress main .pop-up-content-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 2vw;
+  }
+  .progress main .pop-up-content-bottom img {
+    width: 31%;
+    margin-bottom: 3vw;
+    cursor: pointer;
+  }
+  .progress main .pop-up-active {
+    opacity: 1;
+    z-index: 300;
+  }
+}
 .concept {
   width: 100%;
   overflow: hidden;
@@ -3959,7 +4172,7 @@ footer p span {
   right: 0;
   top: 4vw;
   margin: 0 auto;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.23);
   width: 1px;
   height: 100%;
   z-index: -1;
@@ -4156,11 +4369,11 @@ footer p span {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: -4px;
+    left: -3px;
     margin: auto 0;
     background-color: #4F4F4F;
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
     margin-right: 1.4vw;
   }
@@ -4200,11 +4413,11 @@ footer p span {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: -4px;
+    left: -3px;
     margin: auto 0;
     background-color: #4F4F4F;
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
     margin-right: 1.4vw;
   }
@@ -5958,6 +6171,28 @@ footer p span {
   }
   .company .sixth-page-content .paraBox .para6 {
     left: -1vw;
+  }
+}
+@media all and (max-width: 1039px) and (max-width: 500px) {
+  .company .first-page-title .titleBox {
+    order: -1;
+    padding-left: 6vw;
+  }
+  .company .first-page-title .titleBox h1 {
+    font-size: var(--ch_l_text);
+  }
+  .company .first-page-title .titleBox h4 {
+    font-size: 2.4vw;
+  }
+  .company .first-page-title .titleBox::after {
+    width: 195%;
+    background-color: rgba(0, 0, 0, 0.5215686275);
+    bottom: -10px;
+  }
+  .company .first-page-bg {
+    width: 90%;
+    height: auto;
+    order: -1;
   }
 }
 .user {

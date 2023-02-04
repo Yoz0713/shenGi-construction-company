@@ -867,4 +867,40 @@
         }
     }
 
+    @media all and (max-width:500px) {
+        .company {
+            .first-page {
+
+                &-title {
+
+
+                    .titleBox {
+                        order: -1;
+                        padding-left: 6vw;
+
+                        h1 {
+                            font-size: var(--ch_l_text);
+                        }
+
+                        h4 {
+                            font-size: 2.4vw;
+                        }
+
+                        &::after {
+                            width: 195%;
+                            background-color: #00000085;
+                            bottom: -10px;
+                        }
+                    }
+                }
+
+                &-bg {
+                    width: 90%;
+                    height: auto;
+                    order: -1;
+
+                }
+            }
+        }
+    }
 }
