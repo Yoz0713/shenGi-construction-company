@@ -3285,17 +3285,12 @@ footer p span {
   height: 100%;
   -webkit-mask: url(../img/ink-transition-sprite2.png);
   -webkit-mask-size: 5350% 100%;
-  -webkit-animation: ink-transition 3.5s steps(37) forwards;
+  -webkit-animation: ink-transition 3s steps(37) forwards;
   width: 100%;
-  filter: contrast(0.7) blur(10px);
   height: 100%;
   left: 0;
   top: 0;
   background-color: #fff;
-  background-image: url(../img/concept/banner-page-bg.webp);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
 }
 .concept .first-page-bg > :nth-child(2) {
   position: absolute;
