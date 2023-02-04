@@ -239,6 +239,25 @@
     <script>
 
         window.onload = function () {
+
+            const swiper = new Swiper(".fifth-page .swiper", {
+                speed: 1000,
+                slidesPerView: 2.5,
+                spaceBetween: 10,
+                freeMode: true,
+                breakpoints: {
+                    500: {
+                        spaceBetween: 15,
+                        freeMode: true,
+                    },
+                    1039: {  //当屏幕宽度大于等于1039
+                        direction: 'vertical',
+                        spaceBetween: 25,
+                        slidesPerView: 4.5,
+                        freeMode: true,
+                    }
+                }
+            })
             function bannerText() {
                 let gg = gsap.timeline()
 
