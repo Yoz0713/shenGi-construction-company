@@ -3,6 +3,7 @@
 }
 
 .progress {
+    overflow: hidden;
 
     .first-page {
         width: 100%;
@@ -94,9 +95,9 @@
             display: flex;
             flex-wrap: wrap;
 
-            &:not(:last-child) {
-                margin-bottom: 10vw;
-            }
+
+            margin-bottom: 10vw;
+
 
             .title {
                 flex: 0 0 100%;
