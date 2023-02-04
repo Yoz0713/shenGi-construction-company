@@ -2095,9 +2095,9 @@ footer p span {
   bottom: -1.75vw;
   width: 35%;
   height: 1px;
-  transform: rotate(-46.1deg);
+  transform: rotate(-46.2deg);
   transform-origin: left center;
-  background-color: #888888;
+  background-color: rgba(136, 136, 136, 0.4392156863);
 }
 .construction .second-page ul li .paraBox {
   position: absolute;
@@ -2121,7 +2121,7 @@ footer p span {
   font-weight: 700;
   letter-spacing: 0.1em;
   color: #56B87E;
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(245, 244, 244);
 }
 .construction .second-page ul li .paraBox > p {
   font-size: var(--ch_s_text);
@@ -2275,7 +2275,7 @@ footer p span {
     margin-bottom: 4vw;
   }
   .construction .second-page ul li .paraBox-title h3 {
-    margin-right: 10vw;
+    margin-right: 8vw;
   }
   .construction .second-page ul li .paraBox-title p {
     padding: 1vw 3vw;
@@ -2285,6 +2285,7 @@ footer p span {
   }
   .construction .second-page ul li .paraBox span {
     padding: 0 5vw 2vw 1.5vw;
+    font-weight: 700;
   }
   .construction .second-page ul li .paraBox span::after {
     display: block;
@@ -3547,7 +3548,7 @@ footer p span {
 }
 .concept .fifth-page .swiper {
   width: 100%;
-  margin: 0;
+  margin: 0 0 7vw;
 }
 .concept .fifth-page .swiper .swiper-wrapper {
   width: 100%;
@@ -4104,7 +4105,7 @@ footer p span {
     margin-right: 0.5vw;
   }
   .portfolio .second-page {
-    width: 70.5%;
+    width: 80%;
     margin: 0 auto;
   }
   .portfolio .second-page-logo {
@@ -4151,11 +4152,11 @@ footer p span {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: -6px;
+    left: -4px;
     margin: auto 0;
     background-color: #4F4F4F;
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     margin-right: 1.4vw;
   }
@@ -4195,11 +4196,11 @@ footer p span {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: -6px;
+    left: -4px;
     margin: auto 0;
     background-color: #4F4F4F;
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     margin-right: 1.4vw;
   }
@@ -5160,7 +5161,7 @@ footer p span {
     bottom: 18vw;
   }
   .smart .second-page-para {
-    width: 85%;
+    width: 80%;
   }
   .smart .second-page-para .para1 {
     margin-bottom: 10vw;
@@ -5191,7 +5192,7 @@ footer p span {
     width: 100%;
   }
   .smart .third-page {
-    width: 85%;
+    width: 80%;
     margin: 0 auto 30vw;
   }
   .smart .third-page-box {
@@ -5213,6 +5214,9 @@ footer p span {
     align-self: flex-end;
     margin-bottom: 25vw;
   }
+  .smart .third-page-box .paraBox p {
+    letter-spacing: 0.1em;
+  }
   .smart .third-page-box .paraBox h4 {
     font-size: var(--ch_l_text);
     margin-bottom: 40px;
@@ -5230,6 +5234,7 @@ footer p span {
     margin-bottom: 10vw;
   }
   .smart .fifth-page {
+    width: 80%;
     margin: 0 auto 15vw;
   }
   .smart .fifth-page-top {
@@ -5264,6 +5269,9 @@ footer p span {
   .smart .fifth-page-bottom .box p {
     line-height: 2;
     font-size: var(--ch_s_text);
+  }
+  .smart .fifth-page-bottom :nth-child(2) .imgBox img, .smart .fifth-page-bottom :nth-child(3) .imgBox img {
+    height: 15vw;
   }
 }
 .company {
@@ -5670,7 +5678,7 @@ footer p span {
     flex-direction: column;
     align-items: flex-end;
     width: 100%;
-    margin: 16vw 0 15vw auto;
+    margin: 22vw 0 20vw auto;
   }
   .company .first-page-title {
     display: flex;
@@ -5678,7 +5686,7 @@ footer p span {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-top: 10vw;
+    margin-top: 15vw;
   }
   .company .first-page-title .logoBox {
     margin-right: 12vw;
@@ -5731,10 +5739,10 @@ footer p span {
   }
   .company .second-page .opposite .imgBox {
     align-self: flex-end;
-    margin-right: 8vw;
+    margin-right: 7vw;
   }
   .company .second-page .opposite .imgBox img {
-    width: 55vw;
+    width: 50vw;
   }
   .company .second-page .opposite .paraBox {
     margin: 0 0 15vw 10vw;
@@ -5748,7 +5756,7 @@ footer p span {
     left: 0;
     right: 0;
     margin: 0 auto;
-    bottom: 5vw;
+    bottom: 107vw;
   }
   .company .third-page {
     width: 100%;
@@ -5802,9 +5810,9 @@ footer p span {
     white-space: nowrap;
   }
   .company .forth-page-bottom .box .paraBox h6 {
-    font-size: 3.8vw;
+    font-size: 4.2vw;
     margin-top: 2vw;
-    font-weight: 400;
+    font-weight: 600;
   }
   .company .forth-page-bottom .box .paraBox h6::after {
     left: -1.5vw;
@@ -5849,7 +5857,7 @@ footer p span {
     margin: 0 auto 25vw;
   }
   .company .fifth-page h3 {
-    font-size: var(--ch_l_text);
+    font-size: var(--ch_m_text);
     margin-bottom: 4vw;
   }
   .company .fifth-page h3 span {

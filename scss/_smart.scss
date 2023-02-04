@@ -588,7 +588,7 @@
 
             .second-page {
                 &-para {
-                    width: 85%;
+                    width: 80%;
 
                     .para1 {
                         margin-bottom: 10vw;
@@ -629,7 +629,7 @@
 
             .third-page {
 
-                width: 85%;
+                width: 80%;
                 margin: 0 auto 30vw;
 
                 &-box {
@@ -652,6 +652,10 @@
                         order: -1;
                         align-self: flex-end;
                         margin-bottom: 25vw;
+
+                        p {
+                            letter-spacing: 0.1em;
+                        }
 
                         h4 {
                             font-size: var(--ch_l_text);
@@ -689,6 +693,7 @@
             }
 
             .fifth-page {
+                width: 80%;
                 margin: 0 auto 15vw;
 
 
@@ -734,6 +739,15 @@
                         p {
                             line-height: 2;
                             font-size: var(--ch_s_text);
+                        }
+                    }
+
+                    & :nth-child(2),
+                    & :nth-child(3) {
+                        .imgBox {
+                            img {
+                                height: 15vw;
+                            }
                         }
                     }
                 }
