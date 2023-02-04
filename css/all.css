@@ -2865,7 +2865,7 @@ footer p span {
   .constrctionInner .first-page .swiper2 {
     width: 100%;
     height: 25vw;
-    padding-left: 8vw;
+    padding-left: 6vw;
   }
   .constrctionInner .second-page {
     width: 80%;
@@ -2873,7 +2873,7 @@ footer p span {
   }
   .constrctionInner .second-page-top {
     margin-bottom: 13vw;
-    padding-left: 10vw;
+    padding-left: 8vw;
   }
   .constrctionInner .second-page-top .caseName {
     margin-bottom: 5vw;
@@ -2951,6 +2951,11 @@ footer p span {
   .constrctionInner .second-page-bottom-right ul .is-active {
     background-color: #56B87E !important;
     border: none !important;
+  }
+  .constrctionInner .second-page::after {
+    left: 1vw;
+    top: -50vw;
+    height: 36.5%;
   }
   .constrctionInner .form-page-title h4 {
     font-size: var(--ch_l_text);
@@ -3261,6 +3266,7 @@ footer p span {
 
 .concept {
   width: 100%;
+  overflow: hidden;
 }
 .concept .first-page {
   padding-top: 3.5vw;
