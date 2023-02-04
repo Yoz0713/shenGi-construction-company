@@ -2095,9 +2095,9 @@ footer p span {
   bottom: -1.75vw;
   width: 35%;
   height: 1px;
-  transform: rotate(-46.1deg);
+  transform: rotate(-46.2deg);
   transform-origin: left center;
-  background-color: #888888;
+  background-color: rgba(136, 136, 136, 0.4941176471);
 }
 .construction .second-page ul li .paraBox {
   position: absolute;
@@ -3159,9 +3159,11 @@ footer p span {
   justify-content: center;
   align-items: center;
   width: 100%;
-  font-size: var(--more_text);
   border: 1px solid #000;
   cursor: pointer;
+}
+.progress main .content-right .more p {
+  font-size: var(--more_text);
 }
 .progress main .content .more-active {
   height: auto;

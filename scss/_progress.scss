@@ -193,9 +193,13 @@
                     justify-content: center;
                     align-items: center;
                     width: 100%;
-                    font-size: var(--more_text);
+
                     border: 1px solid #000;
                     cursor: pointer;
+
+                    p {
+                        font-size: var(--more_text);
+                    }
                 }
             }
 
