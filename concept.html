@@ -106,9 +106,10 @@
         <section class="first-page">
             <div class="first-page-bg">
                 <div class="imgBox">
+                    <img src="./img/concept/banner-page-bg.webp">
                 </div>
 
-                <img src="./img/concept/banner-page-bg.webp">
+
                 <img src="./img/concept/svg/SUN GLORY.svg" class="glory">
 
             </div>
@@ -257,11 +258,24 @@
             function bannerText() {
                 let gg = gsap.timeline()
 
-                gg.from(".first-page-bg :nth-child(3)", {
+                gg.fromTo(".first-page-bg .imgBox", {
+                    clipPath: "polygon(0 0 , 0% 0, 0% 90% , 0 90% , 0 0 )",
+
+                }, {
+                    clipPath: "polygon(0 0 , 80% 0, 80% 90% , 0 90% , 0 0 )",
+                    duration: 1.4,
+                }).to(".first-page-bg .imgBox", {
+                    clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
+                    duration: 1,
+                }).fromTo(".first-page-bg .imgBox", {
+                    scale: 1.2
+                }, {
+                    scale: 1,
+                    duration: 1,
+                }, "<").from(".first-page-bg :nth-child(2)", {
                     opacity: 0,
                     x: 30,
                     duration: 1.5,
-                    delay: 2
                 })
             }
             bannerText()
