@@ -354,18 +354,19 @@
             })
             const swiper2 = new Swiper(".first-page .swiper2", {
                 speed: 1000,
-                loopedSlides: $(".first-page .swiper2 .swiper-slide").length,
                 slidesPerView: 2.5,
-                spaceBetween: 5,
+                spaceBetween: 10,
                 freeMode: true,
                 breakpoints: {
                     500: {
                         spaceBetween: 15,
+                        freeMode: true,
                     },
                     1039: {  //当屏幕宽度大于等于1039
                         direction: 'vertical',
                         spaceBetween: 25,
                         slidesPerView: 4.5,
+                        freeMode: true,
                     }
                 }
             })
@@ -399,7 +400,7 @@
             mouseToggleColor(".second-page-bottom-right ul li:nth-child(3)")
 
             $(".toForm").click(() => {
-                gsap.to(window, { duration: 1, scrollTo: "#form", ease: "none" });
+                gsap.to(window, { duration: 0.8, scrollTo: "#form", ease: "none" });
             })
         }
     </script>

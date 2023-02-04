@@ -37,13 +37,13 @@
             }
 
             h2 {
-                font-size: 1.4vw;
+                font-size: var(--ch_l_text);
                 letter-spacing: 0.2em;
                 font-weight: 600;
             }
 
             h3 {
-                font-size: 0.8vw;
+                font-size: var(--more_text);
                 margin-right: 0.3vw;
 
             }
@@ -92,7 +92,7 @@
 
 
             .content-box {
-                width: 28vw;
+                width: 50%;
                 align-self: flex-end;
                 margin-bottom: 0vw;
 
@@ -106,12 +106,18 @@
                     .box {
                         display: flex;
                         align-items: center;
-                        margin-left: -7.52vw;
+                        position: relative;
+                        padding-left: 2vw;
 
                         .dot {
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: -8.5px;
+                            margin: auto 0;
                             background-color: #4F4F4F;
-                            width: 0.6vw;
-                            height: 0.6vw;
+                            width: 17px;
+                            height: 17px;
                             border-radius: 50%;
                             margin-right: 1.4vw;
                         }
@@ -139,6 +145,8 @@
                 }
 
                 &-bottom {
+                    padding-left: 7.5vw;
+
                     p {
                         font-size: var(--ch_m_text);
                         opacity: 0.6;
@@ -169,12 +177,14 @@
                         display: flex;
                         align-items: center;
                         margin: 0;
-                        margin-right: -7.58vw;
+                        padding-left: auto;
+                        padding-right: 2vw;
 
                         .dot {
-                            margin: 0;
+                            margin: auto 0;
                             order: 2;
-                            margin-left: 1.4vw;
+                            left: auto;
+                            right: -8.5px;
                         }
 
                         p {
@@ -199,6 +209,9 @@
                 }
 
                 .content-box-bottom {
+                    padding-left: 0;
+                    padding-right: 7.5vw;
+
                     p {
                         font-size: var(--ch_m_text);
                         opacity: 0.6;
@@ -212,4 +225,308 @@
         }
     }
 
+}
+
+@media all and (max-width:1039px) {
+    .portfolio {
+        .first-page {
+            padding-top: 10vw;
+            margin-bottom: 10vw;
+
+            &-bg {
+                width: 100%;
+
+
+                img {
+
+                    width: 100%;
+                    height: 45vw;
+                    object-fit: cover;
+                }
+            }
+
+            &-title {
+                width: fit-content;
+                height: fit-content;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: auto;
+                margin: auto;
+                bottom: 18vw;
+
+                h2,
+                h3 {
+                    text-align: center;
+                    color: #fff;
+                }
+
+                h3 {
+                    font-weight: 300;
+                }
+
+                h2 {
+                    letter-spacing: 0.3em;
+                    font-weight: 500;
+                }
+
+                h3 {
+                    margin-right: 0.5vw;
+
+                }
+            }
+        }
+
+        .second-page {
+            width: 70.5%;
+            margin: 0 auto;
+
+            &-logo {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin-bottom: 8vw;
+
+                img {
+                    width: 8vw;
+                }
+            }
+
+            &-content {
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+                position: relative;
+                margin-top: -1vw;
+
+
+
+                &::after {
+                    left: 0;
+                    right: auto;
+                }
+
+
+
+                .content-box {
+                    width: 100%;
+                    align-self: flex-start;
+                    margin-bottom: 18vw;
+
+
+                    &-top {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        margin-bottom: 5vw;
+
+
+                        .box {
+                            display: flex;
+                            align-items: center;
+                            position: relative;
+                            padding-left: 5vw;
+                            margin-bottom: 5vw;
+
+                            .dot {
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                left: -6px;
+                                margin: auto 0;
+                                background-color: #4F4F4F;
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 50%;
+                                margin-right: 1.4vw;
+                            }
+
+                            p {
+                                margin-right: 2.8vw;
+                            }
+
+                            h4 {
+                                color: $green_color;
+                                font-size: var(--ch_l_text);
+                            }
+                        }
+
+
+
+                        img {
+                            width: 100%;
+                            opacity: 1;
+                            padding-left: 5vw;
+                        }
+                    }
+
+                    &-bottom {
+                        padding-left: 5vw;
+                    }
+
+
+                }
+
+                & :nth-child(even) {
+                    align-self: flex-start;
+
+                    .content-box-top {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        margin-bottom: 5vw;
+
+                        .box {
+                            display: flex;
+                            align-items: center;
+                            position: relative;
+                            padding-left: 5vw;
+                            margin-bottom: 5vw;
+
+                            .dot {
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                left: -6px;
+                                margin: auto 0;
+                                background-color: #4F4F4F;
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 50%;
+                                margin-right: 1.4vw;
+                            }
+
+                            p {
+                                margin: 0;
+                                order: -1;
+                                margin-right: 2.8vw;
+                            }
+
+                            h4 {
+                                color: $green_color;
+                                font-size: var(--ch_l_text);
+                                order: 2;
+                            }
+                        }
+
+
+
+                        img {
+                            order: 2;
+
+                        }
+                    }
+
+                    .content-box-bottom {
+                        padding-left: 5vw;
+                        padding-right: 0;
+
+                        p {
+                            font-size: var(--ch_m_text);
+                            opacity: 0.6;
+                        }
+                    }
+                }
+
+                &> :last-child {
+                    margin-bottom: 8vw;
+                }
+            }
+        }
+    }
+
+    @media all and (max-width:500px) {
+        .portfolio {
+            .first-page {
+                padding-top: 12vw;
+                margin-bottom: 10vw;
+
+
+            }
+
+            .second-page {
+                margin-top: 15vw;
+
+                &-logo {
+                    margin-bottom: 12vw;
+
+                    img {
+                        width: 9vw;
+                    }
+                }
+
+                &-content {
+
+
+
+                    .content-box {
+                        margin-bottom: 22vw;
+
+
+                        &-top {
+                            margin-bottom: 8vw;
+
+
+                            .box {
+                                padding-left: 7vw;
+                                margin-bottom: 6vw;
+
+                                p {
+                                    margin-right: 2.8vw;
+                                }
+                            }
+
+
+
+                            img {
+                                width: 100%;
+                                opacity: 1;
+                                padding-left: 7vw;
+                            }
+                        }
+
+                        &-bottom {
+                            padding-left: 7vw;
+                        }
+
+
+                    }
+
+                    & :nth-child(even) {
+                        .content-box-top {
+                            margin-bottom: 8vw;
+
+                            .box {
+                                padding-left: 7vw;
+                                margin-bottom: 6vw;
+
+                                p {
+                                    margin-right: 3.1vw;
+                                }
+
+                            }
+
+
+
+                            img {
+                                order: 2;
+
+                            }
+                        }
+
+                        .content-box-bottom {
+                            padding-left: 7vw;
+                        }
+                    }
+
+                    &> :last-child {
+                        margin-bottom: 15vw;
+                    }
+                }
+            }
+        }
+    }
 }
