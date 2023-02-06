@@ -3191,15 +3191,14 @@ footer p span {
   width: 100%;
   height: 100vh;
   z-index: -1;
-  padding-top: 5vw;
-  overflow: auto;
+  padding-top: 1vw;
   opacity: 0;
   transition: 0.5s;
 }
 .progress main .pop-up-close {
   position: absolute;
   right: 10vw;
-  top: 5vw;
+  top: 2vw;
   cursor: pointer;
 }
 .progress main .pop-up-close img {
@@ -3213,7 +3212,7 @@ footer p span {
   margin: 0 auto;
 }
 .progress main .pop-up-content .title {
-  margin: 0 auto 2vw;
+  margin: 0 auto 1.5vw;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -3254,7 +3253,7 @@ footer p span {
 }
 .progress main .pop-up-content-top .swiper .swiper-wrapper .swiper-slide .imgBox img {
   width: 100%;
-  height: 35vw;
+  height: 34vw;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -3263,7 +3262,21 @@ footer p span {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  margin-top: 2vw;
+  margin-top: 1.5vw;
+  overflow: auto;
+  height: 12vw;
+  padding-bottom: 1vw;
+  padding-right: 1vw;
+}
+.progress main .pop-up-content-bottom::-webkit-scrollbar {
+  width: 5px;
+  background-color: #000000;
+}
+.progress main .pop-up-content-bottom::-webkit-scrollbar-thumb {
+  background-color: #F5F5F5;
+}
+.progress main .pop-up-content-bottom::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
 }
 .progress main .pop-up-content-bottom img {
   width: 18%;
@@ -3413,7 +3426,7 @@ footer p span {
     margin-bottom: 1.4vw;
   }
   .progress main .pop-up {
-    padding-top: 20vw;
+    padding-top: 15vw;
   }
   .progress main .pop-up-close {
     position: absolute;
@@ -3438,6 +3451,9 @@ footer p span {
   .progress main .pop-up-content .title p span {
     font-size: var(--ch_l_text);
     margin-right: 1.5vw;
+  }
+  .progress main .pop-up-content-top {
+    margin-bottom: 1.5vw;
   }
   .progress main .pop-up-content-top .swiper {
     width: 100%;
@@ -3475,6 +3491,8 @@ footer p span {
     flex-wrap: wrap;
     width: 100%;
     margin-top: 2vw;
+    padding-right: 2vw;
+    height: 30vw;
   }
   .progress main .pop-up-content-bottom img {
     width: 31%;
@@ -3484,6 +3502,27 @@ footer p span {
   .progress main .pop-up-active {
     opacity: 1;
     z-index: 300;
+  }
+}
+@media all and (max-width: 1039px) and (max-width: 500px) {
+  .progress main .pop-up {
+    padding-top: 25vw;
+  }
+  .progress main .pop-up-close img {
+    width: 9vw;
+  }
+  .progress main .pop-up-content .title p span {
+    margin-right: 2vw;
+  }
+  .progress main .pop-up-content-bottom {
+    margin-top: 2.5vw;
+    padding-right: 2.5vw;
+    height: 85vw;
+  }
+  .progress main .pop-up-content-bottom img {
+    width: 31%;
+    margin-bottom: 3vw;
+    cursor: pointer;
   }
 }
 .concept {
@@ -6676,6 +6715,185 @@ footer p span {
   margin-right: 1vw;
 }
 
+@media all and (max-width: 1039px) {
+  .user {
+    margin-top: 7vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .user .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 4vw 0;
+    margin: 10vw 0;
+  }
+  .user .content-box {
+    width: 80%;
+    position: relative;
+    padding: 0;
+  }
+  .user .content-box .title {
+    border-bottom: 1px solid #126233;
+    margin: 1vw auto 5vw;
+  }
+  .user .content-box .title h1 {
+    margin: 0 auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: var(--ch_m_text);
+    padding-bottom: 1.2vw;
+  }
+  .user .content-box form {
+    width: 100%;
+  }
+  .user .content-box form .form-box {
+    margin-bottom: 8vw;
+    flex-direction: column;
+    padding: 0;
+  }
+  .user .content-box form .form-box > p {
+    padding-left: 1vw;
+    margin-bottom: 2vw;
+    font-size: var(--ch_s_text);
+  }
+  .user .content-box form .form-box input {
+    width: 100%;
+    padding: 2.5vw 2.5vw;
+    font-size: var(--ch_s_text);
+  }
+  .user .content-box form .form-box input[type=submit] {
+    font-size: var(--ch_s_text);
+  }
+  .user .content-box form .form-box select {
+    position: relative;
+    font-size: var(--ch_s_text);
+    width: 100%;
+    flex: auto;
+    margin: 2vw 0 3vw 0;
+    padding: 0 2.5vw;
+    height: 5.5vw;
+  }
+  .user .content-box form .form-box .floor {
+    margin-top: 3vw;
+  }
+  .user .content-box form > :nth-child(2) {
+    flex-direction: row;
+    align-items: center;
+  }
+  .user .content-box form > :nth-child(2) p {
+    margin-bottom: 0;
+    flex: 0 0 20%;
+  }
+  .user .content-box form > :nth-child(2) label {
+    font-size: var(--ch_s_text);
+    margin-right: 6vw;
+  }
+  .user .content-box form > :nth-child(2) label input {
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+  }
+  .user .content-box form > :last-child {
+    position: static;
+    width: 100%;
+  }
+  .user .content-box form > :last-child input {
+    width: 100%;
+    font-size: var(--more_text);
+    font-weight: 600;
+  }
+  .user .content-box form > :last-child > :nth-child(1) {
+    margin-right: 0;
+    order: 3;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 40px;
+    margin-top: 3.5vw;
+  }
+  .user .content-box form > :last-child > :nth-child(1) input {
+    color: #126233;
+    pointer-events: none;
+  }
+  .user .content-box form > :last-child > :nth-child(2) {
+    background-color: rgba(18, 98, 51, 0.5568627451);
+    color: #fff;
+  }
+}
+@media all and (max-width: 1039px) and (max-width: 500px) {
+  .user .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 4vw 0;
+    margin: 20vw 0;
+  }
+  .user .content-box {
+    width: 80%;
+    position: relative;
+    padding: 0;
+  }
+  .user .content-box .title {
+    margin: 1vw auto 8vw;
+  }
+  .user .content-box .title h1 {
+    margin: 0 auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: var(--ch_m_text);
+    padding-bottom: 2.5vw;
+  }
+  .user .content-box form {
+    width: 100%;
+  }
+  .user .content-box form .form-box {
+    margin-bottom: 12vw;
+  }
+  .user .content-box form .form-box > p {
+    padding-left: 1vw;
+    margin-bottom: 2vw;
+  }
+  .user .content-box form .form-box input {
+    padding: 4.5vw 3vw;
+  }
+  .user .content-box form .form-box select {
+    margin: 4vw 0 5vw;
+    padding: 0 2.5vw;
+    height: 10vw;
+  }
+  .user .content-box form .form-box .floor {
+    margin-top: 5vw;
+  }
+  .user .content-box form > :nth-child(2) {
+    flex-direction: row;
+    align-items: center;
+  }
+  .user .content-box form > :nth-child(2) p {
+    margin-bottom: 0;
+  }
+  .user .content-box form > :nth-child(2) label {
+    margin-right: 8vw;
+  }
+  .user .content-box form > :nth-child(2) label input {
+    width: 20px;
+    height: 20px;
+  }
+  .user .content-box form > :last-child > :nth-child(1) {
+    margin-right: 0;
+    margin-top: 5vw;
+  }
+}
 * {
   margin: 0;
   padding: 0;

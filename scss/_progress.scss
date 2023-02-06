@@ -227,15 +227,15 @@
             width: 100%;
             height: 100vh;
             z-index: -1;
-            padding-top: 5vw;
-            overflow: auto;
+            padding-top: 1vw;
+
             opacity: 0;
             transition: 0.5s;
 
             &-close {
                 position: absolute;
                 right: 10vw;
-                top: 5vw;
+                top: 2vw;
                 cursor: pointer;
 
                 img {
@@ -251,7 +251,7 @@
                 margin: 0 auto;
 
                 .title {
-                    margin: 0 auto 2vw;
+                    margin: 0 auto 1.5vw;
                     width: fit-content;
 
                     p {
@@ -286,7 +286,7 @@
 
                                     img {
                                         width: 100%;
-                                        height: 35vw;
+                                        height: 34vw;
                                         object-fit: cover;
 
                                     }
@@ -302,8 +302,25 @@
                     justify-content: space-between;
                     flex-wrap: wrap;
                     width: 100%;
-                    margin-top: 2vw;
+                    margin-top: 1.5vw;
+                    overflow: auto;
+                    height: 12vw;
+                    padding-bottom: 1vw;
+                    padding-right: 1vw;
 
+                    &::-webkit-scrollbar {
+                        width: 5px;
+                        background-color: #000000;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+
+                        background-color: #F5F5F5;
+                    }
+
+                    &::-webkit-scrollbar-thumb:hover {
+                        background-color: #555;
+                    }
 
                     img {
                         width: 18%;
@@ -480,7 +497,7 @@
             }
 
             .pop-up {
-                padding-top: 20vw;
+                padding-top: 15vw;
 
                 &-close {
                     position: absolute;
@@ -510,6 +527,8 @@
                     }
 
                     &-top {
+                        margin-bottom: 1.5vw;
+
                         .swiper {
                             width: 100%;
                             height: fit-content;
@@ -544,7 +563,8 @@
                         flex-wrap: wrap;
                         width: 100%;
                         margin-top: 2vw;
-
+                        padding-right: 2vw;
+                        height: 30vw;
 
                         img {
                             width: 31%;
@@ -558,6 +578,53 @@
             .pop-up-active {
                 opacity: 1;
                 z-index: 300;
+            }
+        }
+    }
+
+    @media all and (max-width:500px) {
+        .progress {
+
+
+            main {
+
+                .pop-up {
+                    padding-top: 25vw;
+
+                    &-close {
+
+                        img {
+                            width: 9vw;
+                        }
+                    }
+
+                    &-content {
+
+                        .title {
+
+                            p {
+
+                                span {
+                                    margin-right: 2vw;
+                                }
+                            }
+                        }
+
+
+
+                        &-bottom {
+                            margin-top: 2.5vw;
+                            padding-right: 2.5vw;
+                            height: 85vw;
+
+                            img {
+                                width: 31%;
+                                margin-bottom: 3vw;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

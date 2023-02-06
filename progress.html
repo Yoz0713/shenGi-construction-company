@@ -461,9 +461,8 @@
 
                             if (e.target == $($(".pop-up-content-bottom img")[i])[0]) {
                                 swiper2.slideTo(i)
-                                $(item).parent().find("img").removeClass("is-active")
-                                $(item).addClass("is-active")
-
+                                $($($(".pop-up-content-bottom img")[i])[0]).addClass("is-active").parent().find("img").removeClass("is-active")
+                                $($($(".pop-up-content-bottom img")[i])[0]).addClass("is-active")
                             }
 
                         })
