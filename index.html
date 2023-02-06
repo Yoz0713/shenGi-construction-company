@@ -468,6 +468,7 @@
 
 
     <script src="./js/sliceSquare.js"></script>
+    <script src="./js/splitText.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -483,43 +484,13 @@
 
             //在Loading及開場動畫結束前取消滾動
 
-            function splitTextAnimation(wrap) {
-                wrap = document.querySelector(`${wrap}`);
-                text = wrap.innerText
 
-                wrap.innerHTML = null
-                let str = `${text}`;
-                let brExp = /\n/i;
-                let arrElement = [];
-                let arr = str.split(brExp)
-                arr.forEach((item, i) => {
-                    item = item.split("");
-
-                    let a = item.map((item2, i) => {
-
-                        if (item2 == " ") {
-                            item2 = `<span class="blind"><span>\xa0</span></span>`
-                            return item2
-                        } else {
-                            item2 = `<span class="blind"><span>${item2}</span></span>`
-                            return item2
-                        }
-                    })
-                    arrElement.push(a)
-                })
-                let finalStr = arrElement.map((item) => {
-                    return item.join("")
-
-                })
-
-                wrap.innerHTML = finalStr.join("<br/>");
-            }
             function split() {
                 //first-page
-                splitTextAnimation(".first-page .paraBox p")
-                splitTextAnimation(".first-page .paraBox h2")
-                splitTextAnimation(".fifth-page .paraBox h4")
-                splitTextAnimation(".fifth-page .paraBox h6")
+                splitText(".first-page .paraBox p")
+                splitText(".first-page .paraBox h2")
+                splitText(".fifth-page .paraBox h4")
+                splitText(".fifth-page .paraBox h6")
                 //first-page
             }
             split()

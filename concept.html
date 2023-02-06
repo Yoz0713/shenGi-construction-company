@@ -231,6 +231,7 @@
     <div class="clip"></div>
 
     <script src="./js/sliceSquare.js"></script>
+    <script src="./js/splitText.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
@@ -255,7 +256,11 @@
                     }
                 }
             })
-            function bannerText() {
+            function split() {
+                splitText(".ch-box h2")
+            }
+            split()
+            function bannerIn() {
                 let gg = gsap.timeline()
 
                 gg.fromTo(".first-page-bg .imgBox", {
@@ -278,28 +283,30 @@
                     duration: 1.5,
                 })
             }
-            bannerText()
-            // function bannerIn() {
-            //     let gg = gsap.timeline({
-            //         onUpdate() {
-            //             $(".first-page-bg :nth-child(1)").css("clip-path", "none")
-            //             $(".first-page-bg :nth-child(1)").css("clip-path", "url(#clipPath1)")
-            //         },
+            bannerIn()
 
-            //     })
-            //     gsap.set("#clipPath1 rect", {
-            //         svgOrigin: "center center",
-            //     })
-
-            //     gg.from("#clipPath1 rect", {
-            //         // attr: {
-            //         //     fill: "#000"
-            //         // },
-            //         scale: 0,
-            //         duration: 1.6,
-            //     })
-            // }
-            // bannerIn()
+            function secondPageAnimation() {
+                let gg = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".second-page",
+                        start: "top center"
+                    }
+                })
+                gg.from(".en-box h2", {
+                    opacity: 0,
+                    y: 30,
+                    duration: 0.8,
+                    onComplete: () => {
+                        $(".en-box h2").addClass("is-active")
+                    }
+                }).from(".ch-box h2 span", {
+                    opacity: 0,
+                    y: 30,
+                    duration: 0.8,
+                    stagger: 0.1
+                })
+            }
+            secondPageAnimation()
         }
 
     </script>

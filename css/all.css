@@ -3506,7 +3506,7 @@ footer p span {
 }
 @media all and (max-width: 1039px) and (max-width: 500px) {
   .progress main .pop-up {
-    padding-top: 25vw;
+    padding-top: 16vw;
   }
   .progress main .pop-up-close img {
     width: 9vw;
@@ -3588,11 +3588,15 @@ footer p span {
   content: "";
   position: absolute;
   right: 0vw;
-  top: 0;
+  bottom: 0;
   width: 1px;
-  height: 100%;
+  height: 0;
   background-color: #010101;
   opacity: 0.6;
+  transition: 1s;
+}
+.concept .second-page-title .en-box .is-active::after {
+  height: 100%;
 }
 .concept .second-page-title .ch-box {
   font-size: var(--ch_m_text);
