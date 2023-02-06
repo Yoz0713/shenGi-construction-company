@@ -3268,7 +3268,11 @@ footer p span {
 .progress main .pop-up-content-bottom img {
   width: 18%;
   margin-bottom: 1.6vw;
+  filter: brightness(0.3);
   cursor: pointer;
+}
+.progress main .pop-up-content-bottom .is-active {
+  filter: brightness(1);
 }
 .progress main .pop-up-active {
   opacity: 1;
@@ -3506,8 +3510,6 @@ footer p span {
   position: relative;
   width: 100%;
   height: 100%;
-  -webkit-clip-path: polygon(0% 0%, 80% 0%, 80% 90%, 0% 90%);
-          clip-path: polygon(0% 0%, 80% 0%, 80% 90%, 0% 90%);
 }
 .concept .first-page-bg > :nth-child(2) {
   position: absolute;
@@ -4732,8 +4734,10 @@ footer p span {
 .login .content-box .content-sign {
   display: flex;
   width: 100%;
-  font-size: var(--more_text);
   margin: 1vw 0 2vw;
+}
+.login .content-box .content-sign > p {
+  font-size: var(--ch_m_text);
 }
 .login .content-box .content-sign div {
   display: flex;
@@ -4745,6 +4749,7 @@ footer p span {
 }
 .login .content-box .content-sign div p {
   pointer-events: none;
+  font-size: var(--more_text);
   color: rgba(18, 98, 51, 0.5568627451);
   font-weight: 600;
 }
@@ -4783,7 +4788,7 @@ footer p span {
   margin-bottom: 1vw;
 }
 .login .content-box form .form-box > p {
-  font-size: 0.8vw;
+  font-size: var(--ch_xs_text);
   color: rgba(18, 98, 51, 0.7960784314);
   margin-bottom: 5px;
   margin-left: 0.5vw;
@@ -4965,6 +4970,241 @@ footer p span {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+@media all and (max-width: 1039px) {
+  .login {
+    margin-top: 7vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .login .content {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 12vw 0;
+    margin: 10vw 0;
+  }
+  .login .content-box {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    position: relative;
+    padding: 0;
+  }
+  .login .content-box .content-logo {
+    margin-bottom: 5vw;
+  }
+  .login .content-box .content-logo img {
+    width: 13vw;
+  }
+  .login .content-box .content-sign {
+    margin: 1vw 0 5vw;
+  }
+  .login .content-box .content-sign > p {
+    font-size: var(--ch_m_text);
+    padding-bottom: 1.2vw;
+  }
+  .login .content-box .content-sign div {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    flex: auto;
+    padding: 0 3vw 1.2vw;
+  }
+  .login .content-box .content-sign div p {
+    font-size: var(--ch_m_text);
+  }
+  .login .content-box .content-sign div p span {
+    font-size: var(--more_text);
+  }
+  .login .content-box form {
+    width: 100%;
+  }
+  .login .content-box form .form-box {
+    margin-bottom: 5vw;
+  }
+  .login .content-box form .form-box > p {
+    margin-left: 1.5vw;
+    margin-bottom: 1.5vw;
+    font-size: var(--ch_s_text);
+  }
+  .login .content-box form .form-box > p span {
+    font-size: var(--ch_xs_text);
+    font-weight: 300;
+  }
+  .login .content-box form .form-box input {
+    padding: 1.5vw 2.5vw;
+    font-size: var(--ch_s_text);
+  }
+  .login .content-box form .form-box input[type=submit] {
+    margin-top: 1.5vw;
+    font-size: var(--ch_s_text);
+  }
+  .login .content-box form .form-box .box .forgetPassword {
+    margin: 1.5vw 1.5vw 0 0;
+  }
+  .login .content-box form .form-box .box .forgetPassword p {
+    font-size: var(--ch_xs_text);
+    color: #126233;
+  }
+  .login .content-box > .signUp {
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: static;
+    width: 100%;
+  }
+  .login .content-box > .signUp .form-box {
+    flex: auto;
+  }
+  .login .content-box > .signUp :nth-child(7) {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 100%;
+  }
+  .login .content-box > .signUp :nth-child(7) input {
+    width: 100%;
+  }
+  .login .content-box > .signIn {
+    display: none;
+    flex-direction: column;
+  }
+  .login .content-box > .signIn .form-box input[type=submit] {
+    margin-top: 0vw;
+  }
+  .login .content-box > .is-active {
+    display: flex;
+    -webkit-animation-name: up;
+            animation-name: up;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    pointer-events: all;
+  }
+  .login .content2 .content-sign {
+    border-bottom: 1px solid #126233;
+  }
+  .login .content2 .content-box form {
+    width: 100%;
+  }
+  .login .content2 .content-box form .checkFormat .box {
+    position: relative;
+  }
+  .login .content2 .content-box form .checkFormat .box .hint {
+    position: absolute;
+    width: 5vw;
+    height: 5vw;
+    top: 0;
+    margin: auto 0;
+    bottom: 0;
+    right: -7vw;
+  }
+  .login .content2 .content-box form .verification {
+    position: relative;
+  }
+  .login .content2 .content-box form .verification .box {
+    position: relative;
+  }
+  .login .content2 .content-box form .verification .box .hint2 {
+    width: 5vw;
+    height: 5vw;
+    bottom: 0;
+    top: 0;
+    margin: auto 0;
+    right: 25vw;
+  }
+  .login .content2 .content-box form .verification .box .submit-verification-code {
+    padding: 0 5vw;
+  }
+  .login .content2 .content-box form .verification .box .submit-verification-code p {
+    font-size: var(--more_text);
+  }
+  .login .is-active2 {
+    display: flex;
+  }
+}
+@media all and (max-width: 1039px) and (max-width: 500px) {
+  .login {
+    margin-top: 12vw;
+  }
+  .login .content {
+    padding: 20vw 0;
+    margin: 20vw 0;
+  }
+  .login .content-box {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    position: relative;
+    padding: 0;
+  }
+  .login .content-box .content-logo {
+    margin-bottom: 8vw;
+  }
+  .login .content-box .content-logo img {
+    width: 18vw;
+  }
+  .login .content-box .content-sign {
+    margin: 2vw 0 8vw;
+  }
+  .login .content-box .content-sign > p {
+    padding-bottom: 2vw;
+  }
+  .login .content-box .content-sign div {
+    padding: 0 6vw 2vw;
+  }
+  .login .content-box form {
+    width: 100%;
+  }
+  .login .content-box form .form-box {
+    margin-bottom: 5vw;
+  }
+  .login .content-box form .form-box > p {
+    margin-left: 2.5vw;
+    margin-bottom: 2.5vw;
+  }
+  .login .content-box form .form-box input {
+    padding: 2vw 3vw;
+  }
+  .login .content-box form .form-box input[type=submit] {
+    margin-top: 3vw;
+  }
+  .login .content-box form .form-box .box .forgetPassword {
+    margin: 2.5vw 2.5vw 0 0;
+  }
+  .login .content2 .content-box form .checkFormat .box .hint {
+    width: 6vw;
+    height: 6vw;
+    right: -8vw;
+  }
+  .login .content2 .content-box form .verification {
+    position: relative;
+  }
+  .login .content2 .content-box form .verification .box {
+    position: relative;
+  }
+  .login .content2 .content-box form .verification .box .hint2 {
+    width: 6vw;
+    height: 6vw;
+    right: 27vw;
+  }
+  .login .content2 .content-box form .verification .box .submit-verification-code {
+    padding: 0 5vw;
+  }
+  .login .content2 .content-box form .verification .box .submit-verification-code p {
+    font-size: var(--more_text);
+  }
+  .login .content2 .content-box form > :last-child {
+    margin-top: 4vw;
   }
 }
 .smart {

@@ -182,11 +182,14 @@
                 <form class="signIn is-active">
                     <div class="form-box checkFormat">
                         <p>信箱 <span>MAIL</span></p>
-                        <input type="text">
-                        <div class="hint">
-                            <img src="./img/login/SVG/wrong.svg" class="wrong">
-                            <img src="./img/login/SVG/check.svg" class="check">
+                        <div class="box">
+                            <input type="text">
+                            <div class="hint">
+                                <img src="./img/login/SVG/wrong.svg" class="wrong">
+                                <img src="./img/login/SVG/check.svg" class="check">
+                            </div>
                         </div>
+
                     </div>
                     <div class="form-box verification">
                         <p>輸入驗證碼 <span>VERIFICATION CODE</span></p>
@@ -195,12 +198,13 @@
                             <div class="submit-verification-code">
                                 <p>發送驗證碼</p>
                             </div>
+                            <div class="hint2">
+                                <img src="./img/login/SVG/wrong.svg" class="wrong">
+                                <img src="./img/login/SVG/check.svg" class="check">
+                            </div>
                         </div>
 
-                        <div class="hint2">
-                            <img src="./img/login/SVG/wrong.svg" class="wrong">
-                            <img src="./img/login/SVG/check.svg" class="check">
-                        </div>
+
 
                     </div>
                     <div class="form-box">
@@ -263,6 +267,8 @@
             $(".content2").addClass("is-active2");
         })
         //change to forget
+
+        //change content height on phone
 
 
         //submit click effect 

@@ -288,6 +288,7 @@
                                         width: 100%;
                                         height: 35vw;
                                         object-fit: cover;
+
                                     }
                                 }
                             }
@@ -307,7 +308,12 @@
                     img {
                         width: 18%;
                         margin-bottom: 1.6vw;
+                        filter: brightness(0.3);
                         cursor: pointer;
+                    }
+
+                    .is-active {
+                        filter: brightness(1);
                     }
                 }
             }
