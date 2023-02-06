@@ -35,8 +35,8 @@
 
                 <div class="user-area-menu">
                     <ul>
-                        <li><a href="user.html">會員專區</a></li>
-                        <li><a href="javascript:;">客服維修</a></li>
+                        <li><a href="./user.html">會員專區</a></li>
+                        <li><a href="./service.html">客服維修</a></li>
                     </ul>
                 </div>
             </div>
@@ -232,6 +232,7 @@
         <p class="phone">森鉅建設股份有限公司版權所有 2023 © Copyright<br>
             02-12345678 臺北市松山區敦化北路167號17樓</p>
     </footer>
+    <script src="./js/splitText.js"></script>
     <script src="./js/paticles.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
@@ -241,7 +242,206 @@
     <script src="./js/config.js"></script>
 
     <script>
+        function split() {
+            splitText(".first-page-title h3")
+            splitText(".first-page-title h2")
+            splitText(".second-page-para .para1 h4")
+            splitText(".second-page-para .para1 h3")
+            splitText(".fifth-page-top h4")
+        }
+        split()
+        function bannerIn() {
+            let gg = gsap.timeline()
+            gg.fromTo(".first-page-bg", {
+                clipPath: "polygon(0 0 , 0% 0, 0% 90% , 0 90% , 0 0 )",
 
+            }, {
+                clipPath: "polygon(0 0 , 80% 0, 80% 90% , 0 90% , 0 0 )",
+                duration: 1.4,
+            }).to(".first-page-bg", {
+                clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
+                duration: 1,
+            }).fromTo(".first-page-bg", {
+                scale: 1.2
+            }, {
+                scale: 1,
+                duration: 1,
+            }, "<").from(".first-page-title h3 span", {
+                opacity: 0,
+                x: 30,
+                duration: 0.8,
+                stagger: 0.03
+            }, "<+0.5").from(".first-page-title h2 span", {
+                opacity: 0,
+                x: -30,
+                duration: 0.8,
+                stagger: 0.03
+            }, "<")
+        }
+        bannerIn()
+        function secondPageAnimation() {
+            let gg = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".second-page-para .para1",
+                    start: "top center"
+                }
+            })
+            gg.from(".second-page-para .para1 h4 span", {
+                opacity: 0,
+
+                duration: 0.8,
+                stagger: 0.03
+            }).from(".second-page-para .para1 h3 span", {
+                opacity: 0,
+
+                duration: 0.8,
+                stagger: 0.03
+            }, "<+0.5").from(".second-page-para .para2 p", {
+                opacity: 0,
+                y: 30,
+                duration: 0.8,
+            })
+
+            let gg2 = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".second-page-para .para3",
+                    start: "top 80%"
+                }
+            })
+            gg2.from(".second-page-para .para3", {
+                duration: 0.5,
+                onStart: () => {
+                    $(".second-page-para .para2").addClass("is-active")
+                }
+            }).from(".second-page-para .para3", {
+                opacity: 0,
+                y: 30,
+                duration: 0.8,
+
+
+            })
+
+            let gg3 = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".second-page-img",
+                    start: "top 80%"
+                }
+            })
+            gg3.from(".second-page-img", {
+                opacity: 0,
+                y: 30,
+                duration: 0.8,
+
+
+            })
+        }
+        secondPageAnimation()
+
+        function thirdPageAnimation() {
+            let gg = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".third-page :nth-child(1)",
+                    start: "top 80%"
+                }
+            })
+            gg.from(".third-page :nth-child(1) .paraBox", {
+                opacity: 0,
+                y: 30,
+                duration: 1.2,
+            }).from(".third-page :nth-child(1) .imgBox", {
+                opacity: 0,
+                y: 30,
+                scale: 0.9,
+                duration: 0.8,
+            }, "<+0.5").from(".third-page :nth-child(1) .imgBox img", {
+                scale: 1.6,
+                duration: 1.2,
+            }, "<")
+
+            let gg2 = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".third-page .opposite",
+                    start: "top 80%",
+
+                }
+            })
+
+            gg2.from(".third-page :nth-child(2) .paraBox", {
+                opacity: 0,
+                y: 30,
+                duration: 1.2,
+            }).from(".third-page :nth-child(2) .imgBox", {
+                opacity: 0,
+                y: 30,
+                scale: 0.9,
+                duration: 0.8,
+            }, "<+0.5").from(".third-page :nth-child(2) .imgBox img", {
+                scale: 1.6,
+                duration: 1.2,
+            }, "<")
+        }
+        thirdPageAnimation()
+
+        function forthPageAnimation() {
+            let gg = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".forth-page",
+                    start: "top 80%"
+                }
+            })
+            gg.from(".forth-page-bg", {
+                opacity: 0,
+                y: 30,
+                duration: 1.2,
+            }).fromTo(".forth-page-para", {
+                clipPath: "polygon(0 0 , 0% 0, 0% 100% , 0 100% , 0 0 )",
+
+            }, {
+                clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
+                duration: 1.2,
+            }).from(".forth-page-para h4 ", {
+                opacity: 0,
+                x: 30,
+                duration: 0.8,
+            }).from(".forth-page-para p ", {
+                opacity: 0,
+                x: -30,
+                duration: 0.8,
+            }, "<0.5")
+
+
+        }
+        forthPageAnimation()
+
+        function fifthPageAnimation() {
+            let gg = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".fifth-page",
+                    start: "top 80%"
+                }
+            })
+            gg.from(".fifth-page-top h4 span", {
+                opacity: 0,
+                y: 30,
+                duration: 0.8,
+                stagger: 0.03
+            }).from(".fifth-page-bottom > :nth-child(odd)", {
+                opacity: 0,
+                y: 30,
+                duration: 0.8,
+                stagger: 0.3
+            }, "<+0.8").from(".fifth-page-bottom > :nth-child(even)", {
+                opacity: 0,
+                y: 30,
+                duration: 0.8,
+                stagger: 0.3
+            }, "<+0.8").from(".fifth-page-top a", {
+                opacity: 0,
+
+                duration: 0.8,
+            }, "<+0.8")
+        }
+        fifthPageAnimation()
     </script>
 </body>
 

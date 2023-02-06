@@ -35,8 +35,8 @@
 
                 <div class="user-area-menu">
                     <ul>
-                        <li><a href="user.html">會員專區</a></li>
-                        <li><a href="javascript:;">客服維修</a></li>
+                        <li><a href="./user.html">會員專區</a></li>
+                        <li><a href="./service.html">客服維修</a></li>
                     </ul>
                 </div>
             </div>
@@ -194,30 +194,82 @@
         <p class="phone">森鉅建設股份有限公司版權所有 2023 © Copyright<br>
             02-12345678 臺北市松山區敦化北路167號17樓</p>
     </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.0.5/pixi.min.js"></script>
+    <script src="./js/splitText.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script src="./js/config.js"></script>
 
     <script>
-
+        function split() {
+            splitText(".first-page-title h3")
+            splitText(".first-page-title h2")
+            splitText(".paraBox-title h3")
+        }
+        split()
         function bannerIn() {
-
-
             let gg = gsap.timeline()
+            gg.fromTo(".first-page-bg", {
+                clipPath: "polygon(0 0 , 0% 0, 0% 90% , 0 90% , 0 0 )",
 
-            gg.fromTo(".first-page-title", {
-                y: 100,
-                opacity: 0
             }, {
-                opacity: 1,
-                y: 0,
-                duration: 1.5
+                clipPath: "polygon(0 0 , 80% 0, 80% 90% , 0 90% , 0 0 )",
+                duration: 1.4,
+            }).to(".first-page-bg", {
+                clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
+                duration: 1,
+            }).fromTo(".first-page-bg", {
+                scale: 1.2
+            }, {
+                scale: 1,
+                duration: 1,
+            }, "<").from(".first-page-title h3 span", {
+                opacity: 0,
+                x: 30,
+                duration: 0.8,
+                stagger: 0.03
+            }, "<+0.5").from(".first-page-title h2 span", {
+                opacity: 0,
+                x: -30,
+                duration: 0.8,
+                stagger: 0.03
+            }, "<")
+        }
+        bannerIn()
+
+        function mainAnimation() {
+            $(".second-page ul li").each((i, item) => {
+                console.log(item)
+
+                this[`gg+${i}`] = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: item,
+                        start: "top 80%",
+                    }
+                })
+                this[`gg+${i}`].fromTo($(item).find(".imgBox a"), {
+                    clipPath: "polygon(0 0 , 0% 0, 0% 100% , 0 100% , 0 0 )",
+
+                }, {
+                    clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
+                    duration: 1.8,
+                }).from($(item).find(".paraBox-title h3 span"), {
+                    x: -30,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.05
+                }, "<+1").from($(item).find(".paraBox > p"), {
+                    x: -30,
+                    opacity: 0,
+                    duration: 0.8,
+                }, "<+0.5").from($(item).find(".paraBox > a"), {
+                    x: -30,
+                    opacity: 0,
+                    duration: 0.8,
+                }, "<+0.5")
             })
         }
-
-        bannerIn()
+        mainAnimation()
     </script>
 </body>
 

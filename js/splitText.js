@@ -1,4 +1,5 @@
 function splitText(wrap) {
+
     wrap = document.querySelector(`${wrap}`);
     text = wrap.innerText
 
@@ -28,4 +29,5 @@ function splitText(wrap) {
     })
 
     wrap.innerHTML = finalStr.join("<br/>");
+
 }

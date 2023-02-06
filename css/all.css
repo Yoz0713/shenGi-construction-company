@@ -2140,13 +2140,13 @@ footer p span {
   height: -moz-fit-content;
   height: fit-content;
 }
-.construction .second-page ul li .paraBox span {
+.construction .second-page ul li .paraBox a span {
   font-size: var(--more_text);
   letter-spacing: 0.2em;
   border-bottom: 1px solid rgba(136, 136, 136, 0.2745098039);
   padding: 0 1.5vw 0.3vw 0.5vw;
 }
-.construction .second-page ul li .paraBox span::after {
+.construction .second-page ul li .paraBox a span::after {
   display: block;
   content: "";
   position: absolute;
@@ -2241,10 +2241,10 @@ footer p span {
     font-size: var(--ch_s_text);
     padding: 1vw 2vw;
   }
-  .construction .second-page ul li .paraBox span {
+  .construction .second-page ul li .paraBox a span {
     padding: 0 4vw 1.5vw 1vw;
   }
-  .construction .second-page ul li .paraBox span::after {
+  .construction .second-page ul li .paraBox a span::after {
     display: block;
     content: "";
     position: absolute;
@@ -2284,11 +2284,11 @@ footer p span {
   .construction .second-page ul li .paraBox a {
     bottom: -10vw;
   }
-  .construction .second-page ul li .paraBox span {
+  .construction .second-page ul li .paraBox a span {
     padding: 0 5vw 2vw 1.5vw;
     font-weight: 700;
   }
-  .construction .second-page ul li .paraBox span::after {
+  .construction .second-page ul li .paraBox a span::after {
     display: block;
     content: "";
     position: absolute;
@@ -3624,6 +3624,9 @@ footer p span {
 .concept .second-page-para p span {
   color: #56B87E;
 }
+.concept .second-page-bg {
+  overflow: hidden;
+}
 .concept .second-page-bg img {
   width: 36vw;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 7% 100%, 7% 45%, 0% 45%, 0 0);
@@ -3640,8 +3643,15 @@ footer p span {
   width: 100%;
   height: 100%;
 }
-.concept .third-page-bg img {
+.concept .third-page-bg .imgBox {
   position: absolute;
+  overflow: hidden;
+}
+.concept .third-page-bg .imgBox img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .concept .third-page-bg :nth-child(1) {
   width: 16vw;
@@ -3720,6 +3730,7 @@ footer p span {
 }
 .concept .forth-page-bg {
   margin-left: 13vw;
+  overflow: hidden;
 }
 .concept .forth-page-bg img {
   width: 20.5vw;
@@ -3766,9 +3777,13 @@ footer p span {
   right: 0vw;
   top: 0;
   width: 1px;
-  height: 100%;
+  height: 0;
+  transition: 1s;
   background-color: #010101;
   opacity: 0.6;
+}
+.concept .forth-page-title .en-box .is-active::after {
+  height: 100%;
 }
 .concept .forth-page-title .ch-box {
   font-size: var(--ch_m_text);
@@ -3906,6 +3921,9 @@ footer p span {
     display: flex;
     flex-direction: column;
   }
+  .concept .third-page-bg .imgBox {
+    position: static;
+  }
   .concept .third-page-bg img {
     position: static;
   }
@@ -3916,7 +3934,7 @@ footer p span {
   .concept .third-page-bg :nth-child(2) {
     width: 55vw;
     align-self: flex-end;
-    margin-bottom: 50vw;
+    margin-bottom: 60vw;
   }
   .concept .third-page-bg :nth-child(3) {
     width: 100%;
@@ -3949,7 +3967,7 @@ footer p span {
     position: absolute;
     right: auto;
     left: 0;
-    top: 185vw;
+    top: 225vw;
   }
   .concept .third-page-para2 p br {
     display: none;
@@ -4083,7 +4101,7 @@ footer p span {
     margin: 0 auto;
   }
   .concept .third-page-para2 {
-    top: 235vw;
+    top: 290vw;
   }
   .concept .third-page .box1 {
     width: 9.5vw;
@@ -5353,7 +5371,8 @@ footer p span {
   margin: 0 auto;
   top: 112%;
   width: 1px;
-  height: 8vw;
+  height: 0;
+  transition: 1s;
   background-color: rgba(0, 0, 0, 0.401);
 }
 .smart .second-page-para .para3 {
@@ -5364,6 +5383,9 @@ footer p span {
   font-size: var(--ch_m_text);
   letter-spacing: 0.2em;
   font-weight: 300;
+}
+.smart .second-page-para .is-active::after {
+  height: 8vw;
 }
 .smart .second-page-img {
   width: 85%;
@@ -5384,6 +5406,7 @@ footer p span {
 }
 .smart .third-page-box .imgBox {
   flex: 0 0 40%;
+  overflow: hidden;
 }
 .smart .third-page-box .imgBox img {
   width: 100%;
@@ -5569,9 +5592,6 @@ footer p span {
     position: relative;
     margin-bottom: 42vw;
   }
-  .smart .second-page-para .para2::after {
-    height: 30vw;
-  }
   .smart .second-page-para .para3 {
     margin-bottom: 15vw;
   }
@@ -5582,6 +5602,9 @@ footer p span {
     font-weight: 300;
     text-align: center;
     line-height: 2.5;
+  }
+  .smart .second-page-para .is-active::after {
+    height: 30vw;
   }
   .smart .second-page-img {
     width: 100%;
@@ -5769,7 +5792,6 @@ footer p span {
     margin-bottom: 75vw;
   }
   .smart .second-page-para .para2::after {
-    height: 40vw;
     top: 130%;
   }
   .smart .second-page-para .para3 {
@@ -5782,6 +5804,9 @@ footer p span {
     font-weight: 300;
     text-align: center;
     line-height: 2.5;
+  }
+  .smart .second-page-para::after {
+    height: 40vw;
   }
   .smart .second-page-img {
     width: 100%;
@@ -5911,12 +5936,18 @@ footer p span {
   position: absolute;
   bottom: -25px;
   left: 0;
-  width: 250%;
+  width: 0;
   height: 1px;
   background-color: #000;
+  transition: 1s;
+}
+.company .first-page-title .is-active::after {
+  width: 250%;
 }
 .company .first-page-bg {
   width: 81%;
+  overflow: hidden;
+  z-index: -1;
 }
 .company .first-page-bg img {
   width: 100%;
@@ -5931,6 +5962,9 @@ footer p span {
   align-items: center;
   width: 90%;
   margin: 0 auto 6vw 0;
+}
+.company .second-page-box .imgBox {
+  overflow: hidden;
 }
 .company .second-page-box .imgBox img {
   width: 32vw;

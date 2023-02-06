@@ -35,8 +35,8 @@
 
                 <div class="user-area-menu">
                     <ul>
-                        <li><a href="user.html">會員專區</a></li>
-                        <li><a href="javascript:;">客服維修</a></li>
+                        <li><a href="./user.html">會員專區</a></li>
+                        <li><a href="./service.html">客服維修</a></li>
                     </ul>
                 </div>
             </div>
@@ -140,9 +140,15 @@
                 <p>雲世代 新思維建築家 <br class="phone"> <span>森鉅建築</span></p>
             </div>
             <div class="third-page-bg">
-                <img src="./img/concept/third-page-bg1.webp">
-                <img src="./img/concept/third-page-bg3.webp">
-                <img src="./img/concept/third-page-bg2.webp">
+                <div class="imgBox">
+                    <img src="./img/concept/third-page-bg1.webp">
+                </div>
+                <div class="imgBox">
+                    <img src="./img/concept/third-page-bg2.webp">
+                </div>
+                <div class="imgBox">
+                    <img src="./img/concept/third-page-bg3.webp">
+                </div>
 
             </div>
 
@@ -243,7 +249,7 @@
         window.onload = function () {
             const swiper1 = new Swiper(".fifth-page .swiper", {
                 loop: true,
-                autoplay: true,
+                // autoplay: true,
                 slidesPerView: 1.3,
                 centeredSlides: true,
                 breakpoints: {
@@ -257,7 +263,8 @@
                 }
             })
             function split() {
-                splitText(".ch-box h2")
+                splitText(".second-page .ch-box h2")
+                splitText(".forth-page .ch-box h2")
             }
             split()
             function bannerIn() {
@@ -292,21 +299,181 @@
                         start: "top center"
                     }
                 })
-                gg.from(".en-box h2", {
+                gg.from(".second-page .en-box h2", {
                     opacity: 0,
                     y: 30,
                     duration: 0.8,
                     onComplete: () => {
-                        $(".en-box h2").addClass("is-active")
+                        $(".second-page .en-box h2").addClass("is-active")
                     }
-                }).from(".ch-box h2 span", {
+                }).from(".second-page .ch-box h2 span", {
                     opacity: 0,
                     y: 30,
                     duration: 0.8,
                     stagger: 0.1
-                })
+                }, "<+0.5").from(".second-page-bg", {
+                    opacity: 0,
+                    y: 30,
+                    scale: 0.9,
+                    duration: 0.8,
+                }, "<+0.5").from(".second-page-bg img", {
+                    scale: 1.4,
+                    duration: 2,
+                }, "<").from(".second-page-para", {
+                    opacity: 0,
+                    y: 30,
+                    duration: 0.8,
+                    stagger: 0.1
+                }, "<+1")
             }
             secondPageAnimation()
+
+            function thirdPageAnimation() {
+                let gg = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".third-page",
+                        start: "top center"
+                    }
+                })
+
+                let media = gsap.matchMedia()
+
+                media.add("(min-width: 1040px)", () => {
+                    gg.from(".third-page-para1 p", {
+                        opacity: 0,
+                        y: 30,
+                        duration: 0.8
+                    }).from(".third-page-bg .imgBox", {
+                        opacity: 0,
+                        y: 30,
+                        scale: 0.9,
+                        duration: 0.8,
+                        stagger: 0.2
+                    }).from(".third-page-bg img", {
+                        scale: 1.2,
+                        duration: 1.2,
+                        stagger: 0.2
+                    }, "<+0.5").from(".third-page-para2", {
+                        opacity: 0,
+                        y: 30,
+                        duration: 0.8,
+                    })
+                })
+                media.add("(max-width: 1039px)", () => {
+                    $(".third-page-bg .imgBox").each((i, item) => {
+                        this[`gg+${i}`] = gsap.timeline({
+                            scrollTrigger: {
+                                trigger: item,
+                                start: "top 80%",
+                            }
+                        })
+                        this[`gg+${i}`].from(item, {
+                            opacity: 0,
+                            y: 30,
+                            scale: 0.9,
+                            duration: 0.8,
+                        }).from($(item).children(), {
+                            scale: 1.2,
+                            duration: 1.2,
+                        }, "<+0.5")
+                    })
+                    let title = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: ".third-page-para1 p",
+                            start: "top 80%",
+                        }
+                    })
+                    title.from(".third-page-para1 p", {
+                        opacity: 0,
+                        y: 30,
+                        duration: 0.8
+                    })
+                    let para = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: ".third-page-para2 p",
+                            start: "top 80%",
+                        }
+                    })
+                    para.from(".third-page-para2 p", {
+                        opacity: 0,
+                        y: 30,
+                        duration: 0.8
+                    })
+                })
+            }
+            thirdPageAnimation()
+
+            function forthPageAnimation() {
+                let gg = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".forth-page",
+                        start: "top center"
+                    }
+                })
+                gg.fromTo(".forth-page .box", {
+                    clipPath: "polygon(0 0 ,0 100% ,0 100%  ,0 0 )",
+
+                }, {
+                    clipPath: "polygon(0 0 ,0 100% , 100% 100% , 100% 0%)",
+                    duration: 1.6,
+                    ease: "power1"
+                }).from(".forth-page .en-box h2", {
+                    opacity: 0,
+                    y: 30,
+                    duration: 0.8,
+                    onComplete: () => {
+                        $(".forth-page .en-box h2").addClass("is-active")
+                    }
+                }, "<+0.3").from(".forth-page .ch-box h2 span", {
+                    opacity: 0,
+                    y: 30,
+                    duration: 0.8,
+                    stagger: 0.1
+                }).from(".forth-page-bg", {
+                    opacity: 0,
+                    y: 30,
+                    scale: 0.9,
+                    duration: 0.8,
+                }, "<+0.5").from(".forth-page-bg img", {
+                    scale: 1.4,
+                    duration: 2,
+                }, "<").from(".forth-page-para", {
+                    opacity: 0,
+                    y: 30,
+                    duration: 0.8,
+                    stagger: 0.1
+                }, "<+0.8")
+            }
+            forthPageAnimation()
+
+            function fifthPageAnimation() {
+                let gg = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".fifth-page",
+                        start: "top 80%"
+                    }
+                })
+                gg.from(".fifth-page .swiper-slide-active", {
+                    opacity: 0,
+                    y: 30,
+                    duration: 0.8,
+
+                }).from(".fifth-page .swiper-slide-prev", {
+                    opacity: 0,
+                    y: 30,
+                    duration: 0.8,
+
+                }, "<+0.5").from(".fifth-page .swiper-slide-next", {
+                    opacity: 0,
+                    y: 30,
+                    duration: 0.8,
+
+                }, "<+0.5").then(() => {
+                    console.log(swiper1.autoplay.start())
+                })
+            }
+            fifthPageAnimation()
+
         }
 
     </script>

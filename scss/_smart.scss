@@ -105,7 +105,8 @@
                     margin: 0 auto;
                     top: 112%;
                     width: 1px;
-                    height: 8vw;
+                    height: 0;
+                    transition: 1s;
                     background-color: rgba(0, 0, 0, 0.401);
                 }
             }
@@ -118,6 +119,12 @@
                     font-size: var(--ch_m_text);
                     letter-spacing: 0.2em;
                     font-weight: 300;
+                }
+            }
+
+            .is-active {
+                &::after {
+                    height: 8vw;
                 }
             }
         }
@@ -145,6 +152,7 @@
 
             .imgBox {
                 flex: 0 0 40%;
+                overflow: hidden;
 
                 img {
                     width: 100%;
@@ -361,9 +369,7 @@
                     position: relative;
                     margin-bottom: 42vw;
 
-                    &::after {
-                        height: 30vw;
-                    }
+
                 }
 
                 .para3 {
@@ -376,6 +382,12 @@
                         font-weight: 300;
                         text-align: center;
                         line-height: 2.5;
+                    }
+                }
+
+                .is-active {
+                    &::after {
+                        height: 30vw;
                     }
                 }
             }
@@ -604,7 +616,6 @@
                         margin-bottom: 75vw;
 
                         &::after {
-                            height: 40vw;
                             top: 130%;
                         }
                     }
@@ -620,6 +631,10 @@
                             text-align: center;
                             line-height: 2.5;
                         }
+                    }
+
+                    &::after {
+                        height: 40vw;
                     }
                 }
 

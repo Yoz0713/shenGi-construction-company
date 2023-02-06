@@ -46,15 +46,25 @@
                     position: absolute;
                     bottom: -25px;
                     left: 0;
-                    width: 250%;
+                    width: 0;
                     height: 1px;
                     background-color: #000;
+                    transition: 1s;
+                }
+
+            }
+
+            .is-active {
+                &::after {
+                    width: 250%;
                 }
             }
         }
 
         &-bg {
             width: 81%;
+            overflow: hidden;
+            z-index: -1;
 
             img {
                 width: 100%;
@@ -74,8 +84,11 @@
             margin: 0 auto 6vw 0;
 
             .imgBox {
+                overflow: hidden;
+
                 img {
                     width: 32vw;
+
                 }
             }
 
