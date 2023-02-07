@@ -372,6 +372,9 @@
             <section class="forth-page">
                 <div class="forth-page-para">
                     <div class="box1">
+                        <div class="green">
+
+                        </div>
                         <div class="box1-1">
                             <h4>CLASSIC<br>PORTFOLIO</h4>
                             <p>純粹美學 時代印記~閱讀建築</p>
@@ -383,6 +386,9 @@
 
                     </div>
                     <div class="box2">
+                        <div class="green">
+
+                        </div>
                         <div class="box1-1">
                             <h4>ARCHITECTURE</h4>
                         </div>
@@ -392,6 +398,9 @@
 
                     </div>
                     <div class="box3">
+                        <div class="green">
+
+                        </div>
                         <div class="box1-1">
                             <p>美好生活 與 人 藝術 自然相遇。</p>
                         </div>
@@ -942,12 +951,15 @@
                     clipPath: "polygon(0 0 , 100% 0, 100% 0% , 0 0% , 0 0 )",
                     duration: 6,
                     stagger: 1
-                }, "<+2").fromTo(".forth-page-para .box1-2", {
-                    clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
-                }, {
-                    clipPath: "polygon(0 100% , 100% 100%, 100% 100% , 0 100% , 0 0 )",
-                    duration: 6,
-                    stagger: 1
+                }, "<+2").to(".forth-page-para .green", {
+                    clipPath: "polygon(100% 0, 0% 0, 0% 100%, 100% 100% )",
+                    duration: 4.5,
+                }).to(".forth-page-para .box1-2", {
+                    opacity: 0,
+                    duration: 0.001,
+                }).to(".forth-page-para .green", {
+                    clipPath: "polygon(0% 0, 0% 0, 0% 100%, 0% 100% )",
+                    duration: 3.5,
                 }).to(".forth-page-para div", {
                     opacity: 0,
                     duration: 6
@@ -1097,7 +1109,7 @@
 
                 secondPage2.to(".second-page .svgBox path", {
                     strokeDashoffset: 510,
-                    duration: 10,
+                    duration: 8,
 
                 }, "<+8").to(".second-page-bg :nth-child(3)", {
                     opacity: 1,
@@ -1159,7 +1171,7 @@
                     clipPath: "circle(100%)"
                 }, {
                     clipPath: "circle(18%)",
-                    duration: 10
+                    duration: 8
                 }, ">+2").to(".second-page-paraBox .para", {
                     x: "-1vw",
                     scale: 0.7,
@@ -1167,11 +1179,11 @@
                 }, "<+1").from(".second-page .circle", {
                     scale: 0,
 
-                    duration: 8
+                    duration: 6
                 }).to(".second-page .circle", {
                     rotate: 195,
 
-                    duration: 20
+                    duration: 16
                 }).to(".second-page .circle", {
                     scale: 3.5,
                     duration: 14
@@ -1307,13 +1319,16 @@
                     opacity: 1,
                     x: 0,
                     duration: 8,
-                }, "<").fromTo(".forth-page-para .box1-2", {
-                    clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
-                }, {
-                    clipPath: "polygon(0 100% , 100% 100%, 100% 100% , 0 100% , 0 0 )",
-                    duration: 6,
-                    stagger: 1
-                }, "<+12").to(".forth-page-para div", {
+                }, "<").to(".forth-page-para .green", {
+                    clipPath: "polygon(100% 0, 0% 0, 0% 100%, 100% 100% )",
+                    duration: 4.5,
+                }, "<+11").to(".forth-page-para .box1-2", {
+                    opacity: 0,
+                    duration: 0.001,
+                }, "<+4").to(".forth-page-para .green", {
+                    clipPath: "polygon(0% 0, 0% 0, 0% 100%, 0% 100% )",
+                    duration: 3.5,
+                }, "<").to(".forth-page-para div", {
                     opacity: 0,
                     duration: 6
 
