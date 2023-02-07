@@ -231,8 +231,6 @@
     </footer>
     <script src="./js/paticles.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="./js/config.js"></script>
@@ -319,6 +317,27 @@
                 $(".checkFormat .wrong").removeClass("is-active")
             }
         })
+
+
+        function bannerIn() {
+            let gg = gsap.timeline()
+            gg.from(".content", {
+                opacity: 0,
+
+                y: 30,
+                duration: 1.4
+            }).fromTo(".content .content-box", {
+                clipPath: "polygon(0 0 , 0% 0, 100% 0% , 100% 0% , 0 0 )",
+
+            }, {
+                clipPath: "polygon(0 0 , 0% 100%, 100% 100% , 100% 0% , 0 0 )",
+                duration: 1.6,
+            }, "<+1").from("#particles-js", {
+                opacity: 0,
+                duration: 5
+            }, "<+1")
+        }
+        bannerIn()
     </script>
 
 

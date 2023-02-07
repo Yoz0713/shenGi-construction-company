@@ -102,11 +102,19 @@
                         position: absolute;
                         right: 1.6vw;
                         bottom: -1.75vw;
+                        opacity: 0;
                         width: 35%;
                         height: 1px;
                         transform: rotate(-46.2deg);
                         transform-origin: left center;
                         background-color: #88888846;
+                        transition: 1s;
+                    }
+                }
+
+                .is-active {
+                    &::after {
+                        opacity: 1;
                     }
                 }
 

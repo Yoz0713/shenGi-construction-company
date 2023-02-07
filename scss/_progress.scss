@@ -41,16 +41,20 @@
                 bottom: -3vw;
                 margin: 0 auto;
                 width: 1px;
-                height: 1.5vw;
+                height: 0;
                 background-color: #000;
                 opacity: 0.8;
+                transition: 1s;
             }
         }
+
+
 
         &-bg {
             width: 95%;
             margin: 0 auto;
             margin-top: 5vw;
+            overflow: hidden;
 
             img {
                 width: 100%;
@@ -80,9 +84,16 @@
                 top: -3vw;
                 margin: 0 auto;
                 width: 1px;
-                height: 1.5vw;
+                height: 0;
                 background-color: #000;
                 opacity: 0.8;
+                transition: 1s;
+            }
+        }
+
+        .is-active {
+            &::after {
+                height: 1.5vw;
             }
         }
     }
@@ -141,6 +152,7 @@
                             .imgBox {
                                 width: 100%;
                                 height: 100%;
+                                overflow: hidden;
 
                                 img {
                                     width: 100%;
@@ -194,6 +206,7 @@
                     justify-content: center;
                     align-items: center;
                     width: 100%;
+                    transform-origin: center center;
 
                     border: 1px solid #000;
                     cursor: pointer;
@@ -365,9 +378,10 @@
 
                 &::after {
                     bottom: -6vw;
-                    height: 3.5vw;
                 }
             }
+
+
 
             .caseName {
                 margin-top: 10vw;
@@ -380,6 +394,12 @@
 
                 &::after {
                     top: -6vw;
+
+                }
+            }
+
+            .is-active {
+                &::after {
                     height: 3.5vw;
                 }
             }

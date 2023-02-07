@@ -330,10 +330,11 @@
             02-12345678 臺北市松山區敦化北路167號17樓</p>
     </footer>
 
-
+    <script src="./js/splitText.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
     <script src="./js/config.js"></script>
 
@@ -402,6 +403,136 @@
             $(".toForm").click(() => {
                 gsap.to(window, { duration: 0.8, scrollTo: "#form", ease: "none" });
             })
+
+
+            function split() {
+                splitText(".second-page-bottom-right li p")
+                splitText(".form-page-title h4")
+            }
+            split()
+            function bannerIn() {
+                let gg = gsap.timeline()
+
+                gg.fromTo(".first-page .swiper1 .imgBox img", {
+                    clipPath: "polygon(0 0 , 0% 0, 0% 90% , 0 90% , 0 0 )",
+                    duration: 1.2
+                }, {
+                    clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
+                    duration: 1.4,
+                }).from(".first-page .swiper1 img", {
+                    scale: 1.2,
+                    duration: 1.6
+                }, "<+1").from(".first-page .swiper2 .imgBox", {
+                    y: 45,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.2
+                }, "<+1")
+            }
+            bannerIn()
+
+            function secondPageAnimation() {
+                let gg = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".second-page-top",
+                        start: "top 80%"
+                    }
+                })
+
+                gg.from(".second-page-top .caseName h2", {
+                    x: -30,
+                    opacity: 0,
+                    duration: 0.8
+                }).from(".second-page-top .contact img", {
+                    x: -30,
+                    opacity: 0,
+                    duration: 0.8
+                }, "<+0.5").from(".second-page-top .contact p", {
+                    x: -30,
+                    opacity: 0,
+                    duration: 0.8
+                }, "<+0.3")
+
+                let gg2 = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".second-page-bottom",
+                        start: "top 80%"
+                    }
+                })
+
+                gg2.from(".second-page-bottom-left ul li h4", {
+                    x: -30,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.3
+                }).from(".second-page-bottom-left ul li p", {
+                    x: -30,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.3
+                }, "<+0.3")
+
+                let gg3 = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".second-page-bottom-right",
+                        start: "top 80%"
+                    }
+                })
+
+                gg3.from(".second-page-bottom-right li", {
+                    y: 30,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.3
+                }).from(".second-page-bottom-right svg ", {
+                    x: -30,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.3
+                }, "<+0.5").from(".second-page-bottom-right p span ", {
+                    x: -30,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.07
+                }, "<+0.5")
+
+            }
+            secondPageAnimation()
+
+            function formPageAnimation() {
+                let gg = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".form-page",
+                        start: "top 65%"
+                    }
+                })
+                gg.from(".form-page-title h4 span", {
+                    x: -30,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.06,
+                    onStart: () => {
+                        setTimeout(() => {
+                            $(".form-page-title h4").addClass("is-active")
+                        }, 500)
+
+                    }
+                }).from(".form-page .form-box ", {
+                    y: 30,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.3
+                }, "<+0.5").from(".form-page .box-right ", {
+                    y: 30,
+                    opacity: 0,
+                    duration: 0.8,
+                }, "<+0.3").from(".form-page .box-submit", {
+                    y: 30,
+                    opacity: 0,
+                    duration: 0.8,
+                }, "<+0.3")
+            }
+            formPageAnimation()
         }
     </script>
 </body>

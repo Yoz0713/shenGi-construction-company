@@ -157,8 +157,8 @@
 
                 &:hover {
                     .content-box-top {
-                        img {
-                            opacity: 1;
+                        .is-active {
+                            opacity: 1 !important;
                         }
                     }
                 }
@@ -360,6 +360,7 @@
                             width: 100%;
                             opacity: 1;
                             padding-left: 5vw;
+                            transition: none;
                         }
                     }
 

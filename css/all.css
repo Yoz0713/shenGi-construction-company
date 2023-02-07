@@ -2095,11 +2095,16 @@ footer p span {
   position: absolute;
   right: 1.6vw;
   bottom: -1.75vw;
+  opacity: 0;
   width: 35%;
   height: 1px;
   transform: rotate(-46.2deg);
   transform-origin: left center;
   background-color: rgba(136, 136, 136, 0.2745098039);
+  transition: 1s;
+}
+.construction .second-page ul li .is-active::after {
+  opacity: 1;
 }
 .construction .second-page ul li .paraBox {
   position: absolute;
@@ -2331,6 +2336,7 @@ footer p span {
   height: 100%;
   -webkit-clip-path: polygon(0 0, 0 100%, 90% 100%, 100% 85%, 100% 0, 0 0);
           clip-path: polygon(0 0, 0 100%, 90% 100%, 100% 85%, 100% 0, 0 0);
+  overflow: hidden;
 }
 .constrctionInner .first-page .swiper1 .swiper-wrapper .swiper-slide .imgBox img {
   width: 100%;
@@ -2460,7 +2466,6 @@ footer p span {
 .constrctionInner .second-page-bottom-right ul li {
   width: 100%;
   margin-bottom: 1vw;
-  padding: 0.6vw 1vw;
   border: 1px solid rgba(0, 0, 0, 0.801);
   cursor: pointer;
 }
@@ -2468,15 +2473,18 @@ footer p span {
   display: flex;
   width: 100%;
   height: 100%;
+  padding: 0.6vw 1vw;
 }
 .constrctionInner .second-page-bottom-right ul li a svg {
   width: 1vw;
   margin-right: 2vw;
+  pointer-events: none;
 }
 .constrctionInner .second-page-bottom-right ul li a p {
   font-size: var(--more_text);
   font-weight: 300;
   letter-spacing: 0.2em;
+  pointer-events: none;
 }
 .constrctionInner .second-page-bottom-right ul li:hover {
   background-color: #6A6A6A;
@@ -2527,9 +2535,13 @@ footer p span {
   position: absolute;
   left: 0;
   top: -0.7vw;
-  width: 2.5%;
+  width: 0;
   height: 1px;
+  transition: 1s;
   background-color: #888888;
+}
+.constrctionInner .form-page-title .is-active::after {
+  width: 2.5%;
 }
 .constrctionInner .form-page form {
   display: flex;
@@ -2729,7 +2741,6 @@ footer p span {
   .constrctionInner .second-page-bottom-right ul li {
     width: 100%;
     margin-bottom: 4.5vw;
-    padding: 2.4vw 0;
   }
   .constrctionInner .second-page-bottom-right ul li a {
     display: flex;
@@ -2737,6 +2748,7 @@ footer p span {
     align-items: center;
     width: 100%;
     height: 100%;
+    padding: 2.4vw 0;
   }
   .constrctionInner .second-page-bottom-right ul li a svg {
     width: 5.5vw;
@@ -2783,8 +2795,10 @@ footer p span {
     font-size: var(--ch_l_text);
   }
   .constrctionInner .form-page-title h4::after {
-    width: 5%;
     top: -2vw;
+  }
+  .constrctionInner .form-page-title .is-active::after {
+    width: 5%;
   }
   .constrctionInner .form-page form {
     display: flex;
@@ -2942,6 +2956,8 @@ footer p span {
   }
   .constrctionInner .second-page-bottom-right ul li {
     margin-bottom: 6vw;
+  }
+  .constrctionInner .second-page-bottom-right ul li a {
     padding: 2.5vw 0;
   }
   .constrctionInner .second-page-bottom-right ul li a svg {
@@ -2969,8 +2985,10 @@ footer p span {
     font-size: var(--ch_l_text);
   }
   .constrctionInner .form-page-title h4::after {
-    width: 7%;
     top: -3.5vw;
+  }
+  .constrctionInner .form-page-title .is-active::after {
+    width: 7%;
   }
   .constrctionInner .form-page form .box-right {
     padding: 3vw 0;
@@ -3037,14 +3055,16 @@ footer p span {
   bottom: -3vw;
   margin: 0 auto;
   width: 1px;
-  height: 1.5vw;
+  height: 0;
   background-color: #000;
   opacity: 0.8;
+  transition: 1s;
 }
 .progress .first-page-bg {
   width: 95%;
   margin: 0 auto;
   margin-top: 5vw;
+  overflow: hidden;
 }
 .progress .first-page-bg img {
   width: 100%;
@@ -3070,9 +3090,13 @@ footer p span {
   top: -3vw;
   margin: 0 auto;
   width: 1px;
-  height: 1.5vw;
+  height: 0;
   background-color: #000;
   opacity: 0.8;
+  transition: 1s;
+}
+.progress .first-page .is-active::after {
+  height: 1.5vw;
 }
 .progress main {
   width: 80%;
@@ -3122,6 +3146,7 @@ footer p span {
 .progress main .content-left .swiper1 .swiper-wrapper .swiper-slide .imgBox {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 .progress main .content-left .swiper1 .swiper-wrapper .swiper-slide .imgBox img {
   width: 100%;
@@ -3168,6 +3193,7 @@ footer p span {
   justify-content: center;
   align-items: center;
   width: 100%;
+  transform-origin: center center;
   border: 1px solid #000;
   cursor: pointer;
 }
@@ -3312,7 +3338,6 @@ footer p span {
   }
   .progress .first-page-title::after {
     bottom: -6vw;
-    height: 3.5vw;
   }
   .progress .first-page .caseName {
     margin-top: 10vw;
@@ -3324,6 +3349,8 @@ footer p span {
   }
   .progress .first-page .caseName::after {
     top: -6vw;
+  }
+  .progress .first-page .is-active::after {
     height: 3.5vw;
   }
   .progress main {
@@ -4283,8 +4310,8 @@ footer p span {
   opacity: 0.6;
   line-height: 1.7em;
 }
-.portfolio .second-page-content .content-box:hover .content-box-top img {
-  opacity: 1;
+.portfolio .second-page-content .content-box:hover .content-box-top .is-active {
+  opacity: 1 !important;
 }
 .portfolio .second-page-content :nth-child(even) {
   align-self: flex-start;
@@ -4442,6 +4469,7 @@ footer p span {
     width: 100%;
     opacity: 1;
     padding-left: 5vw;
+    transition: none;
   }
   .portfolio .second-page-content .content-box-bottom {
     padding-left: 5vw;
@@ -4598,6 +4626,12 @@ footer p span {
   width: 13.1vw;
   left: 1vw;
   top: 1vw;
+}
+.contact .first-page .form-title .cls-1 {
+  fill: none;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 0.75px;
 }
 .contact .first-page .form form .form-box {
   border-bottom: 1px solid rgba(255, 255, 255, 0.425);

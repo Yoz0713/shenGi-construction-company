@@ -110,7 +110,17 @@
             <div class="form">
                 <div class="form-title">
                     <img src="./img/contact/SVG/title.svg">
-                    <img src="./img/contact/SVG/line.svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 261.25 298">
+
+                        <g>
+                            <line class="cls-1" x1=".38" y1="183" x2=".38" y2="298" />
+                            <g>
+                                <line class="cls-1" x1="78.88" y1=".5" x2="260.88" y2=".5" />
+                                <line class="cls-1" x1="260.88" x2="260.88" y2="31" />
+                            </g>
+                            <line class="cls-1" x1="243.38" y1="98.5" x2="169.38" y2="191.5" />
+                        </g>
+                    </svg>
                 </div>
                 <form>
                     <div class="form-box">
@@ -142,6 +152,7 @@
             02-12345678 臺北市松山區敦化北路167號17樓</p>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -149,7 +160,26 @@
 
     <script>
         window.onload = function () {
-
+            function bannerIn() {
+                let gg = gsap.timeline()
+                gg.from(".form-title img", {
+                    opacity: 0,
+                    y: 30,
+                    duration: 1
+                }).fromTo(".form-title svg line", {
+                    strokeDasharray: 2000,
+                    strokeDashoffset: 2000,
+                }, {
+                    strokeDashoffset: 1820,
+                    duration: 1
+                }).from(".form-box", {
+                    opacity: 0,
+                    y: 30,
+                    duration: 0.8,
+                    stagger: 0.3
+                }, "<+0.5")
+            }
+            bannerIn()
         }
 
 

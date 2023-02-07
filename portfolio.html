@@ -211,6 +211,9 @@
             02-12345678 臺北市松山區敦化北路167號17樓</p>
     </footer>
 
+    <script src="./js/splitText.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="./js/config.js"></script>
@@ -218,7 +221,99 @@
     <script>
 
         window.onload = function () {
+            function split() {
+                splitText(".first-page-title h3")
+                splitText(".first-page-title h2")
+                splitText(".content-box-top p")
+                splitText(".content-box-top h4")
+            }
+            split()
+            function bannerIn() {
+                let gg = gsap.timeline()
 
+                gg.fromTo(".first-page-bg ", {
+                    clipPath: "polygon(0 0 , 0% 0, 0% 90% , 0 90% , 0 0 )",
+
+                }, {
+                    clipPath: "polygon(0 0 , 80% 0, 80% 90% , 0 90% , 0 0 )",
+                    duration: 1.4,
+                }).to(".first-page-bg ", {
+                    clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
+                    duration: 1,
+                }).fromTo(".first-page-bg ", {
+                    scale: 1.2
+                }, {
+                    scale: 1,
+                    duration: 1,
+                }, "<").from(".first-page-title h3 span", {
+                    opacity: 0,
+                    x: -30,
+                    duration: 0.6,
+                    stagger: 0.03,
+
+                }, "<+0.6").from(".first-page-title h2 span", {
+                    opacity: 0,
+                    x: 30,
+                    duration: 0.6,
+                    stagger: 0.03,
+
+                }, '<+0.3')
+            }
+            bannerIn()
+
+            function mainPageAnimation() {
+                let gg = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".second-page",
+                        start: "top 80%"
+                    }
+                })
+                gg.from(".second-page-logo img", {
+                    opacity: 0,
+                    y: 30,
+                    duration: 1.2
+                })
+
+                $(".second-page-content .content-box").each((i, item) => {
+                    this[`gg+${i}`] = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top 80%"
+                        },
+                        overwrite: "auto"
+                    })
+                    this[`gg+${i}`].from($(item).find(".dot"), {
+                        opacity: 0,
+                        duration: 1
+                    }).from($(item).find(".content-box-top p span"), {
+                        opacity: 0,
+                        x: i % 2 == 0 ? -30 : 30,
+                        duration: 1
+                    }, "<+0.2").from($(item).find(".content-box-top h4 span"), {
+                        opacity: 0,
+                        x: i % 2 == 0 ? -30 : 30,
+                        duration: 1
+                    }, "<+0.3").fromTo($(item).find(".content-box-top > img"), {
+                        opacity: 0,
+                        x: i % 2 == 0 ? -30 : 30,
+                    }, {
+                        x: 0,
+                        opacity: window.innerWidth > 1039 ? 0 : 1,
+                        duration: 0.8,
+                    }, "<+0.3").from($(item).find(".content-box-bottom p"), {
+                        opacity: 0,
+                        x: i % 2 == 0 ? -30 : 30,
+                        duration: 1,
+                        onStart: () => {
+                            setTimeout(() => {
+                                $($(item).find(".content-box-top > img")).addClass("is-active")
+                            }, 600)
+
+                        }
+                    }, "<+0.3")
+                })
+            }
+            mainPageAnimation()
         }
 
     </script>
