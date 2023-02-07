@@ -476,7 +476,7 @@ footer p span {
 }
 @media all and (max-width: 1039px) and (max-width: 500px) {
   :root {
-    --ch_xs_text: 0.9vw;
+    --ch_xs_text: 2.4vw;
     --more_text: 2.6vw;
     --ch_s_text: 3.5vw;
     --ch_m_text: 3.9vw;
@@ -3043,7 +3043,7 @@ footer p span {
   font-weight: 600;
 }
 .progress .first-page-title h3 {
-  font-size: var(--ch_xs_text);
+  font-size: var(--more_text);
   margin-right: 0.3vw;
 }
 .progress .first-page-title::after {
