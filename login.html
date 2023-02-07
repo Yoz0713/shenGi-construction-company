@@ -326,9 +326,12 @@
 
                 y: 30,
                 duration: 1.4
-            }).from("#particles-js", {
+            }).from("#particles-js canvas", {
                 opacity: 0,
                 duration: 5
+            }, "<+1").from("#particles-js ", {
+                x: 100,
+                duration: 1
             }, "<+1")
         }
         bannerIn()

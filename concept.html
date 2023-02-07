@@ -286,19 +286,18 @@
                 let gg = gsap.timeline()
 
                 gg.fromTo(".first-page-bg .imgBox", {
-                    clipPath: "polygon(0 0 , 0% 0, 0% 90% , 0 90% , 0 0 )",
+                    filter: "blur(5px)",
+                    opacity: 0,
 
                 }, {
-                    clipPath: "polygon(0 0 , 80% 0, 80% 90% , 0 90% , 0 0 )",
-                    duration: 1.4,
-                }).to(".first-page-bg .imgBox", {
-                    clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0 100% , 0 0 )",
-                    duration: 1,
+                    filter: "blur(0px)",
+                    opacity: 1,
+                    duration: 3,
                 }).fromTo(".first-page-bg .imgBox", {
                     scale: 1.2
                 }, {
                     scale: 1,
-                    duration: 1,
+                    duration: 1.4,
                 }, "<").from(".first-page-bg :nth-child(2)", {
                     opacity: 0,
                     x: 30,

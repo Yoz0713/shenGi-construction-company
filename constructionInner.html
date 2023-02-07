@@ -161,6 +161,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="swiper-scrollbar"></div>
             </div>
         </section>
         <section class="second-page">
@@ -358,6 +359,10 @@
                 slidesPerView: 2.5,
                 spaceBetween: 10,
                 freeMode: true,
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                    draggable: true,
+                },
                 breakpoints: {
                     500: {
                         spaceBetween: 15,

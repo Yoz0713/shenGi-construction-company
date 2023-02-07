@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:ital,wght@1,600&display=swap");
 :root {
-  --ch_xs_text: 0.8vw;
-  --more_text: 1vw;
+  --ch_xs_text: 0.7vw;
+  --more_text: 0.9vw;
   --ch_s_text: 1.1vw;
   --ch_m_text: 1.3vw;
   --ch_l_text: 1.7vw;
@@ -2385,6 +2385,7 @@ footer p span {
   height: 8vw;
   filter: brightness(0.5);
   cursor: pointer;
+  padding-right: 2vw;
 }
 .constrctionInner .first-page .swiper2 .swiper-wrapper .swiper-slide .imgBox {
   width: 100%;
@@ -2398,6 +2399,14 @@ footer p span {
 }
 .constrctionInner .first-page .swiper2 .swiper-wrapper .is-active {
   filter: none;
+}
+.constrctionInner .first-page .swiper2 .swiper-scrollbar {
+  width: 1px;
+}
+.constrctionInner .first-page .swiper2 .swiper-scrollbar .swiper-scrollbar-drag {
+  width: 2.5px;
+  background-color: #000;
+  left: -0.625px;
 }
 .constrctionInner .second-page {
   width: 85%;
@@ -2651,7 +2660,7 @@ footer p span {
   }
   .constrctionInner .first-page .swiper2 {
     width: 100%;
-    height: 22vw;
+    height: 27vw;
     padding-left: 6vw;
   }
   .constrctionInner .first-page .swiper2 .swiper-wrapper {
@@ -2663,12 +2672,22 @@ footer p span {
     height: 100%;
     filter: brightness(0.5);
     transition: 0.3s;
+    padding-right: 0;
+    padding-bottom: 5vw;
   }
   .constrctionInner .first-page .swiper2 .swiper-wrapper .swiper-slide img {
     pointer-events: none;
   }
   .constrctionInner .first-page .swiper2 .swiper-wrapper .is-active {
     filter: brightness(1);
+  }
+  .constrctionInner .first-page .swiper2 .swiper-scrollbar {
+    height: 1px;
+  }
+  .constrctionInner .first-page .swiper2 .swiper-scrollbar .swiper-scrollbar-drag {
+    height: 2.5px;
+    background-color: #000;
+    top: -1.25px;
   }
   .constrctionInner .second-page {
     width: 85%;
@@ -2903,7 +2922,7 @@ footer p span {
   }
   .constrctionInner .first-page .swiper2 {
     width: 100%;
-    height: 23vw;
+    height: 28vw;
     padding-left: 6vw;
   }
   .constrctionInner .second-page {
@@ -3581,13 +3600,15 @@ footer p span {
 .concept .first-page-bg {
   position: relative;
   width: 100%;
-  height: 33vw;
+  height: 20vw;
 }
 .concept .first-page-bg img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center bottom;
+     object-position: center bottom;
 }
 .concept .first-page-bg .imgBox {
   position: relative;
@@ -4869,7 +4890,7 @@ footer p span {
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
-  padding-bottom: 4vw;
+  padding-bottom: 2vw;
 }
 .login .content-box .content-logo {
   display: flex;
@@ -4882,7 +4903,7 @@ footer p span {
 .login .content-box .content-sign {
   display: flex;
   width: 100%;
-  margin: 1vw 0 2vw;
+  margin: 2vw 0 2vw;
 }
 .login .content-box .content-sign > p {
   font-size: var(--ch_m_text);
@@ -4899,6 +4920,7 @@ footer p span {
   pointer-events: none;
   font-size: var(--more_text);
   color: rgba(18, 98, 51, 0.5568627451);
+  letter-spacing: 0.05em;
   font-weight: 600;
 }
 .login .content-box .content-sign div p span {
@@ -4941,9 +4963,11 @@ footer p span {
   margin-bottom: 5px;
   margin-left: 0.5vw;
   font-weight: 600;
+  letter-spacing: 0.05em;
 }
 .login .content-box form .form-box > p span {
-  font-size: 0.65vw;
+  margin-left: 3px;
+  font-size: 0.5vw;
   font-weight: 300;
 }
 .login .content-box form .form-box input {
@@ -4952,9 +4976,10 @@ footer p span {
   border: 1px solid rgba(0, 0, 0, 0.2);
   outline: none;
   border-radius: 40px;
-  padding: 0.5vw;
+  padding: 0.5vw 1vw;
   font-size: var(--ch_xs_text);
   color: rgba(0, 0, 0, 0.5);
+  font-family: "Noto Serif TC", sans-serif;
 }
 .login .content-box form .form-box input[type=submit] {
   cursor: pointer;
@@ -5032,6 +5057,9 @@ footer p span {
   font-weight: 600;
   color: #126233;
 }
+.login .content2 .content-sign p {
+  font-size: var(--ch_s_text);
+}
 .login .content2 .content-box {
   padding: 0;
 }
@@ -5042,8 +5070,10 @@ footer p span {
   position: absolute;
   width: 1.5vw;
   height: 1.5vw;
-  bottom: 0.35vw;
-  right: -2.5vw;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  right: 0.6vw;
 }
 .login .content2 .content-box form .checkFormat .hint img {
   opacity: 0;
@@ -5063,7 +5093,7 @@ footer p span {
   width: 1.5vw;
   height: 1.5vw;
   bottom: 0.35vw;
-  right: 9vw;
+  right: 8.2vw;
 }
 .login .content2 .content-box form .verification .hint2 img {
   opacity: 0;
@@ -5097,6 +5127,7 @@ footer p span {
 .login .content2 .content-box form .verification .box .submit-verification-code p {
   font-size: var(--ch_xs_text);
   color: #fff;
+  letter-spacing: 0.1em;
   pointer-events: none;
 }
 .login .is-active2 {
@@ -5254,7 +5285,7 @@ footer p span {
     top: 0;
     margin: auto 0;
     bottom: 0;
-    right: -7vw;
+    right: 2vw;
   }
   .login .content2 .content-box form .verification {
     position: relative;
@@ -5332,7 +5363,7 @@ footer p span {
   .login .content2 .content-box form .checkFormat .box .hint {
     width: 6vw;
     height: 6vw;
-    right: -8vw;
+    right: 2.5vw;
   }
   .login .content2 .content-box form .verification {
     position: relative;
@@ -5343,7 +5374,7 @@ footer p span {
   .login .content2 .content-box form .verification .box .hint2 {
     width: 6vw;
     height: 6vw;
-    right: 27vw;
+    right: 28vw;
   }
   .login .content2 .content-box form .verification .box .submit-verification-code {
     padding: 0 5vw;
@@ -6741,6 +6772,7 @@ footer p span {
   width: 100%;
   border-bottom: 4px solid #126233;
   padding-bottom: 0.6vw;
+  padding-left: 1vw;
 }
 .user .content-box .title h1 {
   font-size: var(--ch_m_text);
@@ -6762,6 +6794,7 @@ footer p span {
   align-items: center;
   font-size: var(--ch_xs_text);
   margin-right: 1vw;
+  font-family: "Noto Serif TC", sans-serif;
 }
 .user .content-box form .form-box label input {
   width: 0.8vw;
@@ -6781,8 +6814,10 @@ footer p span {
   flex: 0 1 90%;
   font-size: 0.7vw;
   letter-spacing: 0.1em;
-  padding-left: 5px;
+  padding-left: 8px;
   padding-bottom: 8px;
+  font-family: "Noto Serif TC", sans-serif;
+  letter-spacing: 0.2em;
 }
 .user .content-box form .form-box input:focus {
   outline: none;
@@ -6799,12 +6834,25 @@ footer p span {
   background-color: transparent;
   color: rgba(0, 0, 0, 0.514);
   cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url(../img/login/SVG/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: 93% center;
+  font-family: "Noto Serif TC", sans-serif;
+  background-size: 15px 15px;
 }
 .user .content-box form .form-box select:focus {
   outline: none;
 }
+.user .content-box form .form-box .tobe {
+  flex: auto;
+  width: 100%;
+}
 .user .content-box form .form-box .floor {
   margin-left: 0.5vw;
+  flex: auto;
+  width: 100%;
 }
 .user .content-box form > :last-child {
   position: absolute;
@@ -6990,12 +7038,13 @@ footer p span {
     margin-bottom: 2vw;
   }
   .user .content-box form .form-box input {
-    padding: 4.5vw 3vw;
+    padding: 4.5vw 3vw 2.5vw;
   }
   .user .content-box form .form-box select {
     margin: 4vw 0 5vw;
     padding: 0 2.5vw;
     height: 10vw;
+    background-size: 10px 10px;
   }
   .user .content-box form .form-box .floor {
     margin-top: 5vw;

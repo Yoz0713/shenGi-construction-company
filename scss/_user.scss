@@ -47,6 +47,7 @@
                 width: 100%;
                 border-bottom: 4px solid $dark-green;
                 padding-bottom: 0.6vw;
+                padding-left: 1vw;
 
                 h1 {
                     font-size: var(--ch_m_text);
@@ -70,6 +71,7 @@
                         align-items: center;
                         font-size: var(--ch_xs_text);
                         margin-right: 1vw;
+                        font-family: 'Noto Serif TC', sans-serif;
 
                         input {
                             width: 0.8vw;
@@ -93,12 +95,15 @@
                         flex: 0 1 90%;
                         font-size: 0.7vw;
                         letter-spacing: 0.1em;
-                        padding-left: 5px;
+                        padding-left: 8px;
                         padding-bottom: 8px;
+                        font-family: 'Noto Serif TC', sans-serif;
+                        letter-spacing: 0.2em;
 
                         &:focus {
                             outline: none;
                         }
+
                     }
 
                     select {
@@ -113,17 +118,31 @@
                         background-color: transparent;
                         color: rgba(0, 0, 0, 0.514);
                         cursor: pointer;
-
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        background-image: url(../img/login/SVG/arrow-down.svg);
+                        background-repeat: no-repeat;
+                        background-position: 93% center;
+                        font-family: 'Noto Serif TC', sans-serif;
+                        background-size: 15px 15px;
 
                         &:focus {
                             outline: none;
                         }
 
 
+
+                    }
+
+                    .tobe {
+                        flex: auto;
+                        width: 100%;
                     }
 
                     .floor {
                         margin-left: 0.5vw;
+                        flex: auto;
+                        width: 100%;
                     }
                 }
 
@@ -342,7 +361,7 @@
                             }
 
                             input {
-                                padding: 4.5vw 3vw;
+                                padding: 4.5vw 3vw 2.5vw;
                             }
 
 
@@ -350,6 +369,7 @@
                                 margin: 4vw 0 5vw;
                                 padding: 0 2.5vw;
                                 height: 10vw;
+                                background-size: 10px 10px;
                             }
 
                             .floor {

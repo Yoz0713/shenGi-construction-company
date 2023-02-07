@@ -376,8 +376,15 @@
 
                         </div>
                         <div class="box1-1">
-                            <h4>CLASSIC<br>PORTFOLIO</h4>
-                            <p>純粹美學 時代印記~閱讀建築</p>
+                            <div class="box-inner">
+                                <h4>CLASSIC</h4>
+                            </div>
+                            <div class="box-inner">
+                                <h4>PORTFOLIO</h4>
+                            </div>
+                            <div class="box-inner">
+                                <p>純粹美學 時代印記~閱讀建築</p>
+                            </div>
                         </div>
                         <div class="box1-2">
                             <h4>PORTFOLIO<br>DESIGN</h4>
@@ -1162,7 +1169,7 @@
                 }, {
                     y: 0,
                     autoAlpha: 1,
-                    duration: 5,
+                    duration: 3.5,
                     stagger: 0.8
                 }, "<+3").fromTo(".second-page .para .imgBox svg > :nth-child(2) ", {
                     y: 30,
@@ -1197,7 +1204,7 @@
                     clipPath: "circle(18%)"
                 }, {
                     clipPath: "circle(0%)",
-                    duration: 10
+                    duration: 7
                 }, "<")
                 let thirdPage = gsap.timeline({
                     scrollTrigger: {

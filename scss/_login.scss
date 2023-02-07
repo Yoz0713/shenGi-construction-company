@@ -21,6 +21,7 @@
         height: 100%;
         z-index: 10;
 
+
         canvas {
             filter: blur(5px);
             width: 100%;
@@ -43,7 +44,7 @@
         &-box {
             width: fit-content;
             position: relative;
-            padding-bottom: 4vw;
+            padding-bottom: 2vw;
 
             .content-logo {
                 display: flex;
@@ -60,7 +61,7 @@
                 display: flex;
                 width: 100%;
 
-                margin: 1vw 0 2vw;
+                margin: 2vw 0 2vw;
 
                 >p {
                     font-size: var(--ch_m_text);
@@ -78,7 +79,7 @@
                         pointer-events: none;
                         font-size: var(--more_text);
                         color: $light-green;
-
+                        letter-spacing: 0.05em;
                         font-weight: 600;
 
                         span {
@@ -136,9 +137,11 @@
                         margin-bottom: 5px;
                         margin-left: 0.5vw;
                         font-weight: 600;
+                        letter-spacing: 0.05em;
 
                         span {
-                            font-size: 0.65vw;
+                            margin-left: 3px;
+                            font-size: 0.5vw;
                             font-weight: 300;
                         }
                     }
@@ -149,9 +152,10 @@
                         border: 1px solid rgba(0, 0, 0, 0.2);
                         outline: none;
                         border-radius: 40px;
-                        padding: 0.5vw;
+                        padding: 0.5vw 1vw;
                         font-size: var(--ch_xs_text);
                         color: rgba(0, 0, 0, 0.5);
+                        font-family: 'Noto Serif TC', sans-serif;
                     }
 
                     input[type=submit] {
@@ -257,6 +261,10 @@
             margin-bottom: 2.5vw;
             font-weight: 600;
             color: $dark-green;
+
+            p {
+                font-size: var(--ch_s_text);
+            }
         }
 
         .content-box {
@@ -270,8 +278,10 @@
                         position: absolute;
                         width: 1.5vw;
                         height: 1.5vw;
-                        bottom: 0.35vw;
-                        right: -2.5vw;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto 0;
+                        right: 0.6vw;
 
                         img {
                             opacity: 0;
@@ -297,7 +307,7 @@
                         width: 1.5vw;
                         height: 1.5vw;
                         bottom: 0.35vw;
-                        right: 9vw;
+                        right: 8.2vw;
 
                         img {
                             opacity: 0;
@@ -332,7 +342,7 @@
                             p {
                                 font-size: var(--ch_xs_text);
                                 color: #fff;
-
+                                letter-spacing: 0.1em;
 
 
                                 pointer-events: none;
@@ -532,7 +542,7 @@
                                 top: 0;
                                 margin: auto 0;
                                 bottom: 0;
-                                right: -7vw;
+                                right: 2vw;
                             }
                         }
 
@@ -657,7 +667,7 @@
                                 .hint {
                                     width: 6vw;
                                     height: 6vw;
-                                    right: -8vw;
+                                    right: 2.5vw;
                                 }
                             }
 
@@ -675,7 +685,7 @@
                                 .hint2 {
                                     width: 6vw;
                                     height: 6vw;
-                                    right: 27vw;
+                                    right: 28vw;
                                 }
 
                                 .submit-verification-code {
