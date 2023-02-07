@@ -209,21 +209,21 @@
                                     <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
                                         <feOffset dx="7" dy="7" />
                                         <feGaussianBlur result="blur" stdDeviation="5" />
-                                        <feFlood flood-color="#000" flood-opacity=".75" />
+                                        <feFlood flood-color="#000" flood-autoAlpha=".75" />
                                         <feComposite in2="blur" operator="in" />
                                         <feComposite in="SourceGraphic" />
                                     </filter>
                                     <filter id="drop-shadow-2" filterUnits="userSpaceOnUse">
                                         <feOffset dx="7" dy="7" />
                                         <feGaussianBlur result="blur-2" stdDeviation="5" />
-                                        <feFlood flood-color="#000" flood-opacity=".75" />
+                                        <feFlood flood-color="#000" flood-autoAlpha=".75" />
                                         <feComposite in2="blur-2" operator="in" />
                                         <feComposite in="SourceGraphic" />
                                     </filter>
                                     <filter id="drop-shadow-3" filterUnits="userSpaceOnUse">
                                         <feOffset dx="7" dy="7" />
                                         <feGaussianBlur result="blur-3" stdDeviation="5" />
-                                        <feFlood flood-color="#000" flood-opacity=".75" />
+                                        <feFlood flood-color="#000" flood-autoAlpha=".75" />
                                         <feComposite in2="blur-3" operator="in" />
                                         <feComposite in="SourceGraphic" />
                                     </filter>
@@ -546,23 +546,23 @@
                             }
                         }, "<").fromTo(".first-page .paraBox p span", {
                             y: 30,
-                            opacity: 0
+                            autoAlpha: 0
                         }, {
                             y: 0,
-                            opacity: 1,
+                            autoAlpha: 1,
                             duration: 0.5,
                             stagger: 0.015
                         }, "<+1.5").fromTo(".first-page .paraBox h2 span", {
                             y: 30,
-                            opacity: 0
+                            autoAlpha: 0
                         }, {
                             y: 0,
-                            opacity: 1,
+                            autoAlpha: 1,
                             duration: 0.5,
                             stagger: 0.015
                         }, "<").to(".first-page .paraBox .para > span", {
 
-                            opacity: 1,
+                            autoAlpha: 1,
                             y: 0,
                             duration: 0.8,
                             ease: "power1",
@@ -636,7 +636,7 @@
                     y: 0,
                     duration: 6
                 }, "<").to(".first-page .imgBox .para img", {
-                    opacity: 1,
+                    autoAlpha: 1,
                     y: 0,
                     duration: 6
                 }, "<+3.5").to(".first-page .imgBox .para svg .fp-line", {
@@ -644,7 +644,7 @@
                     duration: 12,
                 }, "<+5").to(".first-page .imgBox .para p", {
 
-                    opacity: 1,
+                    autoAlpha: 1,
                     y: 0,
                     duration: 6
                 }, "<+1.5").to(".first-page .imgBox", {
@@ -660,7 +660,7 @@
                     x: "-8vw",
                     duration: 0.001
                 }, "<").to(".second-page-bg :nth-child(1)", {
-                    opacity: 1,
+                    autoAlpha: 1,
                     duration: 6
                 }, "<+3").to(".second-page-bg :nth-child(2)", {
 
@@ -723,13 +723,13 @@
                     strokeDashoffset: 530,
                     duration: 6,
                 }, "<").to(".second-page .para h4", {
-                    opacity: 0,
+                    autoAlpha: 0,
                     duration: 6,
                 }, "<").to(".second-page .para h3", {
-                    opacity: 0,
+                    autoAlpha: 0,
                     duration: 6,
                 }, "<").to(".second-page .para h2", {
-                    opacity: 0,
+                    autoAlpha: 0,
                     duration: 6,
                 }, "<").to(".second-page-bg :nth-child(1)", {
                     display: "none"
@@ -739,21 +739,21 @@
                     y: 30
                 }, {
                     y: 0,
-                    opacity: 1,
+                    autoAlpha: 1,
                     duration: 4,
                 }, "<+1").fromTo(".second-page .para .imgBox svg .rigin", {
                     y: 30
                 }, {
                     y: 0,
-                    opacity: 1,
+                    autoAlpha: 1,
                     duration: 5,
                     stagger: 0.8
                 }, "<+3").fromTo(".second-page .para .imgBox svg > :nth-child(2) ", {
                     y: 30,
-                    opacity: 0
+                    autoAlpha: 0
                 }, {
                     y: 0,
-                    opacity: 1,
+                    autoAlpha: 1,
                     duration: 5,
                 }, "<+3").fromTo(".second-page-bg :nth-child(3)", {
 
@@ -780,10 +780,10 @@
                     scale: 0,
                     duration: 6
                 }, "<").fromTo(".third-page-bg", {
-                    opacity: 0
+                    autoAlpha: 0
                 }, {
 
-                    opacity: 1,
+                    autoAlpha: 1,
                     duration: 1
                 }).fromTo(".third-page-bg", {
 
@@ -846,43 +846,43 @@
                     backgroundImage: "none",
                     duration: 1
                 }, "<").fromTo(".third-page-paraBox h2", {
-                    opacity: 0,
+                    autoAlpha: 0,
                     y: 30,
                 }, {
-                    opacity: 1,
+                    autoAlpha: 1,
                     y: 0,
                     duration: 2,
                 }, "<").fromTo(".third-page-paraBox ul .line", {
-                    opacity: 0,
+                    autoAlpha: 0,
                     y: -30,
                 }, {
-                    opacity: 1,
+                    autoAlpha: 1,
                     y: 0,
                     stagger: 1.5,
                     duration: 2,
                 }, "<+2.5").fromTo(".third-page-paraBox ul :nth-child(odd)", {
-                    opacity: 0,
+                    autoAlpha: 0,
                     y: 30,
                 }, {
-                    opacity: 1,
+                    autoAlpha: 1,
                     y: 0,
                     stagger: 1.5,
                     duration: 2,
                 }, "<+1").fromTo(".third-page-paraBox .box h3", {
-                    opacity: 0,
+                    autoAlpha: 0,
                     x: -30,
                     filter: "blur(5px)",
                 }, {
                     filter: "blur(0px)",
-                    opacity: 1,
+                    autoAlpha: 1,
                     y: 0,
                     stagger: 1.5,
                     duration: 4.5,
                 }, "<+5").fromTo(".third-page-paraBox .box svg", {
-                    opacity: 0,
+                    autoAlpha: 0,
                     y: 30,
                 }, {
-                    opacity: 1,
+                    autoAlpha: 1,
                     y: 0,
                     stagger: 1.5,
                     duration: 3.5,
@@ -905,7 +905,7 @@
                     y: "-19vw",
                     x: "-11vw"
                 }, "<+6.5").to(".third-page-paraBox ", {
-                    opacity: 0,
+                    autoAlpha: 0,
                     filter: "blur(4px)",
                     duration: 2.5,
                 }, "<").fromTo(".forth-page-bg .imgBox", {
@@ -921,23 +921,23 @@
                     duration: 10,
                 }, "<").fromTo(".forth-page-para .box1", {
                     x: "30vw",
-                    opacity: 0
+                    autoAlpha: 0
                 }, {
-                    opacity: 1,
+                    autoAlpha: 1,
                     x: 0,
                     duration: 8,
                 }, "<+8").fromTo(".forth-page-para .box2", {
                     x: "-40vw",
-                    opacity: 0
+                    autoAlpha: 0
                 }, {
-                    opacity: 1,
+                    autoAlpha: 1,
                     x: 0,
                     duration: 8,
                 }, "<").fromTo(".forth-page-para .box3", {
                     x: "-30vw",
-                    opacity: 0,
+                    autoAlpha: 0,
                 }, {
-                    opacity: 1,
+                    autoAlpha: 1,
                     x: 0,
                     duration: 8,
                 }, "<").fromTo(".forth-page-bg .left-top-box > :nth-child(2)", {
@@ -955,13 +955,13 @@
                     clipPath: "polygon(100% 0, 0% 0, 0% 100%, 100% 100% )",
                     duration: 4.5,
                 }).to(".forth-page-para .box1-2", {
-                    opacity: 0,
+                    autoAlpha: 0,
                     duration: 0.001,
                 }).to(".forth-page-para .green", {
                     clipPath: "polygon(0% 0, 0% 0, 0% 100%, 0% 100% )",
                     duration: 3.5,
                 }).to(".forth-page-para div", {
-                    opacity: 0,
+                    autoAlpha: 0,
                     duration: 6
 
                 }, ">+4.5").to(".forth-page-bg > div", {
@@ -971,7 +971,7 @@
                     stagger: 0.5,
                 }, "<+5").from(".fifth-page", {
                     y: "100vh",
-                    opacity: 0,
+                    autoAlpha: 0,
                     duration: 6,
                     onStart: () => {
                         video.pause();
@@ -999,16 +999,16 @@
 
 
                             videoTitle.fromTo(".fifth-page .paraBox h4 span", {
-                                opacity: 0
+                                autoAlpha: 0
                             }, {
-                                opacity: 1,
+                                autoAlpha: 1,
                                 duration: 0.8,
                                 stagger: 0.02,
 
                             }).fromTo(".fifth-page .paraBox h6 span", {
-                                opacity: 0
+                                autoAlpha: 0
                             }, {
-                                opacity: 1,
+                                autoAlpha: 1,
                                 duration: 0.8,
                                 stagger: 0.02,
                             }, ">-0.7")
@@ -1041,6 +1041,8 @@
 
 
             function reNewAnimation() {
+                gsap.ticker.fps(144)
+                gsap.ticker.lagSmoothing(0)
                 let firstPage = gsap.timeline({
                     scrollTrigger: {
                         trigger: ".first-page",
@@ -1054,7 +1056,7 @@
                     y: 0,
                     duration: 16
                 }, "<").to(".first-page .imgBox .para img", {
-                    opacity: 1,
+                    autoAlpha: 1,
                     y: 0,
                     duration: 8
                 }, "<+1.5").to(".first-page .imgBox .para svg .fp-line", {
@@ -1062,7 +1064,7 @@
                     duration: 14,
                 }, "<+3").to(".first-page .imgBox .para p", {
 
-                    opacity: 1,
+                    autoAlpha: 1,
                     y: 0,
                     duration: 8
                 }, "<")
@@ -1112,17 +1114,17 @@
                     duration: 8,
 
                 }, "<+8").to(".second-page-bg :nth-child(3)", {
-                    opacity: 1,
+                    autoAlpha: 1,
                     duration: 5,
 
                 }, ">+3").to(".second-page h4", {
-                    opacity: 0,
+                    autoAlpha: 0,
                     duration: 5
                 }, "<").to(".second-page h3", {
-                    opacity: 0,
+                    autoAlpha: 0,
                     duration: 5
                 }, "<").to(".second-page h2", {
-                    opacity: 0,
+                    autoAlpha: 0,
                     duration: 5,
                 }, "<").to(".second-page-bg :nth-child(3)", {
                     filter: "brightness(0.4)",
@@ -1150,21 +1152,21 @@
                     y: 30
                 }, {
                     y: 0,
-                    opacity: 1,
+                    autoAlpha: 1,
                     duration: 4,
                 }, "<+1").fromTo(".second-page .para .imgBox svg .rigin", {
                     y: 30
                 }, {
                     y: 0,
-                    opacity: 1,
+                    autoAlpha: 1,
                     duration: 5,
                     stagger: 0.8
                 }, "<+3").fromTo(".second-page .para .imgBox svg > :nth-child(2) ", {
                     y: 30,
-                    opacity: 0
+                    autoAlpha: 0
                 }, {
                     y: 0,
-                    opacity: 1,
+                    autoAlpha: 1,
                     duration: 5,
                 }, "<+3").fromTo(".second-page-bg :nth-child(3)", {
 
@@ -1202,7 +1204,7 @@
                     }
                 })
                 thirdPage.from(".third-page-bg", {
-                    opacity: 0,
+                    autoAlpha: 0,
                     y: 30,
                     duration: 1.5
                 })
@@ -1246,43 +1248,43 @@
                     backgroundImage: "none",
                     duration: 1
                 }, "<").fromTo(".third-page-paraBox h2", {
-                    opacity: 0,
+                    autoAlpha: 0,
                     y: 30,
                 }, {
-                    opacity: 1,
+                    autoAlpha: 1,
                     y: 0,
                     duration: 2,
                 }, "<").fromTo(".third-page-paraBox ul .line", {
-                    opacity: 0,
+                    autoAlpha: 0,
                     y: -30,
                 }, {
-                    opacity: 1,
+                    autoAlpha: 1,
                     y: 0,
                     stagger: 1.5,
                     duration: 2,
                 }, "<+2.5").fromTo(".third-page-paraBox ul :nth-child(odd)", {
-                    opacity: 0,
+                    autoAlpha: 0,
                     y: 30,
                 }, {
-                    opacity: 1,
+                    autoAlpha: 1,
                     y: 0,
                     stagger: 1.5,
                     duration: 2,
                 }, "<+1").fromTo(".third-page-paraBox .box h3", {
-                    opacity: 0,
+                    autoAlpha: 0,
                     x: -30,
                     filter: "blur(5px)",
                 }, {
                     filter: "blur(0px)",
-                    opacity: 1,
+                    autoAlpha: 1,
                     y: 0,
                     stagger: 1.5,
                     duration: 4.5,
                 }, "<+5").fromTo(".third-page-paraBox .box svg", {
-                    opacity: 0,
+                    autoAlpha: 0,
                     y: 30,
                 }, {
-                    opacity: 1,
+                    autoAlpha: 1,
                     y: 0,
                     stagger: 1.5,
                     duration: 3.5,
@@ -1296,10 +1298,10 @@
                     strokeDashoffset: 1300,
                     duration: 13,
                 }, "<+3").to(".third-page-bg > :nth-child(2) img", {
-                    opacity: 0,
+                    autoAlpha: 0,
                     duration: 10
                 }, "<+6.5").to(".third-page-paraBox ", {
-                    opacity: 0,
+                    autoAlpha: 0,
                     filter: "blur(4px)",
                     duration: 2.5,
                 }, "<").fromTo(".forth-page-bg2 > :nth-child(1)", {
@@ -1314,27 +1316,27 @@
                     duration: 42
                 }, "<").fromTo(".forth-page-para .box1", {
                     x: "30vw",
-                    opacity: 0
+                    autoAlpha: 0
                 }, {
-                    opacity: 1,
+                    autoAlpha: 1,
                     x: 0,
                     duration: 8,
                 }, "<").to(".forth-page-para .green", {
                     clipPath: "polygon(100% 0, 0% 0, 0% 100%, 100% 100% )",
                     duration: 4.5,
                 }, "<+11").to(".forth-page-para .box1-2", {
-                    opacity: 0,
+                    autoAlpha: 0,
                     duration: 0.001,
                 }, "<+4").to(".forth-page-para .green", {
                     clipPath: "polygon(0% 0, 0% 0, 0% 100%, 0% 100% )",
                     duration: 3.5,
                 }, "<").to(".forth-page-para div", {
-                    opacity: 0,
+                    autoAlpha: 0,
                     duration: 6
 
                 }, ">+4.5").from(".fifth-page .content", {
                     y: "100%",
-                    opacity: 0,
+                    autoAlpha: 0,
                     duration: 6,
                     onStart: () => {
                         videoTitle.seek(0).clear().pause();
@@ -1344,18 +1346,18 @@
 
                         videoTitle.fromTo(".fifth-page .paraBox h4 span", {
                             y: 30,
-                            opacity: 0
+                            autoAlpha: 0
                         }, {
                             y: 0,
-                            opacity: 1,
+                            autoAlpha: 1,
                             duration: 0.5,
                             stagger: 0.015
                         }).fromTo(".fifth-page .paraBox h6 span", {
                             y: 30,
-                            opacity: 0
+                            autoAlpha: 0
                         }, {
                             y: 0,
-                            opacity: 1,
+                            autoAlpha: 1,
                             duration: 0.5,
                             stagger: 0.015
                         }, ">-0.7")
