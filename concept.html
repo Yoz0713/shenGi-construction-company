@@ -223,6 +223,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="navBox">
+                    <div class="prev">
+                        <img src="./img/concept/svg/arrow-left.svg">
+                    </div>
+                    <div class="next">
+                        <img src="./img/concept/svg/arrow-right.svg">
+                    </div>
+                </div>
             </div>
 
         </section>
@@ -261,6 +269,13 @@
                         slidesPerView: 3,
                     }
                 }
+            })
+
+            $(".fifth-page .navBox .prev").click(() => {
+                swiper1.slidePrev()
+            })
+            $(".fifth-page .navBox .next").click(() => {
+                swiper1.slideNext()
             })
             function split() {
                 splitText(".second-page .ch-box h2")
