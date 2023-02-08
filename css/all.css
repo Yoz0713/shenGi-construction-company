@@ -2657,6 +2657,7 @@ footer p span {
     filter: brightness(1);
   }
   .constrctionInner .first-page .swiper2 .swiper-scrollbar {
+    width: 100%;
     height: 1px;
   }
   .constrctionInner .first-page .swiper2 .swiper-scrollbar .swiper-scrollbar-drag {
