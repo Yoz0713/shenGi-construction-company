@@ -108,10 +108,14 @@
         &-top {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             width: 80%;
             margin-bottom: 3vw;
 
             .caseName {
+                flex: 0 1 50%;
+
+
                 h2 {
                     font-size: var(--ch_m_text);
                     opacity: 0.8;
@@ -121,7 +125,10 @@
 
             .contact {
                 display: flex;
+                justify-content: flex-end;
                 align-items: center;
+                height: auto;
+                flex: 0 1 50%;
 
                 div {
                     display: flex;
@@ -327,6 +334,7 @@
                     opacity: 0.8;
                     letter-spacing: 0.2em;
                     font-weight: 600;
+                    font-family: 'Noto Serif TC', sans-serif;
                 }
             }
 
@@ -343,6 +351,7 @@
                     background-color: #6A6A6A;
                     cursor: pointer;
                     border: none;
+
 
                     &:hover {
                         opacity: 0.4;
@@ -369,6 +378,8 @@
                     border: none;
                     border-bottom: 1px solid #000;
                     font-size: var(--ch_xs_text);
+                    font-family: 'Noto Serif TC', sans-serif;
+                    letter-spacing: 0.1em;
                 }
 
                 .form-box {
@@ -381,6 +392,7 @@
                         opacity: 0.8;
                         letter-spacing: 0.2em;
                         font-weight: 600;
+                        font-family: 'Noto Serif TC', sans-serif;
                     }
 
                     input {
@@ -392,6 +404,8 @@
                         border: none;
                         border-bottom: 1px solid #000;
                         font-size: var(--ch_xs_text);
+                        font-family: 'Noto Serif TC', sans-serif;
+                        letter-spacing: 0.1em;
                     }
 
                     &:not(:last-child) {
@@ -468,6 +482,7 @@
             &-top {
                 display: flex;
                 flex-direction: column;
+                align-items: flex-start;
                 justify-content: space-between;
                 margin-bottom: 13vw;
                 padding-left: 10vw;

@@ -357,6 +357,8 @@
 
                 .swiper-slide {
                     width: 100%;
+                    filter: brightness(1);
+                    transition: 0.5s;
 
                     .imgBox {
                         width: 100%;
@@ -369,6 +371,11 @@
                             transition: 1s;
                         }
                     }
+                }
+
+                .swiper-slide-prev,
+                .swiper-slide-next {
+                    filter: brightness(0.5);
                 }
 
                 .swiper-slide-prev {

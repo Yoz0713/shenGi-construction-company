@@ -2379,8 +2379,12 @@ footer p span {
 .constrctionInner .second-page-top {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 80%;
   margin-bottom: 3vw;
+}
+.constrctionInner .second-page-top .caseName {
+  flex: 0 1 50%;
 }
 .constrctionInner .second-page-top .caseName h2 {
   font-size: var(--ch_m_text);
@@ -2389,7 +2393,10 @@ footer p span {
 }
 .constrctionInner .second-page-top .contact {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
+  height: auto;
+  flex: 0 1 50%;
 }
 .constrctionInner .second-page-top .contact div {
   display: flex;
@@ -2547,6 +2554,7 @@ footer p span {
   opacity: 0.8;
   letter-spacing: 0.2em;
   font-weight: 600;
+  font-family: "Noto Serif TC", sans-serif;
 }
 .constrctionInner .form-page form .box-submit {
   display: flex;
@@ -2581,6 +2589,8 @@ footer p span {
   border: none;
   border-bottom: 1px solid #000;
   font-size: var(--ch_xs_text);
+  font-family: "Noto Serif TC", sans-serif;
+  letter-spacing: 0.1em;
 }
 .constrctionInner .form-page form div .form-box {
   display: flex;
@@ -2591,6 +2601,7 @@ footer p span {
   opacity: 0.8;
   letter-spacing: 0.2em;
   font-weight: 600;
+  font-family: "Noto Serif TC", sans-serif;
 }
 .constrctionInner .form-page form div .form-box input {
   flex: 0 0 90%;
@@ -2601,6 +2612,8 @@ footer p span {
   border: none;
   border-bottom: 1px solid #000;
   font-size: var(--ch_xs_text);
+  font-family: "Noto Serif TC", sans-serif;
+  letter-spacing: 0.1em;
 }
 .constrctionInner .form-page form div .form-box:not(:last-child) {
   margin-bottom: 3vw;
@@ -2659,6 +2672,7 @@ footer p span {
   .constrctionInner .second-page-top {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 13vw;
     padding-left: 10vw;
@@ -3825,6 +3839,8 @@ footer p span {
 }
 .concept .fifth-page .swiper .swiper-wrapper .swiper-slide {
   width: 100%;
+  filter: brightness(1);
+  transition: 0.5s;
 }
 .concept .fifth-page .swiper .swiper-wrapper .swiper-slide .imgBox {
   width: 100%;
@@ -3836,6 +3852,10 @@ footer p span {
   -o-object-fit: cover;
      object-fit: cover;
   transition: 1s;
+}
+.concept .fifth-page .swiper .swiper-wrapper .swiper-slide-prev,
+.concept .fifth-page .swiper .swiper-wrapper .swiper-slide-next {
+  filter: brightness(0.5);
 }
 .concept .fifth-page .swiper .swiper-wrapper .swiper-slide-prev .imgBox img {
   transform-origin: left center;
@@ -4269,11 +4289,11 @@ footer p span {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: -8.5px;
+  left: -6px;
   margin: auto 0;
   background-color: #4F4F4F;
-  width: 17px;
-  height: 17px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   margin-right: 1.4vw;
 }
@@ -4323,7 +4343,7 @@ footer p span {
   margin: auto 0;
   order: 2;
   left: auto;
-  right: -8.5px;
+  right: -6px;
 }
 .portfolio .second-page-content :nth-child(even) .content-box-top .box p {
   margin: 0;
