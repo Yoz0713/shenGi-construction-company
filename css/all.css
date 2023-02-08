@@ -27,10 +27,8 @@
   transform: translate3d(0, 0, 0);
 }
 .loading-page .contentBox {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   pointer-events: none;
@@ -82,7 +80,6 @@
   top: 0;
   bottom: 0;
   margin: auto;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   padding-top: 10vw;
@@ -706,10 +703,8 @@ footer p span {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   left: 0;
@@ -883,7 +878,6 @@ footer p span {
 .container .index .second-page-paraBox .para h2 {
   display: flex;
   align-items: center;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   font-weight: 700;
@@ -970,7 +964,6 @@ footer p span {
 .container .index .third-page-bg .para {
   display: flex;
   align-items: center;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   left: 0;
@@ -1019,10 +1012,8 @@ footer p span {
   z-index: 10;
 }
 .container .index .third-page-bg .paraBox {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   position: absolute;
@@ -1078,10 +1069,8 @@ footer p span {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   z-index: 10;
@@ -1148,7 +1137,6 @@ footer p span {
 .container .index .third-page-paraBox ul li {
   color: #fff;
   font-size: 1.5vw;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -1174,63 +1162,72 @@ footer p span {
   width: 100%;
   height: 100%;
 }
+.container .index .forth-page-para .green {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #56B87E;
+  z-index: 1;
+  -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+          clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
 .container .index .forth-page-para .box1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   position: absolute;
   right: 2.5vw;
   top: 7vw;
 }
-.container .index .forth-page-para .box1 p {
+.container .index .forth-page-para .box1 .box-inner {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  margin-bottom: 0.2vw;
+}
+.container .index .forth-page-para .box1 .box-inner h4 {
+  position: relative;
+  text-align: end;
+  white-space: nowrap;
+  font-size: 2vw;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+}
+.container .index .forth-page-para .box1 .box-inner > :nth-child(1) {
+  opacity: 0;
+}
+.container .index .forth-page-para .box1 .box-inner :nth-child(2) {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.container .index .forth-page-para .box1 .box-inner p {
   text-align: end;
   white-space: nowrap;
   font-size: 1.2vw;
   letter-spacing: 0.1em;
   font-weight: 700;
 }
-.container .index .forth-page-para .box1 .box1-1 h4 {
-  position: relative;
-  text-align: end;
-  white-space: nowrap;
-  font-size: 2vw;
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 600;
-  color: #56B87E;
+.container .index .forth-page-para .box1 :nth-child(1) .green {
+  width: 140%;
 }
-.container .index .forth-page-para .box1 .box1-1 h4::after {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 4.5vw;
-  height: 1px;
-  background-color: #000;
-  right: -5vw;
-  top: 1.2vw;
-}
-.container .index .forth-page-para .box1 .box1-2 {
-  background-color: #fff;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.container .index .forth-page-para .box1 .box1-2 h4 {
-  position: relative;
-  text-align: end;
-  white-space: nowrap;
-  font-size: 2vw;
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 600;
-}
-.container .index .forth-page-para .box1 .box1-2 h4::after {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 4.5vw;
-  height: 1px;
-  background-color: #000;
-  right: -5vw;
-  top: 1.2vw;
-}
-.container .index .forth-page-para .box1 .green {
+.container .index .forth-page-para .box1 :nth-child(3) .green {
   width: 120%;
+}
+.container .index .forth-page-para .box1 div:nth-child(1) :nth-child(1)::after, .container .index .forth-page-para .box1 div:nth-child(1) :nth-child(2)::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 4.5vw;
+  height: 1px;
+  background-color: #000;
+  right: -5vw;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
 }
 .container .index .forth-page-para .box2 {
   position: absolute;
@@ -1244,9 +1241,6 @@ footer p span {
   text-align: end;
   font-family: "Cormorant Garamond", serif;
   font-weight: 500;
-}
-.container .index .forth-page-para .box2 .box1-1 {
-  color: #56B87E;
 }
 .container .index .forth-page-para .box2 .box1-2 {
   position: absolute;
@@ -1262,6 +1256,12 @@ footer p span {
   font-size: 0.8vw;
   font-weight: 600;
 }
+.container .index .forth-page-para .box3 p {
+  white-space: nowrap;
+  font-size: 0.7vw;
+  text-align: end;
+  font-weight: 500;
+}
 .container .index .forth-page-para .box3 .box1-2 {
   position: absolute;
   width: 150%;
@@ -1270,18 +1270,9 @@ footer p span {
   left: 0;
 }
 .container .index .forth-page-para .box3 .green {
-  height: 200%;
-}
-.container .index .forth-page-para div .green {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #56B87E;
-  z-index: 1;
-  -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-          clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  width: 150%;
+  left: 0;
+  right: auto;
 }
 .container .index .forth-page-bg {
   width: 100%;
@@ -1405,13 +1396,11 @@ footer p span {
 @media all and (max-width: 1039px) {
   .container {
     overflow: auto;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
   .container .index {
     position: static;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     transform: none;
@@ -1431,10 +1420,8 @@ footer p span {
   }
   .container .index .first-page .imgBox .para {
     position: absolute;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     bottom: 120vw;
@@ -1458,7 +1445,6 @@ footer p span {
   }
   .container .index .first-page .imgBox .para p {
     font-size: 3vw;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
@@ -1524,8 +1510,8 @@ footer p span {
     width: 50%;
   }
   .container .index .second-page-paraBox .para h4,
-.container .index .second-page-paraBox .para h3,
-.container .index .second-page-paraBox .para h2 {
+  .container .index .second-page-paraBox .para h3,
+  .container .index .second-page-paraBox .para h2 {
     transform: none;
   }
   .container .index .second-page-paraBox .para h4 {
@@ -1664,7 +1650,6 @@ footer p span {
   .container .index .third-page-paraBox ul li {
     color: #fff;
     font-size: 3.5vw;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
@@ -1688,10 +1673,8 @@ footer p span {
   }
   .container .index .forth-page-para .box1 {
     position: absolute;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     right: 15vw;
@@ -1699,37 +1682,17 @@ footer p span {
     bottom: 0;
     margin: auto 0;
   }
-  .container .index .forth-page-para .box1 p {
+  .container .index .forth-page-para .box1 .box-inner h4 {
+    font-size: 5vw;
+  }
+  .container .index .forth-page-para .box1 .box-inner h4::after {
+    top: 3vw;
+    right: -6vw;
+  }
+  .container .index .forth-page-para .box1 .box-inner p {
     font-size: 3.2vw;
   }
-  .container .index .forth-page-para .box1 .box1-1 h4 {
-    font-size: 5vw;
-  }
-  .container .index .forth-page-para .box1 .box1-1 h4::after {
-    top: 3vw;
-    right: -6vw;
-  }
-  .container .index .forth-page-para .box1 .box1-2 {
-    background-color: #fff;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .container .index .forth-page-para .box1 .box1-2 h4 {
-    position: relative;
-    text-align: end;
-    white-space: nowrap;
-    font-size: 5vw;
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 600;
-  }
-  .container .index .forth-page-para .box1 .box1-2 h4::after {
-    top: 3vw;
-    right: -6vw;
-  }
-  .container .index .forth-page-para .box2 {
-    display: none;
-  }
+  .container .index .forth-page-para .box2,
   .container .index .forth-page-para .box3 {
     display: none;
   }
@@ -1776,11 +1739,11 @@ footer p span {
     margin-top: 0vw;
   }
   .container .index .fifth-page .content .paraBox h4,
-.container .index .fifth-page .content .paraBox h6 {
+  .container .index .fifth-page .content .paraBox h6 {
     text-align: center;
   }
   .container .index .fifth-page .content .paraBox h4 span,
-.container .index .fifth-page .content .paraBox h6 span {
+  .container .index .fifth-page .content .paraBox h6 span {
     opacity: 0;
   }
   .container .index .fifth-page .content .paraBox h4 {
@@ -1906,7 +1869,6 @@ footer p span {
     margin-bottom: 2vw;
   }
   .container .index .third-page-paraBox {
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
@@ -1935,7 +1897,6 @@ footer p span {
   .container .index .third-page-paraBox ul li {
     color: #fff;
     font-size: 4.5vw;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
@@ -1959,14 +1920,18 @@ footer p span {
     bottom: 0;
     margin: auto 0;
   }
-  .container .index .forth-page-para .box1 p {
+  .container .index .forth-page-para .box1 .box-inner {
+    margin-bottom: 1.2vw;
+  }
+  .container .index .forth-page-para .box1 .box-inner h4 {
+    font-size: 7vw;
+  }
+  .container .index .forth-page-para .box1 .box-inner h4::after {
+    top: 3vw;
+    right: -6vw;
+  }
+  .container .index .forth-page-para .box1 .box-inner p {
     font-size: 4vw;
-  }
-  .container .index .forth-page-para .box1 .box1-1 h4 {
-    font-size: 7vw;
-  }
-  .container .index .forth-page-para .box1 .box1-2 h4 {
-    font-size: 7vw;
   }
   .container .index .forth-page-bg2 {
     display: flex;
@@ -2001,11 +1966,11 @@ footer p span {
     margin-top: 2vw;
   }
   .container .index .fifth-page .content .paraBox h4,
-.container .index .fifth-page .content .paraBox h6 {
+  .container .index .fifth-page .content .paraBox h6 {
     text-align: center;
   }
   .container .index .fifth-page .content .paraBox h4 span,
-.container .index .fifth-page .content .paraBox h6 span {
+  .container .index .fifth-page .content .paraBox h6 span {
     opacity: 0;
   }
   .container .index .fifth-page .content .paraBox h4 {
@@ -2027,19 +1992,19 @@ footer p span {
 }
 .construction .first-page-bg {
   width: 100%;
-  height: 33vw;
+  height: 20vw;
 }
 .construction .first-page-bg img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center bottom;
+     object-position: center bottom;
 }
 .construction .first-page-title {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   position: absolute;
@@ -2155,10 +2120,8 @@ footer p span {
   position: absolute;
   right: -4vw;
   bottom: -6vw;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -2200,7 +2163,7 @@ footer p span {
        object-fit: cover;
   }
   .construction .first-page-title h2,
-.construction .first-page-title h3 {
+  .construction .first-page-title h3 {
     text-align: center;
   }
   .construction .first-page-title h3 {
@@ -2647,7 +2610,6 @@ footer p span {
   .constrctionInner .first-page {
     display: flex;
     flex-direction: column;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     margin: 20vw 0 15vw;
@@ -2818,7 +2780,6 @@ footer p span {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     background-image: url(../img/construction/Inner/form-page-bg-ph.webp);
@@ -2902,7 +2863,6 @@ footer p span {
   .constrctionInner .first-page {
     display: flex;
     flex-direction: column;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     margin: 20vw 0 15vw;
@@ -3199,7 +3159,6 @@ footer p span {
   justify-content: space-between;
   flex: 0 0 35%;
   width: 35%;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   padding: 0 1vw;
@@ -3275,7 +3234,6 @@ footer p span {
 }
 .progress main .pop-up-content .title {
   margin: 0 auto 1.5vw;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -3291,25 +3249,21 @@ footer p span {
 }
 .progress main .pop-up-content-top .swiper {
   width: 100%;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
 .progress main .pop-up-content-top .swiper .swiper-wrapper {
   width: 100%;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
 .progress main .pop-up-content-top .swiper .swiper-wrapper .swiper-slide {
   width: 100%;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
 .progress main .pop-up-content-top .swiper .swiper-wrapper .swiper-slide .imgBox {
   width: 100%;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -3357,7 +3311,6 @@ footer p span {
 @media all and (max-width: 1039px) {
   .progress .first-page {
     width: 100%;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     padding-top: 22vw;
@@ -3409,7 +3362,6 @@ footer p span {
   }
   .progress main .content-left {
     width: 100%;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     padding-left: 0vw;
@@ -3417,26 +3369,22 @@ footer p span {
   }
   .progress main .content-left .swiper1 {
     width: 100%;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
   .progress main .content-left .swiper1 .swiper-wrapper {
     width: 100%;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
   .progress main .content-left .swiper1 .swiper-wrapper .swiper-slide {
     display: none;
     width: 100%;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
   .progress main .content-left .swiper1 .swiper-wrapper .swiper-slide .imgBox {
     width: 100%;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
@@ -3504,7 +3452,6 @@ footer p span {
   }
   .progress main .pop-up-content .title {
     margin: 0 0 6vw;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
@@ -3520,25 +3467,21 @@ footer p span {
   }
   .progress main .pop-up-content-top .swiper {
     width: 100%;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
   .progress main .pop-up-content-top .swiper .swiper-wrapper {
     width: 100%;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
   .progress main .pop-up-content-top .swiper .swiper-wrapper .swiper-slide {
     width: 100%;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
   .progress main .pop-up-content-top .swiper .swiper-wrapper .swiper-slide .imgBox {
     width: 100%;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
@@ -3638,8 +3581,7 @@ footer p span {
   align-items: flex-end;
   margin-right: 2.5vw;
   font-size: var(--more_text);
-  -ms-writing-mode: tb-lr;
-      writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
 }
 .concept .second-page-title .en-box h2 {
   color: #010101;
@@ -3665,8 +3607,7 @@ footer p span {
 }
 .concept .second-page-title .ch-box {
   font-size: var(--ch_m_text);
-  -ms-writing-mode: tb-rl;
-      writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
   margin-top: 6vw;
 }
 .concept .second-page-title .ch-box h2 {
@@ -3825,8 +3766,7 @@ footer p span {
   position: relative;
   margin-right: 2.5vw;
   font-size: var(--more_text);
-  -ms-writing-mode: tb-lr;
-      writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
 }
 .concept .forth-page-title .en-box h2 {
   position: relative;
@@ -3852,8 +3792,7 @@ footer p span {
 }
 .concept .forth-page-title .ch-box {
   font-size: var(--ch_m_text);
-  -ms-writing-mode: tb-rl;
-      writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
   margin-top: 3vw;
   margin-right: 2vw;
 }
@@ -3921,7 +3860,6 @@ footer p span {
   z-index: 10;
 }
 .concept .fifth-page .swiper .navBox div {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
@@ -3969,8 +3907,7 @@ footer p span {
     margin-right: 4vw;
   }
   .concept .second-page-title .ch-box {
-    -ms-writing-mode: tb-rl;
-        writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
     margin-top: 15vw;
     font-size: var(--ch_m_text);
   }
@@ -4000,7 +3937,6 @@ footer p span {
   .concept .third-page {
     width: 80%;
     margin: 0 auto;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     margin-bottom: 25vw;
@@ -4030,10 +3966,8 @@ footer p span {
   }
   .concept .third-page-para1 {
     position: static;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     background-color: transparent;
@@ -4217,22 +4151,6 @@ footer p span {
     width: 11vw;
   }
 }
-@-webkit-keyframes ink-transition {
-  from {
-    -webkit-mask-position: 0 100%;
-    -ms-mask-position: 0 100%;
-    -moz-mask-position: 0 100%;
-    -o-mask-position: 0 100%;
-    mask-position: 0 100%;
-  }
-  to {
-    -webkit-mask-position: 100% 100%;
-    -ms-mask-position: 100% 100%;
-    -moz-mask-position: 100% 100%;
-    -o-mask-position: 100% 100%;
-    mask-position: 100% 100%;
-  }
-}
 @keyframes ink-transition {
   from {
     -webkit-mask-position: 0 100%;
@@ -4271,10 +4189,8 @@ footer p span {
      object-fit: cover;
 }
 .portfolio .first-page-title {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   position: absolute;
@@ -4448,10 +4364,8 @@ footer p span {
        object-fit: cover;
   }
   .portfolio .first-page-title {
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     position: absolute;
@@ -4462,7 +4376,7 @@ footer p span {
     bottom: 18vw;
   }
   .portfolio .first-page-title h2,
-.portfolio .first-page-title h3 {
+  .portfolio .first-page-title h3 {
     text-align: center;
     color: #fff;
   }
@@ -4747,7 +4661,6 @@ footer p span {
 @media all and (max-width: 1039px) {
   .contact {
     width: 100%;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
@@ -4886,7 +4799,6 @@ footer p span {
   border: 1px solid #fff;
 }
 .login .content-box {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
@@ -5032,14 +4944,10 @@ footer p span {
   margin-top: 0vw;
 }
 .login .content-box > .is-active {
-  -webkit-animation-name: up;
-          animation-name: up;
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-name: up;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
   opacity: 1;
   pointer-events: all;
 }
@@ -5115,7 +5023,6 @@ footer p span {
   position: absolute;
   top: 0;
   right: 0;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: 100%;
@@ -5134,15 +5041,6 @@ footer p span {
   display: flex;
 }
 
-@-webkit-keyframes up {
-  0% {
-    transform: translateY(20px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
 @keyframes up {
   0% {
     transform: translateY(20px);
@@ -5154,7 +5052,6 @@ footer p span {
 @media all and (max-width: 1039px) {
   .login {
     margin-top: 7vw;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
@@ -5163,14 +5060,12 @@ footer p span {
     justify-content: center;
     align-items: center;
     width: 90%;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     padding: 12vw 0;
     margin: 10vw 0;
   }
   .login .content-box {
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     position: relative;
@@ -5190,7 +5085,6 @@ footer p span {
     padding-bottom: 1.2vw;
   }
   .login .content-box .content-sign div {
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     flex: auto;
@@ -5259,14 +5153,10 @@ footer p span {
   }
   .login .content-box > .is-active {
     display: flex;
-    -webkit-animation-name: up;
-            animation-name: up;
-    -webkit-animation-duration: 0.3s;
-            animation-duration: 0.3s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
+    animation-name: up;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
     pointer-events: all;
   }
   .login .content2 .content-sign {
@@ -5320,7 +5210,6 @@ footer p span {
     margin: 20vw 0;
   }
   .login .content-box {
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     position: relative;
@@ -5397,19 +5286,19 @@ footer p span {
 }
 .smart .first-page-bg {
   width: 100%;
-  height: 33vw;
+  height: 20vw;
 }
 .smart .first-page-bg img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center 80%;
+     object-position: center 80%;
 }
 .smart .first-page-title {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   position: absolute;
@@ -5569,10 +5458,8 @@ footer p span {
 }
 .smart .forth-page-para {
   position: absolute;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   text-align: center;
@@ -5853,7 +5740,6 @@ footer p span {
     flex-direction: column;
     align-items: center;
     flex: 0 0 19%;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     padding: 15vw 10vw;
@@ -6197,7 +6083,6 @@ footer p span {
 }
 .company .forth-page-bottom .box .paraBox {
   position: absolute;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   left: 3.8vw;
@@ -6542,7 +6427,6 @@ footer p span {
   }
   .company .forth-page-bottom .box .paraBox {
     position: absolute;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     left: 3.8vw;
@@ -6669,13 +6553,13 @@ footer p span {
     opacity: 0.8;
   }
   .company .sixth-page-content .paraBox .para2 h5,
-.company .sixth-page-content .paraBox .para4 h5,
-.company .sixth-page-content .paraBox .para6 h5 {
+  .company .sixth-page-content .paraBox .para4 h5,
+  .company .sixth-page-content .paraBox .para6 h5 {
     margin-bottom: 5vw;
   }
   .company .sixth-page-content .paraBox .para2::after,
-.company .sixth-page-content .paraBox .para4::after,
-.company .sixth-page-content .paraBox .para6::after {
+  .company .sixth-page-content .paraBox .para4::after,
+  .company .sixth-page-content .paraBox .para6::after {
     top: 6vw;
   }
   .company .sixth-page-content .paraBox .para1 {
@@ -6856,7 +6740,6 @@ footer p span {
 }
 .user .content-box form > :last-child {
   position: absolute;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   bottom: 4vw;
@@ -6891,7 +6774,6 @@ footer p span {
 @media all and (max-width: 1039px) {
   .user {
     margin-top: 7vw;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
@@ -6900,7 +6782,6 @@ footer p span {
     justify-content: center;
     align-items: center;
     width: 90%;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     padding: 4vw 0;
@@ -6917,7 +6798,6 @@ footer p span {
   }
   .user .content-box .title h1 {
     margin: 0 auto;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     font-size: var(--ch_m_text);
@@ -7005,7 +6885,6 @@ footer p span {
     justify-content: center;
     align-items: center;
     width: 90%;
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     padding: 4vw 0;
@@ -7021,7 +6900,6 @@ footer p span {
   }
   .user .content-box .title h1 {
     margin: 0 auto;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     font-size: var(--ch_m_text);
@@ -7120,15 +6998,6 @@ span {
   display: inline-block;
 }
 
-@-webkit-keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes rotate {
   0% {
     transform: rotate(0);
@@ -7139,14 +7008,12 @@ span {
 }
 @media all and (max-width: 1039px) {
   html {
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
 }
 @media all and (max-width: 1039px) and (max-width: 500px) {
   html {
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }

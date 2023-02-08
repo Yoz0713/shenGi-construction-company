@@ -659,20 +659,31 @@
                 width: 100%;
                 height: 100%;
 
+                .green {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $green_color;
+                    z-index: 1;
+                    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+                }
+
                 .box1 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
                     position: absolute;
                     right: 2.5vw;
                     top: 7vw;
 
-                    p {
-                        text-align: end;
-                        white-space: nowrap;
-                        font-size: 1.2vw;
-                        letter-spacing: 0.1em;
-                        font-weight: 700;
-                    }
 
-                    .box1-1 {
+                    .box-inner {
+                        position: relative;
+                        width: fit-content;
+                        height: auto;
+                        margin-bottom: 0.2vw;
 
                         h4 {
                             position: relative;
@@ -681,35 +692,46 @@
                             font-size: 2vw;
                             font-family: $en_style;
                             font-weight: 600;
-                            color: $green_color;
-
-                            &::after {
-                                position: absolute;
-                                display: block;
-                                content: "";
-                                width: 4.5vw;
-                                height: 1px;
-                                background-color: #000;
-                                right: -5vw;
-                                top: 1.2vw;
-                            }
                         }
-                    }
 
-                    .box1-2 {
-                        background-color: #fff;
-                        position: absolute;
-                        right: 0;
-                        top: 0;
+                        &> :nth-child(1) {
+                            opacity: 0;
+                        }
 
-                        h4 {
-                            position: relative;
+                        & :nth-child(2) {
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+
+                        }
+
+                        p {
                             text-align: end;
                             white-space: nowrap;
-                            font-size: 2vw;
-                            font-family: $en_style;
-                            font-weight: 600;
+                            font-size: 1.2vw;
+                            letter-spacing: 0.1em;
+                            font-weight: 700;
+                        }
 
+
+                    }
+
+                    & :nth-child(1) {
+                        .green {
+                            width: 140%;
+                        }
+                    }
+
+                    & :nth-child(3) {
+                        .green {
+                            width: 120%;
+                        }
+                    }
+
+                    div {
+
+                        &:nth-child(1) :nth-child(1),
+                        &:nth-child(1) :nth-child(2) {
                             &::after {
                                 position: absolute;
                                 display: block;
@@ -718,18 +740,18 @@
                                 height: 1px;
                                 background-color: #000;
                                 right: -5vw;
-                                top: 1.2vw;
+                                top: 0;
+                                bottom: 0;
+                                margin: auto 0;
                             }
                         }
                     }
 
-                    .green {
-                        width: 120%;
-                    }
                 }
 
                 .box2 {
                     position: absolute;
+
                     left: 27vw;
                     top: 12.5vw;
                     z-index: 0;
@@ -741,11 +763,6 @@
                         text-align: end;
                         font-family: $en_style;
                         font-weight: 500;
-                    }
-
-                    .box1-1 {
-
-                        color: $green_color;
                     }
 
                     .box1-2 {
@@ -764,6 +781,14 @@
                     font-size: 0.8vw;
                     font-weight: 600;
 
+                    p {
+
+                        white-space: nowrap;
+                        font-size: 0.7vw;
+                        text-align: end;
+                        font-weight: 500;
+                    }
+
                     .box1-2 {
                         position: absolute;
                         width: 150%;
@@ -773,22 +798,15 @@
                     }
 
                     .green {
-                        height: 200%;
+                        width: 150%;
+                        left: 0;
+                        right: auto;
                     }
+
                 }
 
-                div {
-                    .green {
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-color: $green_color;
-                        z-index: 1;
-                        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-                    }
-                }
+
+
             }
 
             &-bg {
@@ -1339,12 +1357,7 @@
                         bottom: 0;
                         margin: auto 0;
 
-                        p {
-                            font-size: 3.2vw;
-                        }
-
-                        .box1-1 {
-
+                        .box-inner {
                             h4 {
                                 font-size: 5vw;
 
@@ -1353,38 +1366,16 @@
                                     right: -6vw;
                                 }
                             }
-                        }
 
-                        .box1-2 {
-                            background-color: #fff;
-                            position: absolute;
-                            right: 0;
-                            top: 0;
-
-                            h4 {
-                                position: relative;
-                                text-align: end;
-                                white-space: nowrap;
-                                font-size: 5vw;
-                                font-family: $en_style;
-                                font-weight: 600;
-
-                                &::after {
-                                    top: 3vw;
-                                    right: -6vw;
-                                }
+                            p {
+                                font-size: 3.2vw;
                             }
                         }
                     }
 
-                    .box2 {
-                        display: none;
-
-                    }
-
+                    .box2,
                     .box3 {
                         display: none;
-
                     }
                 }
 
@@ -1721,23 +1712,23 @@
                             bottom: 0;
                             margin: auto 0;
 
-                            p {
-                                font-size: 4vw;
-                            }
-
-                            .box1-1 {
+                            .box-inner {
+                                margin-bottom: 1.2vw;
 
                                 h4 {
                                     font-size: 7vw;
+
+                                    &::after {
+                                        top: 3vw;
+                                        right: -6vw;
+                                    }
+                                }
+
+                                p {
+                                    font-size: 4vw;
                                 }
                             }
 
-                            .box1-2 {
-
-                                h4 {
-                                    font-size: 7vw;
-                                }
-                            }
                         }
                     }
 

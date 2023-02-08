@@ -372,25 +372,27 @@
             <section class="forth-page">
                 <div class="forth-page-para">
                     <div class="box1">
-                        <div class="green">
+                        <div class="box-inner">
+                            <h4>CLASSIC</h4>
+                            <h4>PORTFOLIO</h4>
+                            <div class="green">
 
-                        </div>
-                        <div class="box1-1">
-                            <div class="box-inner">
-                                <h4>CLASSIC</h4>
-                            </div>
-                            <div class="box-inner">
-                                <h4>PORTFOLIO</h4>
-                            </div>
-                            <div class="box-inner">
-                                <p>純粹美學 時代印記~閱讀建築</p>
                             </div>
                         </div>
-                        <div class="box1-2">
-                            <h4>PORTFOLIO<br>DESIGN</h4>
+                        <div class="box-inner">
+                            <h4>PORTFOLIO</h4>
+                            <h4>DESIGN</h4>
+                            <div class="green">
+
+                            </div>
+                        </div>
+                        <div class="box-inner">
+                            <p>純粹美學 時代印記~閱讀建築</p>
                             <p>轉變成設計的成果 激盪創意的火花</p>
-                        </div>
+                            <div class="green">
 
+                            </div>
+                        </div>
                     </div>
                     <div class="box2">
                         <div class="green">
@@ -412,7 +414,7 @@
                             <p>美好生活 與 人 藝術 自然相遇。</p>
                         </div>
                         <div class="box1-2">
-                            <p>打造空間新美學，<br>收藏一個詩意棲居般的「家」</p>
+                            <p>打造空間新美學，收藏一個詩意棲居的「家」</p>
                         </div>
 
 
@@ -492,6 +494,7 @@
     <script src="./js/config.js"></script>
 
     <script>
+
         window.onload = function () {
             //在Loading及開場動畫結束前取消滾動
             // gsap.set("html", {
@@ -961,10 +964,16 @@
                 }, "<+2").to(".forth-page-para .green", {
                     clipPath: "polygon(100% 0, 0% 0, 0% 100%, 100% 100% )",
                     duration: 4.5,
-                }).to(".forth-page-para .box1-2", {
+                }).to(".forth-page-para .box-inner :nth-child(2)", {
                     autoAlpha: 0,
                     duration: 0.001,
-                }).to(".forth-page-para .green", {
+                }).to(".forth-page-para .box-inner :nth-child(1)", {
+                    autoAlpha: 1,
+                    duration: 0.001,
+                }, "<").to(".forth-page-para .box1-2", {
+                    autoAlpha: 0,
+                    duration: 0.001,
+                }, "<").to(".forth-page-para .green", {
                     clipPath: "polygon(0% 0, 0% 0, 0% 100%, 0% 100% )",
                     duration: 3.5,
                 }).to(".forth-page-para div", {
@@ -1336,13 +1345,16 @@
                 }, "<").to(".forth-page-para .green", {
                     clipPath: "polygon(100% 0, 0% 0, 0% 100%, 100% 100% )",
                     duration: 4.5,
-                }, "<+11").to(".forth-page-para .box1-2", {
+                }, "<+7.8").to(".forth-page-para .box-inner :nth-child(2)", {
                     autoAlpha: 0,
                     duration: 0.001,
-                }, "<+4").to(".forth-page-para .green", {
+                }).to(".forth-page-para .box-inner :nth-child(1)", {
+                    autoAlpha: 1,
+                    duration: 0.001,
+                }, "<").to(".forth-page-para .green", {
                     clipPath: "polygon(0% 0, 0% 0, 0% 100%, 0% 100% )",
                     duration: 3.5,
-                }, "<").to(".forth-page-para div", {
+                }, "<-30").to(".forth-page-para div", {
                     autoAlpha: 0,
                     duration: 6
 

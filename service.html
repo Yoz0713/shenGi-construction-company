@@ -18,6 +18,58 @@
 </head>
 
 <body>
+    <!-- loading畫面 -->
+    <section class="loading-page">
+        <div class="contentBox">
+            <div class="svgBox">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewbox="0 0 600 600">
+                    <g class="rotate">
+                        <g stroke="#56B87E" fill="transparent" stroke-width="7" class="g1">
+                            <path d="M 300 300 m -40 0 a 40 40 0 1 1 80 0 a 40 40 0 1 1 -80 0" class="circle1"
+                                stroke-linecap="round" />
+                            <path d="M 300 300 m -60 0 a 40 40 0 1 1 120 0 a 40 40 0 1 1 -120 0" class="circle2"
+                                stroke-linecap="round" />
+                            <path d="M 300 300 m -80 0 a 40 40 0 1 1 160 0 a 40 40 0 1 1 -160 0" class="circle3"
+                                stroke-linecap="round" />
+                        </g>
+                        <g stroke="#56B87E" fill="transparent" stroke-width="7" class="g2">
+                            <!-- <circle cx="20" cy="300" r="120" class="circle1" />
+                            <circle cx="20" cy="300" r="140" class="circle2" />
+                            <circle cx="20" cy="300" r="120" class="circle3" /> -->
+                            <path d="M -20 300 m -200 0 a 40 40 0 1 1 80 0 a 40 40 0 1 1 -80 0" class="circle1"
+                                stroke-linecap="round" />
+                            <path d="M -20 300 m -220 0 a 40 40 0 1 1 120 0 a 40 40 0 1 1 -120 0" class="circle2"
+                                stroke-linecap="round" />
+                            <path d="M -20 300 m -240 0 a 40 40 0 1 1 160 0 a 40 40 0 1 1 -160 0" class="circle3"
+                                stroke-linecap="round" />
+
+
+                        </g>
+                        <g stroke="#56B87E" fill="transparent" stroke-width="7" class="g3">
+                            <path d="M 580 300 m -200 0 a 40 40 0 1 0 80 0 a 40 40 0 1 0 -80 0" class="circle1"
+                                stroke-linecap="round" />
+                            <path d="M 580 300 m -220 0 a 40 40 0 1 0 120 0 a 40 40 0 1 0 -120 0" class="circle2"
+                                stroke-linecap="round" />
+                            <path d="M 580 300 m -240 0 a 40 40 0 1 0 160 0 a 40 40 0 1 0 -160 0" class="circle3"
+                                stroke-linecap="round" />
+                        </g>
+                        <g stroke="#56B87E" fill="transparent" stroke-width="7" class="g4">
+                            <line x1="222" y1="240" x2="378" y2="290" />
+                            <line x1="222" y1="255" x2="378" y2="305" />
+                            <line x1="222" y1="270" x2="378" y2="320" />
+                        </g>
+                    </g>
+
+                </svg>
+            </div>
+            <div class="titleBox">
+                <h1>森鉅建設</h1>
+                <h5>Sun Glory Archi Group</h5>
+            </div>
+        </div>
+
+    </section>
+    <!-- loading畫面 -->
     <header>
         <div class="logoBox">
             <a href="./index.html">
@@ -113,7 +165,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="./js/config.js"></script>
 
-
+    <script>
+        loadingPageAnimaiton()
+        window.onload = function () {
+            $(".loading-page").css("opacity", "0")
+        }
+    </script>
 
 
 </body>
