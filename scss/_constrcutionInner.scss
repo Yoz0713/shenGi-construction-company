@@ -194,6 +194,10 @@
                     }
 
                     & :nth-child(7) {
+                        h4 {
+                            font-weight: 600;
+                        }
+
                         p {
                             line-height: 2.6;
 
@@ -351,7 +355,7 @@
                     background-color: #6A6A6A;
                     cursor: pointer;
                     border: none;
-
+                    font-family: 'Noto Serif TC', sans-serif;
 
                     &:hover {
                         opacity: 0.4;
@@ -886,7 +890,7 @@
 
 
                                 a {
-                                    padding: 2.5vw 0;
+                                    padding: 1vw 0;
 
                                     svg {
                                         width: 8vw;
