@@ -3839,8 +3839,6 @@ footer p span {
 }
 .concept .fifth-page .swiper .swiper-wrapper .swiper-slide {
   width: 100%;
-  filter: brightness(1);
-  transition: 0.5s;
 }
 .concept .fifth-page .swiper .swiper-wrapper .swiper-slide .imgBox {
   width: 100%;
@@ -3852,9 +3850,10 @@ footer p span {
   -o-object-fit: cover;
      object-fit: cover;
   transition: 1s;
+  filter: brightness(1);
 }
-.concept .fifth-page .swiper .swiper-wrapper .swiper-slide-prev,
-.concept .fifth-page .swiper .swiper-wrapper .swiper-slide-next {
+.concept .fifth-page .swiper .swiper-wrapper .swiper-slide-prev .imgBox img,
+.concept .fifth-page .swiper .swiper-wrapper .swiper-slide-next .imgBox img {
   filter: brightness(0.5);
 }
 .concept .fifth-page .swiper .swiper-wrapper .swiper-slide-prev .imgBox img {

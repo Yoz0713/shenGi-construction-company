@@ -357,8 +357,8 @@
 
                 .swiper-slide {
                     width: 100%;
-                    filter: brightness(1);
-                    transition: 0.5s;
+
+
 
                     .imgBox {
                         width: 100%;
@@ -369,13 +369,20 @@
                             transform: scale(0.8);
                             object-fit: cover;
                             transition: 1s;
+                            filter: brightness(1);
                         }
                     }
                 }
 
                 .swiper-slide-prev,
                 .swiper-slide-next {
-                    filter: brightness(0.5);
+                    .imgBox {
+                        img {
+                            filter: brightness(0.5);
+                        }
+                    }
+
+
                 }
 
                 .swiper-slide-prev {
