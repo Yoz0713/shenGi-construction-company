@@ -138,6 +138,20 @@ $light-green: #1262338e;
     }
 }
 
+//除首頁外其餘loading的底色
+.loading-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: #fff;
+    pointer-events: none;
+    transition: 1.2s;
+    opacity: 1;
+}
+
 header {
     display: flex;
     justify-content: space-between;

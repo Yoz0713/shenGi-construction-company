@@ -15,10 +15,14 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:ital,wght@1,600&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="./css/loading-bar.css">
     <title>森鉅建設</title>
 </head>
 
 <body>
+    <div class="loading-bg">
+
+    </div>
     <header>
         <div class="logoBox">
             <a href="./index.html">
@@ -298,6 +302,7 @@
             02-12345678 臺北市松山區敦化北路167號17樓</p>
     </footer>
     <script src="./js/splitText.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
@@ -305,9 +310,9 @@
     <script src="./js/config.js"></script>
 
     <script>
-        loadingPageAnimaiton()
+
         window.onload = function () {
-            $(".loading-page").css("opacity", "0")
+            $(".loading-bg").css("opacity", "0")
             //for mobile effect
             $(".forth-page-bottom .box").click((target) => {
                 $(target).toggleClass("active")

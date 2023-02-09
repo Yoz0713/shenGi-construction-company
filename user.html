@@ -14,61 +14,15 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;600;700;900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="./css/loading-bar.css">
     <title>森鉅建設</title>
 </head>
 
 <body>
     <!-- loading畫面 -->
-    <section class="loading-page">
-        <div class="contentBox">
-            <div class="svgBox">
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewbox="0 0 600 600">
-                    <g class="rotate">
-                        <g stroke="#56B87E" fill="transparent" stroke-width="7" class="g1">
-                            <path d="M 300 300 m -40 0 a 40 40 0 1 1 80 0 a 40 40 0 1 1 -80 0" class="circle1"
-                                stroke-linecap="round" />
-                            <path d="M 300 300 m -60 0 a 40 40 0 1 1 120 0 a 40 40 0 1 1 -120 0" class="circle2"
-                                stroke-linecap="round" />
-                            <path d="M 300 300 m -80 0 a 40 40 0 1 1 160 0 a 40 40 0 1 1 -160 0" class="circle3"
-                                stroke-linecap="round" />
-                        </g>
-                        <g stroke="#56B87E" fill="transparent" stroke-width="7" class="g2">
-                            <!-- <circle cx="20" cy="300" r="120" class="circle1" />
-                            <circle cx="20" cy="300" r="140" class="circle2" />
-                            <circle cx="20" cy="300" r="120" class="circle3" /> -->
-                            <path d="M -20 300 m -200 0 a 40 40 0 1 1 80 0 a 40 40 0 1 1 -80 0" class="circle1"
-                                stroke-linecap="round" />
-                            <path d="M -20 300 m -220 0 a 40 40 0 1 1 120 0 a 40 40 0 1 1 -120 0" class="circle2"
-                                stroke-linecap="round" />
-                            <path d="M -20 300 m -240 0 a 40 40 0 1 1 160 0 a 40 40 0 1 1 -160 0" class="circle3"
-                                stroke-linecap="round" />
+    <div class="loading-bg">
 
-
-                        </g>
-                        <g stroke="#56B87E" fill="transparent" stroke-width="7" class="g3">
-                            <path d="M 580 300 m -200 0 a 40 40 0 1 0 80 0 a 40 40 0 1 0 -80 0" class="circle1"
-                                stroke-linecap="round" />
-                            <path d="M 580 300 m -220 0 a 40 40 0 1 0 120 0 a 40 40 0 1 0 -120 0" class="circle2"
-                                stroke-linecap="round" />
-                            <path d="M 580 300 m -240 0 a 40 40 0 1 0 160 0 a 40 40 0 1 0 -160 0" class="circle3"
-                                stroke-linecap="round" />
-                        </g>
-                        <g stroke="#56B87E" fill="transparent" stroke-width="7" class="g4">
-                            <line x1="222" y1="240" x2="378" y2="290" />
-                            <line x1="222" y1="255" x2="378" y2="305" />
-                            <line x1="222" y1="270" x2="378" y2="320" />
-                        </g>
-                    </g>
-
-                </svg>
-            </div>
-            <div class="titleBox">
-                <h1>森鉅建設</h1>
-                <h5>Sun Glory Archi Group</h5>
-            </div>
-        </div>
-
-    </section>
+    </div>
     <!-- loading畫面 -->
     <header>
         <div class="logoBox">
@@ -218,15 +172,15 @@
             02-12345678 臺北市松山區敦化北路167號17樓</p>
     </footer>
     <script src="./js/paticles.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="./js/config.js"></script>
     <script>
 
-        loadingPageAnimaiton()
         window.onload = function () {
-            $(".loading-page").css("opacity", "0")
+            $(".loading-bg").css("opacity", "0")
             let particles = particlesJS("particles-js", { "particles": { "number": { "value": 33, "density": { "enable": true, "value_area": 1815.039575754227 } }, "color": { "value": "#26dc90" }, "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 4 }, "image": { "src": "img/login/3d-texture.png", "width": 100, "height": 100 } }, "opacity": { "value": 0.71010661384636, "random": true, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } }, "size": { "value": 200.24033491425909, "random": true, "anim": { "enable": true, "speed": 16.783216783216783, "size_min": 2.3976023976023977, "sync": false } }, "line_linked": { "enable": false, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 }, "move": { "enable": true, "speed": 3, "direction": "top-right", "random": true, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1104.8066982851817 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": false, "mode": "push" }, "resize": true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true })
 
 
@@ -246,8 +200,10 @@
                     duration: 2,
                 }, "<+1").from("#particles-js", {
                     opacity: 0,
-
-                    duration: 5,
+                    duration: 5
+                }, "<+2").from("#particles-js canvas", {
+                    x: 100,
+                    duration: 1
                 }, "<+1")
             }
             bannerIn()
