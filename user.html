@@ -195,11 +195,13 @@
                     y: 30,
                     duration: 1.4
                 }).fromTo(".content .content-box", {
-                    clipPath: "polygon(0 0 , 0% 0, 100% 0% , 100% 0% , 0 0 )",
+                    opacity: 0,
+                    y: 30
 
                 }, {
-                    clipPath: "polygon(0 0 , 0% 100%, 180% 100% , 180% 0% , 0 0 )",
-                    duration: 2,
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.5,
                 }, "<+1").from("#particles-js", {
                     opacity: 0,
                     duration: 5
