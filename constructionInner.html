@@ -349,7 +349,9 @@
     <script>
 
         window.onload = function () {
-            $(".loading-bg").css("opacity", "0")
+            setTimeout(() => {
+                $(".loading-bg").css("opacity", "0")
+            }, 650)
             const swiper1 = new Swiper(".first-page .swiper1", {
                 effect: 'fade',
                 fadeEffect: {

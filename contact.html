@@ -167,7 +167,9 @@
     <script>
 
         window.onload = function () {
-            $(".loading-bg").css("opacity", "0")
+            setTimeout(() => {
+                $(".loading-bg").css("opacity", "0")
+            }, 650)
             function bannerIn() {
                 let gg = gsap.timeline()
                 gg.from(".form-title img", {

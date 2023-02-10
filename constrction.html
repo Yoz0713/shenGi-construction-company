@@ -210,7 +210,9 @@
     <script>
 
         window.onload = function () {
-            $(".loading-bg").css("opacity", "0")
+            setTimeout(() => {
+                $(".loading-bg").css("opacity", "0")
+            }, 650)
             function split() {
                 splitText(".first-page-title h3")
                 splitText(".first-page-title h2")

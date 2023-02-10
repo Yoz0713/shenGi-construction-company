@@ -335,7 +335,9 @@
     <script>
 
         window.onload = function () {
-            $(".loading-bg").css("opacity", "0")
+            setTimeout(() => {
+                $(".loading-bg").css("opacity", "0")
+            }, 650)
 
             popUpImg()
 
