@@ -6657,7 +6657,7 @@ footer p span {
   position: relative;
   width: 100%;
   margin-top: 3.5vw;
-  height: 50.5vw;
+  height: 100vh;
   overflow: hidden;
 }
 .user #particles-js {
@@ -6680,6 +6680,7 @@ footer p span {
   align-items: center;
   width: 70vw;
   height: 40vw;
+  min-height: 600px;
   z-index: 12;
   background-color: rgba(255, 255, 255, 0.53);
   -webkit-backdrop-filter: blur(25px);
@@ -6731,6 +6732,7 @@ footer p span {
   font-size: var(--ch_xs_text);
   color: #126233;
   flex: 0 0 10%;
+  white-space: nowrap;
 }
 .user .content-box form .form-box input {
   background-color: transparent;
