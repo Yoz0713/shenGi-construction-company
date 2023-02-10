@@ -198,7 +198,7 @@ function loadingPageAnimaiton(func) {
                     rotate: 90,
                     transformOrigin: "center",
                     duration: 0.8,
-                    x: "-3%",
+                    transform: "matrix(0.45, 0, 0, 0.5, 0, 110)",
                 }, "<").to(".g1",
                     {
                         opacity: 0,
