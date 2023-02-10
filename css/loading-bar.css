@@ -5,11 +5,11 @@
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	user-select: none;
-	font-family: Garamond, serif;
+	font-family: 'Times New Roman', Times, serif, serif;
 }
 
 .pace.pace-inactive .pace-progress {
-	font-family: Garamond, serif;
+	font-family: 'Times New Roman', Times, serif, serif;
 	display: none;
 }
 
@@ -23,7 +23,7 @@
 	margin: auto;
 	height: 5rem;
 	width: 5rem;
-	font-family: Garamond, serif;
+	font-family: 'Times New Roman', Times, serif, serif;
 	-webkit-transform: translate3d(0, 0, 0) !important;
 	-ms-transform: translate3d(0, 0, 0) !important;
 	transform: translate3d(0, 0, 0) !important;
@@ -35,7 +35,7 @@
 	top: 0;
 	right: .5rem;
 	content: attr(data-progress-text);
-	font-family: Garamond, serif;
+	font-family: 'Times New Roman', Times, serif, serif;
 	font-weight: 100;
 	font-size: 2rem;
 	line-height: 1;
