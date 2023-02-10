@@ -6,10 +6,12 @@
 	-moz-user-select: none;
 	user-select: none;
 	font-family: 'Times New Roman', Times, serif, serif;
+	font-style: italic;
 }
 
 .pace.pace-inactive .pace-progress {
 	font-family: 'Times New Roman', Times, serif, serif;
+	font-style: italic;
 	display: none;
 }
 
@@ -24,6 +26,7 @@
 	height: 5rem;
 	width: 5rem;
 	font-family: 'Times New Roman', Times, serif, serif;
+	font-style: italic;
 	-webkit-transform: translate3d(0, 0, 0) !important;
 	-ms-transform: translate3d(0, 0, 0) !important;
 	transform: translate3d(0, 0, 0) !important;
@@ -36,6 +39,7 @@
 	right: .5rem;
 	content: attr(data-progress-text);
 	font-family: 'Times New Roman', Times, serif, serif;
+	font-style: italic;
 	font-weight: 100;
 	font-size: 2rem;
 	line-height: 1;
