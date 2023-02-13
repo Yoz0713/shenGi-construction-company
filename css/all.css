@@ -11,6 +11,14 @@
   filter: blur(5px);
 }
 
+.flex_div {
+  display: flex;
+}
+
+.d-none {
+  display: none;
+}
+
 .loading-page {
   display: flex;
   align-items: center;
@@ -133,6 +141,9 @@ header .logoBox img {
 header .toolBox {
   display: flex;
   align-items: center;
+}
+header .toolBox #login_a {
+  padding: 10px 15px;
 }
 header .toolBox .user-area {
   padding: 0.2vw 0.5vw 0;
@@ -323,6 +334,9 @@ footer p span {
     --ch_s_text: 3vw;
     --ch_m_text: 3.5vw;
     --ch_l_text: 4vw;
+  }
+  .flex_div {
+    flex-wrap: wrap;
   }
   .computer {
     display: none;
@@ -4945,6 +4959,44 @@ footer p span {
 .login .content-box form .form-box input[type=submit]:hover {
   background-color: rgba(0, 55, 32, 0.2549019608);
 }
+.login .content-box form .form-box .signUp_btn {
+  width: 40%;
+}
+.login .content-box form .form-box .submit_btn {
+  cursor: pointer;
+  background-color: rgba(18, 98, 51, 0.5568627451);
+  color: #fff;
+  border: none;
+  font-size: var(--ch_xs_text);
+  border-radius: 40px;
+  padding: 0.5vw 1vw;
+  display: block;
+  text-align: center;
+}
+.login .content-box form .form-box .submit_btn:hover {
+  background-color: rgba(0, 55, 32, 0.2549019608);
+}
+.login .content-box form .form-box .flex_div input[type=submit] {
+  flex: 1 1 50%;
+}
+.login .content-box form .form-box .flex_div .new_pwd_btn {
+  flex: 1 1 50%;
+}
+.login .content-box form .form-box .flex_div .back_btn {
+  flex: 1 1 50%;
+  background-color: rgba(0, 55, 32, 0.1);
+  border: 1px solid rgba(0, 55, 32, 0.6);
+  color: #003720;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  font-size: var(--ch_xs_text);
+}
+.login .content-box form .form-box .flex_div .back_btn:hover {
+  background-color: rgba(0, 55, 32, 0.2549019608);
+}
 .login .content-box form .form-box .box {
   display: flex;
   flex-direction: column;
@@ -4961,6 +5013,31 @@ footer p span {
   font-size: 0.6vw;
   color: #126233;
 }
+.login .content-box form .form-box .community_div input {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  padding: 10px;
+  margin-left: 15px;
+}
+.login .content-box form .form-box select {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+  border-radius: 40px;
+  padding: 0.5vw 1vw;
+  font-size: var(--ch_xs_text);
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Noto Serif TC", sans-serif;
+}
+.login .content-box form .form-box label {
+  padding: 10px;
+  display: inline-block;
+}
+.login .content-box form .form-box [type=radio] {
+  width: auto;
+  margin-right: 7px;
+}
 .login .content-box > .signUp {
   display: flex;
   flex-wrap: wrap;
@@ -4972,14 +5049,6 @@ footer p span {
 }
 .login .content-box > .signUp .form-box {
   flex: 0 0 48%;
-}
-.login .content-box > .signUp :nth-child(7) {
-  display: flex;
-  justify-content: center;
-  flex: 0 0 100%;
-}
-.login .content-box > .signUp :nth-child(7) input {
-  width: 48%;
 }
 .login .content-box > .signIn .form-box input[type=submit] {
   margin-top: 0vw;
@@ -5160,6 +5229,12 @@ footer p span {
     margin-top: 1.5vw;
     font-size: var(--ch_s_text);
   }
+  .login .content-box form .form-box .submit_btn,
+  .login .content-box form .form-box .back_btn {
+    margin-top: 1.5vw;
+    font-size: var(--ch_s_text);
+    padding: 1.5vw;
+  }
   .login .content-box form .form-box .box .forgetPassword {
     margin: 1.5vw 1.5vw 0 0;
   }
@@ -5286,6 +5361,15 @@ footer p span {
   }
   .login .content-box form .form-box input[type=submit] {
     margin-top: 3vw;
+  }
+  .login .content-box form .form-box .back_btn {
+    margin: 0 !important;
+  }
+  .login .content-box form .form-box .submit_btn,
+  .login .content-box form .form-box .back_btn {
+    margin-top: 3vw;
+    padding: 3vw;
+    flex: 1 1 100% !important;
   }
   .login .content-box form .form-box .box .forgetPassword {
     margin: 2.5vw 2.5vw 0 0;
@@ -7061,4 +7145,4 @@ span {
     height: -moz-fit-content;
     height: fit-content;
   }
-}
+}/*# sourceMappingURL=all.css.map */
