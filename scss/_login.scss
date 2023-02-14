@@ -186,6 +186,7 @@
                         padding: .5vw 1vw;
                         display: block;
                         text-align: center;
+                        margin: auto;
 
                         &:hover {
                             background-color: #00372041;
@@ -283,7 +284,8 @@
 
 
                 .form-box {
-                    flex: 0 0 48%;
+                    flex: 1 1 50%;
+                    padding: 0 1vw;
                 }
 
 
@@ -563,21 +565,20 @@
 
                     .form-box {
                         flex: auto;
+                        // padding: 0 5vw;
                     }
 
 
 
-                    & :nth-child(7) {
-                        display: flex;
-                        justify-content: center;
-                        flex: 0 0 100%;
+                    // & :nth-child(7) {
+                    //     display: flex;
+                    //     justify-content: center;
+                    //     flex: 0 0 100%;
 
-                        input {
-                            width: 100%;
-                        }
-
-
-                    }
+                    //     input {
+                    //         width: 100%;
+                    //     }
+                    // }
                 }
 
                 &>.signIn {
@@ -726,15 +727,32 @@
                                 margin-top: 3vw;
                             }
 
+                            select{
+                                width: 100%;
+                                padding: 2vw 3vw;
+                                font-size: var(--ch_s_text);
+                            }
+
                             .back_btn{
                                 margin: 0 !important;
                             }
 
                             .submit_btn,
                             .back_btn{
+                                width: 100%;
                                 margin-top: 3vw;
                                 padding: 3vw;
                                 flex: 1 1 100% !important;
+                            }
+
+                            .community_div {
+
+                                flex-direction: column;
+
+                                input{
+                                    margin: 0;
+                                    margin-top: 2vw;
+                                }
                             }
 
                             .box {
