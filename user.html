@@ -12,7 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@300;400;500;600;700;900&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;600;700;900&display=swap"
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/loading-bar.css">
     <title>森鉅建設</title>
@@ -126,7 +126,7 @@
                     </div>
                     <div class="form-box">
                         <p>生日</p>
-                        <input type="text" placeholder="YYYY/MM/DD">
+                        <input type="date" name="birthday" placeholder="年/月/日">
                     </div>
                     <div class="form-box">
                         <p>身分證</p>
@@ -143,7 +143,7 @@
                     </div>
                     <div class="form-box">
                         <p>行動電話</p>
-                        <input type="text" placeholder="0912-345-678">
+                        <input type="text" placeholder="0912-345-678" name="phone">
                     </div>
                     <div class="form-box">
                         <p>電子郵件</p>
@@ -183,6 +183,13 @@
             let particles = particlesJS("particles-js", { "particles": { "number": { "value": 33, "density": { "enable": true, "value_area": 1815.039575754227 } }, "color": { "value": "#26dc90" }, "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 4 }, "image": { "src": "img/login/3d-texture.png", "width": 100, "height": 100 } }, "opacity": { "value": 0.71010661384636, "random": true, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } }, "size": { "value": 200.24033491425909, "random": true, "anim": { "enable": true, "speed": 16.783216783216783, "size_min": 2.3976023976023977, "sync": false } }, "line_linked": { "enable": false, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 }, "move": { "enable": true, "speed": 3, "direction": "top-right", "random": true, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1104.8066982851817 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": false, "mode": "push" }, "resize": true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true })
 
 
+            //-- 電話 --
+            $('input[name="phone"]').keyup(function (e) { 
+                let now_val=$(this).val();
+                if(e.key!='Backspace' && ($(this).val().length==4 || $(this).val().length==8)){
+                  $(this).val(now_val+'-');
+                }
+            });
 
             function bannerIn() {
                 let gg = gsap.timeline()

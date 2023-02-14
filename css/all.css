@@ -144,6 +144,7 @@ header .toolBox {
 }
 header .toolBox #login_a {
   padding: 10px 15px;
+  letter-spacing: 1px;
 }
 header .toolBox .user-area {
   padding: 0.2vw 0.5vw 0;
@@ -162,7 +163,8 @@ header .toolBox .user-area img {
 }
 header .toolBox .user-area p {
   font-size: 0.8vw;
-  margin: 0 6px 0 20px;
+  margin: 0 6px 0 15px;
+  letter-spacing: 1px;
 }
 header .toolBox .user-area .arrow {
   transform: rotate(180deg);
@@ -176,7 +178,7 @@ header .toolBox .user-area-menu {
   display: none;
   width: 100%;
   position: absolute;
-  left: 0;
+  left: 5%;
   top: 100%;
   padding: 1vw 0.5vw;
   background-color: rgb(255, 255, 255);
@@ -195,9 +197,11 @@ header .toolBox .user-area-menu ul li {
   color: rgba(0, 0, 0, 0.85);
   margin-top: 0.3vw;
   cursor: pointer;
-}
-header .toolBox .user-area-menu ul :not(:last-child) {
+  letter-spacing: 1px;
+  line-height: 2;
   padding-bottom: 0.3vw;
+}
+header .toolBox .user-area-menu ul li:not(:last-child) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.308);
 }
 header .toolBox .menu-button {
@@ -405,9 +409,9 @@ footer p span {
     color: rgba(0, 0, 0, 0.85);
     margin-top: 1.5vw;
     cursor: pointer;
-  }
-  header .toolBox .user-area-menu ul :not(:last-child) {
     padding-bottom: 2vw;
+  }
+  header .toolBox .user-area-menu ul li:not(:last-child) {
     border-bottom: 1px solid rgba(0, 0, 0, 0.308);
   }
   header .toolBox .menu-button {
@@ -550,8 +554,11 @@ footer p span {
     padding: 0vw 5vw;
   }
   header .logoBox img {
-    width: 18vw;
+    width: 20vw;
     margin-bottom: -1vw;
+  }
+  header .toolBox #login_a {
+    font-size: 3.2vw;
   }
   header .toolBox .user-area img {
     width: 5vw;
@@ -561,6 +568,10 @@ footer p span {
   }
   header .toolBox .user-area .arrow {
     width: 5vw;
+  }
+  header .toolBox .user-area-menu {
+    left: 4%;
+    top: 150%;
   }
   header .toolBox .user-area-menu ul {
     display: flex;
@@ -572,9 +583,9 @@ footer p span {
     font-size: 3.2vw;
     margin-top: 2.5vw;
     cursor: pointer;
-  }
-  header .toolBox .user-area-menu ul :not(:last-child) {
     padding-bottom: 3.5vw;
+  }
+  header .toolBox .user-area-menu ul li:not(:last-child) {
     border-bottom: 1px solid rgba(0, 0, 0, 0.308);
   }
   header .toolBox .menu-button {
@@ -4844,7 +4855,7 @@ footer p span {
   justify-content: center;
   align-items: center;
   width: 70vw;
-  height: 35vw;
+  height: 39vw;
   z-index: 12;
   background-color: rgba(255, 255, 255, 0.53);
   -webkit-backdrop-filter: blur(25px);
@@ -4945,8 +4956,16 @@ footer p span {
   border-radius: 40px;
   padding: 0.5vw 1vw;
   font-size: var(--ch_xs_text);
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.6);
   font-family: "Noto Serif TC", sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+}
+.login .content-box form .form-box input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+.login .content-box form .form-box input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
 }
 .login .content-box form .form-box input[type=submit] {
   cursor: pointer;
@@ -5020,6 +5039,7 @@ footer p span {
   border-radius: 0;
   padding: 10px;
   margin-left: 15px;
+  flex: 1 1;
 }
 .login .content-box form .form-box select {
   background-color: rgba(0, 0, 0, 0);
@@ -5028,12 +5048,21 @@ footer p span {
   border-radius: 40px;
   padding: 0.5vw 1vw;
   font-size: var(--ch_xs_text);
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.6);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url(../img/login/SVG/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: 93% center;
   font-family: "Noto Serif TC", sans-serif;
+  background-size: 15px 15px;
+  flex: 1 1 13%;
 }
 .login .content-box form .form-box label {
   padding: 10px;
   display: inline-block;
+  color: rgba(0, 0, 0, 0.5);
 }
 .login .content-box form .form-box [type=radio] {
   width: auto;
@@ -5100,7 +5129,10 @@ footer p span {
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 86%;
 }
 .login .content2 .content-box form .checkFormat .hint .is-active {
   opacity: 1;
@@ -5120,7 +5152,10 @@ footer p span {
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 86%;
 }
 .login .content2 .content-box form .verification .hint2 .is-active {
   opacity: 1;
@@ -5361,8 +5396,9 @@ footer p span {
     padding: 2vw 3vw;
     font-size: var(--ch_s_text);
   }
-  .login .content-box form .form-box .back_btn {
+  .login .content-box form .form-box .flex_div .back_btn {
     margin: 0 !important;
+    font-size: var(--ch_s_text);
   }
   .login .content-box form .form-box .submit_btn,
   .login .content-box form .form-box .back_btn {
@@ -5380,6 +5416,9 @@ footer p span {
   }
   .login .content-box form .form-box .box .forgetPassword {
     margin: 2.5vw 2.5vw 0 0;
+  }
+  .login .content-box form .form-box .box .forgetPassword p {
+    font-size: var(--ch_s_text);
   }
   .login .content2 .content-box form .checkFormat .box .hint {
     width: 6vw;
@@ -6958,6 +6997,7 @@ footer p span {
   }
   .user .content-box form .form-box input[type=submit] {
     font-size: var(--ch_s_text);
+    padding: 3.5vw 3vw 3.5vw;
   }
   .user .content-box form .form-box select {
     position: relative;
@@ -7052,6 +7092,7 @@ footer p span {
   }
   .user .content-box form .form-box input {
     padding: 4.5vw 3vw 2.5vw;
+    color: rgba(0, 0, 0, 0.6);
   }
   .user .content-box form .form-box select {
     margin: 4vw 0 5vw;
