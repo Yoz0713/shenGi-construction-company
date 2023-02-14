@@ -29,13 +29,15 @@
             <a href="./index.html">
                 <img src="./img/index/svg/logo.svg" alt="logo">
             </a>
-
         </div>
+
+
         <div class="toolBox">
-            <div class="user-area">
+            <a id="login_a" href="login.html">會員登入</a>
+            <div class="user-area ">
                 <div class="user-area-button">
                     <img src="./img/config/user.svg">
-                    <p>Name </p>
+                    <p>測試會員 </p>
                     <img src="./img/config/header-arrow.svg" class="arrow">
                 </div>
 
@@ -43,9 +45,11 @@
                     <ul>
                         <li><a href="./user.html">會員專區</a></li>
                         <li><a href="./service.html">客服維修</a></li>
+                        <li><a id="logout_btn" href="javascript:;">會員登出</a></li>
                     </ul>
                 </div>
             </div>
+
             <div class="menu-button">
                 <p>．</p>
                 <p>Menu</p>
@@ -99,13 +103,7 @@
                 </a>
 
             </li>
-            <li>
-                <a href="./login.html">
-                    會員登入
-                    <span>Log In</span>
-                </a>
-
-            </li>
+            
         </ul>
     </div>
     <section class="login">
@@ -113,7 +111,7 @@
 
         </div>
 
-        <div class="content is-active2">
+        <div class="content content1 is-active2">
             <div class="content-box">
                 <div class="content-logo">
                     <img src="./img/login/SVG/logo-green.svg">
@@ -142,36 +140,56 @@
 
                     </div>
                     <div class="form-box">
-                        <input type="submit" value="SIGN IN">
+                        <a class="signIn_btn submit_btn" href="javascript:;">SIGN IN</a>
                     </div>
                 </form>
                 <form class="signUp">
                     <div class="form-box">
-                        <p>姓 <span>FIRST NAME</span></p>
+                        <p>姓名 <span>NAME</span></p>
                         <input type="text">
+                    </div>
+                    <div class="form-box">
+                        <p>社區名稱 <span>COMMUNITY</span></p>
+                        <div class="flex_div community_div">
+                          <select name="case_id" id="case_id">
+                            <option value="">-- 請選擇 --</option>
+                            <option value="1">森鉅</option>
+                          </select>
+                          <input type="text" placeholder="戶別">
+                          <input type="text" placeholder="樓層">
+                        </div>
+                    </div>
+                    <div class="form-box">
+                        <p>姓別 <span>GENDER</span></p>
+                        <label > <input type="radio" name="gender" value="1">男 </label>
+                        <label ><input type="radio" name="gender" value="0">女</label>
                     </div>
                     <div class="form-box">
                         <p>信箱 <span>MAIL</span></p>
                         <input type="text">
                     </div>
-                    <div class="form-box">
-                        <p>名 <span>LAST NAME</span></p>
-                        <input type="text">
-                    </div>
-                    <div class="form-box">
-                        <p>電話 <span>PHONE</span></p>
-                        <input type="text">
-                    </div>
+
                     <div class="form-box">
                         <p>身分證<span>IDENTIFICATION</span></p>
                         <input type="text">
                     </div>
+                    
+                    <div class="form-box">
+                        <p>電話 <span>PHONE</span></p>
+                        <input type="text">
+                    </div>
+
+                    <div class="form-box">
+                        <p>生日 <span>BIRTH</span></p>
+                        <input type="text">
+                    </div>
+                    
                     <div class="form-box">
                         <p>密碼 <span>PASSWORD</span></p>
                         <input type="text">
                     </div>
                     <div class="form-box">
-                        <input type="submit" value="SIGN UP">
+                        <a class="signUp_btn submit_btn" href="javascript:;">SIGN UP</a>
                     </div>
                 </form>
             </div>
@@ -222,7 +240,10 @@
                         <input type="text">
                     </div>
                     <div class="form-box">
-                        <input type="submit" value="提交">
+                      <div class="flex_div">
+                        <a href="javascript:;" class="back_btn">返回</a>
+                        <a class="new_pwd_btn submit_btn" href="javascript:;">提交</a>
+                      </div>
                     </div>
                 </form>
 
@@ -278,6 +299,19 @@
             //change to forget
 
             //change content height on phone
+
+            //-- 登入 --
+            $('.signIn_btn').click(function (e) { 
+               alert('測試會員歡迎登入~');
+               sessionStorage['signIn']='mem123456';
+               location.href='user.html';
+            });
+
+            //-- 返回 --
+            $('.back_btn').click(function (e) { 
+                $(".content").removeClass("is-active2");
+                $(".content1").addClass("is-active2");
+            });
 
 
             //submit click effect 

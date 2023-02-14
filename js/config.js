@@ -284,73 +284,94 @@ function loadingPageAnimaiton(func) {
 
 
 }
+//開頭動畫 END
 
-//開頭動畫
+$(document).ready(function () {
 
+    
 
+    //-- menu 登入會員判定 --
+    if(sessionStorage['signIn']!=undefined){
+        $('#login_a').addClass('d-none');
+        $('.user-area').removeClass('d-none');
+    }
+    else{
+        $('.user-area').addClass('d-none');
+        $('#login_a').removeClass('d-none');
+    }
 
-//menu開啟關閉與模糊
+    //-- 會員登出 --
+    $('#logout_btn').click(function (e) { 
+        e.preventDefault();
+        sessionStorage.removeItem("signIn");
+        location.href='index.html';
+    });
 
-$(".close").click(() => {
-    $(".menu").css("right", "-100%")
-    $(".index").removeClass("blur")
-    $(".loading-page").removeClass("blur")
-    // $(".index").css({
-    //     filter: "blur(0px)"
-    // })
-    // $(".loading-page").css({
-    //     filter: "blur(0px)"
-    // })
-})
-$(".menu-button").click(() => {
-    $(".menu").css("right", "0")
-    $(".index").addClass("blur")
-    $(".loading-page").addClass("blur")
-    // $(".index").css({
-    //     filter: "blur(5px)"
-    // })
-    // $(".loading-page").css({
-    //     filter: "blur(5px)"
-    // })
-})
-//Menu開啟關閉模糊
-
-//Menu點點浮動
-$(".menu-button").mousemove((e) => {
-    let gg = gsap.timeline()
-    let dotRange = $(".menu-button :nth-child(1)").offset().left
-    let dotRange2 = $(".menu-button :nth-child(1)").offset().top
-
-    gg.to(".menu-button :nth-child(1)", {
-        x: e.pageX - dotRange - 30,
-        y: e.pageY - dotRange2 - 40,
-        duration: 0.5,
-        overwrite: "auto",
-        ease: "power1"
+    //menu開啟關閉與模糊
+    $(".close").click(() => {
+        $(".menu").css("right", "-100%")
+        $(".index").removeClass("blur")
+        $(".loading-page").removeClass("blur")
+        // $(".index").css({
+        //     filter: "blur(0px)"
+        // })
+        // $(".loading-page").css({
+        //     filter: "blur(0px)"
+        // })
     })
-})
-$(".menu-button").mouseleave((e) => {
-    let gg = gsap.timeline()
 
-
-    gg.to(".menu-button :nth-child(1)", {
-        x: 0,
-        y: 0,
-        duration: 0.5,
-        overwrite: "auto",
-        ease: "power1"
+    $(".menu-button").click(() => {
+        $(".menu").css("right", "0")
+        $(".index").addClass("blur")
+        $(".loading-page").addClass("blur")
+        // $(".index").css({
+        //     filter: "blur(5px)"
+        // })
+        // $(".loading-page").css({
+        //     filter: "blur(5px)"
+        // })
     })
-})
-//Menu點點浮動
+    //Menu開啟關閉模糊
 
-//user-menu-toggle
+    //Menu點點浮動
+    $(".menu-button").mousemove((e) => {
+        let gg = gsap.timeline()
+        let dotRange = $(".menu-button :nth-child(1)").offset().left
+        let dotRange2 = $(".menu-button :nth-child(1)").offset().top
 
-$(".user-area-button").click(() => {
-    $(".user-area-menu").slideToggle()
-    $(".user-area .arrow").toggleClass("is-active")
-})
+        gg.to(".menu-button :nth-child(1)", {
+            x: e.pageX - dotRange - 30,
+            y: e.pageY - dotRange2 - 40,
+            duration: 0.5,
+            overwrite: "auto",
+            ease: "power1"
+        })
+    })
+    $(".menu-button").mouseleave((e) => {
+        let gg = gsap.timeline()
 
-//user-menu-toggle
+
+        gg.to(".menu-button :nth-child(1)", {
+            x: 0,
+            y: 0,
+            duration: 0.5,
+            overwrite: "auto",
+            ease: "power1"
+        })
+    })
+    //Menu點點浮動
+
+    //user-menu-toggle
+
+    $(".user-area-button").click(() => {
+        $(".user-area-menu").slideToggle()
+        $(".user-area .arrow").toggleClass("is-active")
+    })
+
+    //user-menu-toggle
+});
+
+
 
 
 //除首頁外loading底色消除

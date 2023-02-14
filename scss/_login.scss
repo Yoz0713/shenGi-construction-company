@@ -172,6 +172,54 @@
                         }
                     }
 
+                    .signUp_btn{
+                        width: 40%;
+                    }
+
+                    .submit_btn{
+                        cursor: pointer;
+                        background-color: $light-green;
+                        color: #fff;
+                        border: none;
+                        font-size: var(--ch_xs_text);
+                        border-radius: 40px;
+                        padding: .5vw 1vw;
+                        display: block;
+                        text-align: center;
+
+                        &:hover {
+                            background-color: #00372041;
+                        }
+                    }
+
+                    .flex_div{
+                        input[type=submit]{
+                            flex: 1 1 50%;
+                        }
+                        
+                        .new_pwd_btn{
+                            flex: 1 1 50%;
+                        }
+                        .back_btn{
+                            flex: 1 1 50%;
+                            background-color: rgb(0 55 32 / 10%);
+                            border: 1px solid rgb(0 55 32 / 60%);
+                            color: #003720;
+                            border-radius: 50px;
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-right: 10px;
+                            font-size: var(--ch_xs_text);
+
+                            &:hover{
+                                background-color: #00372041;
+                            }
+                        }
+                    }
+
+                    
+
                     .box {
                         display: flex;
                         flex-direction: column;
@@ -189,6 +237,36 @@
                                 color: $dark-green;
                             }
                         }
+                    }
+
+                    .community_div{
+                        input{
+                            border: none;
+                            border-bottom: 1px solid rgb(0 0 0 / 20%);
+                            border-radius: 0;
+                            padding: 10px;
+                            margin-left: 15px;
+                        }
+                    }
+
+                    select{
+                        background-color: rgba(0,0,0,0);
+                        border: 1px solid rgba(0,0,0,.2);
+                        outline: none;
+                        border-radius: 40px;
+                        padding: .5vw 1vw;
+                        font-size: var(--ch_xs_text);
+                        color: rgba(0,0,0,.5);
+                        font-family: "Noto Serif TC",sans-serif;
+                    }
+
+                    label{
+                        padding: 10px;
+                        display: inline-block;
+                    }
+                    [type="radio"]{
+                        width: auto;
+                        margin-right: 7px;
                     }
 
                 }
@@ -210,17 +288,15 @@
 
 
 
-                & :nth-child(7) {
-                    display: flex;
-                    justify-content: center;
-                    flex: 0 0 100%;
+                // & :nth-child(7) {
+                //     display: flex;
+                //     justify-content: center;
+                //     flex: 0 0 100%;
 
-                    input {
-                        width: 48%;
-                    }
-
-
-                }
+                //     input {
+                //         width: 48%;
+                //     }
+                // }
             }
 
             &>.signIn {
@@ -451,6 +527,15 @@
                             font-size: var(--ch_s_text);
                         }
 
+                        
+
+                        .submit_btn,
+                        .back_btn{
+                            margin-top: 1.5vw;
+                            font-size: var(--ch_s_text);
+                            padding: 1.5vw;
+                        }
+
                         .box {
 
                             .forgetPassword {
@@ -639,6 +724,17 @@
 
                             input[type=submit] {
                                 margin-top: 3vw;
+                            }
+
+                            .back_btn{
+                                margin: 0 !important;
+                            }
+
+                            .submit_btn,
+                            .back_btn{
+                                margin-top: 3vw;
+                                padding: 3vw;
+                                flex: 1 1 100% !important;
                             }
 
                             .box {
