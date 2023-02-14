@@ -423,10 +423,9 @@ footer {
     }
 
 
-    .flex_div{
-        flex-wrap: wrap;
-    }
-
+   .flex_div.f_column {
+     flex-direction: column;
+   }
 
 
     .computer {
