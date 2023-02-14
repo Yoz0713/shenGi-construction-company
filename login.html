@@ -12,7 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@300;400;500;600;700;900&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;600;700;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/loading-bar.css">
     <title>森鉅建設</title>
@@ -152,7 +152,7 @@
                         <p>社區名稱 <span>COMMUNITY</span></p>
                         <div class="flex_div community_div">
                           <select name="case_id" id="case_id">
-                            <option value="">-- 請選擇 --</option>
+                            <option value="">社區</option>
                             <option value="1">森鉅</option>
                           </select>
                           <input type="text" placeholder="戶別">
@@ -171,17 +171,17 @@
 
                     <div class="form-box">
                         <p>身分證<span>IDENTIFICATION</span></p>
-                        <input type="text">
+                        <input type="text" placeholder="A123456789">
                     </div>
                     
                     <div class="form-box">
                         <p>電話 <span>PHONE</span></p>
-                        <input type="text">
+                        <input type="text" placeholder="0912-345-678" name="phone">
                     </div>
 
                     <div class="form-box">
                         <p>生日 <span>BIRTH</span></p>
-                        <input type="text">
+                        <input type="date" placeholder="YYYY/MM/DD" name="birthday">
                     </div>
                     
                     <div class="form-box">
@@ -311,6 +311,15 @@
             $('.back_btn').click(function (e) { 
                 $(".content").removeClass("is-active2");
                 $(".content1").addClass("is-active2");
+            });
+
+
+            //-- 電話 --
+            $('input[name="phone"]').keyup(function (e) { 
+                let now_val=$(this).val();
+                if(e.key!='Backspace' && ($(this).val().length==4 || $(this).val().length==8)){
+                  $(this).val(now_val+'-');
+                }
             });
 
 
