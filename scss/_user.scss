@@ -371,6 +371,15 @@
                                 color: rgb(0 0 0 / 60%);
                             }
 
+                            input[name="birthday"]{
+                                appearance: none;
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                                background-image: url(../img/login/SVG/calendar.svg);
+                                background-repeat: no-repeat;
+                                background-position: 93% center;
+                                background-size: 15px 15px;
+                            }
 
                             select {
                                 margin: 4vw 0 5vw;
@@ -380,6 +389,7 @@
                             }
 
                             .floor {
+                                margin-left:0;
                                 margin-top: 5vw;
                             }
 
