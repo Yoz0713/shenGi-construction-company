@@ -5399,6 +5399,9 @@ footer p span {
   .login .content-box form .form-box input[type=submit] {
     margin-top: 3vw;
   }
+  .login .content-box form .form-box input[name=birthday] {
+    background-size: 12px 12px;
+  }
   .login .content-box form .form-box select {
     width: 100%;
     padding: 2vw 3vw;
@@ -7009,6 +7012,15 @@ footer p span {
     font-size: var(--ch_s_text);
     padding: 3.5vw 3vw 3.5vw;
   }
+  .user .content-box form .form-box input[name=birthday] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(../img/login/SVG/calendar.svg);
+    background-repeat: no-repeat;
+    background-position: 93% center;
+    background-size: 15px 15px;
+  }
   .user .content-box form .form-box select {
     position: relative;
     font-size: var(--ch_s_text);
@@ -7105,13 +7117,7 @@ footer p span {
     color: rgba(0, 0, 0, 0.6);
   }
   .user .content-box form .form-box input[name=birthday] {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-image: url(../img/login/SVG/calendar.svg);
-    background-repeat: no-repeat;
-    background-position: 93% center;
-    background-size: 15px 15px;
+    background-size: 12px 12px;
   }
   .user .content-box form .form-box select {
     margin: 4vw 0 5vw;
