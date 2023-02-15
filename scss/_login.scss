@@ -211,8 +211,8 @@
                         }
                         .back_btn{
                             flex: 1 1 50%;
-                            background-color: rgb(0 55 32 / 10%);
-                            border: 1px solid rgb(0 55 32 / 60%);
+                            // background-color: rgb(0 55 32 / 10%);
+                            border: 1px solid rgb(0 55 32 / 30%);
                             color: #003720;
                             border-radius: 50px;
                             display: inline-flex;
@@ -529,7 +529,7 @@
                     width: 100%;
 
                     .form-box {
-                        margin-bottom: 7vw;
+                        margin-bottom: 5vw;
 
                         
 
@@ -747,7 +747,7 @@
                         width: 100%;
 
                         .form-box {
-                            margin-bottom: 5vw;
+                            margin-bottom: 7vw;
 
 
                             >p {

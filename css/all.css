@@ -5004,8 +5004,7 @@ footer p span {
 }
 .login .content-box form .form-box .flex_div .back_btn {
   flex: 1 1 50%;
-  background-color: rgba(0, 55, 32, 0.1);
-  border: 1px solid rgba(0, 55, 32, 0.6);
+  border: 1px solid rgba(0, 55, 32, 0.3);
   color: #003720;
   border-radius: 50px;
   display: inline-flex;
@@ -5247,7 +5246,7 @@ footer p span {
     width: 100%;
   }
   .login .content-box form .form-box {
-    margin-bottom: 7vw;
+    margin-bottom: 5vw;
   }
   .login .content-box form .form-box > p {
     margin-left: 1.5vw;
@@ -5388,7 +5387,7 @@ footer p span {
     width: 100%;
   }
   .login .content-box form .form-box {
-    margin-bottom: 5vw;
+    margin-bottom: 7vw;
   }
   .login .content-box form .form-box > p {
     margin-left: 2.5vw;
