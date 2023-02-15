@@ -529,7 +529,7 @@
                     width: 100%;
 
                     .form-box {
-                        margin-bottom: 5vw;
+                        margin-bottom: 7vw;
 
                         
 
@@ -767,7 +767,16 @@
                                 width: 100%;
                                 padding: 2vw 3vw;
                                 font-size: var(--ch_s_text);
+                                background-size: 10px 10px;
+                                
                             }
+
+                            // select {
+                            //     margin: 4vw 0 5vw;
+                            //     padding: 0 2.5vw;
+                            //     height: 10vw;
+                            //     background-size: 10px 10px;
+                            // }
 
                             .flex_div{
                                 .back_btn{

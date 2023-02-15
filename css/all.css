@@ -5247,7 +5247,7 @@ footer p span {
     width: 100%;
   }
   .login .content-box form .form-box {
-    margin-bottom: 5vw;
+    margin-bottom: 7vw;
   }
   .login .content-box form .form-box > p {
     margin-left: 1.5vw;
@@ -5404,6 +5404,7 @@ footer p span {
     width: 100%;
     padding: 2vw 3vw;
     font-size: var(--ch_s_text);
+    background-size: 10px 10px;
   }
   .login .content-box form .form-box .flex_div .back_btn {
     margin: 0 !important;
