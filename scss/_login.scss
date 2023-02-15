@@ -211,8 +211,8 @@
                         }
                         .back_btn{
                             flex: 1 1 50%;
-                            background-color: rgb(0 55 32 / 10%);
-                            border: 1px solid rgb(0 55 32 / 60%);
+                            // background-color: rgb(0 55 32 / 10%);
+                            border: 1px solid rgb(0 55 32 / 30%);
                             color: #003720;
                             border-radius: 50px;
                             display: inline-flex;
@@ -747,7 +747,7 @@
                         width: 100%;
 
                         .form-box {
-                            margin-bottom: 5vw;
+                            margin-bottom: 7vw;
 
 
                             >p {
@@ -767,7 +767,16 @@
                                 width: 100%;
                                 padding: 2vw 3vw;
                                 font-size: var(--ch_s_text);
+                                background-size: 10px 10px;
+                                
                             }
+
+                            // select {
+                            //     margin: 4vw 0 5vw;
+                            //     padding: 0 2.5vw;
+                            //     height: 10vw;
+                            //     background-size: 10px 10px;
+                            // }
 
                             .flex_div{
                                 .back_btn{
