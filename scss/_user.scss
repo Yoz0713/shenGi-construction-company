@@ -250,6 +250,16 @@
                             padding: 3.5vw 3vw 3.5vw;
                         }
 
+                        input[name="birthday"]{
+                            appearance: none;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            background-image: url(../img/login/SVG/calendar.svg);
+                            background-repeat: no-repeat;
+                            background-position: 93% center;
+                            background-size: 15px 15px;
+                        }
+
                         select {
                             position: relative;
                             font-size: var(--ch_s_text);
@@ -372,13 +382,7 @@
                             }
 
                             input[name="birthday"]{
-                                appearance: none;
-                                -webkit-appearance: none;
-                                -moz-appearance: none;
-                                background-image: url(../img/login/SVG/calendar.svg);
-                                background-repeat: no-repeat;
-                                background-position: 93% center;
-                                background-size: 15px 15px;
+                                background-size: 12px 12px;
                             }
 
                             select {
