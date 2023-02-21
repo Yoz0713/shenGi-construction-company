@@ -614,7 +614,32 @@
             }
             mainPageAnimation()
 
+            function progressAnimation() {
+                let gg = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".progress-bar",
+                        start: "top 70%"
+                    }
+                })
 
+                gg.from(".progress-bar p", {
+                    x: -35,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.3
+                }).from(".progress-bar .bar-container", {
+                    y: 30,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.3
+                }, "<+0.3").from(".progress-bar .bar", {
+                    scaleX: 0,
+                    transformOrigin: "left center",
+                    duration: 1.5,
+                    stagger: 0.3
+                }, "<+1")
+            }
+            progressAnimation()
             //progress 進度條
             function persentageSetting(i, num) {
                 let bar = document.querySelectorAll(".progress-bar .bar")
