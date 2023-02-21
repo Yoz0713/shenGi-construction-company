@@ -137,8 +137,8 @@
                             display: block;
                             content: attr(data-persent);
                             position: absolute;
-                            right: -45px;
-                            top: -30px;
+                            right: -2.4vw;
+                            top: -1.7vw;
                             color: $green_color;
                             font-size: var(--more_text);
                         }
@@ -504,8 +504,8 @@
 
                         .bar {
                             &::after {
-                                right: -55px;
-                                top: -40px;
+                                right: -7vw;
+                                top: -5vw;
                             }
                         }
 
@@ -735,12 +735,7 @@
                             height: 1px;
                             background-color: #000;
 
-                            .bar {
-                                &::after {
-                                    right: -30px;
-                                    top: -25px;
-                                }
-                            }
+
 
                         }
 

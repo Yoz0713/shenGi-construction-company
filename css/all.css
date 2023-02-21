@@ -3187,8 +3187,8 @@ footer p span {
   display: block;
   content: attr(data-persent);
   position: absolute;
-  right: -45px;
-  top: -30px;
+  right: -2.4vw;
+  top: -1.7vw;
   color: #56B87E;
   font-size: var(--more_text);
 }
@@ -3477,8 +3477,8 @@ footer p span {
     background-color: #000;
   }
   .progress .progress-bar ul li .bar-container .bar::after {
-    right: -55px;
-    top: -40px;
+    right: -7vw;
+    top: -5vw;
   }
   .progress .progress-bar ul li:not(:last-child) {
     margin-bottom: 5vw;
@@ -3664,10 +3664,6 @@ footer p span {
     width: 100%;
     height: 1px;
     background-color: #000;
-  }
-  .progress .progress-bar ul li .bar-container .bar::after {
-    right: -30px;
-    top: -25px;
   }
   .progress .progress-bar ul li:not(:last-child) {
     margin-bottom: 8vw;
