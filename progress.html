@@ -102,7 +102,7 @@
                 </a>
 
             </li>
-            
+
         </ul>
     </div>
     <section class="progress">
@@ -118,10 +118,45 @@
                 <h2>之間</h2>
             </div>
         </section>
+        <section class="progress-bar">
+            <ul>
+                <li>
+                    <p>地下基礎工程</p>
+                    <div class="bar-container">
+                        <div class="bar"></div>
+                    </div>
+                </li>
+                <li>
+                    <p>地上基礎工程</p>
+                    <div class="bar-container">
+                        <div class="bar"></div>
+                    </div>
+                </li>
+                <li>
+                    <p>水電設備工程</p>
+                    <div class="bar-container">
+                        <div class="bar"></div>
+                    </div>
+                </li>
+                <li>
+                    <p>外部裝修工程</p>
+                    <div class="bar-container">
+                        <div class="bar"></div>
+                    </div>
+                </li>
+                <li>
+                    <p>內部裝修工程</p>
+                    <div class="bar-container">
+                        <div class="bar"></div>
+                    </div>
+                </li>
+            </ul>
+        </section>
         <main>
             <div class="content">
                 <div class="title">
                     <p><span>10月</span>大底灌漿</p>
+                    <p>工程進度 : <span class="schedule">80%</span></p>
                 </div>
                 <div class="content-left">
                     <div class="swiper swiper1 swiper-no-swiping">
@@ -193,6 +228,7 @@
             <div class="content">
                 <div class="title">
                     <p><span>9月</span>鋼筋綁紮</p>
+                    <p>工程進度 : <span class="schedule">80%</span></p>
                 </div>
                 <div class="content-left">
                     <div class="swiper swiper1 swiper-no-swiping">
@@ -245,6 +281,7 @@
             <div class="content">
                 <div class="title">
                     <p><span>8月</span>第二層出土完成</p>
+                    <p>工程進度 : <span class="schedule">80%</span></p>
                 </div>
                 <div class="content-left">
                     <div class="swiper swiper1 swiper-no-swiping">
@@ -338,7 +375,6 @@
 
             popUpImg()
 
-
             const swiper1 = new Swiper(".content .swiper1", {
                 effect: 'fade',
                 fadeEffect: {
@@ -430,6 +466,7 @@
 
 
                                 $(".pop-up .swiper-wrapper").append(slide[j])
+                                swiper2.slideTo(0)
                             }
                             //小圖抓取
                             let slide2 = []
@@ -440,9 +477,15 @@
                             })
 
                             for (let j = 0; j < $($(".content")[i]).find(".content-right img").length; j++) {
-                                $(slide2[0]).addClass("is-active")
-                                $(".pop-up-content-bottom").append(slide2[j])
 
+                                $(".pop-up-content-bottom").append(slide2[j])
+                                $(".pop-up-content-bottom").children().each((i, item) => {
+                                    if (i !== 0) {
+                                        $($(".pop-up-content-bottom").children()[i]).removeClass("is-active")
+                                    } else {
+                                        $($(".pop-up-content-bottom").children()[i]).addClass("is-active")
+                                    }
+                                })
                             }
 
                             //title 抓取
@@ -570,6 +613,25 @@
                 })
             }
             mainPageAnimation()
+
+
+            //progress 進度條
+            function persentageSetting(i, num) {
+                let bar = document.querySelectorAll(".progress-bar .bar")
+                bar[i].dataset.persent = `${num}%`
+                bar[i].style.width = `${num}%`
+            }
+            //進度條長度依序往下設定 (index,num)
+            //1.
+            persentageSetting(0, 90)
+            //2.
+            persentageSetting(1, 80)
+            //3.
+            persentageSetting(2, 70)
+            //4.
+            persentageSetting(3, 60)
+            //5.
+            persentageSetting(4, 50)
         }
     </script>
 </body>

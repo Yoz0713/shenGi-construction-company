@@ -3079,7 +3079,7 @@ footer p span {
 }
 .progress .first-page {
   width: 100%;
-  height: 50.5vw;
+  height: 47vw;
   padding-top: 12vw;
 }
 .progress .first-page-title {
@@ -3150,6 +3150,51 @@ footer p span {
 .progress .first-page .is-active::after {
   height: 1.5vw;
 }
+.progress .progress-bar {
+  width: 78%;
+  margin: 0 auto 8vw;
+}
+.progress .progress-bar ul {
+  width: 100%;
+}
+.progress .progress-bar ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.progress .progress-bar ul li p {
+  flex: 0 0 10%;
+  font-size: var(--more_text);
+  font-weight: 600;
+}
+.progress .progress-bar ul li .bar-container {
+  position: relative;
+  flex: 0 0 90%;
+  height: 1px;
+  background-color: #000;
+}
+.progress .progress-bar ul li .bar-container .bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  left: 0;
+  height: 5px;
+  background-color: #56B87E;
+}
+.progress .progress-bar ul li .bar-container .bar::after {
+  display: block;
+  content: attr(data-persent);
+  position: absolute;
+  right: -45px;
+  top: -30px;
+  color: #56B87E;
+  font-size: var(--more_text);
+}
+.progress .progress-bar ul li:not(:last-child) {
+  margin-bottom: 3.2vw;
+}
 .progress main {
   width: 80%;
   margin: 0 auto 5vw;
@@ -3160,14 +3205,19 @@ footer p span {
   margin-bottom: 10vw;
 }
 .progress main .content .title {
+  display: flex;
+  justify-content: space-between;
   flex: 0 0 100%;
   width: 100%;
   padding-bottom: 1vw;
   padding-left: 0.8vw;
+  padding-right: 0.8vw;
   border-bottom: 1px solid #000;
   margin-bottom: 2vw;
 }
 .progress main .content .title p {
+  display: flex;
+  align-items: center;
   font-size: var(--ch_s_text);
   font-weight: 600;
 }
@@ -3175,6 +3225,13 @@ footer p span {
   color: #56B87E;
   font-size: var(--ch_m_text);
   margin-right: 1.2vw;
+}
+.progress main .content .title :nth-child(2) span {
+  color: #000;
+  font-size: var(--ch_s_text);
+  font-weight: 600;
+  margin: 0;
+  margin-left: 6px;
 }
 .progress main .content-left {
   flex: 0 0 65%;
@@ -3398,6 +3455,34 @@ footer p span {
   .progress .first-page .is-active::after {
     height: 3.5vw;
   }
+  .progress .progress-bar {
+    width: 88%;
+    margin: 0 auto 15vw;
+  }
+  .progress .progress-bar ul {
+    width: 100%;
+  }
+  .progress .progress-bar ul li {
+    display: block;
+    width: 100%;
+  }
+  .progress .progress-bar ul li p {
+    margin-bottom: 4vw;
+  }
+  .progress .progress-bar ul li .bar-container {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+  }
+  .progress .progress-bar ul li .bar-container .bar::after {
+    right: -55px;
+    top: -40px;
+  }
+  .progress .progress-bar ul li:not(:last-child) {
+    margin-bottom: 5vw;
+  }
   .progress main {
     width: 90%;
     margin: 0 auto 10vw;
@@ -3567,6 +3652,26 @@ footer p span {
   }
 }
 @media all and (max-width: 1039px) and (max-width: 500px) {
+  .progress .progress-bar {
+    margin: 0 auto 25vw;
+  }
+  .progress .progress-bar ul li p {
+    margin-bottom: 6vw;
+  }
+  .progress .progress-bar ul li .bar-container {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+  }
+  .progress .progress-bar ul li .bar-container .bar::after {
+    right: -30px;
+    top: -25px;
+  }
+  .progress .progress-bar ul li:not(:last-child) {
+    margin-bottom: 8vw;
+  }
   .progress main .pop-up {
     padding-top: 16vw;
   }
@@ -7219,4 +7324,4 @@ span {
     height: -moz-fit-content;
     height: fit-content;
   }
-}/*# sourceMappingURL=all.css.map */
+}
