@@ -490,7 +490,8 @@
 
                             //title 抓取
                             console.log($($($(".content")[i]).find(".title")[0]).children().html())
-                            $(".pop-up .title").append(`${$($($(".content")[i]).find(".title")[0]).html()}`)
+                            $(".pop-up .title").append(`${$($(".content")[i]).find(".title :nth-child(1)")[0].outerHTML}`)
+                            // $(".pop-up .title").append(`${$($($(".content")[i]).find(".title")[0]).html()}`) 此行可抓取工程進度的部分
 
 
 
