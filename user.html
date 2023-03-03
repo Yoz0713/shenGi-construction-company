@@ -12,7 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@300;400;500;600;700;900&display=swap"
         rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/loading-bar.css">
     <title>森鉅建設</title>
@@ -75,11 +75,18 @@
                             營造公司
                             <span>Company</span>
                         </a> </li>
-                    <li> <a href="./smart.html">
+                    <li><a href="./smart.html">
                             科技智慧宅
                             <span>Smart Home</span>
                         </a> </li>
                 </ul>
+            </li>
+            <li>
+                <a href="./news.html" class="sub">
+                    最新消息
+                    <span>NEWS</span>
+                </a>
+
             </li>
             <li>
                 <a href="./constrction.html" class="sub">
@@ -102,7 +109,7 @@
                 </a>
 
             </li>
-            
+
         </ul>
     </div>
     <section class="user">
@@ -184,10 +191,10 @@
 
 
             //-- 電話 --
-            $('input[name="phone"]').keyup(function (e) { 
-                let now_val=$(this).val();
-                if(e.key!='Backspace' && ($(this).val().length==4 || $(this).val().length==8)){
-                  $(this).val(now_val+'-');
+            $('input[name="phone"]').keyup(function (e) {
+                let now_val = $(this).val();
+                if (e.key != 'Backspace' && ($(this).val().length == 4 || $(this).val().length == 8)) {
+                    $(this).val(now_val + '-');
                 }
             });
 

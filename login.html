@@ -76,11 +76,18 @@
                             營造公司
                             <span>Company</span>
                         </a> </li>
-                    <li> <a href="./smart.html">
+                    <li><a href="./smart.html">
                             科技智慧宅
                             <span>Smart Home</span>
                         </a> </li>
                 </ul>
+            </li>
+            <li>
+                <a href="./news.html" class="sub">
+                    最新消息
+                    <span>NEWS</span>
+                </a>
+
             </li>
             <li>
                 <a href="./constrction.html" class="sub">
@@ -103,7 +110,7 @@
                 </a>
 
             </li>
-            
+
         </ul>
     </div>
     <section class="login">
@@ -151,18 +158,18 @@
                     <div class="form-box">
                         <p>社區名稱 <span>COMMUNITY</span></p>
                         <div class="flex_div community_div">
-                          <select name="case_id" id="case_id">
-                            <option value="">社區</option>
-                            <option value="1">森鉅</option>
-                          </select>
-                          <input type="text" placeholder="戶別">
-                          <input type="text" placeholder="樓層">
+                            <select name="case_id" id="case_id">
+                                <option value="">社區</option>
+                                <option value="1">森鉅</option>
+                            </select>
+                            <input type="text" placeholder="戶別">
+                            <input type="text" placeholder="樓層">
                         </div>
                     </div>
                     <div class="form-box">
                         <p>姓別 <span>GENDER</span></p>
-                        <label > <input type="radio" name="gender" value="1">男 </label>
-                        <label ><input type="radio" name="gender" value="0">女</label>
+                        <label> <input type="radio" name="gender" value="1">男 </label>
+                        <label><input type="radio" name="gender" value="0">女</label>
                     </div>
                     <div class="form-box">
                         <p>信箱 <span>MAIL</span></p>
@@ -173,7 +180,7 @@
                         <p>身分證<span>IDENTIFICATION</span></p>
                         <input type="text" placeholder="A123456789">
                     </div>
-                    
+
                     <div class="form-box">
                         <p>電話 <span>PHONE</span></p>
                         <input type="text" placeholder="0912-345-678" name="phone">
@@ -183,7 +190,7 @@
                         <p>生日 <span>BIRTH</span></p>
                         <input type="date" placeholder="YYYY/MM/DD" name="birthday">
                     </div>
-                    
+
                     <div class="form-box">
                         <p>密碼 <span>PASSWORD</span></p>
                         <input type="text">
@@ -240,10 +247,10 @@
                         <input type="text">
                     </div>
                     <div class="form-box">
-                      <div class="flex_div f_column">
-                        <a href="javascript:;" class="back_btn">返回</a>
-                        <a class="new_pwd_btn submit_btn" href="javascript:;">提交</a>
-                      </div>
+                        <div class="flex_div f_column">
+                            <a href="javascript:;" class="back_btn">返回</a>
+                            <a class="new_pwd_btn submit_btn" href="javascript:;">提交</a>
+                        </div>
                     </div>
                 </form>
 
@@ -301,24 +308,24 @@
             //change content height on phone
 
             //-- 登入 --
-            $('.signIn_btn').click(function (e) { 
-               alert('測試會員歡迎登入~');
-               sessionStorage['signIn']='mem123456';
-               location.href='user.html';
+            $('.signIn_btn').click(function (e) {
+                alert('測試會員歡迎登入~');
+                sessionStorage['signIn'] = 'mem123456';
+                location.href = 'user.html';
             });
 
             //-- 返回 --
-            $('.back_btn').click(function (e) { 
+            $('.back_btn').click(function (e) {
                 $(".content").removeClass("is-active2");
                 $(".content1").addClass("is-active2");
             });
 
 
             //-- 電話 --
-            $('input[name="phone"]').keyup(function (e) { 
-                let now_val=$(this).val();
-                if(e.key!='Backspace' && ($(this).val().length==4 || $(this).val().length==8)){
-                  $(this).val(now_val+'-');
+            $('input[name="phone"]').keyup(function (e) {
+                let now_val = $(this).val();
+                if (e.key != 'Backspace' && ($(this).val().length == 4 || $(this).val().length == 8)) {
+                    $(this).val(now_val + '-');
                 }
             });
 

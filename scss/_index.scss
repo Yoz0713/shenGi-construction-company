@@ -1455,6 +1455,30 @@
                 }
 
             }
+
+            .to-bottom {
+                display: none;
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                width: 7vw;
+                height: 7vw;
+                border-radius: 50%;
+                right: 3vw;
+                bottom: 28vw;
+                z-index: 20;
+                background-color: #000;
+                padding: 1vw 1.5vw;
+                opacity: 0.5;
+
+                p {
+                    color: #fff;
+                    font-size: var(--ch_xs_text);
+                    pointer-events: none;
+                    transform: rotate(90deg);
+                }
+
+            }
         }
 
 

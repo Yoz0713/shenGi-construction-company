@@ -102,7 +102,7 @@
                 <p>Menu</p>
             </div>
         </div>
-        
+
         <div class="progress-bar">
 
         </div>
@@ -137,6 +137,13 @@
                 </ul>
             </li>
             <li>
+                <a href="./news.html" class="sub">
+                    最新消息
+                    <span>NEWS</span>
+                </a>
+
+            </li>
+            <li>
                 <a href="./constrction.html" class="sub">
                     熱銷建案
                     <span>Construction</span>
@@ -157,7 +164,7 @@
                 </a>
 
             </li>
-            
+
         </ul>
     </div>
     <!-- Menu -->
@@ -458,7 +465,6 @@
                     </div>
                 </div>
             </section>
-
             <section class="fifth-page">
                 <div class="content">
                     <video src="./video/logo_new - Compressed with FlexClip.mp4" muted playsinline="true"
@@ -471,16 +477,22 @@
 
                 </div>
             </section>
+            <div class="phone to-bottom">
+                <a>
+                    <p>→</p>
+                </a>
+
+            </div>
         </section>
     </section>
-
+    <!-- 主畫面 -->
     <footer>
         <p class="computer">Copyright © 2023 森鉅建設股份有限公司版權所有<span>TEL：02-8776-2086</span>地址：臺北市松山區敦化北路167號17樓</p>
         <p class="phone">森鉅建設股份有限公司版權所有 2023 © Copyright<br>
             02-8776-2086 臺北市松山區敦化北路167號17樓</p>
     </footer>
 
-    <!-- 主畫面 -->
+
 
     <div class="clip"></div>
 
@@ -491,6 +503,7 @@
     <script src="./js/sliceSquare.js"></script>
     <script src="./js/splitText.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
@@ -504,6 +517,25 @@
                 // gsap.set("html", {
                 //     overflow: "hidden"
                 // })
+            } else {
+                //手機版設定第二次載入首頁時出現前往底部錨點的按鈕
+                if (!window.sessionStorage.getItem("visited")) {
+                    window.sessionStorage.setItem("visited", "ok")
+                } else {
+                    $(".index .to-bottom").css("display", "flex")
+                }
+                //錨點到底部
+                const toBottomLink = document.querySelector('.to-bottom a');
+                toBottomLink.addEventListener('click', (event) => {
+                    event.preventDefault(); // 防止默認行為
+
+                    gsap.to(window, { duration: 0.001, scrollTo: { y: "max" } }).then(() => {
+                        setTimeout(() => {
+                            $(".menu").css("right", "0")
+                        }, 1300)
+
+                    });
+                });
             }
 
 
