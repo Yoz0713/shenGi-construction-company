@@ -7377,6 +7377,7 @@ footer p span {
   font-size: var(--more_text);
   letter-spacing: 0.1em;
   opacity: 0.6;
+  font-weight: 600;
 }
 .news .second-page ul li .right .title h3 {
   font-size: var(--ch_m_text);
@@ -7629,7 +7630,7 @@ footer p span {
 .newsInner .title-box {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   width: 95%;
   margin: 10vw auto 4vw 0;
   padding: 0 1.5vw 0.8vw 8.5%;
@@ -7644,6 +7645,7 @@ footer p span {
   font-size: var(--ch_xs_text);
   letter-spacing: 0.1em;
   opacity: 0.6;
+  font-weight: 600;
 }
 .newsInner .content {
   width: 83%;
@@ -7778,7 +7780,7 @@ footer p span {
     margin-bottom: 70px;
   }
   .newsInner .content ul li .paraBox {
-    width: 87%;
+    width: 90%;
     margin: 0 0 0 auto;
   }
   .newsInner .content ul li .paraBox p {
