@@ -136,7 +136,8 @@ header .logoBox {
   isolation: isolate;
 }
 header .logoBox img {
-  width: 5vw;
+  display: block;
+  width: 6vw;
 }
 header .toolBox {
   display: flex;
