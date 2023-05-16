@@ -295,6 +295,15 @@ header .progress-bar {
   height: 1px;
   background-color: rgba(0, 0, 0, 0.5);
 }
+.menu > ul > li:nth-child(2) {
+  display: none;
+}
+.menu > ul > li:nth-child(3) {
+  display: none;
+}
+.menu > ul > li:nth-child(4) {
+  display: none;
+}
 
 footer {
   display: flex;

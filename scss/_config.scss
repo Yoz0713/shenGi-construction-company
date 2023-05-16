@@ -372,6 +372,28 @@ header {
                     }
                 }
             }
+
+
+        }
+
+
+
+    }
+
+    //隱藏menu第二三四的選項(大的)
+    >ul {
+        >li {
+            &:nth-child(2) {
+                display: none;
+            }
+
+            &:nth-child(3) {
+                display: none;
+            }
+
+            &:nth-child(4) {
+                display: none;
+            }
         }
     }
 }
